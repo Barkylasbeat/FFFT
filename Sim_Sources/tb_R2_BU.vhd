@@ -1,9 +1,12 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 use IEEE.math_real.all;
 use IEEE.math_complex.all;
-use IEEE.fixed_pkg.all;
+use ieee.fixed_pkg.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std_unsigned.all;
 
 entity tb_R2_BU is
     --  Port ( );
@@ -80,19 +83,21 @@ begin
 
     clk <= not clk after CLK_PERIOD/2;
 
-    elaboration_test : process(clk)
+    elaboration_test : process
     begin
 
         reset <= '1';
+        
         wait for 100 ns;
+        if rising_edge(clk) then
+            for i in 0 to 100 loop
+                Re_Data_in <= std_logic_vector(to_signed(i, Re_Data_in'length));
+                Im_Data_in <= std_logic_vector(to_signed(-i,Im_Data_in'length));
 
-        for i in 0 to 100 loop
-            Re_Data_in <= std_logic_vector(to_signed(i));
-            Im_Data_in <= std_logic_vector(to_signed(-i));
-
-            Re_FIFO_in <= std_logic_vector(to_signed(-i));
-            Re_FIFO_in <= std_logic_vector(to_signed(i));
-        end loop;
+                Re_FIFO_in <= std_logic_vector(to_signed(-i,Re_FIFO_in'length));
+                Im_FIFO_in <= std_logic_vector(to_signed(i,Re_FIFO_in'length));
+            end loop;
+        end if;
     end process;
 
 end Behavioral;

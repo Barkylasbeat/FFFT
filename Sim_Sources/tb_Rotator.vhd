@@ -1,9 +1,12 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.NUMERIC_STD.ALL;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 use IEEE.math_real.all;
 use IEEE.math_complex.all;
-use IEEE.fixed_pkg.all;
+use ieee.fixed_pkg.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std_unsigned.all;
 
 entity tb_Rot is
     --  Port ( );
