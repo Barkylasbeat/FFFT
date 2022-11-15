@@ -350,9 +350,7 @@ begin
             data_out_ppF            <= (Others => (Others => '0'));
         
         elsif rising_edge(clk) then
-        
-        --Decoder management
-        
+
             if halfway_pp1 = '0' then
                 --Input Decoder, first half of samples
                 InDec_FIFOMux   <= Data_in_ppF;
@@ -365,15 +363,11 @@ begin
                 FIFODec_BU      <= FIFO_FIFODec_ppF;
             end if;
             
-         --Halfway signal management
-         
             if  data_counter >= FFT_TOT_POINTS/2 then
                 halfway         <= '1';
             else
                 halfway         <= '0';
             end if;
-            
-          --Pipeline management
             
             --Halfway control signal to muxes and decoders
             halfway_pp1         <= halfway;

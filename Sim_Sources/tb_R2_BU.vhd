@@ -17,8 +17,8 @@ architecture Behavioral of tb_R2_BU is
     constant CLK_PERIOD : time := 10 ns;
     constant RESET_WND  : time := 50 ns; 
 
-    constant DATA_WIDTH : integer := 32;
-    constant PRECISION  : integer := 6;
+    constant DATA_WIDTH : integer := 16;
+    constant PRECISION  : integer := 0;
 
     component R2_BU is
         Generic(
@@ -88,16 +88,33 @@ begin
 
         reset <= '1';
         
-        wait for 100 ns;
-        if rising_edge(clk) then
-            for i in 0 to 100 loop
-                Re_Data_in <= std_logic_vector(to_signed(i, Re_Data_in'length));
-                Im_Data_in <= std_logic_vector(to_signed(-i,Im_Data_in'length));
+        wait for RESET_WND;
+        
+        reset <= '0';
+        
 
-                Re_FIFO_in <= std_logic_vector(to_signed(-i,Re_FIFO_in'length));
+            for i in 0 to 10 loop
+                Re_Data_in <= std_logic_vector(to_signed(i, Re_Data_in'length));
+                Im_Data_in <= std_logic_vector(to_signed(i,Im_Data_in'length));
+
+                Re_FIFO_in <= std_logic_vector(to_signed(i,Re_FIFO_in'length));
                 Im_FIFO_in <= std_logic_vector(to_signed(i,Re_FIFO_in'length));
+                
+                wait until rising_edge(clk); 
             end loop;
-        end if;
+            
+        reset <= '1';
+        
+        wait for RESET_WND;
+         
+        reset <= '0';
+        
+        Re_Data_in   <= "0111111111111111";   
+        Re_FIFO_in   <= "0111111111111111";
+        
+        
+        wait;
+        
     end process;
 
 end Behavioral;

@@ -8,24 +8,24 @@ use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std_unsigned.all;
 
-entity tb_Rot is
+entity tb_Rotator is
     --  Port ( );
-end tb_Rot;
+end tb_Rotator;
     
-architecture Behavioral of tb_Rot is
+architecture Behavioral of tb_Rotator is
 
     constant CLK_PERIOD : time := 10 ns;
     constant RESET_WND  : time := 50 ns; 
 
-    constant DATA_WIDTH : integer := 32;
+    constant DATA_WIDTH : integer := 16;
     constant TF_WIDTH   : integer := 8;
     constant PRECISION  : integer := 6;
 
     component Rotator is
         Generic(
-            DATA_WIDTH : POSITIVE := 32;
+            DATA_WIDTH : POSITIVE := 8;
             TF_WIDTH   : POSITIVE := 8; 
-            PRECISION  : NATURAL  := 6
+            PRECISION  : NATURAL  := 3
         );
         Port(
             -----------clock/reset---------
@@ -36,8 +36,8 @@ architecture Behavioral of tb_Rot is
             Re_Data_in     :   in std_logic_vector(DATA_WIDTH-1  downto 0);
             Im_Data_in     :   in std_logic_vector(DATA_WIDTH-1  downto 0);
     
-            Re_TF_in       :   in std_logic_vector(DATA_WIDTH-1 downto 0);
-            Im_TF_in       :   in std_logic_vector(DATA_WIDTH-1 downto 0);
+            Re_TF_in       :   in std_logic_vector(TF_WIDTH-1 downto 0);
+            Im_TF_in       :   in std_logic_vector(TF_WIDTH-1 downto 0);
     
             Re_Data_out    :   out std_logic_vector(DATA_WIDTH-1 downto 0);
             Im_Data_out    :   out std_logic_vector(DATA_WIDTH-1 downto 0)
@@ -45,14 +45,14 @@ architecture Behavioral of tb_Rot is
          );
     end component;
 
-    signal clk   : std_logic := '0';
+    signal clk   : std_logic := '1';
     signal reset : std_logic := '0';
     
     signal Re_Data_in  : std_logic_vector(DATA_WIDTH-1  downto 0) := (Others => '0');
     signal Im_Data_in  : std_logic_vector(DATA_WIDTH-1  downto 0) := (Others => '0');
 
-    signal Re_TF_in    : std_logic_vector(DATA_WIDTH-1  downto 0) := (Others => '0');
-    signal Im_TF_in    : std_logic_vector(DATA_WIDTH-1  downto 0) := (Others => '0');
+    signal Re_TF_in    : std_logic_vector(TF_WIDTH-1  downto 0) := (Others => '0');
+    signal Im_TF_in    : std_logic_vector(TF_WIDTH-1  downto 0) := (Others => '0');
 
     signal Re_Data_out : std_logic_vector(DATA_WIDTH-1  downto 0) := (Others => '0');
     signal Im_Data_out : std_logic_vector(DATA_WIDTH-1  downto 0) := (Others => '0');
@@ -86,6 +86,36 @@ begin
 
     elaboration_test : process
     begin
+
+        reset <= '1';
+        
+        wait for RESET_WND;
+        
+        reset <= '0';
+        
+
+            for i in 9 to 98 loop
+                Re_Data_in <= std_logic_vector(to_signed(i*10, Re_Data_in'length));
+                Im_Data_in <= std_logic_vector(to_signed(i*12, Im_Data_in'length));
+                
+                Re_TF_in   <= std_logic_vector(to_signed(i+3, Re_TF_in'length));
+                Im_TF_in   <= std_logic_vector(to_signed(i+4, Im_TF_in'length));
+                
+                wait until rising_edge(clk); 
+            end loop;
+            
+        --reset <= '1';
+        
+        wait for RESET_WND;
+         
+        --reset <= '0';
+        
+        --Re_Data_in <= "01111111";   
+        --Re_TF_in   <= "01111111";
+        
+        
+        wait;
+        
     end process;
 
 end Behavioral;

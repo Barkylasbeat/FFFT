@@ -55,7 +55,12 @@ begin
         if reset = '1' then
             FIFO_sum <= (Others => ( others => '0'));
             Data_sum <= (Others => ( others => '0'));
-        
+            Re_FIFO_out <= ( others => '0');
+            Im_FIFO_out <= ( others => '0');
+            Re_Data_out <= ( others => '0');
+            Im_Data_out <= ( others => '0');
+            
+            
         elsif rising_edge(clk) then
 
             FIFO_sum(RE) <= to_sfixed(Re_Data_in, DATA_WIDTH-PRECISION-1, -PRECISION) 

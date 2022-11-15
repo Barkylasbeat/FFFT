@@ -89,7 +89,7 @@ begin
             elsif Result(IM) < LOWER_BOUND then
                 Im_Data_out	<= to_slv(LOWER_BOUND);
             else
-                Im_Data_out <= resize(to_slv(Result(RE)), Im_Data_out);
+                Im_Data_out <= resize(to_slv(Result(IM)), Im_Data_out);
             end if;
 
         end if;
