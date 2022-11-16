@@ -36,7 +36,7 @@ end SR_FIFO;
 
 architecture Behavioral of SR_FIFO is
 
-    type CPLX is array (1 downto 0) of std_logic_vector(0 to SR_WIDTH-1);
+    type CPLX is array (1 downto 0) of std_logic_vector(SR_WIDTH-1 downto 0);
     type data is array (0 to SR_DEPTH-1) of CPLX;
 
     signal temp : data;
@@ -68,6 +68,6 @@ begin
     end process;
     
     dout_RE <= temp(SR_DEPTH-1)(RE);
-    dout_RE <= temp(SR_DEPTH-1)(IM);
+    dout_IM <= temp(SR_DEPTH-1)(IM);
 
 end Behavioral;

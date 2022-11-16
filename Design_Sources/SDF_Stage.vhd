@@ -105,7 +105,6 @@ architecture Behavioral of SDF_Stage is
 
     component TF_ROM is
         Generic(
-            ROM_STAGE_POINTS : POSITIVE := 2048;
             ADDR_LENGTH      : POSITIVE := 11;
             TF_WIDTH         : POSITIVE := 8 -- with precision=6 we have 8-bit for every address 
         );
@@ -256,7 +255,6 @@ begin
     --Twiddle Factor ROM instantiation
     TF_ROM_inst : TF_ROM 
     Generic map(
-        ROM_STAGE_POINTS => TF_POINTS,
         ADDR_LENGTH      => ADDR_LENGTH,
         TF_WIDTH         => TF_WIDTH
     )

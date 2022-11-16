@@ -22,7 +22,6 @@ use ieee.numeric_std_unsigned.all;
 
 entity TF_ROM is
     Generic(
-        ROM_STAGE_POINTS : POSITIVE := 2048;
         ADDR_LENGTH      : POSITIVE := 11;
         TF_WIDTH         : POSITIVE := 8 -- with precision=6 we have 8-bit for every address 
     );
@@ -46,6 +45,8 @@ entity TF_ROM is
         
     constant RE               : integer  := 0;
     constant IM               : integer  := 1;
+
+    constant ROM_STAGE_POINTS : integer  := 2**ADDR_LENGTH;
 
     type CPLX      is array(1 downto 0) of sfixed(1 downto -(TF_WIDTH-2));
     type CPLX_ROM  is array(0 to ROM_STAGE_POINTS-1) of CPLX;
