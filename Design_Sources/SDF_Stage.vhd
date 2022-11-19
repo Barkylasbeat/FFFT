@@ -84,8 +84,8 @@ architecture Behavioral of SDF_Stage is
 
     component SR_FIFO is
         Generic(
-            SR_WIDTH    :   POSITIVE    := 8;  --The width of the data
-            SR_DEPTH    :   POSITIVE    := 4;  --Lenght of the FIFO
+            SR_WIDTH    :   POSITIVE    := 8;    --The width of the data
+            SR_DEPTH    :   POSITIVE    := 4;    --Lenght of the FIFO
             SR_INIT     :   REAL        := 0.0;  --Initialization values
             PRECISION   :   NATURAL     := 6
         );
@@ -269,6 +269,9 @@ begin
     
 ------------------------------------------DATAFLOW-------------------------------------------
 
+--    state   <=  go          when STAGE = 1;
+                
+
 -----------------------------------------HALFWAY CONTROL-------------------------------------
     halfway <=  '0' when data_counter < STAGE_POINTS/2 else
                 '1' when data_counter >= STAGE_POINTS/2;
@@ -276,14 +279,14 @@ begin
 -------------------------------------------MUXES---------------------------------------------
     --OUTPUT MUXES
     with halfway_ppF select data_out        <=  FIFODec_OutMux_ppF  when '0',
-                                                ROT_OutMux          when '1';
+                                                ROT_OutMux          when Others;
 
     with halfway_ppF select FIFOMux_FIFO    <=  InDec_FIFOMux_ppF   when '0',
-                                                BU_FIFOMux_ppF      when '1';
+                                                BU_FIFOMux_ppF      when Others;
 -----------------------------------------END_MUXES-------------------------------------------
     --Connecting inputs
-    Data_in_ppF(RE) <= Re_Data_in;
-    Data_in_ppF(IM) <= Re_Data_in;
+--   Data_in_ppF(RE) <= Re_Data_in;
+--   Data_in_ppF(IM) <= Re_Data_in;
     
     --Connecting outputs
     Re_Data_out     <= data_out_ppF(RE);
@@ -355,9 +358,12 @@ begin
 
             data_out                <= (Others => (Others => '0'));
             data_out_ppF            <= (Others => (Others => '0'));
+
+            state <= wait_sync;
         
         elsif rising_edge(clk) then
 
+            --DECODERS LOGIC
             if halfway_pp1 = '0' then
                 --Input Decoder, first half of samples
                 InDec_FIFOMux   <= Data_in_ppF;
@@ -365,7 +371,7 @@ begin
                 FIFODec_OutMux  <= FIFO_FIFODec_ppF;
             elsif halfway_ppF = '1' then
                 --Input Decoder, second half of samples
-                InDec_BU_ppF    <= Data_in_ppF;
+                InDec_BU        <= Data_in_ppF;
                 --FIFO Decoder, second half of samples
                 FIFODec_BU      <= FIFO_FIFODec_ppF;
             end if;
@@ -386,8 +392,8 @@ begin
             data_counter_ppF    <= data_counter_pp3;
 
             --Data_it to InDec
-            --Data_in_ppF(RE)     <= Re_Data_in;
-            --Data_in_ppF(IM)     <= Im_Data_in;
+            Data_in_ppF(RE)     <= Re_Data_in;
+            Data_in_ppF(IM)     <= Im_Data_in;
 
             --FIFO to FIFODec
             FIFO_FIFODec_ppF    <= FIFO_FIFODec;
@@ -399,6 +405,9 @@ begin
             InDec_FIFOMux_pp4   <= InDec_FIFOMux_pp3;
             InDec_FIFOMux_pp5   <= InDec_FIFOMux_pp4;
             InDec_FIFOMux_ppF   <= InDec_FIFOMux_pp5;
+
+            --FIFOMux to FIFO
+            FIFOMux_FIFO_ppF    <= FIFOMux_FIFO;
 
             --InDec to Butterfly
             InDec_BU_ppF        <= InDec_BU;
@@ -419,31 +428,23 @@ begin
             BU_FIFOMux_pp2      <= BU_FIFOMux_pp1;
             BU_FIFOMux_ppF      <= BU_FIFOMux_pp2;
 
+            --Output register
+            data_out_ppF        <= data_out;
         end if;
-    end process;
--- END CONTROL PROCESS
 
-
-    FSM_proc : process(clk,reset)
-    begin
-        if reset = '1' then
-
-            state <= wait_sync;
-
-        elsif rising_edge(clk) then 
-            
+        if STAGE /= 1 then
             case state is 
 
                 when wait_sync =>
                     
 
                     --Wait for syncronization
-                    if data_counter < (STAGE-1)*8 then 
-                        data_counter <= data_counter + 1;
-                    else 
-                        data_counter <= 0;
-                        state <= go;
-                    end if;
+                    if data_counter < ((STAGE-1)*8)-1 then  -- Every stage has an input delay referred to the output
+                        data_counter <= data_counter + 1;   -- of the previous stage equal to the pipeline depth of
+                    else                                    -- the previous stage, i.e. 8 for every stage.
+                        data_counter <= 0;                  -- Referring to the first stage (since all counters start
+                        state <= go;                        -- simultaneously at startup), the input delay is the
+                    end if;                                 -- stage number (1st is 0) multiplied for the pp depth
 
 
                 when go =>
@@ -456,8 +457,52 @@ begin
                     end if;
 
             end case;
+        else
+            --Incrementing the counter in circular mode
+            if data_counter < STAGE_POINTS-1 then 
+                data_counter <= data_counter + 1;
+            else
+                data_counter <= 0;
+            end if;
         end if;
     end process;
+-- END CONTROL PROCESS
+
+
+    -- FSM_proc : process(clk,reset)
+    -- begin
+    --     if reset = '1' then
+
+    --         state <= wait_sync;
+
+    --     elsif rising_edge(clk) then 
+
+    --         case state is 
+
+    --             when wait_sync =>
+                    
+
+    --                 --Wait for syncronization
+    --                 if data_counter < ((STAGE-1)*8)-1 then  -- Every stage has an input delay referred to the output
+    --                     data_counter <= data_counter + 1;   -- of the previous stage equal to the pipeline depth of
+    --                 else                                    -- the previous stage, i.e. 8 for every stage.
+    --                     data_counter <= 0;                  -- Referring to the first stage (since all counters start
+    --                     state <= go;                        -- simultaneously at startup), the input delay is the
+    --                 end if;                                 -- stage number (1st is 0) multiplied for the pp depth
+
+
+    --             when go =>
+
+    --                 --Incrementing the counter in circular mode
+    --                 if data_counter < STAGE_POINTS-1 then 
+    --                     data_counter <= data_counter + 1;
+    --                 else
+    --                     data_counter <= 0;
+    --                 end if;
+
+    --         end case;
+    --     end if;
+    -- end process;
 
 
 end Behavioral;
