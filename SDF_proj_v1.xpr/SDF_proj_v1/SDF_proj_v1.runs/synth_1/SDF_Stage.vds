@@ -2,8 +2,8 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Nov 17 22:35:46 2022
-# Process ID: 37065
+# Start of session at: Sat Nov 19 12:17:02 2022
+# Process ID: 18678
 # Current directory: /home/fralenzi/SDF_proj_v1/SDF_proj_v1.runs/synth_1
 # Command line: vivado -log SDF_Stage.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SDF_Stage.tcl
 # Log file: /home/fralenzi/SDF_proj_v1/SDF_proj_v1.runs/synth_1/SDF_Stage.vds
@@ -18,13 +18,12 @@ Command: synth_design -top SDF_Stage -part xc7a12tcpg238-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12t'
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Vivado_Tcl 4-1810] synth_design options have changed between reference and incremental; A full resynthesis will be run
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 37086
+INFO: [Synth 8-7075] Helper process launched with PID 18708
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2607.898 ; gain = 0.000 ; free physical = 3355 ; free virtual = 10461
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2608.867 ; gain = 0.000 ; free physical = 3572 ; free virtual = 11070
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'SDF_Stage' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:35]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
@@ -61,64 +60,15 @@ INFO: [Synth 8-638] synthesizing module 'TF_ROM' [/home/fralenzi/SDF_proj_v1/SDF
 	Parameter ADDR_LENGTH bound to: 3 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'TF_ROM' (0#1) [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:44]
+WARNING: [Synth 8-614] signal 'data_counter' is read in the process but is not in the sensitivity list [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:299]
 INFO: [Synth 8-256] done synthesizing module 'SDF_Stage' (0#1) [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:35]
 WARNING: [Synth 8-5856] 3D RAM temp_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
 WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  temp_reg 
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:318]
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:318]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:342]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:342]
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_pp1_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:319]
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_pp1_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:319]
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_pp2_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:320]
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_pp2_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:320]
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_pp3_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:321]
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_pp3_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:321]
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_pp4_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:322]
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_pp4_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:322]
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_pp5_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:323]
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_pp5_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:323]
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_ppF_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:324]
-WARNING: [Synth 8-6014] Unused sequential element InDec_FIFOMux_ppF_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:324]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_pp1_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:343]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_pp1_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:343]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_pp2_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:344]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_pp2_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:344]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_pp3_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:345]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_pp3_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:345]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_pp4_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:346]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_pp4_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:346]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_pp5_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:347]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_pp5_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:347]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_ppF_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:348]
-WARNING: [Synth 8-6014] Unused sequential element FIFODec_OutMux_ppF_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:348]
-WARNING: [Synth 8-6014] Unused sequential element BU_FIFOMux_pp1_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:327]
-WARNING: [Synth 8-6014] Unused sequential element BU_FIFOMux_pp1_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:327]
-WARNING: [Synth 8-6014] Unused sequential element BU_FIFOMux_pp2_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:328]
-WARNING: [Synth 8-6014] Unused sequential element BU_FIFOMux_pp2_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:328]
-WARNING: [Synth 8-6014] Unused sequential element BU_FIFOMux_ppF_reg[1] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:329]
-WARNING: [Synth 8-6014] Unused sequential element BU_FIFOMux_ppF_reg[0] was removed.  [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:329]
-WARNING: [Synth 8-7129] Port Re_Data_in[7] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[6] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[5] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[4] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[3] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[2] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[1] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[0] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[7] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[6] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[5] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[4] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[3] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[2] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[1] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[0] in module SDF_Stage is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2607.898 ; gain = 0.000 ; free physical = 4453 ; free virtual = 11560
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2608.867 ; gain = 0.000 ; free physical = 3664 ; free virtual = 11163
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2607.898 ; gain = 0.000 ; free physical = 4449 ; free virtual = 11556
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2608.867 ; gain = 0.000 ; free physical = 3659 ; free virtual = 11158
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -126,20 +76,45 @@ Start Loading Part and Timing Information
 Loading part: xc7a12tcpg238-1
 INFO: [Device 21-403] Loading part xc7a12tcpg238-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2615.902 ; gain = 8.004 ; free physical = 4449 ; free virtual = 11556
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3658 ; free virtual = 11157
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:206]
-WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:273]
-WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:300]
-WARNING: [Synth 8-327] inferring latch for variable 'data_counter_reg' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:309]
-WARNING: [Synth 8-327] inferring latch for variable 'BU_ROT_reg[0]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:206]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFO_FIFODec_reg[1]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3656 ; free virtual = 11156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3656 ; free virtual = 11156
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'data_out_reg[0]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:359]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:303]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:276]
+WARNING: [Synth 8-327] inferring latch for variable 'ROT_OutMux_reg[0]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
 WARNING: [Synth 8-327] inferring latch for variable 'FIFO_FIFODec_reg[0]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
-WARNING: [Synth 8-327] inferring latch for variable 'TF_ROT_reg[1]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:226]
+WARNING: [Synth 8-327] inferring latch for variable 'data_out_reg[1]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:359]
+WARNING: [Synth 8-327] inferring latch for variable 'ROT_OutMux_reg[1]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFO_FIFODec_reg[1]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+WARNING: [Synth 8-327] inferring latch for variable 'BU_ROT_reg[0]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:206]
+WARNING: [Synth 8-327] inferring latch for variable 'BU_FIFOMux_reg[1]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:204]
 WARNING: [Synth 8-327] inferring latch for variable 'TF_ROT_reg[0]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:226]
+WARNING: [Synth 8-327] inferring latch for variable 'TF_ROT_reg[1]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:226]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFOMux_FIFO_reg[0]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:336]
+WARNING: [Synth 8-327] inferring latch for variable 'BU_FIFOMux_reg[0]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:204]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFOMux_FIFO_reg[1]' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:336]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2615.902 ; gain = 8.004 ; free physical = 4409 ; free virtual = 11517
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3609 ; free virtual = 11109
 ---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : synth_design options have changed between reference and incremental
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -151,15 +126,15 @@ Detailed RTL Component Info :
 	   2 Input    4 Bit       Adders := 1     
 +---Registers : 
 	                9 Bit    Registers := 6     
-	                8 Bit    Registers := 49    
+	                8 Bit    Registers := 92    
 	                4 Bit    Registers := 4     
-	                1 Bit    Registers := 8     
+	                1 Bit    Registers := 7     
 +---Muxes : 
-	   2 Input    8 Bit        Muxes := 28    
+	   2 Input    8 Bit        Muxes := 32    
 	   3 Input    8 Bit        Muxes := 4     
 	   8 Input    8 Bit        Muxes := 2     
-	   4 Input    4 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 6     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -177,29 +152,21 @@ No constraint files found.
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-7129] Port Re_Data_in[7] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[6] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[5] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[4] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[3] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[2] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[1] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Re_Data_in[0] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[7] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[6] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[5] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[4] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[3] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[2] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[1] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-7129] Port Im_Data_in[0] in module SDF_Stage is either unconnected or has no load
-WARNING: [Synth 8-3332] Sequential element (InDec_BU_reg[1][7]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (halfway_reg) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (halfway_reg__0) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (data_counter_reg[3]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (data_counter_reg[2]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (data_counter_reg[1]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (data_counter_reg[0]) is unused and will be removed from module SDF_Stage.
+WARNING: [Synth 8-3332] Sequential element (BU_FIFOMux_reg[1][6]) is unused and will be removed from module SDF_Stage.
+WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[0][0]) is unused and will be removed from module SDF_Stage.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3382 ; free virtual = 10883
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3380 ; free virtual = 10881
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
 WARNING: [Synth 8-3332] Sequential element (BU_ROT_reg[0][7]) is unused and will be removed from module SDF_Stage.
 WARNING: [Synth 8-3332] Sequential element (BU_ROT_reg[0][6]) is unused and will be removed from module SDF_Stage.
 WARNING: [Synth 8-3332] Sequential element (BU_ROT_reg[0][5]) is unused and will be removed from module SDF_Stage.
@@ -208,53 +175,235 @@ WARNING: [Synth 8-3332] Sequential element (BU_ROT_reg[0][3]) is unused and will
 WARNING: [Synth 8-3332] Sequential element (BU_ROT_reg[0][2]) is unused and will be removed from module SDF_Stage.
 WARNING: [Synth 8-3332] Sequential element (BU_ROT_reg[0][1]) is unused and will be removed from module SDF_Stage.
 WARNING: [Synth 8-3332] Sequential element (BU_ROT_reg[0][0]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[1][7]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[1][6]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[1][5]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[1][4]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[1][3]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[1][2]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[1][1]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[1][0]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[0][7]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[0][6]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[0][5]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[0][4]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[0][3]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[0][2]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[0][1]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (FIFO_FIFODec_reg[0][0]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[1][7]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[1][6]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[1][5]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[1][4]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[1][3]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[1][2]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[1][1]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[1][0]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[0][7]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[0][6]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[0][5]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[0][4]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[0][3]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[0][2]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[0][1]) is unused and will be removed from module SDF_Stage.
-WARNING: [Synth 8-3332] Sequential element (TF_ROT_reg[0][0]) is unused and will be removed from module SDF_Stage.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin I1 with 1st driver pin 'data_counter_ppF_reg[0]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:262]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin I1 with 2nd driver pin 'GND' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:262]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net I1 is connected to at least one constant driver which has been preserved, other driver is ignored [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:262]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Re[4] with 1st driver pin 'TF_ROM_inst/Twiddle_ROM[0][0]/O' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:84]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Re[4] with 2nd driver pin 'GND' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:84]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net TW_Re[4] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:84]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Re[5] with 1st driver pin 'TF_ROM_inst/Twiddle_ROM[0][0]__0/O' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:84]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Re[5] with 2nd driver pin 'GND' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:84]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net TW_Re[5] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:84]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Re[6] with 1st driver pin 'TF_ROM_inst/Twiddle_ROM[0][0]__1/Z' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:84]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Re[6] with 2nd driver pin 'GND' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:84]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net TW_Re[6] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:84]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Im[4] with 1st driver pin 'TF_ROM_inst/Twiddle_ROM[0][1]/O' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:85]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Im[4] with 2nd driver pin 'GND' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:85]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net TW_Im[4] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:85]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Im[5] with 1st driver pin 'TF_ROM_inst/Twiddle_ROM[0][1]__0/O' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:85]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Im[5] with 2nd driver pin 'GND' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:85]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net TW_Im[5] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:85]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Im[6] with 1st driver pin 'TF_ROM_inst/Twiddle_ROM[0][1]__1/Z' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:85]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Im[6] with 2nd driver pin 'GND' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:85]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net TW_Im[6] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd:85]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Re[7] with 1st driver pin 'i_119/Z' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Re[7] with 2nd driver pin 'GND' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:68]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net TW_Re[7] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Im[7] with 1st driver pin 'i_120/O' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:68]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin TW_Im[7] with 2nd driver pin 'GND' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:68]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net TW_Im[7] is connected to at least one constant driver which has been preserved, other driver is ignored [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:68]
+Found timing loop:
+     0: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     1: i_214/I4 (LUT5)
+     2: i_214/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I4 -to O i_214"
+Found timing loop:
+     0: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     1: i_214/I3 (LUT5)
+     2: i_220/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     3: i_220/I3 (LUT4)
+     4: i_215/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     5: i_215/I3 (LUT4)
+     6: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I3 -to O i_214"
+Found timing loop:
+     0: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     1: i_214/I1 (LUT5)
+     2: i_221/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     3: i_221/I4 (LUT5)
+     4: i_212/O (LUT6)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:463]
+     5: i_212/I5 (LUT6)
+     6: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I1 -to O i_214"
+Found timing loop:
+     0: i_221/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     1: i_221/I4 (LUT5)
+     2: i_212/O (LUT6)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:463]
+     3: i_212/I5 (LUT6)
+     4: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     5: i_214/I0 (LUT5)
+     6: i_214/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I4 -to O i_221"
+Found timing loop:
+     0: i_212/O (LUT6)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:463]
+     1: i_212/I5 (LUT6)
+     2: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     3: i_214/I2 (LUT5)
+     4: i_219/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     5: i_219/I4 (LUT5)
+     6: i_212/O (LUT6)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:463]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I5 -to O i_212"
+Found timing loop:
+     0: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     1: i_214/I2 (LUT5)
+     2: i_219/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     3: i_219/I4 (LUT5)
+     4: i_212/O (LUT6)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:463]
+     5: i_212/I4 (LUT6)
+     6: i_221/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     7: i_221/I3 (LUT5)
+     8: i_220/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     9: i_220/I3 (LUT4)
+    10: i_215/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+    11: i_215/I3 (LUT4)
+    12: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I2 -to O i_214"
+Found timing loop:
+     0: i_215/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     1: i_215/I3 (LUT4)
+     2: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     3: i_214/I0 (LUT5)
+     4: i_214/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I3 -to O i_215"
+Found timing loop:
+     0: i_220/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     1: i_220/I3 (LUT4)
+     2: i_215/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     3: i_215/I2 (LUT4)
+     4: i_221/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     5: i_221/I3 (LUT5)
+     6: i_220/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I3 -to O i_220"
+Found timing loop:
+     0: i_219/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     1: i_219/I4 (LUT5)
+     2: i_212/O (LUT6)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:463]
+     3: i_212/I4 (LUT6)
+     4: i_221/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     5: i_221/I3 (LUT5)
+     6: i_220/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     7: i_220/I2 (LUT4)
+     8: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     9: i_214/I0 (LUT5)
+    10: i_214/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I4 -to O i_219"
+Found timing loop:
+     0: i_220/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     1: i_220/I2 (LUT4)
+     2: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     3: i_214/I0 (LUT5)
+     4: i_214/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I2 -to O i_220"
+Found timing loop:
+     0: i_212/O (LUT6)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:463]
+     1: i_212/I4 (LUT6)
+     2: i_221/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     3: i_221/I3 (LUT5)
+     4: i_220/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     5: i_220/I1 (LUT4)
+     6: i_212/O (LUT6)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:463]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I4 -to O i_212"
+Found timing loop:
+     0: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     1: i_214/I0 (LUT5)
+     2: i_214/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I0 -to O i_214"
+Found timing loop:
+     0: i_220/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     1: i_220/I0 (LUT4)
+     2: i_220/O (LUT4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I0 -to O i_220"
+Found timing loop:
+     0: i_221/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     1: i_221/I3 (LUT5)
+     2: i_220/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     3: i_220/O (LUT4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I3 -to O i_221"
+Found timing loop:
+     0: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     1: i_214/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Found timing loop:
+     0: i_220/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     1: i_220/O (LUT4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Found timing loop:
+     0: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     1: i_214/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Found timing loop:
+     0: i_220/O (LUT4)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     1: i_220/O (LUT4)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Found timing loop:
+     0: i_214/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:462]
+     1: i_214/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2615.902 ; gain = 8.004 ; free physical = 4193 ; free virtual = 11293
----------------------------------------------------------------------------------
-No constraint files found.
----------------------------------------------------------------------------------
-Start Timing Optimization
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2615.902 ; gain = 8.004 ; free physical = 4192 ; free virtual = 11291
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Technology Mapping
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2615.902 ; gain = 8.004 ; free physical = 4192 ; free virtual = 11291
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3377 ; free virtual = 10878
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -272,37 +421,170 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2615.902 ; gain = 8.004 ; free physical = 4191 ; free virtual = 11291
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3383 ; free virtual = 10885
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2615.902 ; gain = 8.004 ; free physical = 4191 ; free virtual = 11291
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3383 ; free virtual = 10885
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[7] with 1st driver pin 'BU_inst/Im_FIFO_out_reg[7]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:59]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[7] with 2nd driver pin 'BU_inst/Re_FIFO_out_reg[7]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[7] with 3rd driver pin 'BU_FIFOMux_reg[0][7]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:204]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[6] with 1st driver pin 'BU_inst/Im_FIFO_out_reg[6]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:59]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[6] with 2nd driver pin 'BU_inst/Re_FIFO_out_reg[6]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[6] with 3rd driver pin 'BU_FIFOMux_reg[0][6]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:204]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[5] with 1st driver pin 'BU_inst/Im_FIFO_out_reg[5]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:59]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[5] with 2nd driver pin 'BU_inst/Re_FIFO_out_reg[5]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[5] with 3rd driver pin 'BU_FIFOMux_reg[0][5]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:204]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[4] with 1st driver pin 'BU_inst/Im_FIFO_out_reg[4]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:59]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[4] with 2nd driver pin 'BU_inst/Re_FIFO_out_reg[4]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[4] with 3rd driver pin 'BU_FIFOMux_reg[0][4]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:204]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[3] with 1st driver pin 'BU_inst/Im_FIFO_out_reg[3]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:59]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[3] with 2nd driver pin 'BU_inst/Re_FIFO_out_reg[3]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[3] with 3rd driver pin 'BU_FIFOMux_reg[0][3]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:204]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[2] with 1st driver pin 'BU_inst/Im_FIFO_out_reg[2]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:59]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[2] with 2nd driver pin 'BU_inst/Re_FIFO_out_reg[2]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[2] with 3rd driver pin 'BU_FIFOMux_reg[0][2]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:204]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[1] with 1st driver pin 'BU_inst/Im_FIFO_out_reg[1]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:59]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[1] with 2nd driver pin 'BU_inst/Re_FIFO_out_reg[1]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[1] with 3rd driver pin 'BU_FIFOMux_reg[0][1]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:204]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[0] with 1st driver pin 'BU_inst/Im_FIFO_out_reg[0]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:59]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[0] with 2nd driver pin 'BU_inst/Re_FIFO_out_reg[0]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd:58]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Re_FIFO_out[0] with 3rd driver pin 'BU_FIFOMux_reg[0][0]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:204]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][7] with 1st driver pin 'Rotator_inst/Re_Data_out_reg[7]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][7] with 2nd driver pin 'ROT_OutMux_reg[0][7]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][6] with 1st driver pin 'Rotator_inst/Re_Data_out_reg[6]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][6] with 2nd driver pin 'ROT_OutMux_reg[0][6]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][5] with 1st driver pin 'Rotator_inst/Re_Data_out_reg[5]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][5] with 2nd driver pin 'ROT_OutMux_reg[0][5]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][4] with 1st driver pin 'Rotator_inst/Re_Data_out_reg[4]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][4] with 2nd driver pin 'ROT_OutMux_reg[0][4]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][3] with 1st driver pin 'Rotator_inst/Re_Data_out_reg[3]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][3] with 2nd driver pin 'ROT_OutMux_reg[0][3]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][2] with 1st driver pin 'Rotator_inst/Re_Data_out_reg[2]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][2] with 2nd driver pin 'ROT_OutMux_reg[0][2]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][1] with 1st driver pin 'Rotator_inst/Re_Data_out_reg[1]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][1] with 2nd driver pin 'ROT_OutMux_reg[0][1]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][0] with 1st driver pin 'Rotator_inst/Re_Data_out_reg[0]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:79]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[0][0] with 2nd driver pin 'ROT_OutMux_reg[0][0]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][7] with 1st driver pin 'Rotator_inst/Im_Data_out_reg[7]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][7] with 2nd driver pin 'ROT_OutMux_reg[1][7]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][6] with 1st driver pin 'Rotator_inst/Im_Data_out_reg[6]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][6] with 2nd driver pin 'ROT_OutMux_reg[1][6]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][5] with 1st driver pin 'Rotator_inst/Im_Data_out_reg[5]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][5] with 2nd driver pin 'ROT_OutMux_reg[1][5]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][4] with 1st driver pin 'Rotator_inst/Im_Data_out_reg[4]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][4] with 2nd driver pin 'ROT_OutMux_reg[1][4]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][3] with 1st driver pin 'Rotator_inst/Im_Data_out_reg[3]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][3] with 2nd driver pin 'ROT_OutMux_reg[1][3]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][2] with 1st driver pin 'Rotator_inst/Im_Data_out_reg[2]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][2] with 2nd driver pin 'ROT_OutMux_reg[1][2]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][1] with 1st driver pin 'Rotator_inst/Im_Data_out_reg[1]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][1] with 2nd driver pin 'ROT_OutMux_reg[1][1]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][0] with 1st driver pin 'Rotator_inst/Im_Data_out_reg[0]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd:88]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin ROT_OutMux[1][0] with 2nd driver pin 'ROT_OutMux_reg[1][0]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:355]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[7] with 1st driver pin 'SR_FIFO_inst/temp_reg[15][0][7]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[7] with 2nd driver pin 'FIFO_FIFODec_reg[0][7]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[6] with 1st driver pin 'SR_FIFO_inst/temp_reg[15][0][6]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[6] with 2nd driver pin 'FIFO_FIFODec_reg[0][6]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[5] with 1st driver pin 'SR_FIFO_inst/temp_reg[15][0][5]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[5] with 2nd driver pin 'FIFO_FIFODec_reg[0][5]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[4] with 1st driver pin 'SR_FIFO_inst/temp_reg[15][0][4]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[4] with 2nd driver pin 'FIFO_FIFODec_reg[0][4]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[3] with 1st driver pin 'SR_FIFO_inst/temp_reg[15][0][3]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[3] with 2nd driver pin 'FIFO_FIFODec_reg[0][3]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[2] with 1st driver pin 'SR_FIFO_inst/temp_reg[15][0][2]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[2] with 2nd driver pin 'FIFO_FIFODec_reg[0][2]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[1] with 1st driver pin 'SR_FIFO_inst/temp_reg[15][0][1]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[1] with 2nd driver pin 'FIFO_FIFODec_reg[0][1]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[0] with 1st driver pin 'SR_FIFO_inst/temp_reg[15][0][0]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_RE[0] with 2nd driver pin 'FIFO_FIFODec_reg[0][0]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_IM[7] with 1st driver pin 'SR_FIFO_inst/temp_reg[15][1][7]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_IM[7] with 2nd driver pin 'FIFO_FIFODec_reg[1][7]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_IM[6] with 1st driver pin 'SR_FIFO_inst/temp_reg[15][1][6]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_IM[6] with 2nd driver pin 'FIFO_FIFODec_reg[1][6]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_IM[5] with 1st driver pin 'SR_FIFO_inst/temp_reg[15][1][5]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_IM[5] with 2nd driver pin 'FIFO_FIFODec_reg[1][5]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_IM[4] with 1st driver pin 'SR_FIFO_inst/temp_reg[15][1][4]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_IM[4] with 2nd driver pin 'FIFO_FIFODec_reg[1][4]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_IM[3] with 1st driver pin 'SR_FIFO_inst/temp_reg[15][1][3]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd:55]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin dout_IM[3] with 2nd driver pin 'FIFO_FIFODec_reg[1][3]/Q' [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:250]
+INFO: [Common 17-14] Message 'Synth 8-6859' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|       73|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+Found timing loop:
+     0: halfway_reg__0_i_1/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     1: halfway_reg__0_i_1/I1 (LUT5)
+     2: halfway_reg__0_i_1/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I1 -to O halfway_reg__0_i_1"
+Found timing loop:
+     0: halfway_reg__0_i_1/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     1: halfway_reg__0_i_1/I0 (LUT5)
+     2: halfway_reg__0_i_3/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     3: halfway_reg__0_i_3/I1 (LUT5)
+     4: halfway_reg__0_i_1/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I0 -to O halfway_reg__0_i_1"
+Found timing loop:
+     0: halfway_reg__0_i_3/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     1: halfway_reg__0_i_3/I1 (LUT5)
+     2: halfway_reg__0_i_1/O (LUT5)
+      [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+     3: halfway_reg__0_i_1/O (LUT5)
+CRITICAL WARNING: [Synth 8-295] found timing loop. [/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd:12]
+Inferred a: "set_disable_timing -from I1 -to O halfway_reg__0_i_3"
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2615.902 ; gain = 8.004 ; free physical = 4191 ; free virtual = 11291
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3383 ; free virtual = 10885
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2615.902 ; gain = 8.004 ; free physical = 4191 ; free virtual = 11291
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3382 ; free virtual = 10884
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2615.902 ; gain = 8.004 ; free physical = 4191 ; free virtual = 11291
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3381 ; free virtual = 10883
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2615.902 ; gain = 8.004 ; free physical = 4191 ; free virtual = 11291
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3381 ; free virtual = 10883
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                     | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|SDF_Stage   | halfway_ppF_reg              | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|SDF_Stage   | FIFODec_OutMux_ppF_reg[0][7] | 6      | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|SDF_Stage   | InDec_FIFOMux_ppF_reg[0][7]  | 6      | 16    | YES          | NO                 | YES               | 16     | 0       | 
++------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -315,37 +597,60 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |OBUF |    16|
-+------+-----+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    33|
+|3     |LUT1   |    28|
+|4     |LUT2   |    73|
+|5     |LUT3   |    64|
+|6     |LUT4   |    12|
+|7     |LUT5   |    21|
+|8     |LUT6   |    25|
+|9     |SRL16E |    33|
+|10    |FDCE   |   546|
+|11    |FDRE   |    42|
+|12    |FDSE   |     7|
+|13    |LD     |    73|
+|14    |LDC    |     1|
+|15    |IBUF   |    18|
+|16    |OBUF   |    16|
++------+-------+------+
 
 Report Instance Areas: 
-+------+---------+-------+------+
-|      |Instance |Module |Cells |
-+------+---------+-------+------+
-|1     |top      |       |    16|
-+------+---------+-------+------+
++------+---------------+--------+------+
+|      |Instance       |Module  |Cells |
++------+---------------+--------+------+
+|1     |top            |        |   994|
+|2     |  BU_inst      |R2_BU   |    72|
+|3     |  Rotator_inst |Rotator |   184|
+|4     |  SR_FIFO_inst |SR_FIFO |   256|
++------+---------------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2615.902 ; gain = 8.004 ; free physical = 4191 ; free virtual = 11291
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3381 ; free virtual = 10883
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 125 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2615.902 ; gain = 8.004 ; free physical = 4192 ; free virtual = 11291
-Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2615.910 ; gain = 8.004 ; free physical = 4192 ; free virtual = 11291
+Synthesis finished with 0 errors, 203 critical warnings and 29 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2616.871 ; gain = 8.004 ; free physical = 3382 ; free virtual = 10885
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2616.879 ; gain = 8.004 ; free physical = 3382 ; free virtual = 10885
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2615.910 ; gain = 0.000 ; free physical = 4281 ; free virtual = 11380
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2616.879 ; gain = 0.000 ; free physical = 3475 ; free virtual = 10977
+INFO: [Netlist 29-17] Analyzing 107 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2615.910 ; gain = 0.000 ; free physical = 4192 ; free virtual = 11292
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2640.883 ; gain = 0.000 ; free physical = 3391 ; free virtual = 10893
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 74 instances were transformed.
+  LD => LDCE: 73 instances
+  LDC => LDCE: 1 instance 
 
-Synth Design complete, checksum: 209b6cc7
+Synth Design complete, checksum: 5891a40e
 INFO: [Common 17-83] Releasing license: Synthesis
-28 Infos, 125 Warnings, 0 Critical Warnings and 0 Errors encountered.
+31 Infos, 29 Warnings, 131 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:15 . Memory (MB): peak = 2615.910 ; gain = 8.012 ; free physical = 4406 ; free virtual = 11506
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:20 . Memory (MB): peak = 2640.883 ; gain = 32.016 ; free physical = 3604 ; free virtual = 11106
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint '/home/fralenzi/SDF_proj_v1/SDF_proj_v1.runs/synth_1/SDF_Stage.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file SDF_Stage_utilization_synth.rpt -pb SDF_Stage_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 17 22:36:07 2022...
+INFO: [Common 17-206] Exiting Vivado at Sat Nov 19 12:17:32 2022...

@@ -116,7 +116,7 @@ List of all the source files present in the archived project:-
 None
 
 <sim_1>
-./SDF_proj_v1.srcs/sim_1/new/tb_Rot_ROM.vhd
+./SDF_proj_v1.srcs/sim_1/new/tb_SDF_Stage.vhd
 ./SDF_proj_v1.srcs/sim_1/imports/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
 
 <utils_1>

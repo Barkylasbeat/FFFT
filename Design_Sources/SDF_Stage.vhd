@@ -202,9 +202,9 @@ begin
             Im_FIFO_in     => FIFODec_BU_ppF(IM),
 
             Re_FIFO_out    => BU_FIFOMux(RE),
-            Im_FIFO_out    => BU_FIFOMux(RE),
+            Im_FIFO_out    => BU_FIFOMux(IM),
             Re_Data_out    => BU_ROT(RE),
-            Im_Data_out    => BU_ROT(RE)
+            Im_Data_out    => BU_ROT(IM)
         );
     
     --Complex Rotator Instantiation
@@ -273,7 +273,7 @@ begin
                 
 
 -----------------------------------------HALFWAY CONTROL-------------------------------------
-    halfway <=  '0' when data_counter < STAGE_POINTS/2 else
+    halfway <=  '0' when data_counter < STAGE_POINTS/2 or reset = '1' else
                 '1' when data_counter >= STAGE_POINTS/2;
 
 -------------------------------------------MUXES---------------------------------------------
@@ -300,7 +300,7 @@ begin
     begin
         if reset = '1' then
             
-            halfway                 <= '0';
+            --halfway                 <= '0';
             halfway_pp1             <= '0';
             halfway_pp2             <= '0';
             halfway_pp3             <= '0';
@@ -333,7 +333,7 @@ begin
 
             BU_ROT                  <= (Others => (Others => '0'));
 
-            FIFOMux_FIFO            <= (Others => (Others => '0'));
+            --FIFOMux_FIFO            <= (Others => (Others => '0'));
             FIFOMux_FIFO_ppF        <= (Others => (Others => '0'));
 
             FIFO_FIFODec            <= (Others => (Others => '0'));
@@ -356,7 +356,7 @@ begin
 
             Data_in_ppF             <= (Others => (Others => '0'));
 
-            data_out                <= (Others => (Others => '0'));
+            --data_out                <= (Others => (Others => '0'));
             data_out_ppF            <= (Others => (Others => '0'));
 
             state <= wait_sync;
@@ -369,7 +369,7 @@ begin
                 InDec_FIFOMux   <= Data_in_ppF;
                 --FIFO Decoder, first half of samples
                 FIFODec_OutMux  <= FIFO_FIFODec_ppF;
-            elsif halfway_ppF = '1' then
+            elsif halfway_pp1 = '1' then
                 --Input Decoder, second half of samples
                 InDec_BU        <= Data_in_ppF;
                 --FIFO Decoder, second half of samples
@@ -430,39 +430,39 @@ begin
 
             --Output register
             data_out_ppF        <= data_out;
-        end if;
 
-        if STAGE /= 1 then
-            case state is 
+            if STAGE /= 1 then
+                case state is 
 
-                when wait_sync =>
-                    
+                    when wait_sync =>
+                        
 
-                    --Wait for syncronization
-                    if data_counter < ((STAGE-1)*8)-1 then  -- Every stage has an input delay referred to the output
-                        data_counter <= data_counter + 1;   -- of the previous stage equal to the pipeline depth of
-                    else                                    -- the previous stage, i.e. 8 for every stage.
-                        data_counter <= 0;                  -- Referring to the first stage (since all counters start
-                        state <= go;                        -- simultaneously at startup), the input delay is the
-                    end if;                                 -- stage number (1st is 0) multiplied for the pp depth
+                        --Wait for syncronization
+                        if data_counter < ((STAGE-1)*8)-1 then  -- Every stage has an input delay referred to the output
+                            data_counter <= data_counter + 1;   -- of the previous stage equal to the pipeline depth of
+                        else                                    -- the previous stage, i.e. 8 for every stage.
+                            data_counter <= 0;                  -- Referring to the first stage (since all counters start
+                            state <= go;                        -- simultaneously at startup), the input delay is the
+                        end if;                                 -- stage number (1st is 0) multiplied for the pp depth
 
 
-                when go =>
+                    when go =>
 
-                    --Incrementing the counter in circular mode
-                    if data_counter < STAGE_POINTS-1 then 
-                        data_counter <= data_counter + 1;
-                    else
-                        data_counter <= 0;
-                    end if;
+                        --Incrementing the counter in circular mode
+                        if data_counter < STAGE_POINTS-1 then 
+                            data_counter <= data_counter + 1;
+                        else
+                            data_counter <= 0;
+                        end if;
 
-            end case;
-        else
-            --Incrementing the counter in circular mode
-            if data_counter < STAGE_POINTS-1 then 
-                data_counter <= data_counter + 1;
+                end case;
             else
-                data_counter <= 0;
+                --Incrementing the counter in circular mode
+                if data_counter < STAGE_POINTS-1 then 
+                    data_counter <= data_counter + 1;
+                else
+                    data_counter <= 0;
+                end if;
             end if;
         end if;
     end process;

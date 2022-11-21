@@ -1,7 +1,0 @@
-# compile vhdl design source files
-vhdl2008 xil_defaultlib  \
-"../../../../SDF_proj_v1.srcs/sources_1/new/Rotator.vhd" \
-"../../../../SDF_proj_v1.srcs/sim_1/new/tb_Rotator.vhd" \
-
-# Do not sort compile order
-nosort

@@ -19,16 +19,16 @@ architecture Behavioral of tb_SDF_Stage is
 
     constant FFT_TOT_POINTS : integer := 16;
     constant DATA_WIDTH     : integer := 16;
-    constant PRECISION      : integer := 3;
+    constant PRECISION      : integer := 0;
     constant TF_WIDTH       : integer := 8;
     constant STAGE          : integer := 1;
-    constant SR_INIT        : real    := 0.0;
+    constant SR_INIT        : real    := 9.0;
 
     component SDF_Stage is
         Generic(
             FFT_TOT_POINTS   : INTEGER  := 16;
             DATA_WIDTH       : NATURAL  := 8;
-            PRECISION        : NATURAL  := 3; 
+            PRECISION        : NATURAL  := 0; 
             TF_WIDTH         : POSITIVE := 8;
             STAGE            : POSITIVE := 1;
             SR_INIT          : REAL     := 0.0
@@ -47,7 +47,7 @@ architecture Behavioral of tb_SDF_Stage is
     
     end component;
 
-    signal clk   : std_logic := '0';
+    signal clk   : std_logic := '1';
     signal reset : std_logic := '0';
     
     signal Re_Data_in   : std_logic_vector(DATA_WIDTH-1  downto 0)   := (Others => '0');
@@ -92,21 +92,13 @@ begin
         reset <= '0';
         
 
-            for i in 0 to 10 loop
+            for i in 1 to 16 loop
                 Re_Data_in <= std_logic_vector(to_signed(i, Re_Data_in'length));
-                Im_Data_in <= std_logic_vector(to_signed(i,Im_Data_in'length));
+                Im_Data_in <= std_logic_vector(to_signed(i*10,Im_Data_in'length));
                 
                 wait until rising_edge(clk); 
             end loop;
             
-        reset <= '1';
-        
-        wait for RESET_WND;
-         
-        reset <= '0';
-        
-        Re_Data_in   <= "0111111111111111";        
-        
         wait;
         
     end process;

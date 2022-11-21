@@ -2,84 +2,15 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Nov 17 16:29:38 2022
-# Process ID: 2931
+# Start of session at: Mon Nov 21 10:23:23 2022
+# Process ID: 3145
 # Current directory: /home/fralenzi
 # Command line: vivado
 # Log file: /home/fralenzi/vivado.log
 # Journal file: /home/fralenzi/vivado.jou
-# Running On: PC-Fralenzi, OS: Linux, CPU Frequency: 1787.162 MHz, CPU Physical cores: 2, Host memory: 16462 MB
+# Running On: PC-Fralenzi, OS: Linux, CPU Frequency: 3699.998 MHz, CPU Physical cores: 2, Host memory: 16460 MB
 #-----------------------------------------------------------
 start_gui
 open_project /home/fralenzi/SDF_proj_v1/SDF_proj_v1.xpr
 update_compile_order -fileset sources_1
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_Rot-ROM.vhd w ]
-add_files -fileset sim_1 /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_Rot-ROM.vhd
-update_compile_order -fileset sim_1
-set_property file_type {VHDL 2008} [get_files  /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_Rot-ROM.vhd]
-export_ip_user_files -of_objects  [get_files /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_Rot-ROM.vhd] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_Rot-ROM.vhd
-file delete -force /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_Rot-ROM.vhd
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_Rot_ROM.vhd w ]
-add_files -fileset sim_1 /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_Rot_ROM.vhd
-update_compile_order -fileset sim_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top tb_Rot_ROM [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sim_1
-launch_simulation
-set_property file_type {VHDL 2008} [get_files  /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_Rot_ROM.vhd]
-launch_simulation
-source tb_Rot_ROM.tcl
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-save_wave_config {/home/fralenzi/SDF_proj_v1/tb_Rot_ROM_behav.wcfg}
-add_files -fileset sim_1 -norecurse /home/fralenzi/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
-set_property xsim.view /home/fralenzi/SDF_proj_v1/tb_Rot_ROM_behav.wcfg [get_filesets sim_1]
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top SR_FIFO [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top TF_ROM [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-refresh_design
-update_compile_order -fileset sources_1
-close_design
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-close_design
-close_sim
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top SDF_Stage [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
-launch_simulation
-open_wave_config /home/fralenzi/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
-source tb_Rot_ROM.tcl
-close_sim
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-close_design
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-close_design
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 2
-wait_on_run synth_1
 archive_project /home/fralenzi/SDF_proj_v1.xpr.zip -force -include_local_ip_cache -include_config_settings

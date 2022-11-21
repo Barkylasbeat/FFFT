@@ -1,6 +1,27 @@
-Vivado Simulator v2022.2
+Vivado Simulator v2022.1
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_Rotator_behav xil_defaultlib.tb_Rotator -log elaborate.log 
-Using 2 slave threads.
+Running: /tools/Xilinx/Vivado/2022.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot tb_SDF_Stage_behav xil_defaultlib.tb_SDF_Stage -log elaborate.log 
+Using 8 slave threads.
 Starting static elaboration
-ERROR: [XSIM 43-3294] Signal EXCEPTION_ACCESS_VIOLATION received.
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.math_real
+Compiling package ieee.math_complex
+Compiling package ieee.fixed_float_types
+Compiling package ieee.fixed_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.numeric_std_unsigned
+Compiling architecture behavioral of entity xil_defaultlib.R2_BU [\R2_BU(data_width=16,precision=0...]
+Compiling architecture behavioral of entity xil_defaultlib.Rotator [\Rotator(data_width=16,precision...]
+Compiling architecture behavioral of entity xil_defaultlib.SR_FIFO [\SR_FIFO(sr_width=16,sr_depth=16...]
+Compiling architecture behavioral of entity xil_defaultlib.TF_ROM [\TF_ROM(addr_length=3)\]
+Compiling architecture behavioral of entity xil_defaultlib.SDF_Stage [\SDF_Stage(data_width=16,precisi...]
+Compiling architecture behavioral of entity xil_defaultlib.tb_sdf_stage
+Built simulation snapshot tb_SDF_Stage_behav
