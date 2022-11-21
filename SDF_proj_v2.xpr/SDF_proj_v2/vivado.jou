@@ -1,0 +1,123 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Mon Nov 21 10:50:46 2022
+# Process ID: 2513
+# Current directory: /home/fralenzi
+# Command line: vivado
+# Log file: /home/fralenzi/vivado.log
+# Journal file: /home/fralenzi/vivado.jou
+# Running On: PC-Fralenzi, OS: Linux, CPU Frequency: 2600.000 MHz, CPU Physical cores: 2, Host memory: 16460 MB
+#-----------------------------------------------------------
+start_gui
+create_project SDF_proj_v2 /home/fralenzi/SDF_proj_v2 -part xc7a35tcpg236-1
+set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
+set_property target_language VHDL [current_project]
+add_files -norecurse {/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/Rotator.vhd /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/R2_BU.vhd /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SR_FIFO.vhd /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/TF_ROM.vhd}
+import_files -force -norecurse
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse {/home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_Rotator.vhd /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_R2_BU.vhd /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_Rot_ROM.vhd /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_TF_ROM.vhd /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_SDF_Stage.vhd /home/fralenzi/SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_SR_FIFO.vhd}
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+set_property file_type {VHDL 2008} [get_files  /home/fralenzi/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/R2_BU.vhd]
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top R2_BU [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_R2_BU [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+set_property file_type {VHDL 2008} [get_files  /home/fralenzi/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/new/tb_R2_BU.vhd]
+launch_simulation
+source tb_R2_BU.tcl
+relaunch_sim
+refresh_design
+close_sim
+launch_simulation
+source tb_R2_BU.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+close_sim
+close_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Rotator [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+set_property file_type {VHDL 2008} [get_files  /home/fralenzi/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/Rotator.vhd]
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_Rotator [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse /home/fralenzi/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_Rot_ROM [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+set_property file_type {VHDL 2008} [get_files  /home/fralenzi/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/new/tb_Rot_ROM.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/fralenzi/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/fralenzi/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/fralenzi/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/new/tb_Rotator.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/fralenzi/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/new/tb_SDF_Stage.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/fralenzi/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/new/tb_SR_FIFO.vhd]
+set_property file_type {VHDL 2008} [get_files  /home/fralenzi/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/new/tb_TF_ROM.vhd]
+launch_simulation
+open_wave_config /home/fralenzi/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
+source tb_Rot_ROM.tcl
+relaunch_sim
+save_wave_config {/home/fralenzi/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v1/tb_Rot_ROM_behav.wcfg}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top SDF_Stage [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+close_sim
+close_design
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_SDF_Stage [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config /home/fralenzi/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
+source tb_SDF_Stage.tcl
+relaunch_sim
+close_sim
+archive_project /home/fralenzi/SDF_proj_v2.xpr.zip -force -include_local_ip_cache -include_config_settings
