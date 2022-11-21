@@ -8,6 +8,7 @@ use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std_unsigned.all;
 
+-- NOT PIPELINED IMPLEMENTATION
 
 entity R2_BU is
     Generic(
@@ -17,7 +18,7 @@ entity R2_BU is
     Port(
 
         reset          :   in STD_LOGIC;
-        clk            :   in STD_LOGIC;
+--        clk            :   in STD_LOGIC;
         
         Re_Data_in     :   in STD_LOGIC_VECTOR(DATA_WIDTH-1  downto 0);
         Im_Data_in     :   in STD_LOGIC_VECTOR(DATA_WIDTH-1  downto 0);
@@ -49,8 +50,8 @@ architecture Behavioral of R2_BU is
     constant LOWER_BOUND  : sfixed(DATA_WIDTH-PRECISION-1 downto -PRECISION)  := (DATA_WIDTH-PRECISION-1 => '1' , Others => '0');
 
 begin
-
-    process (clk,reset)
+    
+    process (all)
     begin
         if reset = '1' then
             FIFO_sum <= (Others => ( others => '0'));
@@ -61,7 +62,7 @@ begin
             Im_Data_out <= ( others => '0');
             
             
-        elsif rising_edge(clk) then
+        else
 
             FIFO_sum(RE) <= to_sfixed(Re_Data_in, DATA_WIDTH-PRECISION-1, -PRECISION) 
                             + to_sfixed(Re_FIFO_in, DATA_WIDTH-PRECISION-1, -PRECISION);

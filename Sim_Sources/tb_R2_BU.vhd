@@ -14,10 +14,9 @@ end tb_R2_BU;
     
 architecture Behavioral of tb_R2_BU is
 
-    constant CLK_PERIOD : time := 10 ns;
     constant RESET_WND  : time := 50 ns; 
 
-    constant DATA_WIDTH : integer := 16;
+    constant DATA_WIDTH : integer := 8;
     constant PRECISION  : integer := 0;
 
     component R2_BU is
@@ -28,7 +27,6 @@ architecture Behavioral of tb_R2_BU is
         Port(
             --------Reset/Clock--------
             reset          :   in STD_LOGIC;
-            clk            :   in STD_LOGIC;
             ---------------------------
             -------------Data----------          
             Re_Data_in     :   in STD_LOGIC_VECTOR(DATA_WIDTH-1  downto 0);
@@ -43,7 +41,6 @@ architecture Behavioral of tb_R2_BU is
          );
     end component;
 
-    signal clk   : std_logic := '0';
     signal reset : std_logic := '0';
     
     signal Re_Data_in   : std_logic_vector(DATA_WIDTH-1  downto 0)   := (Others => '0');
@@ -67,7 +64,6 @@ begin
         Port Map(
             --------Reset/Clock--------
             reset          => reset,
-            clk            => clk,
             ---------------------------
             -------------Data----------          
             Re_Data_in     => Re_Data_in,
@@ -80,8 +76,6 @@ begin
             Re_Data_out    => Re_Data_out,
             Im_Data_out    => Im_Data_out
         );
-
-    clk <= not clk after CLK_PERIOD/2;
 
     elaboration_test : process
     begin
@@ -100,19 +94,22 @@ begin
                 Re_FIFO_in <= std_logic_vector(to_signed(i,Re_FIFO_in'length));
                 Im_FIFO_in <= std_logic_vector(to_signed(i,Re_FIFO_in'length));
                 
-                wait until rising_edge(clk); 
+                wait for 20 ns;
             end loop;
             
-        reset <= '1';
+            wait for 50 ns;
+
+            Re_Data_in <= "01111111";
+            Re_FIFO_in <= "01111111";
+            Im_Data_in <= "01111111";
+            Im_FIFO_in <= "01111111";
         
-        wait for RESET_WND;
-         
-        reset <= '0';
-        
-        Re_Data_in   <= "0111111111111111";   
-        Re_FIFO_in   <= "0111111111111111";
-        
-        
+            wait for 50 ns;
+            
+            Re_Data_in <= "10000000";
+            Re_FIFO_in <= "10000000";
+            Im_Data_in <= "10000000";
+            Im_FIFO_in <= "10000000";
         wait;
         
     end process;
