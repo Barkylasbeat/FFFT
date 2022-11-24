@@ -139,14 +139,14 @@ architecture Behavioral of SDF_Stage is
 
 ---------------------------------------WIRING------------------------------------------------
     -- Rationale of the wire names: origin_destination
-    signal InDec_BU, InDec_FIFOMux              : CPLX_SLV;
-    signal BU_FIFOMux, BU_ROT                   : CPLX_SLV;
-    signal FIFOMux_FIFO                         : CPLX_SLV;
-    signal FIFO_FIFODec                         : CPLX_SLV;
-    signal FIFODec_BU, FIFODec_OutMux           : CPLX_SLV;
-    signal TF_ROT                               : CPLX_SLV_TF;
-    signal ROT_OutMux                           : CPLX_SLV;
-    signal data_out                             : CPLX_SLV;
+    signal InDec_BU, InDec_FIFOMux              : CPLX_SLV      := (Others => (Others => '0'));
+    signal BU_FIFOMux, BU_ROT                   : CPLX_SLV      := (Others => (Others => '0'));
+    signal FIFOMux_FIFO                         : CPLX_SLV      := (Others => (Others => '0'));
+    signal FIFO_FIFODec                         : CPLX_SLV      := (Others => (Others => '0'));
+    signal FIFODec_BU, FIFODec_OutMux           : CPLX_SLV      := (Others => (Others => '0'));
+    signal TF_ROT                               : CPLX_SLV_TF   := (Others => (Others => '0'));
+    signal ROT_OutMux                           : CPLX_SLV      := (Others => (Others => '0'));
+    signal data_out                             : CPLX_SLV      := (Others => (Others => '0'));
 
     signal halfway                              : std_logic;
 -------------------------------------END_WIRING---------------------------------------------
@@ -156,11 +156,11 @@ architecture Behavioral of SDF_Stage is
 
     signal halfway_pp1, halfway_pp2, halfway_ppF    :   std_logic := '0';
     
-    signal Data_in_ppF                              :   CPLX_SLV;
-    signal BU_ROT_ppF                               :   CPLX_SLV;
-    signal FIFODec_OutMux_pp1, FIFODec_OutMux_ppF   :   CPLX_SLV;
-    signal FIFOMux_FIFO_ppF                         :   CPLX_SLV;
-    signal data_out_ppF                             :   CPLX_SLV;
+    signal Data_in_ppF                              :   CPLX_SLV    := (Others => (Others => '0'));
+    signal BU_ROT_ppF                               :   CPLX_SLV    := (Others => (Others => '0'));
+    signal FIFODec_OutMux_pp1, FIFODec_OutMux_ppF   :   CPLX_SLV    := (Others => (Others => '0'));
+    --signal FIFOMux_FIFO_ppF                         :   CPLX_SLV    := (Others => (Others => '0'));
+    signal data_out_ppF                             :   CPLX_SLV    := (Others => (Others => '0'));
 --------------------------------END_PIPELINE_REGISTERS--------------------------------------
 
 
@@ -216,7 +216,7 @@ begin
     SR_FIFO_inst: SR_FIFO 
         Generic Map(
             SR_WIDTH    => DATA_WIDTH,
-            SR_DEPTH    => STAGE_POINTS,
+            SR_DEPTH    => STAGE_POINTS/2,
             SR_INIT     => SR_INIT,
             PRECISION   => PRECISION
         )
@@ -226,8 +226,8 @@ begin
             clk         => clk,
             -------------------------
             ----------Data-----------
-            din_RE      => FIFOMux_FIFO_ppF(RE),
-            din_IM      => FIFOMux_FIFO_ppF(IM),
+            din_RE      => FIFOMux_FIFO(RE),
+            din_IM      => FIFOMux_FIFO(IM),
 
             dout_RE     => FIFO_FIFODec(RE),
             dout_IM     => FIFO_FIFODec(IM)
@@ -256,12 +256,12 @@ begin
                 '1' when data_counter >= STAGE_POINTS/2;
 
 -------------------------------------------MUXES---------------------------------------------
-    -- --OUTPUT MUXES
-    -- with halfway_ppF select data_out        <=  FIFODec_OutMux_ppF  when '0',
-    --                                             ROT_OutMux          when Others;
+    --OUTPUT MUXES
+     with halfway_ppF select data_out        <=  FIFODec_OutMux_ppF  when '0',
+                                                 ROT_OutMux          when Others;
 
-    -- with halfway_pp1 select FIFOMux_FIFO    <=  InDec_FIFOMux       when '0',
-    --                                             BU_FIFOMux          when Others;
+     with halfway_pp1 select FIFOMux_FIFO    <=  InDec_FIFOMux       when '0',
+                                                 BU_FIFOMux          when Others;
 -----------------------------------------END_MUXES-------------------------------------------
     --Connecting outputs
     Re_Data_out     <= data_out_ppF(RE);
@@ -284,30 +284,30 @@ begin
             data_counter_pp1        <= 0;
             data_counter_ppF        <= 0;
 
-            InDec_BU                <= (Others => (Others => '0'));
+            --InDec_BU                <= (Others => (Others => '0'));
 
-            InDec_FIFOMux           <= (Others => (Others => '0'));
+            --InDec_FIFOMux           <= (Others => (Others => '0'));
 
-            BU_FIFOMux              <= (Others => (Others => '0'));
+            --BU_FIFOMux              <= (Others => (Others => '0'));
 
-            BU_ROT                  <= (Others => (Others => '0'));
+            --BU_ROT                  <= (Others => (Others => '0'));
             
-            FIFOMux_FIFO            <= (Others => (Others => '0'));
-            FIFOMux_FIFO_ppF        <= (Others => (Others => '0'));
+            --FIFOMux_FIFO            <= (Others => (Others => '0'));
+            --FIFOMux_FIFO_ppF        <= (Others => (Others => '0'));
 
-            FIFO_FIFODec            <= (Others => (Others => '0'));
+            --FIFO_FIFODec            <= (Others => (Others => '0'));
 
-            FIFODec_BU              <= (Others => (Others => '0'));
+            --FIFODec_BU              <= (Others => (Others => '0'));
 
             BU_ROT_ppF              <= (Others => (Others => '0'));
 
-            FIFODec_OutMux          <= (Others => (Others => '0'));
+            --FIFODec_OutMux          <= (Others => (Others => '0'));
             FIFODec_OutMux_pp1      <= (Others => (Others => '0'));
             FIFODec_OutMux_ppF      <= (Others => (Others => '0'));
 
-            TF_ROT                  <= (Others => (Others => '0'));
+            --TF_ROT                  <= (Others => (Others => '0'));
 
-            ROT_OutMux              <= (Others => (Others => '0'));
+            --ROT_OutMux              <= (Others => (Others => '0'));
 
             Data_in_ppF             <= (Others => (Others => '0'));
 
@@ -332,12 +332,9 @@ begin
             Data_in_ppF(IM)     <= Im_Data_in;
 
             --FIFOMux to FIFO
-            FIFOMux_FIFO_ppF    <= FIFOMux_FIFO;
+            --FIFOMux_FIFO_ppF    <= FIFOMux_FIFO;
 
-            --FIFODec to OutMux
-            FIFODec_OutMux_pp1  <= FIFODec_OutMux;
-            FIFODec_OutMux_ppF  <= FIFODec_OutMux_pp1;
-
+            --FIFODec to OutMux halfway_ppF)
             --BU ROT
             BU_ROT_ppF          <= BU_ROT;
 
@@ -381,36 +378,40 @@ begin
 -- END CONTROL PROCESS
 
 
-    mux_dec_process : process (halfway_pp1, halfway_ppF)
+    mux_dec_process : process (Data_in_ppF, halfway_pp1, FIFO_FIFODec)
     begin
 
         --DECODERS LOGIC
         if halfway_pp1 = '0' then
             --Input Decoder, first half of samples
             InDec_FIFOMux   <= Data_in_ppF;
-            --FIFO Decoder, first half of samples
-            FIFODec_OutMux  <= FIFO_FIFODec;
         elsif halfway_pp1 = '1' then
             --Input Decoder, second half of samples
             InDec_BU        <= Data_in_ppF;
+        end if;
+
+        if halfway_pp1 = '0' then
+            --FIFO Decoder, first half of samples
+            FIFODec_OutMux  <= FIFO_FIFODec;
+        elsif halfway_pp1 = '1' then
             --FIFO Decoder, second half of samples
             FIFODec_BU      <= FIFO_FIFODec;
         end if;
 
         -- MUX LOGIC
         -- FIFO input mux
-        if halfway_pp1 = '0' then
-            FIFOMux_FIFO <= InDec_FIFOMux;
-        else
-            FIFOMux_FIFO <= BU_FIFOMux;
-        end if;
+        --if halfway_pp1 = '0' then
+        --    FIFOMux_FIFO <= InDec_FIFOMux;
+        --else
+        --    FIFOMux_FIFO <= BU_FIFOMux;
+        --end if;
         
         -- Output Mux
-        if halfway_ppF = '0' then
-            data_out <= FIFODec_OutMux_ppF;
-        else
-            data_out <= ROT_OutMux;
-        end if;
+        --if halfway_ppF = '0' then
+        --    data_out <= FIFODec_OutMux_ppF;
+        --else
+        --    data_out <= ROT_OutMux;
+        --end if;
         
     end process;
 

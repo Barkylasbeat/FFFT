@@ -3,10 +3,10 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="60" Path="/home/fralenzi/.Xil/Vivado-2513-PC-Fralenzi/PrjAr/_X_/SDF_proj_v2.xpr">
+<Project Version="7" Minor="60" Path="/home/fralenzi/.Xil/Vivado-2603-PC-Fralenzi/PrjAr/_X_/SDF_proj_v2.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="0475a85e83f0425c8b20a8ad1177da88"/>
+    <Option Name="Id" Val="d49cf43dec12425dbd2d8a77e95c211d"/>
     <Option Name="Part" Val="xc7a35tcpg236-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -58,7 +58,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="basys3"/>
-    <Option Name="WTXSimLaunchSim" Val="18"/>
+    <Option Name="WTXSimLaunchSim" Val="162"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -151,6 +151,24 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sim_1/imports/new/tb_R2_BU.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_R2_BU.vhd"/>
+          <Attr Name="ImportTime" Val="1668550203"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/new/tb_SR_FIFO.vhd">
+        <FileInfo SFType="VHDL2008">
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_SR_FIFO.vhd"/>
+          <Attr Name="ImportTime" Val="1668615428"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sim_1/imports/new/tb_Rot_ROM.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="AutoDisabled" Val="1"/>
@@ -169,15 +187,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/imports/new/tb_R2_BU.vhd">
-        <FileInfo SFType="VHDL2008">
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_R2_BU.vhd"/>
-          <Attr Name="ImportTime" Val="1668550203"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sim_1/imports/new/tb_TF_ROM.vhd">
         <FileInfo SFType="VHDL2008">
           <Attr Name="AutoDisabled" Val="1"/>
@@ -187,19 +196,17 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/imports/new/tb_SR_FIFO.vhd">
-        <FileInfo SFType="VHDL2008">
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../../../../SDF_proj_v1/SDF_proj_v1.srcs/sim_1/new/tb_SR_FIFO.vhd"/>
-          <Attr Name="ImportTime" Val="1668615428"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sim_1/imports/SDF_proj_v1/tb_Rot_ROM_behav.wcfg">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../../SDF_proj_v1/tb_Rot_ROM_behav.wcfg"/>
           <Attr Name="ImportTime" Val="1668704480"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sim_1/imports/SDF_proj_v2/tb_SDF_Stage_behav.wcfg">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../SDF_proj_v2/tb_SDF_Stage_behav.wcfg"/>
+          <Attr Name="ImportTime" Val="1669143164"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -215,6 +222,7 @@
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
         <Option Name="PamPseudoTop" Val="pseudo_tb"/>
         <Option Name="SrcSet" Val="sources_1"/>
+        <Option Name="XSimWcfgFile" Val="$PPRDIR/../../../../SDF_proj_v2/tb_SDF_Stage_behav.wcfg"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">

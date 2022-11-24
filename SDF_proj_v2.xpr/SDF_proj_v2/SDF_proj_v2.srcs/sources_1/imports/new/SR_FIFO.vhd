@@ -39,7 +39,7 @@ architecture Behavioral of SR_FIFO is
     type CPLX is array (1 downto 0) of std_logic_vector(SR_WIDTH-1 downto 0);
     type data is array (0 to SR_DEPTH-1) of CPLX;
 
-    signal temp : data;
+    signal FIFO : data;
     
     constant RE : integer := 0;
     constant IM : integer := 1;
@@ -52,22 +52,22 @@ begin
     begin
     
         if reset = '1' then
-            temp    <= (Others => ( Others => to_slv(to_sfixed(SR_INIT, SR_WIDTH-PRECISION-1, -PRECISION))));
+            FIFO    <= (Others => ( Others => to_slv(to_sfixed(SR_INIT, SR_WIDTH-PRECISION-1, -PRECISION))));
 
         elsif rising_edge(clk) then
 
-            temp(0)(RE)     <= din_RE;
-            temp(0)(IM)     <= din_IM;
+            FIFO(0)(RE)     <= din_RE;
+            FIFO(0)(IM)     <= din_IM;
 
             for I in 1 to SR_DEPTH-1 loop 
-                temp(I) <= temp(I-1);
+                FIFO(I) <= FIFO(I-1);
             end loop;
 
         end if;
     
     end process;
     
-    dout_RE <= temp(SR_DEPTH-1)(RE);
-    dout_IM <= temp(SR_DEPTH-1)(IM);
+    dout_RE <= FIFO(SR_DEPTH-1)(RE);
+    dout_IM <= FIFO(SR_DEPTH-1)(IM);
 
 end Behavioral;

@@ -93,7 +93,7 @@ List of referenced 'remote' design files that were 'imported' into the archived 
 None
 
 <sim_1>
-None
+/home/fralenzi/SDF_proj_v2/tb_SDF_Stage_behav.wcfg
 
 <sources_1>
 None
@@ -118,6 +118,7 @@ None
 <sim_1>
 ./SDF_proj_v2.srcs/sim_1/imports/new/tb_SDF_Stage.vhd
 ./SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
+./SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v2/tb_SDF_Stage_behav.wcfg
 
 <utils_1>
 None
