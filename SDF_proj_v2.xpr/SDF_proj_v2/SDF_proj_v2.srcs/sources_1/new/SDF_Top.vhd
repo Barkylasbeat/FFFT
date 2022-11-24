@@ -60,7 +60,7 @@ Architecture Behavioral of SDF_Top is
     constant RE               : integer := 0;
     constant IM               : integer := 1; 
 
-    constant NUM_STAGES     :   integer := integer(CEIL(LOG(Real(FFT_TOT_POINTS))));
+    constant NUM_STAGES     :   integer := integer(CEIL(LOG2(Real(FFT_TOT_POINTS))));
 
     ---------------------------------------WIRING------------------------------------------------
     type CPLX_SLV    is array(1 downto 0) of std_logic_vector(DATA_WIDTH-1 downto 0);

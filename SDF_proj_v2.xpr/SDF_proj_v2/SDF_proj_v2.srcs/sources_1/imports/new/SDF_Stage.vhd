@@ -122,7 +122,7 @@ architecture Behavioral of SDF_Stage is
     constant IM               : integer := 1;    
     constant STAGE_POINTS     : integer := FFT_TOT_POINTS/(2**(STAGE-1));
     constant TF_POINTS        : integer := FFT_TOT_POINTS/(2**STAGE); 
-    constant ADDR_LENGTH      : integer := integer(CEIL(LOG(Real(STAGE_POINTS))));
+    constant ADDR_LENGTH      : integer := integer(CEIL(LOG2(Real(STAGE_POINTS))));
 -----------------------------------END_CONSTANTS---------------------------------------------
 
 ---------------------------------------TYPES-------------------------------------------------
@@ -155,7 +155,7 @@ architecture Behavioral of SDF_Stage is
 ---------------------------------PIPELINE_REGISTERS-----------------------------------------
     signal data_counter_pp1, data_counter_ppF       :   integer range 0 to STAGE_POINTS-1 := 0;
 
-    signal halfway_pp1, halfway_pp2, halfway_ppF    :   std_logic := '0';
+    signal halfway_pp1, halfway_pp2, halfway_ppF    :   std_logic   := '0';
     
     signal Data_in_ppF                              :   CPLX_SLV    := (Others => (Others => '0'));
     signal BU_ROT_ppF                               :   CPLX_SLV    := (Others => (Others => '0'));
