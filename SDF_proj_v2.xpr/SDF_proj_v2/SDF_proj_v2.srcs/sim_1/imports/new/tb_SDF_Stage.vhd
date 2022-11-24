@@ -21,7 +21,7 @@ architecture Behavioral of tb_SDF_Stage is
     constant DATA_WIDTH     : integer := 16;
     constant PRECISION      : integer := 0;
     constant TF_WIDTH       : integer := 8;
-    constant STAGE          : integer := 1;
+    constant STAGE          : integer := 3;
     constant SR_INIT        : real    := 0.0;
 
     component SDF_Stage is
@@ -90,9 +90,18 @@ begin
         wait for RESET_WND;
         
         reset <= '0';
+
+        wait for (STAGE-1)*4*CLK_PERIOD;
         
 
-            for i in 1 to 16 loop
+            for i in 1 to FFT_TOT_POINTS loop
+                Re_Data_in <= std_logic_vector(to_signed(i*(i+1), Re_Data_in'length));
+                Im_Data_in <= std_logic_vector(to_signed(i*10,Im_Data_in'length));
+                
+                wait until rising_edge(clk); 
+            end loop;
+
+            for i in 1 to FFT_TOT_POINTS loop
                 Re_Data_in <= std_logic_vector(to_signed(i*(i+1), Re_Data_in'length));
                 Im_Data_in <= std_logic_vector(to_signed(i*10,Im_Data_in'length));
                 

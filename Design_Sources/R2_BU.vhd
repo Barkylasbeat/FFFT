@@ -54,8 +54,8 @@ begin
     process (all)
     begin
         if reset = '1' then
-            FIFO_sum <= (Others => ( others => '0'));
-            Data_sum <= (Others => ( others => '0'));
+            FIFO_sum    <= (Others => ( others => '0'));
+            Data_sum    <= (Others => ( others => '0'));
             Re_FIFO_out <= ( others => '0');
             Im_FIFO_out <= ( others => '0');
             Re_Data_out <= ( others => '0');
@@ -74,6 +74,12 @@ begin
             Data_sum(IM) <= to_sfixed(Im_Data_in, DATA_WIDTH-PRECISION-1, -PRECISION) 
                             - to_sfixed(Im_FIFO_in, DATA_WIDTH-PRECISION-1, -PRECISION);
     
+
+
+            -- Re_FIFO_out	<= resize(to_slv(FIFO_sum(RE)), Re_Data_in);
+            -- Im_FIFO_out	<= resize(to_slv(FIFO_sum(IM)), Re_Data_in);
+            -- Re_Data_out	<= resize(to_slv(Data_sum(RE)), Re_Data_in);
+            -- Im_Data_out	<= (others => '1');
             -- Saturate the sample if we exceed the maximum/mininum value
             
             --Management of data saturation : Real Output for FIFO

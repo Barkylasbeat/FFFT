@@ -22,7 +22,7 @@ architecture Behavioral of tb_SDF_Stage is
     constant PRECISION      : integer := 0;
     constant TF_WIDTH       : integer := 8;
     constant STAGE          : integer := 1;
-    constant SR_INIT        : real    := 9.0;
+    constant SR_INIT        : real    := 0.0;
 
     component SDF_Stage is
         Generic(
@@ -93,7 +93,14 @@ begin
         
 
             for i in 1 to 16 loop
-                Re_Data_in <= std_logic_vector(to_signed(i, Re_Data_in'length));
+                Re_Data_in <= std_logic_vector(to_signed(i*(i+1), Re_Data_in'length));
+                Im_Data_in <= std_logic_vector(to_signed(i*10,Im_Data_in'length));
+                
+                wait until rising_edge(clk); 
+            end loop;
+
+            for i in 1 to 16 loop
+                Re_Data_in <= std_logic_vector(to_signed(i*(i+1), Re_Data_in'length));
                 Im_Data_in <= std_logic_vector(to_signed(i*10,Im_Data_in'length));
                 
                 wait until rising_edge(clk); 

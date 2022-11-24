@@ -12,8 +12,8 @@ use ieee.numeric_std_unsigned.all;
 entity SDF_Stage is
     Generic(
         FFT_TOT_POINTS   : INTEGER  := 16;
-        DATA_WIDTH       : NATURAL  := 8;
-        PRECISION        : NATURAL  := 3; 
+        DATA_WIDTH       : NATURAL  := 32;
+        PRECISION        : NATURAL  := 6; 
         TF_WIDTH         : POSITIVE := 8;
         STAGE            : POSITIVE := 1;
         SR_INIT          : REAL     := 0.0
@@ -83,9 +83,9 @@ architecture Behavioral of SDF_Stage is
 
     component SR_FIFO is
         Generic(
-            SR_WIDTH    :   POSITIVE    := 8;    --The width of the data
-            SR_DEPTH    :   POSITIVE    := 4;    --Lenght of the FIFO
-            SR_INIT     :   REAL        := 0.0;  --Initialization values
+            SR_WIDTH    :   POSITIVE    := 8;    
+            SR_DEPTH    :   POSITIVE    := 4;    
+            SR_INIT     :   REAL        := 0.0;  
             PRECISION   :   NATURAL     := 6
         );
         Port(
@@ -105,14 +105,14 @@ architecture Behavioral of SDF_Stage is
     component TF_ROM is
         Generic(
             ADDR_LENGTH      : POSITIVE := 11;
-            TF_WIDTH         : POSITIVE := 8 -- with precision=6 we have 8-bit for every address 
+            TF_WIDTH         : POSITIVE := 8 
         );
         Port(
 
             address          :   in  STD_LOGIC_VECTOR(ADDR_LENGTH-1 downto 0);
             
-            TW_Re            :   out STD_LOGIC_VECTOR(TF_WIDTH-1 downto 0); --cosine
-            TW_Im            :   out STD_LOGIC_VECTOR(TF_WIDTH-1 downto 0)  --negated sine
+            TW_Re            :   out STD_LOGIC_VECTOR(TF_WIDTH-1 downto 0); 
+            TW_Im            :   out STD_LOGIC_VECTOR(TF_WIDTH-1 downto 0) 
         );
     end component;
 ---------------------------------END_COMPONENTS----------------------------------------------
@@ -120,7 +120,7 @@ architecture Behavioral of SDF_Stage is
 ------------------------------------CONSTANTS------------------------------------------------
     constant RE               : integer := 0;
     constant IM               : integer := 1;    
-    constant STAGE_POINTS     : integer := FFT_TOT_POINTS/(2**STAGE-1);
+    constant STAGE_POINTS     : integer := FFT_TOT_POINTS/(2**(STAGE-1));
     constant TF_POINTS        : integer := FFT_TOT_POINTS/(2**STAGE); 
     constant ADDR_LENGTH      : integer := integer(CEIL(LOG(Real(STAGE_POINTS))));
 -----------------------------------END_CONSTANTS---------------------------------------------
@@ -134,6 +134,7 @@ architecture Behavioral of SDF_Stage is
 
 ------------------------------CONTROL_SIGNALS/REGISTERS--------------------------------------
     signal data_counter : integer range 0 to STAGE_POINTS-1 := 0;
+    signal sync_counter : integer range 0 to (STAGE-1)*4    := 0;
     signal state        : state_type                        := wait_sync;
 ------------------------------------END_CONTROLS---------------------------------------------
 
@@ -159,7 +160,6 @@ architecture Behavioral of SDF_Stage is
     signal Data_in_ppF                              :   CPLX_SLV    := (Others => (Others => '0'));
     signal BU_ROT_ppF                               :   CPLX_SLV    := (Others => (Others => '0'));
     signal FIFODec_OutMux_pp1, FIFODec_OutMux_ppF   :   CPLX_SLV    := (Others => (Others => '0'));
-    --signal FIFOMux_FIFO_ppF                         :   CPLX_SLV    := (Others => (Others => '0'));
     signal data_out_ppF                             :   CPLX_SLV    := (Others => (Others => '0'));
 --------------------------------END_PIPELINE_REGISTERS--------------------------------------
 
@@ -236,15 +236,15 @@ begin
     --Twiddle Factor ROM instantiation
     TF_ROM_inst : TF_ROM 
     Generic map(
-        ADDR_LENGTH      => ADDR_LENGTH,
-        TF_WIDTH         => TF_WIDTH
+        ADDR_LENGTH     => ADDR_LENGTH,
+        TF_WIDTH        => TF_WIDTH
     )
     Port map(
 
-        address          => std_logic_vector(to_unsigned(data_counter_ppF, ADDR_LENGTH)),--Manca la lunghezza del vettore
+        address         => std_logic_vector(to_unsigned(data_counter_ppF, ADDR_LENGTH)),
         
-        TW_Re            => TF_ROT(RE),
-        TW_Im            => TF_ROT(IM)
+        TW_Re           => TF_ROT(RE),
+        TW_Im           => TF_ROT(IM)
     );
     
 --------------------------------END_COMPONENTS_INSTANTIATION---------------------------------
@@ -275,7 +275,6 @@ begin
     begin
         if reset = '1' then
             
-            --halfway                 <= '0';
             halfway_pp1             <= '0';
             halfway_pp2             <= '0';
             halfway_ppF             <= '0';
@@ -283,35 +282,15 @@ begin
             data_counter            <= 0;
             data_counter_pp1        <= 0;
             data_counter_ppF        <= 0;
-
-            --InDec_BU                <= (Others => (Others => '0'));
-
-            --InDec_FIFOMux           <= (Others => (Others => '0'));
-
-            --BU_FIFOMux              <= (Others => (Others => '0'));
-
-            --BU_ROT                  <= (Others => (Others => '0'));
-            
-            --FIFOMux_FIFO            <= (Others => (Others => '0'));
-            --FIFOMux_FIFO_ppF        <= (Others => (Others => '0'));
-
-            --FIFO_FIFODec            <= (Others => (Others => '0'));
-
-            --FIFODec_BU              <= (Others => (Others => '0'));
+            sync_counter            <= 0;
 
             BU_ROT_ppF              <= (Others => (Others => '0'));
 
-            --FIFODec_OutMux          <= (Others => (Others => '0'));
             FIFODec_OutMux_pp1      <= (Others => (Others => '0'));
             FIFODec_OutMux_ppF      <= (Others => (Others => '0'));
 
-            --TF_ROT                  <= (Others => (Others => '0'));
-
-            --ROT_OutMux              <= (Others => (Others => '0'));
-
             Data_in_ppF             <= (Others => (Others => '0'));
 
-            --data_out                <= (Others => (Others => '0'));
             data_out_ppF            <= (Others => (Others => '0'));
 
             state                   <= wait_sync;
@@ -331,12 +310,13 @@ begin
             Data_in_ppF(RE)     <= Re_Data_in;
             Data_in_ppF(IM)     <= Im_Data_in;
 
-            --FIFOMux to FIFO
-            --FIFOMux_FIFO_ppF    <= FIFOMux_FIFO;
-
-            --FIFODec to OutMux halfway_ppF)
             --BU ROT
             BU_ROT_ppF          <= BU_ROT;
+
+            --FIFODec to Output Mux
+            FIFODec_OutMux_pp1 <= FIFODec_OutMux;
+            FIFODec_OutMux_ppF <= FIFODec_OutMux_pp1;
+
 
             --Output register
             data_out_ppF        <= data_out;
@@ -347,10 +327,10 @@ begin
                     when wait_sync =>
                         
                         --Wait for syncronization
-                        if data_counter < ((STAGE-1)*4)-1 then  -- Every stage has an input delay referred to the output
-                            data_counter <= data_counter + 1;   -- of the previous stage equal to the pipeline depth of
+                        if sync_counter < ((STAGE-1)*4)-1 then  -- Every stage has an input delay referred to the output
+                            sync_counter <= sync_counter + 1;   -- of the previous stage equal to the pipeline depth of
                         else                                    -- the previous stage, i.e. 4 for every stage.
-                            data_counter <= 0;                  -- Referring to the first stage (since all counters start
+                            sync_counter <= 0;                  -- Referring to the first stage (since all counters start
                             state <= go;                        -- simultaneously at startup), the input delay is the
                         end if;                                 -- stage number (1st is 0) multiplied for the pp depth
 
@@ -377,8 +357,8 @@ begin
     end process;
 -- END CONTROL PROCESS
 
-
-    mux_dec_process : process (Data_in_ppF, halfway_pp1, FIFO_FIFODec)
+-- DECODERS Control
+    dec_process : process (Data_in_ppF, halfway_pp1, FIFO_FIFODec)
     begin
 
         --DECODERS LOGIC
@@ -397,23 +377,9 @@ begin
             --FIFO Decoder, second half of samples
             FIFODec_BU      <= FIFO_FIFODec;
         end if;
-
-        -- MUX LOGIC
-        -- FIFO input mux
-        --if halfway_pp1 = '0' then
-        --    FIFOMux_FIFO <= InDec_FIFOMux;
-        --else
-        --    FIFOMux_FIFO <= BU_FIFOMux;
-        --end if;
-        
-        -- Output Mux
-        --if halfway_ppF = '0' then
-        --    data_out <= FIFODec_OutMux_ppF;
-        --else
-        --    data_out <= ROT_OutMux;
-        --end if;
         
     end process;
+-- END DECODERS
 
 
 end Behavioral;

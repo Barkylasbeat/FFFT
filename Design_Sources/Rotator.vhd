@@ -8,8 +8,6 @@ use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 use ieee.numeric_std_unsigned.all;
 
--- OPTIMIZED VERSION TO STAGE CRITICAL PATH - Computation in 1cc
-
 entity Rotator is
     Generic(
         DATA_WIDTH : POSITIVE := 32;
@@ -71,7 +69,6 @@ begin
             Im_Re <= resize(to_sfixed(Im_Data_in, DATA_WIDTH-1-PRECISION, -PRECISION) * to_sfixed(Re_TF_in, 1, -(TF_WIDTH-2)), Im_Re);
             Re_Im <= resize(to_sfixed(Re_Data_in, DATA_WIDTH-1-PRECISION, -PRECISION) * to_sfixed(Im_TF_in, 1, -(TF_WIDTH-2)), Re_Im);
             Im_Im <= resize(to_sfixed(Im_Data_in, DATA_WIDTH-1-PRECISION, -PRECISION) * to_sfixed(Im_TF_in, 1, -(TF_WIDTH-2)), Im_Im);
-            
             
         end if;
 
