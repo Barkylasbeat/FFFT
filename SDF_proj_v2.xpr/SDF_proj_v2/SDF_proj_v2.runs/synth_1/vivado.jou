@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Vivado v2022.1 (64-bit)
-# SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Thu Nov 24 20:06:54 2022
-# Process ID: 58147
-# Current directory: /home/fralenzi/SDF_proj_v2/SDF_proj_v2.runs/synth_1
-# Command line: vivado -log SDF_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SDF_Top.tcl
-# Log file: /home/fralenzi/SDF_proj_v2/SDF_proj_v2.runs/synth_1/SDF_Top.vds
-# Journal file: /home/fralenzi/SDF_proj_v2/SDF_proj_v2.runs/synth_1/vivado.jou
-# Running On: PC-Fralenzi, OS: Linux, CPU Frequency: 2600.000 MHz, CPU Physical cores: 2, Host memory: 16460 MB
+# Start of session at: Fri Nov 25 12:33:16 2022
+# Process ID: 18340
+# Current directory: D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1
+# Command line: vivado.exe -log SDF_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SDF_Top.tcl
+# Log file: D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/SDF_Top.vds
+# Journal file: D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1\vivado.jou
+# Running On: DESKTOP-PUQ0QT0, OS: Windows, CPU Frequency: 3312 MHz, CPU Physical cores: 10, Host memory: 25431 MB
 #-----------------------------------------------------------
 source SDF_Top.tcl -notrace

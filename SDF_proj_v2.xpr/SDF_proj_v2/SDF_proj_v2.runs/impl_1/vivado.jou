@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Fri Nov 25 12:45:17 2022
+# Process ID: 3220
+# Current directory: D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/impl_1
+# Command line: vivado.exe -log SDF_Top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source SDF_Top.tcl -notrace
+# Log file: D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/impl_1/SDF_Top.vdi
+# Journal file: D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/impl_1\vivado.jou
+# Running On: DESKTOP-PUQ0QT0, OS: Windows, CPU Frequency: 3312 MHz, CPU Physical cores: 10, Host memory: 25431 MB
+#-----------------------------------------------------------
+source SDF_Top.tcl -notrace

@@ -10,7 +10,7 @@ use ieee.numeric_std_unsigned.all;
 
 entity SDF_Top is
     Generic(
-        FFT_TOT_POINTS   : INTEGER  := 4096;
+        FFT_TOT_POINTS   : INTEGER  := 128;
         DATA_WIDTH       : NATURAL  := 16;
         PRECISION        : NATURAL  := 6; 
         TF_WIDTH         : POSITIVE := 8;
@@ -76,7 +76,7 @@ begin
     Re_Data_out <= stage_output(NUM_STAGES-1)(RE);
     Im_Data_out <= stage_output(NUM_STAGES-1)(IM);
 
-    SDF_stage_pp : for i in 1 to NUM_STAGES generate
+    SDF_stage_wrap : for i in 1 to NUM_STAGES generate
 
         SDF_stage_inst : SDF_Stage
             Generic Map(
@@ -101,5 +101,37 @@ begin
         
     end generate;
 
+    wiring_gen : for i in 1 to NUM_STAGES-1 generate
 
+        stage_input(i)(RE) <= stage_output(i-1)(RE);
+        stage_input(i)(IM) <= stage_output(i-1)(IM);
+
+    end generate;
+
+
+
+    -- SDF_stage_pp : for i in 1 to NUM_STAGES generate
+
+    -- SDF_stage_inst : SDF_Stage
+    --     Generic Map(
+    --         FFT_TOT_POINTS   => FFT_TOT_POINTS,
+    --         DATA_WIDTH       => DATA_WIDTH,
+    --         PRECISION        => PRECISION,
+    --         TF_WIDTH         => TF_WIDTH,
+    --         STAGE            => i,
+    --         SR_INIT          => SR_INIT
+    --     )
+    --     Port Map(
+    
+    --         clk            => clk,
+    --         reset          => reset,
+    
+    --         Re_Data_in     => stage_input(i-1)(RE),
+    --         Im_Data_in     => stage_input(i-1)(IM),
+    
+    --         Re_Data_out    => stage_output(i-1)(RE),
+    --         Im_Data_out    => stage_output(i-1)(IM)
+    --     );
+    
+    -- end generate;
 end Behavioral;
