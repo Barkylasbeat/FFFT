@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Fri Nov 25 12:46:30 2022
-| Host             : DESKTOP-PUQ0QT0 running 64-bit major release  (build 9200)
+| Date             : Mon Nov 28 11:44:03 2022
+| Host             : PcFraLenzi running 64-bit major release  (build 9200)
 | Command          : report_power -file SDF_Top_power_routed.rpt -pb SDF_Top_power_summary_routed.pb -rpx SDF_Top_power_routed.rpx
 | Design           : SDF_Top
 | Device           : xc7a35tcpg236-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 91.472 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 78.491 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 90.987                           |
+| Dynamic (W)              | 78.007                           |
 | Device Static (W)        | 0.485                            |
 | Effective TJA (C/W)      | 5.0                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,19 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |    27.176 |     6772 |       --- |             --- |
-|   LUT as Logic          |    23.897 |     2701 |     20800 |           12.99 |
-|   CARRY4                |     1.796 |      393 |      8150 |            4.82 |
-|   Register              |     1.078 |     3059 |     41600 |            7.35 |
-|   LUT as Shift Register |     0.382 |      192 |      9600 |            2.00 |
-|   F7/F8 Muxes           |     0.017 |       12 |     32600 |            0.04 |
-|   BUFG                  |     0.006 |        8 |        32 |           25.00 |
-|   Others                |     0.000 |       76 |       --- |             --- |
-| Signals                 |    30.267 |     5775 |       --- |             --- |
-| DSPs                    |    25.812 |       26 |        90 |           28.89 |
+| Slice Logic             |    22.835 |     5659 |       --- |             --- |
+|   LUT as Logic          |    20.133 |     2273 |     20800 |           10.93 |
+|   CARRY4                |     1.527 |      335 |      8150 |            4.11 |
+|   Register              |     0.915 |     2573 |     41600 |            6.19 |
+|   LUT as Shift Register |     0.254 |      128 |      9600 |            1.33 |
+|   BUFG                  |     0.006 |        7 |        32 |           21.88 |
+|   Others                |     0.000 |       65 |       --- |             --- |
+| Signals                 |    25.827 |     4868 |       --- |             --- |
+| DSPs                    |    21.613 |       22 |        90 |           24.44 |
 | I/O                     |     7.732 |       66 |       106 |           62.26 |
 | Static Power            |     0.485 |          |           |                 |
-| Total                   |    91.472 |          |           |                 |
+| Total                   |    78.491 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |    83.728 |      83.388 |      0.341 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |    70.748 |      70.407 |      0.341 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.676 |       0.622 |      0.053 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -141,39 +140,34 @@ Table of Contents
 +------------------------------------+-----------+
 | Name                               | Power (W) |
 +------------------------------------+-----------+
-| SDF_Top                            |    90.987 |
-|   SDF_stage_wrap[1].SDF_stage_inst |    13.483 |
-|     BU_inst                        |     1.127 |
-|     Rotator_inst                   |    10.501 |
-|     SR_FIFO_inst                   |     0.300 |
-|     TF_ROM_inst                    |     0.240 |
-|   SDF_stage_wrap[2].SDF_stage_inst |    12.999 |
-|     BU_inst                        |     1.038 |
-|     Rotator_inst                   |    10.594 |
-|     SR_FIFO_inst                   |     0.270 |
-|   SDF_stage_wrap[3].SDF_stage_inst |    13.224 |
-|     BU_inst                        |     1.079 |
-|     Rotator_inst                   |    10.620 |
-|     SR_FIFO_inst                   |     0.264 |
-|   SDF_stage_wrap[4].SDF_stage_inst |    13.090 |
-|     BU_inst                        |     1.060 |
-|     Rotator_inst                   |    10.264 |
-|     SR_FIFO_inst                   |     0.276 |
-|     TF_ROM_inst                    |     0.318 |
-|   SDF_stage_wrap[5].SDF_stage_inst |    13.089 |
-|     BU_inst                        |     1.084 |
-|     Rotator_inst                   |    10.305 |
-|     SR_FIFO_inst                   |     0.272 |
-|     TF_ROM_inst                    |     0.263 |
-|   SDF_stage_wrap[6].SDF_stage_inst |    10.862 |
-|     BU_inst                        |     1.021 |
-|     Rotator_inst                   |     8.500 |
-|     SR_FIFO_inst                   |     0.158 |
-|     TF_ROM_inst                    |     0.079 |
-|   SDF_stage_wrap[7].SDF_stage_inst |     6.310 |
-|     BU_inst                        |     1.007 |
-|     Rotator_inst                   |     4.176 |
-|     SR_FIFO_inst                   |     0.104 |
+| SDF_Top                            |    78.007 |
+|   SDF_stage_wrap[1].SDF_stage_inst |    13.137 |
+|     BU_inst                        |     1.075 |
+|     Rotator_inst                   |    10.611 |
+|     SR_FIFO_inst                   |     0.260 |
+|   SDF_stage_wrap[2].SDF_stage_inst |    13.276 |
+|     BU_inst                        |     1.052 |
+|     Rotator_inst                   |    10.694 |
+|     SR_FIFO_inst                   |     0.279 |
+|   SDF_stage_wrap[3].SDF_stage_inst |    13.516 |
+|     BU_inst                        |     1.058 |
+|     Rotator_inst                   |    10.523 |
+|     SR_FIFO_inst                   |     0.277 |
+|     TF_ROM_inst                    |     0.502 |
+|   SDF_stage_wrap[4].SDF_stage_inst |    13.019 |
+|     BU_inst                        |     1.086 |
+|     Rotator_inst                   |    10.368 |
+|     SR_FIFO_inst                   |     0.266 |
+|     TF_ROM_inst                    |     0.212 |
+|   SDF_stage_wrap[5].SDF_stage_inst |    10.764 |
+|     BU_inst                        |     1.041 |
+|     Rotator_inst                   |     8.419 |
+|     SR_FIFO_inst                   |     0.153 |
+|     TF_ROM_inst                    |     0.112 |
+|   SDF_stage_wrap[6].SDF_stage_inst |     6.386 |
+|     BU_inst                        |     0.996 |
+|     Rotator_inst                   |     4.186 |
+|     SR_FIFO_inst                   |     0.109 |
 +------------------------------------+-----------+
 
 

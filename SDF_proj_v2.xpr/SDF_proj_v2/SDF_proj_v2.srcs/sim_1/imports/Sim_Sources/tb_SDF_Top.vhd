@@ -17,7 +17,7 @@ architecture Behavioral of tb_SDF_Top is
     constant CLK_PERIOD : time := 10 ns;
     constant RESET_WND  : time := 50 ns; 
 
-    constant FFT_TOT_POINTS : integer := 16;
+    constant FFT_TOT_POINTS : integer := 8;
     constant DATA_WIDTH     : integer := 16;
     constant PRECISION      : integer := 6;
     constant TF_WIDTH       : integer := 8;
@@ -81,7 +81,7 @@ begin
     clk <= not clk after CLK_PERIOD/2;
 
 -- Questa testbench manda dei primi stream di dati, poi resetta durante la computazione (test di interruzione)
--- dopodichè manda 24 stream di dati
+-- dopodichï¿½ manda 24 stream di dati
 
     elaboration_test : process
     begin
@@ -94,20 +94,20 @@ begin
         
 
         for i in 1 to FFT_TOT_POINTS loop
-            Re_Data_in <= std_logic_vector(to_signed(i*(i+1), Re_Data_in'length));
-            Im_Data_in <= std_logic_vector(to_signed(i*10,Im_Data_in'length));
+            Re_Data_in <= to_slv(to_sfixed(i*(i+1), DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(i*10, DATA_WIDTH-1-PRECISION, -PRECISION));
                 
             wait until rising_edge(clk); 
         end loop;
 
         for i in 1 to FFT_TOT_POINTS loop
-            Re_Data_in <= std_logic_vector(to_signed(i*(i+1), Re_Data_in'length));
-            Im_Data_in <= std_logic_vector(to_signed(i*10,Im_Data_in'length));
+            Re_Data_in <= to_slv(to_sfixed(i*(i+1), DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(i*10, DATA_WIDTH-1-PRECISION, -PRECISION));
                 
             wait until rising_edge(clk); 
         end loop;
 
-            wait for 10*CLK_PERIOD;            
+            wait for 15*CLK_PERIOD;            
 
             reset <= '1';
 
@@ -117,8 +117,8 @@ begin
 
         for j in 1 to 24 loop
             for i in 1 to FFT_TOT_POINTS loop
-                Re_Data_in <= std_logic_vector(to_signed((i+j), Re_Data_in'length));
-                Im_Data_in <= std_logic_vector(to_signed(-(10*i+j),Im_Data_in'length));                    
+                Re_Data_in <= to_slv(to_sfixed((i+j), DATA_WIDTH-1-PRECISION, -PRECISION));
+                Im_Data_in <= to_slv(to_sfixed(-(10*i+j), DATA_WIDTH-1-PRECISION, -PRECISION));                    
                 wait until rising_edge(clk); 
             end loop;
         end loop;

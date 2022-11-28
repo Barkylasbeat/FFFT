@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/impl_1/SDF_Top.tcl"
+  variable script "C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/impl_1/SDF_Top.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,8 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -124,13 +122,12 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param checkpoint.writeSynthRtdsInDcp 1
-  set_param chipscope.maxJobs 5
+  set_param chipscope.maxJobs 1
   reset_param project.defaultXPMLibraries 
-  open_checkpoint D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/impl_1/SDF_Top.dcp
-  set_property webtalk.parent_dir D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.cache/wt [current_project]
-  set_property parent.project_path D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.xpr [current_project]
-  set_property ip_output_repo D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.cache/ip [current_project]
+  open_checkpoint C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/impl_1/SDF_Top.dcp
+  set_property webtalk.parent_dir C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.cache/wt [current_project]
+  set_property parent.project_path C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.xpr [current_project]
+  set_property ip_output_repo C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "init_design_reports" START { REPORT }
 OPTRACE "init_design_reports" END { }

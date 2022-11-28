@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Fri Nov 25 12:45:57 2022
-| Host         : DESKTOP-PUQ0QT0 running 64-bit major release  (build 9200)
+| Date         : Mon Nov 28 11:42:45 2022
+| Host         : PcFraLenzi running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file SDF_Top_control_sets_placed.rpt
 | Design       : SDF_Top
 | Device       : xc7a35t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |    30 |
-|    Minimum number of control sets                        |    30 |
+| Total control sets                                       |    25 |
+|    Minimum number of control sets                        |    25 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    77 |
+| Unused register locations in slices containing registers |    67 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |    30 |
-| >= 0 to < 4        |     7 |
-| >= 4 to < 6        |     6 |
-| >= 6 to < 8        |     1 |
+| Total control sets |    25 |
+| >= 0 to < 4        |     6 |
+| >= 4 to < 6        |     5 |
+| >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |    16 |
+| >= 16              |    14 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |            1056 |          404 |
-| No           | No                    | Yes                    |            1963 |          553 |
-| No           | Yes                   | No                     |               7 |            7 |
+| No           | No                    | No                     |             896 |          310 |
+| No           | No                    | Yes                    |            1649 |          464 |
+| No           | Yes                   | No                     |               6 |            6 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              33 |            7 |
+| Yes          | No                    | Yes                    |              22 |            5 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,39 +70,34 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------------------------------------------+----------------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
-|                      Clock Signal                     |                       Enable Signal                      |                     Set/Reset Signal                    | Slice Load Count | Bel Load Count | Bels / Slice |
-+-------------------------------------------------------+----------------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
-|  SDF_stage_wrap[2].SDF_stage_inst/data_counter_reg[5] |                                                          | SDF_stage_wrap[2].SDF_stage_inst/halfway_reg_i_1__0_n_0 |                1 |              1 |         1.00 |
-|  SDF_stage_wrap[1].SDF_stage_inst/data_counter_reg[6] |                                                          | SDF_stage_wrap[1].SDF_stage_inst/halfway_reg_i_1_n_0    |                1 |              1 |         1.00 |
-|  SDF_stage_wrap[3].SDF_stage_inst/data_counter_reg[4] |                                                          | SDF_stage_wrap[3].SDF_stage_inst/halfway_reg_i_1__1_n_0 |                1 |              1 |         1.00 |
-|  SDF_stage_wrap[7].SDF_stage_inst/data_counter        |                                                          | SDF_stage_wrap[7].SDF_stage_inst/halfway_reg_i_1__5_n_0 |                1 |              1 |         1.00 |
-|  SDF_stage_wrap[6].SDF_stage_inst/data_counter[1]     |                                                          | SDF_stage_wrap[6].SDF_stage_inst/halfway_reg_i_1__4_n_0 |                1 |              1 |         1.00 |
-|  SDF_stage_wrap[5].SDF_stage_inst/data_counter[2]     |                                                          | SDF_stage_wrap[5].SDF_stage_inst/halfway_reg_i_1__3_n_0 |                1 |              1 |         1.00 |
-|  SDF_stage_wrap[4].SDF_stage_inst/data_counter_reg[3] |                                                          | SDF_stage_wrap[4].SDF_stage_inst/halfway_reg_i_1__2_n_0 |                1 |              1 |         1.00 |
-|  clk_IBUF_BUFG                                        | SDF_stage_wrap[5].SDF_stage_inst/state                   | reset_IBUF                                              |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                                        | SDF_stage_wrap[4].SDF_stage_inst/sync_counter[3]_i_1_n_0 | reset_IBUF                                              |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                                        | SDF_stage_wrap[4].SDF_stage_inst/state                   | reset_IBUF                                              |                1 |              4 |         4.00 |
-|  clk_IBUF_BUFG                                        | SDF_stage_wrap[3].SDF_stage_inst/state                   | reset_IBUF                                              |                1 |              5 |         5.00 |
-|  clk_IBUF_BUFG                                        | SDF_stage_wrap[7].SDF_stage_inst/state                   | reset_IBUF                                              |                1 |              5 |         5.00 |
-|  clk_IBUF_BUFG                                        | SDF_stage_wrap[6].SDF_stage_inst/state                   | reset_IBUF                                              |                1 |              5 |         5.00 |
-|  clk_IBUF_BUFG                                        | SDF_stage_wrap[2].SDF_stage_inst/state                   | reset_IBUF                                              |                1 |              6 |         6.00 |
-|  halfway_pp1                                          |                                                          |                                                         |               26 |             64 |         2.46 |
-| ~halfway_pp1                                          |                                                          |                                                         |               26 |             64 |         2.46 |
-|  halfway_pp1_1                                        |                                                          |                                                         |               22 |             64 |         2.91 |
-| ~halfway_pp1_1                                        |                                                          |                                                         |               26 |             64 |         2.46 |
-|  halfway_pp1_2                                        |                                                          |                                                         |               24 |             64 |         2.67 |
-| ~halfway_pp1_2                                        |                                                          |                                                         |               27 |             64 |         2.37 |
-|  halfway_pp1_4                                        |                                                          |                                                         |               23 |             64 |         2.78 |
-| ~halfway_pp1_4                                        |                                                          |                                                         |               27 |             64 |         2.37 |
-|  halfway_pp1_5                                        |                                                          |                                                         |               19 |             64 |         3.37 |
-| ~halfway_pp1_5                                        |                                                          |                                                         |               26 |             64 |         2.46 |
-|  halfway_pp1_3                                        |                                                          |                                                         |               23 |             64 |         2.78 |
-| ~halfway_pp1_3                                        |                                                          |                                                         |               31 |             64 |         2.06 |
-|  halfway_pp1_0                                        |                                                          |                                                         |               24 |             64 |         2.67 |
-| ~halfway_pp1_0                                        |                                                          |                                                         |               29 |             64 |         2.21 |
-|  clk_IBUF_BUFG                                        |                                                          |                                                         |               51 |            352 |         6.90 |
-|  clk_IBUF_BUFG                                        |                                                          | reset_IBUF                                              |              553 |           1963 |         3.55 |
-+-------------------------------------------------------+----------------------------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
++-------------------------------------------------------+----------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
+|                      Clock Signal                     |              Enable Signal             |                     Set/Reset Signal                    | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------------------------+----------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
+|  SDF_stage_wrap[2].SDF_stage_inst/data_counter_reg[4] |                                        | SDF_stage_wrap[2].SDF_stage_inst/halfway_reg_i_1__0_n_0 |                1 |              1 |         1.00 |
+|  SDF_stage_wrap[3].SDF_stage_inst/data_counter_reg[3] |                                        | SDF_stage_wrap[3].SDF_stage_inst/halfway_reg_i_1__1_n_0 |                1 |              1 |         1.00 |
+|  SDF_stage_wrap[6].SDF_stage_inst/data_counter        |                                        | SDF_stage_wrap[6].SDF_stage_inst/halfway_reg_i_1__4_n_0 |                1 |              1 |         1.00 |
+|  SDF_stage_wrap[5].SDF_stage_inst/data_counter[1]     |                                        | SDF_stage_wrap[5].SDF_stage_inst/halfway_reg_i_1__3_n_0 |                1 |              1 |         1.00 |
+|  SDF_stage_wrap[4].SDF_stage_inst/data_counter[2]     |                                        | SDF_stage_wrap[4].SDF_stage_inst/halfway_reg_i_1__2_n_0 |                1 |              1 |         1.00 |
+|  SDF_stage_wrap[1].SDF_stage_inst/data_counter_reg[5] |                                        | SDF_stage_wrap[1].SDF_stage_inst/halfway_reg_i_1_n_0    |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                                        | SDF_stage_wrap[3].SDF_stage_inst/state | reset_IBUF                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                                        | SDF_stage_wrap[5].SDF_stage_inst/state | reset_IBUF                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                                        | SDF_stage_wrap[4].SDF_stage_inst/state | reset_IBUF                                              |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                                        | SDF_stage_wrap[2].SDF_stage_inst/state | reset_IBUF                                              |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG                                        | SDF_stage_wrap[6].SDF_stage_inst/state | reset_IBUF                                              |                1 |              5 |         5.00 |
+|  halfway_pp1                                          |                                        |                                                         |               21 |             64 |         3.05 |
+| ~halfway_pp1                                          |                                        |                                                         |               21 |             64 |         3.05 |
+|  halfway_pp1_0                                        |                                        |                                                         |               26 |             64 |         2.46 |
+| ~halfway_pp1_0                                        |                                        |                                                         |               23 |             64 |         2.78 |
+|  halfway_pp1_1                                        |                                        |                                                         |               20 |             64 |         3.20 |
+| ~halfway_pp1_1                                        |                                        |                                                         |               28 |             64 |         2.29 |
+|  halfway_pp1_2                                        |                                        |                                                         |               23 |             64 |         2.78 |
+| ~halfway_pp1_2                                        |                                        |                                                         |               22 |             64 |         2.91 |
+|  halfway_pp1_3                                        |                                        |                                                         |               24 |             64 |         2.67 |
+| ~halfway_pp1_3                                        |                                        |                                                         |               25 |             64 |         2.56 |
+|  halfway_pp1_4                                        |                                        |                                                         |               18 |             64 |         3.56 |
+| ~halfway_pp1_4                                        |                                        |                                                         |               24 |             64 |         2.67 |
+|  clk_IBUF_BUFG                                        |                                        |                                                         |               35 |            256 |         7.31 |
+|  clk_IBUF_BUFG                                        |                                        | reset_IBUF                                              |              464 |           1649 |         3.55 |
++-------------------------------------------------------+----------------------------------------+---------------------------------------------------------+------------------+----------------+--------------+
 
 

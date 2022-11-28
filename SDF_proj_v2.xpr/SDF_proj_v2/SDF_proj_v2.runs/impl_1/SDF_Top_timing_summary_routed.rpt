@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Fri Nov 25 12:46:31 2022
-| Host         : DESKTOP-PUQ0QT0 running 64-bit major release  (build 9200)
+| Date         : Mon Nov 28 11:44:03 2022
+| Host         : PcFraLenzi running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file SDF_Top_timing_summary_routed.rpt -pb SDF_Top_timing_summary_routed.pb -rpx SDF_Top_timing_summary_routed.rpx -warn_on_violation
 | Design       : SDF_Top
 | Device       : 7a35t-cpg236
@@ -42,9 +42,9 @@ Timing Summary Report
 Rule       Severity          Description                     Violations  
 ---------  ----------------  ------------------------------  ----------  
 TIMING-17  Critical Warning  Non-clocked sequential cell     1000        
-DPIR-1     Warning           Asynchronous driver check       808         
-LUTAR-1    Warning           LUT drives async reset alert    7           
-TIMING-20  Warning           Non-clocked latch               903         
+DPIR-1     Warning           Asynchronous driver check       688         
+LUTAR-1    Warning           LUT drives async reset alert    6           
+TIMING-20  Warning           Non-clocked latch               774         
 LATCH-1    Advisory          Existing latches in the design  1           
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
@@ -55,10 +55,10 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (3251)
+1. checking no_clock (2701)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (5286)
+4. checking unconstrained_internal_endpoints (4399)
 5. checking no_input_delay (33)
 6. checking no_output_delay (32)
 7. checking multiple_clock (0)
@@ -68,37 +68,33 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (3251)
+1. checking no_clock (2701)
 ---------------------------
- There are 2348 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+ There are 1927 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: SDF_stage_wrap[1].SDF_stage_inst/data_counter_reg[6]/Q (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: SDF_stage_wrap[1].SDF_stage_inst/data_counter_reg[5]/Q (HIGH)
 
  There are 128 register/latch pins with no clock driven by root clock pin: SDF_stage_wrap[1].SDF_stage_inst/halfway_pp1_reg/Q (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: SDF_stage_wrap[2].SDF_stage_inst/data_counter_reg[5]/Q (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: SDF_stage_wrap[2].SDF_stage_inst/data_counter_reg[4]/Q (HIGH)
 
  There are 128 register/latch pins with no clock driven by root clock pin: SDF_stage_wrap[2].SDF_stage_inst/halfway_pp1_reg/Q (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: SDF_stage_wrap[3].SDF_stage_inst/data_counter_reg[4]/Q (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: SDF_stage_wrap[3].SDF_stage_inst/data_counter_reg[3]/Q (HIGH)
 
  There are 128 register/latch pins with no clock driven by root clock pin: SDF_stage_wrap[3].SDF_stage_inst/halfway_pp1_reg/Q (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: SDF_stage_wrap[4].SDF_stage_inst/data_counter_reg[3]/Q (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: SDF_stage_wrap[4].SDF_stage_inst/data_counter_reg[2]/Q (HIGH)
 
  There are 128 register/latch pins with no clock driven by root clock pin: SDF_stage_wrap[4].SDF_stage_inst/halfway_pp1_reg/Q (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: SDF_stage_wrap[5].SDF_stage_inst/data_counter_reg[2]/Q (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: SDF_stage_wrap[5].SDF_stage_inst/data_counter_reg[1]/Q (HIGH)
 
  There are 128 register/latch pins with no clock driven by root clock pin: SDF_stage_wrap[5].SDF_stage_inst/halfway_pp1_reg/Q (HIGH)
 
- There is 1 register/latch pin with no clock driven by root clock pin: SDF_stage_wrap[6].SDF_stage_inst/data_counter_reg[1]/Q (HIGH)
+ There is 1 register/latch pin with no clock driven by root clock pin: SDF_stage_wrap[6].SDF_stage_inst/data_counter_reg[0]/Q (HIGH)
 
  There are 128 register/latch pins with no clock driven by root clock pin: SDF_stage_wrap[6].SDF_stage_inst/halfway_pp1_reg/Q (HIGH)
-
- There is 1 register/latch pin with no clock driven by root clock pin: SDF_stage_wrap[7].SDF_stage_inst/data_counter_reg[0]/Q (HIGH)
-
- There are 128 register/latch pins with no clock driven by root clock pin: SDF_stage_wrap[7].SDF_stage_inst/halfway_pp1_reg/Q (HIGH)
 
 
 2. checking constant_clock (0)
@@ -111,9 +107,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (5286)
+4. checking unconstrained_internal_endpoints (4399)
 ---------------------------------------------------
- There are 5286 pins that are not constrained for maximum delay. (HIGH)
+ There are 4399 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -172,7 +168,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                 5318          inf        0.000                      0                 5318           NA           NA                      NA                    NA  
+        inf        0.000                      0                 4431          inf        0.000                      0                 4431           NA           NA                      NA                    NA  
 
 
 There are no user specified timing constraints.
@@ -241,8 +237,8 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay          5318 Endpoints
-Min Delay          5318 Endpoints
+Max Delay          4431 Endpoints
+Min Delay          4431 Endpoints
 --------------------------------------------------------------------------------------
 
 
@@ -251,60 +247,60 @@ Max Delay Paths
 Slack:                    inf
   Source:                 reset
                             (input port)
-  Destination:            SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][13]/D
+  Destination:            SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][3]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        25.153ns  (logic 1.893ns (7.526%)  route 23.260ns (92.474%))
+  Data Path Delay:        16.822ns  (logic 1.897ns (11.277%)  route 14.925ns (88.723%))
   Logic Levels:           4  (CARRY4=1 IBUF=1 LUT2=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    K18                                               0.000     0.000 f  reset (IN)
+    K18                                               0.000     0.000 r  reset (IN)
                          net (fo=0)                   0.000     0.000    reset
-    K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 f  reset_IBUF_inst/O
-                         net (fo=2619, routed)       21.757    22.706    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
-    SLICE_X61Y30         LUT2 (Prop_lut2_I0_O)        0.124    22.830 r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__93/O
-                         net (fo=1, routed)           0.000    22.830    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
-    SLICE_X61Y30         CARRY4 (Prop_carry4_S[1]_CO[1])
-                                                      0.491    23.321 f  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
-                         net (fo=16, routed)          1.503    24.824    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp
-    SLICE_X61Y29         LUT6 (Prop_lut6_I2_O)        0.329    25.153 r  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO[0][0][13]_i_1__0/O
-                         net (fo=1, routed)           0.000    25.153    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/D[13]
-    SLICE_X61Y29         FDCE                                         r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][13]/D
+    K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 r  reset_IBUF_inst/O
+                         net (fo=2205, routed)       12.903    13.852    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
+    SLICE_X38Y39         LUT2 (Prop_lut2_I1_O)        0.124    13.976 r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__40/O
+                         net (fo=1, routed)           0.000    13.976    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15]_0[0]
+    SLICE_X38Y39         CARRY4 (Prop_carry4_S[1]_CO[1])
+                                                      0.492    14.468 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/gtOp_inferred__1/i__carry/CO[1]
+                         net (fo=16, routed)          2.022    16.490    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/gtOp
+    SLICE_X39Y33         LUT6 (Prop_lut6_I3_O)        0.332    16.822 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO[0][0][3]_i_1__0/O
+                         net (fo=1, routed)           0.000    16.822    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/D[3]
+    SLICE_X39Y33         FDCE                                         r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][3]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 reset
                             (input port)
-  Destination:            SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][11]/D
+  Destination:            SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][2]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        25.151ns  (logic 1.893ns (7.527%)  route 23.258ns (92.473%))
+  Data Path Delay:        16.817ns  (logic 1.897ns (11.280%)  route 14.920ns (88.720%))
   Logic Levels:           4  (CARRY4=1 IBUF=1 LUT2=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    K18                                               0.000     0.000 f  reset (IN)
+    K18                                               0.000     0.000 r  reset (IN)
                          net (fo=0)                   0.000     0.000    reset
-    K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 f  reset_IBUF_inst/O
-                         net (fo=2619, routed)       21.757    22.706    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
-    SLICE_X61Y30         LUT2 (Prop_lut2_I0_O)        0.124    22.830 r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__93/O
-                         net (fo=1, routed)           0.000    22.830    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
-    SLICE_X61Y30         CARRY4 (Prop_carry4_S[1]_CO[1])
-                                                      0.491    23.321 f  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
-                         net (fo=16, routed)          1.501    24.822    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp
-    SLICE_X61Y29         LUT6 (Prop_lut6_I2_O)        0.329    25.151 r  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO[0][0][11]_i_1__0/O
-                         net (fo=1, routed)           0.000    25.151    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/D[11]
-    SLICE_X61Y29         FDCE                                         r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][11]/D
+    K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 r  reset_IBUF_inst/O
+                         net (fo=2205, routed)       12.903    13.852    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
+    SLICE_X38Y39         LUT2 (Prop_lut2_I1_O)        0.124    13.976 r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__40/O
+                         net (fo=1, routed)           0.000    13.976    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15]_0[0]
+    SLICE_X38Y39         CARRY4 (Prop_carry4_S[1]_CO[1])
+                                                      0.492    14.468 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/gtOp_inferred__1/i__carry/CO[1]
+                         net (fo=16, routed)          2.017    16.485    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/gtOp
+    SLICE_X39Y33         LUT6 (Prop_lut6_I3_O)        0.332    16.817 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO[0][0][2]_i_1__0/O
+                         net (fo=1, routed)           0.000    16.817    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/D[2]
+    SLICE_X39Y33         FDCE                                         r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][2]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 reset
                             (input port)
-  Destination:            SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][4]/D
+  Destination:            SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][0]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.986ns  (logic 1.893ns (7.576%)  route 23.093ns (92.424%))
+  Data Path Delay:        16.623ns  (logic 1.897ns (11.412%)  route 14.726ns (88.588%))
   Logic Levels:           4  (CARRY4=1 IBUF=1 LUT2=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -312,24 +308,24 @@ Slack:                    inf
     K18                                               0.000     0.000 f  reset (IN)
                          net (fo=0)                   0.000     0.000    reset
     K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 f  reset_IBUF_inst/O
-                         net (fo=2619, routed)       21.757    22.706    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
-    SLICE_X61Y30         LUT2 (Prop_lut2_I0_O)        0.124    22.830 r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__93/O
-                         net (fo=1, routed)           0.000    22.830    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
-    SLICE_X61Y30         CARRY4 (Prop_carry4_S[1]_CO[1])
-                                                      0.491    23.321 f  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
-                         net (fo=16, routed)          1.336    24.657    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp
-    SLICE_X62Y27         LUT6 (Prop_lut6_I2_O)        0.329    24.986 r  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO[0][0][4]_i_1__0/O
-                         net (fo=1, routed)           0.000    24.986    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/D[4]
-    SLICE_X62Y27         FDCE                                         r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][4]/D
+                         net (fo=2205, routed)       13.296    14.245    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
+    SLICE_X38Y40         LUT2 (Prop_lut2_I0_O)        0.124    14.369 r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__78/O
+                         net (fo=1, routed)           0.000    14.369    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
+    SLICE_X38Y40         CARRY4 (Prop_carry4_S[1]_CO[1])
+                                                      0.492    14.861 f  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
+                         net (fo=16, routed)          1.430    16.291    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/ltOp
+    SLICE_X39Y33         LUT6 (Prop_lut6_I2_O)        0.332    16.623 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO[0][0][0]_i_1__0/O
+                         net (fo=1, routed)           0.000    16.623    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/D[0]
+    SLICE_X39Y33         FDCE                                         r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][0]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 reset
                             (input port)
-  Destination:            SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][5]/D
+  Destination:            SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][8]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.983ns  (logic 1.893ns (7.577%)  route 23.090ns (92.423%))
+  Data Path Delay:        16.619ns  (logic 1.897ns (11.415%)  route 14.722ns (88.585%))
   Logic Levels:           4  (CARRY4=1 IBUF=1 LUT2=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -337,24 +333,24 @@ Slack:                    inf
     K18                                               0.000     0.000 f  reset (IN)
                          net (fo=0)                   0.000     0.000    reset
     K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 f  reset_IBUF_inst/O
-                         net (fo=2619, routed)       21.757    22.706    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
-    SLICE_X61Y30         LUT2 (Prop_lut2_I0_O)        0.124    22.830 r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__93/O
-                         net (fo=1, routed)           0.000    22.830    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
-    SLICE_X61Y30         CARRY4 (Prop_carry4_S[1]_CO[1])
-                                                      0.491    23.321 f  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
-                         net (fo=16, routed)          1.333    24.654    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp
-    SLICE_X61Y27         LUT6 (Prop_lut6_I2_O)        0.329    24.983 r  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO[0][0][5]_i_1__0/O
-                         net (fo=1, routed)           0.000    24.983    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/D[5]
-    SLICE_X61Y27         FDCE                                         r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][5]/D
+                         net (fo=2205, routed)       13.296    14.245    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
+    SLICE_X38Y40         LUT2 (Prop_lut2_I0_O)        0.124    14.369 r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__78/O
+                         net (fo=1, routed)           0.000    14.369    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
+    SLICE_X38Y40         CARRY4 (Prop_carry4_S[1]_CO[1])
+                                                      0.492    14.861 f  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
+                         net (fo=16, routed)          1.426    16.287    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/ltOp
+    SLICE_X37Y36         LUT6 (Prop_lut6_I2_O)        0.332    16.619 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO[0][0][8]_i_1__0/O
+                         net (fo=1, routed)           0.000    16.619    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/D[8]
+    SLICE_X37Y36         FDCE                                         r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][8]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 reset
                             (input port)
-  Destination:            SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][10]/D
+  Destination:            SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][7]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.981ns  (logic 1.893ns (7.578%)  route 23.088ns (92.422%))
+  Data Path Delay:        16.617ns  (logic 1.897ns (11.416%)  route 14.720ns (88.584%))
   Logic Levels:           4  (CARRY4=1 IBUF=1 LUT2=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -362,24 +358,24 @@ Slack:                    inf
     K18                                               0.000     0.000 f  reset (IN)
                          net (fo=0)                   0.000     0.000    reset
     K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 f  reset_IBUF_inst/O
-                         net (fo=2619, routed)       21.757    22.706    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
-    SLICE_X61Y30         LUT2 (Prop_lut2_I0_O)        0.124    22.830 r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__93/O
-                         net (fo=1, routed)           0.000    22.830    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
-    SLICE_X61Y30         CARRY4 (Prop_carry4_S[1]_CO[1])
-                                                      0.491    23.321 f  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
-                         net (fo=16, routed)          1.331    24.652    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp
-    SLICE_X61Y27         LUT6 (Prop_lut6_I2_O)        0.329    24.981 r  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO[0][0][10]_i_1__0/O
-                         net (fo=1, routed)           0.000    24.981    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/D[10]
-    SLICE_X61Y27         FDCE                                         r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][10]/D
+                         net (fo=2205, routed)       13.296    14.245    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
+    SLICE_X38Y40         LUT2 (Prop_lut2_I0_O)        0.124    14.369 r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__78/O
+                         net (fo=1, routed)           0.000    14.369    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
+    SLICE_X38Y40         CARRY4 (Prop_carry4_S[1]_CO[1])
+                                                      0.492    14.861 f  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
+                         net (fo=16, routed)          1.424    16.285    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/ltOp
+    SLICE_X37Y36         LUT6 (Prop_lut6_I2_O)        0.332    16.617 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO[0][0][7]_i_1__0/O
+                         net (fo=1, routed)           0.000    16.617    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/D[7]
+    SLICE_X37Y36         FDCE                                         r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][7]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 reset
                             (input port)
-  Destination:            SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][0]/D
+  Destination:            SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][11]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.905ns  (logic 1.893ns (7.601%)  route 23.012ns (92.399%))
+  Data Path Delay:        16.616ns  (logic 1.897ns (11.417%)  route 14.719ns (88.583%))
   Logic Levels:           4  (CARRY4=1 IBUF=1 LUT2=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -387,74 +383,74 @@ Slack:                    inf
     K18                                               0.000     0.000 f  reset (IN)
                          net (fo=0)                   0.000     0.000    reset
     K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 f  reset_IBUF_inst/O
-                         net (fo=2619, routed)       21.757    22.706    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
-    SLICE_X61Y30         LUT2 (Prop_lut2_I0_O)        0.124    22.830 r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__93/O
-                         net (fo=1, routed)           0.000    22.830    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
-    SLICE_X61Y30         CARRY4 (Prop_carry4_S[1]_CO[1])
-                                                      0.491    23.321 f  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
-                         net (fo=16, routed)          1.255    24.576    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp
-    SLICE_X61Y26         LUT6 (Prop_lut6_I2_O)        0.329    24.905 r  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO[0][0][0]_i_1__0/O
-                         net (fo=1, routed)           0.000    24.905    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/D[0]
-    SLICE_X61Y26         FDCE                                         r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][0]/D
+                         net (fo=2205, routed)       13.296    14.245    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
+    SLICE_X38Y40         LUT2 (Prop_lut2_I0_O)        0.124    14.369 r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__78/O
+                         net (fo=1, routed)           0.000    14.369    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
+    SLICE_X38Y40         CARRY4 (Prop_carry4_S[1]_CO[1])
+                                                      0.492    14.861 f  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
+                         net (fo=16, routed)          1.423    16.284    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/ltOp
+    SLICE_X37Y36         LUT6 (Prop_lut6_I2_O)        0.332    16.616 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO[0][0][11]_i_1__0/O
+                         net (fo=1, routed)           0.000    16.616    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/D[11]
+    SLICE_X37Y36         FDCE                                         r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][11]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 reset
                             (input port)
-  Destination:            SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][1]/D
+  Destination:            SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][6]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.903ns  (logic 1.893ns (7.601%)  route 23.010ns (92.399%))
+  Data Path Delay:        16.480ns  (logic 1.897ns (11.511%)  route 14.583ns (88.489%))
   Logic Levels:           4  (CARRY4=1 IBUF=1 LUT2=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    K18                                               0.000     0.000 f  reset (IN)
+    K18                                               0.000     0.000 r  reset (IN)
                          net (fo=0)                   0.000     0.000    reset
-    K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 f  reset_IBUF_inst/O
-                         net (fo=2619, routed)       21.757    22.706    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
-    SLICE_X61Y30         LUT2 (Prop_lut2_I0_O)        0.124    22.830 r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__93/O
-                         net (fo=1, routed)           0.000    22.830    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
-    SLICE_X61Y30         CARRY4 (Prop_carry4_S[1]_CO[1])
-                                                      0.491    23.321 f  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
-                         net (fo=16, routed)          1.253    24.574    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp
-    SLICE_X61Y26         LUT6 (Prop_lut6_I2_O)        0.329    24.903 r  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO[0][0][1]_i_1__0/O
-                         net (fo=1, routed)           0.000    24.903    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/D[1]
-    SLICE_X61Y26         FDCE                                         r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][1]/D
+    K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 r  reset_IBUF_inst/O
+                         net (fo=2205, routed)       12.903    13.852    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
+    SLICE_X38Y39         LUT2 (Prop_lut2_I1_O)        0.124    13.976 r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__40/O
+                         net (fo=1, routed)           0.000    13.976    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15]_0[0]
+    SLICE_X38Y39         CARRY4 (Prop_carry4_S[1]_CO[1])
+                                                      0.492    14.468 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/gtOp_inferred__1/i__carry/CO[1]
+                         net (fo=16, routed)          1.680    16.148    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/gtOp
+    SLICE_X40Y35         LUT6 (Prop_lut6_I3_O)        0.332    16.480 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO[0][0][6]_i_1__0/O
+                         net (fo=1, routed)           0.000    16.480    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/D[6]
+    SLICE_X40Y35         FDCE                                         r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][6]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 reset
                             (input port)
-  Destination:            SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][2]/D
+  Destination:            SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][1]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.822ns  (logic 1.893ns (7.626%)  route 22.929ns (92.374%))
+  Data Path Delay:        16.416ns  (logic 1.897ns (11.556%)  route 14.519ns (88.444%))
   Logic Levels:           4  (CARRY4=1 IBUF=1 LUT2=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    K18                                               0.000     0.000 f  reset (IN)
+    K18                                               0.000     0.000 r  reset (IN)
                          net (fo=0)                   0.000     0.000    reset
-    K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 f  reset_IBUF_inst/O
-                         net (fo=2619, routed)       21.757    22.706    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
-    SLICE_X61Y30         LUT2 (Prop_lut2_I0_O)        0.124    22.830 r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__93/O
-                         net (fo=1, routed)           0.000    22.830    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
-    SLICE_X61Y30         CARRY4 (Prop_carry4_S[1]_CO[1])
-                                                      0.491    23.321 f  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
-                         net (fo=16, routed)          1.172    24.493    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp
-    SLICE_X61Y26         LUT6 (Prop_lut6_I2_O)        0.329    24.822 r  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO[0][0][2]_i_1__0/O
-                         net (fo=1, routed)           0.000    24.822    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/D[2]
-    SLICE_X61Y26         FDCE                                         r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][2]/D
+    K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 r  reset_IBUF_inst/O
+                         net (fo=2205, routed)       12.903    13.852    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
+    SLICE_X38Y39         LUT2 (Prop_lut2_I1_O)        0.124    13.976 r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__40/O
+                         net (fo=1, routed)           0.000    13.976    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15]_0[0]
+    SLICE_X38Y39         CARRY4 (Prop_carry4_S[1]_CO[1])
+                                                      0.492    14.468 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/gtOp_inferred__1/i__carry/CO[1]
+                         net (fo=16, routed)          1.616    16.084    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/gtOp
+    SLICE_X39Y33         LUT6 (Prop_lut6_I3_O)        0.332    16.416 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO[0][0][1]_i_1__0/O
+                         net (fo=1, routed)           0.000    16.416    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/D[1]
+    SLICE_X39Y33         FDCE                                         r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][1]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 reset
                             (input port)
-  Destination:            SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][8]/D
+  Destination:            SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][4]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.759ns  (logic 1.893ns (7.646%)  route 22.866ns (92.354%))
+  Data Path Delay:        16.387ns  (logic 1.897ns (11.576%)  route 14.490ns (88.424%))
   Logic Levels:           4  (CARRY4=1 IBUF=1 LUT2=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -462,24 +458,24 @@ Slack:                    inf
     K18                                               0.000     0.000 f  reset (IN)
                          net (fo=0)                   0.000     0.000    reset
     K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 f  reset_IBUF_inst/O
-                         net (fo=2619, routed)       21.757    22.706    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
-    SLICE_X61Y30         LUT2 (Prop_lut2_I0_O)        0.124    22.830 r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__93/O
-                         net (fo=1, routed)           0.000    22.830    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
-    SLICE_X61Y30         CARRY4 (Prop_carry4_S[1]_CO[1])
-                                                      0.491    23.321 f  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
-                         net (fo=16, routed)          1.109    24.430    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp
-    SLICE_X62Y27         LUT6 (Prop_lut6_I2_O)        0.329    24.759 r  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO[0][0][8]_i_1__0/O
-                         net (fo=1, routed)           0.000    24.759    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/D[8]
-    SLICE_X62Y27         FDCE                                         r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][8]/D
+                         net (fo=2205, routed)       13.296    14.245    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
+    SLICE_X38Y40         LUT2 (Prop_lut2_I0_O)        0.124    14.369 r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__78/O
+                         net (fo=1, routed)           0.000    14.369    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
+    SLICE_X38Y40         CARRY4 (Prop_carry4_S[1]_CO[1])
+                                                      0.492    14.861 f  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
+                         net (fo=16, routed)          1.194    16.055    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/ltOp
+    SLICE_X40Y35         LUT6 (Prop_lut6_I2_O)        0.332    16.387 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO[0][0][4]_i_1__0/O
+                         net (fo=1, routed)           0.000    16.387    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/D[4]
+    SLICE_X40Y35         FDCE                                         r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][4]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 reset
                             (input port)
-  Destination:            SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][7]/D
+  Destination:            SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][5]/D
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        24.749ns  (logic 1.893ns (7.649%)  route 22.856ns (92.351%))
+  Data Path Delay:        16.380ns  (logic 1.897ns (11.581%)  route 14.483ns (88.419%))
   Logic Levels:           4  (CARRY4=1 IBUF=1 LUT2=1 LUT6=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -487,15 +483,15 @@ Slack:                    inf
     K18                                               0.000     0.000 f  reset (IN)
                          net (fo=0)                   0.000     0.000    reset
     K18                  IBUF (Prop_ibuf_I_O)         0.949     0.949 f  reset_IBUF_inst/O
-                         net (fo=2619, routed)       21.757    22.706    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
-    SLICE_X61Y30         LUT2 (Prop_lut2_I0_O)        0.124    22.830 r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__93/O
-                         net (fo=1, routed)           0.000    22.830    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
-    SLICE_X61Y30         CARRY4 (Prop_carry4_S[1]_CO[1])
-                                                      0.491    23.321 f  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
-                         net (fo=16, routed)          1.099    24.420    SDF_stage_wrap[7].SDF_stage_inst/BU_inst/ltOp
-    SLICE_X61Y27         LUT6 (Prop_lut6_I2_O)        0.329    24.749 r  SDF_stage_wrap[7].SDF_stage_inst/BU_inst/FIFO[0][0][7]_i_1__0/O
-                         net (fo=1, routed)           0.000    24.749    SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/D[7]
-    SLICE_X61Y27         FDCE                                         r  SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][7]/D
+                         net (fo=2205, routed)       13.296    14.245    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/reset_IBUF
+    SLICE_X38Y40         LUT2 (Prop_lut2_I0_O)        0.124    14.369 r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/i__carry_i_2__78/O
+                         net (fo=1, routed)           0.000    14.369    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO_reg[0][0][15][0]
+    SLICE_X38Y40         CARRY4 (Prop_carry4_S[1]_CO[1])
+                                                      0.492    14.861 f  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/ltOp_inferred__1/i__carry/CO[1]
+                         net (fo=16, routed)          1.187    16.048    SDF_stage_wrap[6].SDF_stage_inst/BU_inst/ltOp
+    SLICE_X40Y35         LUT6 (Prop_lut6_I2_O)        0.332    16.380 r  SDF_stage_wrap[6].SDF_stage_inst/BU_inst/FIFO[0][0][5]_i_1__0/O
+                         net (fo=1, routed)           0.000    16.380    SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/D[5]
+    SLICE_X40Y35         FDCE                                         r  SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[0][0][5]/D
   -------------------------------------------------------------------    -------------------
 
 
@@ -505,9 +501,9 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[0][1]/C
+  Source:                 SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][10]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            SDF_stage_wrap[3].SDF_stage_inst/Data_in_ppF_reg[0][1]/D
+  Destination:            SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][10]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
@@ -515,16 +511,16 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y19          FDCE                         0.000     0.000 r  SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[0][1]/C
-    SLICE_X5Y19          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[0][1]/Q
-                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[3].SDF_stage_inst/Re_Data_in[1]
-    SLICE_X5Y19          FDCE                                         r  SDF_stage_wrap[3].SDF_stage_inst/Data_in_ppF_reg[0][1]/D
+    SLICE_X37Y15         FDCE                         0.000     0.000 r  SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][10]/C
+    SLICE_X37Y15         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][10]/Q
+                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1]_4[10]
+    SLICE_X37Y15         FDCE                                         r  SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][10]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[0][2]/C
+  Source:                 SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][15]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            SDF_stage_wrap[3].SDF_stage_inst/Data_in_ppF_reg[0][2]/D
+  Destination:            SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][15]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
@@ -532,16 +528,16 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y19          FDCE                         0.000     0.000 r  SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[0][2]/C
-    SLICE_X5Y19          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[0][2]/Q
-                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[3].SDF_stage_inst/Re_Data_in[2]
-    SLICE_X5Y19          FDCE                                         r  SDF_stage_wrap[3].SDF_stage_inst/Data_in_ppF_reg[0][2]/D
+    SLICE_X37Y15         FDCE                         0.000     0.000 r  SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][15]/C
+    SLICE_X37Y15         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][15]/Q
+                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1]_4[15]
+    SLICE_X37Y15         FDCE                                         r  SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][15]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[1][8]/C
+  Source:                 SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][2]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            SDF_stage_wrap[3].SDF_stage_inst/Data_in_ppF_reg[1][8]/D
+  Destination:            SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][2]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
@@ -549,16 +545,16 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X11Y18         FDCE                         0.000     0.000 r  SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[1][8]/C
-    SLICE_X11Y18         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[1][8]/Q
-                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[3].SDF_stage_inst/Im_Data_in[8]
-    SLICE_X11Y18         FDCE                                         r  SDF_stage_wrap[3].SDF_stage_inst/Data_in_ppF_reg[1][8]/D
+    SLICE_X37Y12         FDCE                         0.000     0.000 r  SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][2]/C
+    SLICE_X37Y12         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][2]/Q
+                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1]_4[2]
+    SLICE_X37Y12         FDCE                                         r  SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][2]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 SDF_stage_wrap[3].SDF_stage_inst/FIFODec_OutMux_pp1_reg[0][3]/C
+  Source:                 SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][6]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            SDF_stage_wrap[3].SDF_stage_inst/FIFODec_OutMux_ppF_reg[0][3]/D
+  Destination:            SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][6]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
@@ -566,16 +562,16 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y23          FDCE                         0.000     0.000 r  SDF_stage_wrap[3].SDF_stage_inst/FIFODec_OutMux_pp1_reg[0][3]/C
-    SLICE_X5Y23          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[3].SDF_stage_inst/FIFODec_OutMux_pp1_reg[0][3]/Q
-                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[3].SDF_stage_inst/FIFODec_OutMux_pp1_reg[0]_2[3]
-    SLICE_X5Y23          FDCE                                         r  SDF_stage_wrap[3].SDF_stage_inst/FIFODec_OutMux_ppF_reg[0][3]/D
+    SLICE_X37Y12         FDCE                         0.000     0.000 r  SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][6]/C
+    SLICE_X37Y12         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][6]/Q
+                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1]_4[6]
+    SLICE_X37Y12         FDCE                                         r  SDF_stage_wrap[2].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][6]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 SDF_stage_wrap[3].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][7]/C
+  Source:                 SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1_reg[1]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            SDF_stage_wrap[3].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][7]/D
+  Destination:            SDF_stage_wrap[2].SDF_stage_inst/data_counter_ppF_reg[1]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
@@ -583,16 +579,16 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X13Y23         FDCE                         0.000     0.000 r  SDF_stage_wrap[3].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][7]/C
-    SLICE_X13Y23         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[3].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][7]/Q
-                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[3].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1]_4[7]
-    SLICE_X13Y23         FDCE                                         r  SDF_stage_wrap[3].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][7]/D
+    SLICE_X45Y10         FDCE                         0.000     0.000 r  SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1_reg[1]/C
+    SLICE_X45Y10         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1_reg[1]/Q
+                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1[1]
+    SLICE_X45Y10         FDCE                                         r  SDF_stage_wrap[2].SDF_stage_inst/data_counter_ppF_reg[1]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 SDF_stage_wrap[4].SDF_stage_inst/data_out_ppF_reg[0][8]/C
+  Source:                 SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1_reg[2]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            SDF_stage_wrap[5].SDF_stage_inst/Data_in_ppF_reg[0][8]/D
+  Destination:            SDF_stage_wrap[2].SDF_stage_inst/data_counter_ppF_reg[2]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
@@ -600,16 +596,16 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X45Y21         FDCE                         0.000     0.000 r  SDF_stage_wrap[4].SDF_stage_inst/data_out_ppF_reg[0][8]/C
-    SLICE_X45Y21         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[4].SDF_stage_inst/data_out_ppF_reg[0][8]/Q
-                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[5].SDF_stage_inst/Re_Data_in[8]
-    SLICE_X45Y21         FDCE                                         r  SDF_stage_wrap[5].SDF_stage_inst/Data_in_ppF_reg[0][8]/D
+    SLICE_X45Y10         FDCE                         0.000     0.000 r  SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1_reg[2]/C
+    SLICE_X45Y10         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1_reg[2]/Q
+                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1[2]
+    SLICE_X45Y10         FDCE                                         r  SDF_stage_wrap[2].SDF_stage_inst/data_counter_ppF_reg[2]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 SDF_stage_wrap[4].SDF_stage_inst/data_out_ppF_reg[0][9]/C
+  Source:                 SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1_reg[3]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            SDF_stage_wrap[5].SDF_stage_inst/Data_in_ppF_reg[0][9]/D
+  Destination:            SDF_stage_wrap[2].SDF_stage_inst/data_counter_ppF_reg[3]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
@@ -617,16 +613,16 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X45Y21         FDCE                         0.000     0.000 r  SDF_stage_wrap[4].SDF_stage_inst/data_out_ppF_reg[0][9]/C
-    SLICE_X45Y21         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[4].SDF_stage_inst/data_out_ppF_reg[0][9]/Q
-                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[5].SDF_stage_inst/Re_Data_in[9]
-    SLICE_X45Y21         FDCE                                         r  SDF_stage_wrap[5].SDF_stage_inst/Data_in_ppF_reg[0][9]/D
+    SLICE_X45Y10         FDCE                         0.000     0.000 r  SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1_reg[3]/C
+    SLICE_X45Y10         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1_reg[3]/Q
+                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1[3]
+    SLICE_X45Y10         FDCE                                         r  SDF_stage_wrap[2].SDF_stage_inst/data_counter_ppF_reg[3]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 SDF_stage_wrap[5].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][11]/C
+  Source:                 SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1_reg[4]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            SDF_stage_wrap[5].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][11]/D
+  Destination:            SDF_stage_wrap[2].SDF_stage_inst/data_counter_ppF_reg[4]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
@@ -634,16 +630,16 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X39Y32         FDCE                         0.000     0.000 r  SDF_stage_wrap[5].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][11]/C
-    SLICE_X39Y32         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[5].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][11]/Q
-                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[5].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1]_4[11]
-    SLICE_X39Y32         FDCE                                         r  SDF_stage_wrap[5].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][11]/D
+    SLICE_X45Y10         FDCE                         0.000     0.000 r  SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1_reg[4]/C
+    SLICE_X45Y10         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1_reg[4]/Q
+                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[2].SDF_stage_inst/data_counter_pp1[4]
+    SLICE_X45Y10         FDCE                                         r  SDF_stage_wrap[2].SDF_stage_inst/data_counter_ppF_reg[4]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 SDF_stage_wrap[5].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][5]/C
+  Source:                 SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[0][11]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            SDF_stage_wrap[5].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][5]/D
+  Destination:            SDF_stage_wrap[3].SDF_stage_inst/Data_in_ppF_reg[0][11]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
@@ -651,16 +647,16 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X39Y32         FDCE                         0.000     0.000 r  SDF_stage_wrap[5].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][5]/C
-    SLICE_X39Y32         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[5].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1][5]/Q
-                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[5].SDF_stage_inst/FIFODec_OutMux_pp1_reg[1]_4[5]
-    SLICE_X39Y32         FDCE                                         r  SDF_stage_wrap[5].SDF_stage_inst/FIFODec_OutMux_ppF_reg[1][5]/D
+    SLICE_X43Y17         FDCE                         0.000     0.000 r  SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[0][11]/C
+    SLICE_X43Y17         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[0][11]/Q
+                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[3].SDF_stage_inst/Re_Data_in[11]
+    SLICE_X43Y17         FDCE                                         r  SDF_stage_wrap[3].SDF_stage_inst/Data_in_ppF_reg[0][11]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 SDF_stage_wrap[5].SDF_stage_inst/data_out_ppF_reg[1][14]/C
+  Source:                 SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[0][8]/C
                             (rising edge-triggered cell FDCE)
-  Destination:            SDF_stage_wrap[6].SDF_stage_inst/Data_in_ppF_reg[1][14]/D
+  Destination:            SDF_stage_wrap[3].SDF_stage_inst/Data_in_ppF_reg[0][8]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
   Data Path Delay:        0.197ns  (logic 0.141ns (71.611%)  route 0.056ns (28.389%))
@@ -668,10 +664,10 @@ Slack:                    inf
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X39Y33         FDCE                         0.000     0.000 r  SDF_stage_wrap[5].SDF_stage_inst/data_out_ppF_reg[1][14]/C
-    SLICE_X39Y33         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[5].SDF_stage_inst/data_out_ppF_reg[1][14]/Q
-                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[6].SDF_stage_inst/Im_Data_in[14]
-    SLICE_X39Y33         FDCE                                         r  SDF_stage_wrap[6].SDF_stage_inst/Data_in_ppF_reg[1][14]/D
+    SLICE_X43Y17         FDCE                         0.000     0.000 r  SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[0][8]/C
+    SLICE_X43Y17         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  SDF_stage_wrap[2].SDF_stage_inst/data_out_ppF_reg[0][8]/Q
+                         net (fo=1, routed)           0.056     0.197    SDF_stage_wrap[3].SDF_stage_inst/Re_Data_in[8]
+    SLICE_X43Y17         FDCE                                         r  SDF_stage_wrap[3].SDF_stage_inst/Data_in_ppF_reg[0][8]/D
   -------------------------------------------------------------------    -------------------
 
 

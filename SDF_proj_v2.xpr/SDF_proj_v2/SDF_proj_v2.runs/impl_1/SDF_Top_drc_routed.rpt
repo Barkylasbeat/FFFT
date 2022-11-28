@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Fri Nov 25 12:46:26 2022
-| Host         : DESKTOP-PUQ0QT0 running 64-bit major release  (build 9200)
+| Date         : Mon Nov 28 11:43:54 2022
+| Host         : PcFraLenzi running 64-bit major release  (build 9200)
 | Command      : report_drc -file SDF_Top_drc_routed.rpt -pb SDF_Top_drc_routed.pb -rpx SDF_Top_drc_routed.rpx
 | Design       : SDF_Top
 | Device       : xc7a35tcpg236-1
@@ -24,16 +24,16 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 107
+             Violations found: 91
 +----------+------------------+-----------------------------------------------------+------------+
 | Rule     | Severity         | Description                                         | Violations |
 +----------+------------------+-----------------------------------------------------+------------+
 | NSTD-1   | Critical Warning | Unspecified I/O Standard                            | 1          |
 | UCIO-1   | Critical Warning | Unconstrained Logical Port                          | 1          |
 | CFGBVS-1 | Warning          | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| DPIP-1   | Warning          | Input pipelining                                    | 52         |
-| DPOP-1   | Warning          | PREG Output pipelining                              | 26         |
-| DPOP-2   | Warning          | MREG Output pipelining                              | 26         |
+| DPIP-1   | Warning          | Input pipelining                                    | 44         |
+| DPOP-1   | Warning          | PREG Output pipelining                              | 22         |
+| DPOP-2   | Warning          | MREG Output pipelining                              | 22         |
 +----------+------------------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -283,46 +283,6 @@ Input pipelining
 DSP SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__0 input SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
-DPIP-1#45 Warning
-Input pipelining  
-DSP SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__1 input SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#46 Warning
-Input pipelining  
-DSP SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__1 input SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#47 Warning
-Input pipelining  
-DSP SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__2 input SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#48 Warning
-Input pipelining  
-DSP SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__2 input SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#49 Warning
-Input pipelining  
-DSP SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg input SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#50 Warning
-Input pipelining  
-DSP SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg input SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#51 Warning
-Input pipelining  
-DSP SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg__0 input SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
-DPIP-1#52 Warning
-Input pipelining  
-DSP SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg__0 input SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
-Related violations: <none>
-
 DPOP-1#1 Warning
 PREG Output pipelining  
 DSP SDF_stage_wrap[1].SDF_stage_inst/Rotator_inst/arg output SDF_stage_wrap[1].SDF_stage_inst/Rotator_inst/arg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
@@ -433,26 +393,6 @@ PREG Output pipelining
 DSP SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__0 output SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
 Related violations: <none>
 
-DPOP-1#23 Warning
-PREG Output pipelining  
-DSP SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__1 output SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__1/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#24 Warning
-PREG Output pipelining  
-DSP SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__2 output SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#25 Warning
-PREG Output pipelining  
-DSP SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg output SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
-DPOP-1#26 Warning
-PREG Output pipelining  
-DSP SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg__0 output SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
-Related violations: <none>
-
 DPOP-2#1 Warning
 MREG Output pipelining  
 DSP SDF_stage_wrap[1].SDF_stage_inst/Rotator_inst/arg multiplier stage SDF_stage_wrap[1].SDF_stage_inst/Rotator_inst/arg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
@@ -561,26 +501,6 @@ Related violations: <none>
 DPOP-2#22 Warning
 MREG Output pipelining  
 DSP SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__0 multiplier stage SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#23 Warning
-MREG Output pipelining  
-DSP SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__1 multiplier stage SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__1/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#24 Warning
-MREG Output pipelining  
-DSP SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__2 multiplier stage SDF_stage_wrap[6].SDF_stage_inst/Rotator_inst/arg__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#25 Warning
-MREG Output pipelining  
-DSP SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg multiplier stage SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
-Related violations: <none>
-
-DPOP-2#26 Warning
-MREG Output pipelining  
-DSP SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg__0 multiplier stage SDF_stage_wrap[7].SDF_stage_inst/Rotator_inst/arg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
 Related violations: <none>
 
 

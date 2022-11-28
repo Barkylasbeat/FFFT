@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/SDF_Top.tcl"
+  variable script "C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/SDF_Top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,33 +70,29 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache C:/Users/Donato/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-1528-DESKTOP-PUQ0QT0/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.cache/wt [current_project]
-set_property parent.project_path D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.xpr [current_project]
+set_property webtalk.parent_dir C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.cache/wt [current_project]
+set_property parent.project_path C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part_repo_paths {D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.board} [current_project]
+set_property board_part_repo_paths {C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.board} [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo d:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.cache/ip [current_project]
+set_property ip_output_repo c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd
+read_vhdl -library xil_defaultlib C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd
 read_vhdl -vhdl2008 -library xil_defaultlib {
-  D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/R2_BU.vhd
-  D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/Rotator.vhd
-  D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd
-  D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd
-  D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/new/SDF_Top.vhd
+  C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/R2_BU.vhd
+  C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/Rotator.vhd
+  C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd
+  C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd
+  C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/new/SDF_Top.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -109,7 +105,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental D:/Documenti/GitHub/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/utils_1/imports/synth_1/SDF_Stage.dcp
+read_checkpoint -auto_incremental -incremental C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/utils_1/imports/synth_1/SDF_Stage.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
