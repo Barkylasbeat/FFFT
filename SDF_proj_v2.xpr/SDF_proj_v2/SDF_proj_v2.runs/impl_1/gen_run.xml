@@ -1,81 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1669632077">
-  <File Type="OPT-HWDEF" Name="SDF_Top.hwdef"/>
-  <File Type="ROUTE-BUS-SKEW" Name="SDF_Top_bus_skew_routed.rpt"/>
-  <File Type="PA-DCP" Name="SDF_Top.dcp"/>
   <File Type="ROUTE-PWR" Name="SDF_Top_power_routed.rpt"/>
   <File Type="PA-TCL" Name="SDF_Top.tcl"/>
-  <File Type="BITSTR-MMI" Name="SDF_Top.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="SDF_Top_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="SDF_Top_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="SDF_Top_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="SDF_Top_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="SDF_Top_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="SDF_Top_opt.dcp"/>
+  <File Type="BITSTR-MSK" Name="SDF_Top.msk"/>
+  <File Type="ROUTE-CLK" Name="SDF_Top_clock_utilization_routed.rpt"/>
+  <File Type="RDI-RDI" Name="SDF_Top.vdi"/>
+  <File Type="ROUTE-BUS-SKEW" Name="SDF_Top_bus_skew_routed.rpt"/>
+  <File Type="PA-DCP" Name="SDF_Top.dcp"/>
+  <File Type="BG-BIT" Name="SDF_Top.bit"/>
+  <File Type="BG-DRC" Name="SDF_Top.drc"/>
+  <File Type="BG-BGN" Name="SDF_Top.bgn"/>
+  <File Type="BG-BIN" Name="SDF_Top.bin"/>
+  <File Type="BITSTR-RBT" Name="SDF_Top.rbt"/>
+  <File Type="BITSTR-NKY" Name="SDF_Top.nky"/>
+  <File Type="BITSTR-BMM" Name="SDF_Top_bd.bmm"/>
+  <File Type="BITSTR-MMI" Name="SDF_Top.mmi"/>
+  <File Type="BITSTR-SYSDEF" Name="SDF_Top.sysdef"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="SDF_Top.ltx"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="OPT-DRC" Name="SDF_Top_drc_opted.rpt"/>
-  <File Type="PWROPT-DCP" Name="SDF_Top_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="SDF_Top_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="SDF_Top_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="SDF_Top_placed.dcp"/>
+  <File Type="OPT-HWDEF" Name="SDF_Top.hwdef"/>
   <File Type="PLACE-IO" Name="SDF_Top_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="SDF_Top_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="SDF_Top_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="SDF_Top_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="SDF_Top_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="SDF_Top_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="SDF_Top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="SDF_Top.bin"/>
-  <File Type="PLACE-TIMING" Name="SDF_Top_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="SDF_Top_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="SDF_Top.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="SDF_Top_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="SDF_Top_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="SDF_Top_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="SDF_Top.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="SDF_Top_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="SDF_Top_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="SDF_Top_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="SDF_Top_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="SDF_Top_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="SDF_Top_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="SDF_Top_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="SDF_Top_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="SDF_Top_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="SDF_Top_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="SDF_Top_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="SDF_Top_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="SDF_Top_route_status.pb"/>
+  <File Type="ROUTE-DCP" Name="SDF_Top_routed.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="SDF_Top_routed_error.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="SDF_Top_routed_bb.dcp"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="SDF_Top_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="SDF_Top_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="SDF_Top_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="SDF_Top_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="SDF_Top_clock_utilization_routed.rpt"/>
   <File Type="ROUTE-BUS-SKEW-PB" Name="SDF_Top_bus_skew_routed.pb"/>
   <File Type="ROUTE-BUS-SKEW-RPX" Name="SDF_Top_bus_skew_routed.rpx"/>
+  <File Type="OPT-DCP" Name="SDF_Top_opt.dcp"/>
+  <File Type="PLACE-DCP" Name="SDF_Top_placed.dcp"/>
+  <File Type="PWROPT-DCP" Name="SDF_Top_pwropt.dcp"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="SDF_Top_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="SDF_Top_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="SDF_Top_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="SDF_Top_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="SDF_Top_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="SDF_Top_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="SDF_Top_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="SDF_Top_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="SDF_Top.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="SDF_Top_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="SDF_Top_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="SDF_Top.nky"/>
-  <File Type="BITSTR-BMM" Name="SDF_Top_bd.bmm"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="SDF_Top_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="SDF_Top_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="SDF_Top_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="SDF_Top_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="SDF_Top.pdi"/>
   <File Type="RCFI_FILE" Name="SDF_Top.rcfi"/>
   <File Type="CFI_FILE" Name="SDF_Top.cfi"/>
   <File Type="RNPI_FILE" Name="SDF_Top.rnpi"/>
   <File Type="NPI_FILE" Name="SDF_Top.npi"/>
   <File Type="RBD_FILE" Name="SDF_Top.rbd"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="SDF_Top.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="SDF_Top.sysdef"/>
-  <File Type="BG-BGN" Name="SDF_Top.bgn"/>
-  <File Type="BG-DRC" Name="SDF_Top.drc"/>
-  <File Type="RDI-RDI" Name="SDF_Top.vdi"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <File Type="ROUTE-RQS" Name="SDF_Top_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="SDF_Top_postroute_physopted.rqs"/>
   <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
@@ -169,5 +151,6 @@
     <Step Id="route_design"/>
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
+    <Step Id="write_device_image"/>
   </Strategy>
 </GenRun>
