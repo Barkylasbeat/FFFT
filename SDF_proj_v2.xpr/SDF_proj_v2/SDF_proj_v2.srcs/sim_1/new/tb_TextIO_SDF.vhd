@@ -3,10 +3,6 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use IEEE.math_real.all;
 use IEEE.math_complex.all;
-use ieee.fixed_pkg.all;
-use ieee.std_logic_arith.all;
-use ieee.std_logic_unsigned.all;
-use ieee.numeric_std_unsigned.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
 
@@ -48,8 +44,8 @@ architecture Behavioral of tb_TextIO_SDF is
     
     end component;
 
-    file file_INPUT     : text;
-    file file_OUTPUT    : text;
+    file file_input     : text;
+    file file_output    : text;
 
 
     constant INTERNAL_PIPELINE  : integer := 4;
@@ -101,13 +97,17 @@ begin
         variable input_RE       : integer;
         variable input_IM       : integer;
 
+        --variable output_RE      : integer;
+        --variable output_IM      : integer;
+        
+
         variable space          : character;
 
 
     begin
         
-        file_open(file_input, "inputs_FFT.txt", read_mode);
-        file_open(file_output, "outputs_FFT.txt", write_mode);
+        file_open(file_input, "input_FFT.txt", read_mode);
+        file_open(file_output, "C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/new/output_FFT.txt", write_mode);
         
         reset <= '1';
 
@@ -115,7 +115,7 @@ begin
 
         reset <= '0';
 
-        --Reading all the files
+        --Reading all the numbers
         while not endfile(file_input) loop
             readline(file_input, input_line);
             read(input_line, input_RE);
@@ -126,23 +126,34 @@ begin
             Re_Data_in <= std_logic_vector(to_signed(input_RE, DATA_WIDTH));
             Im_Data_in <= std_logic_vector(to_signed(input_IM, DATA_WIDTH));
     
-            wait until rising_edge(clk);
+            wait for CLK_PERIOD;
 
         end loop;
 
-        wait for CLK_PERIOD*NUM_STAGES*TOT_FIFO_LENGTH*INTERNAL_PIPELINE;
+        wait for CLK_PERIOD*NUM_STAGES*INTERNAL_PIPELINE + CLK_PERIOD*TOT_FIFO_LENGTH -7*CLK_PERIOD;
 
         for i in 1 to FFT_TOT_POINTS loop
-            write(output_line, Re_Data_out, right, DATA_WIDTH);
-            write(output_line, space, right, DATA_WIDTH);
-            write(output_line, Im_Data_out, right, DATA_WIDTH);
+
+            -- output_RE   := to_integer(signed(Re_Data_out));
+            -- output_IM   := to_integer(signed(Im_Data_out));
+
+            write(output_line, to_integer(signed(Re_Data_out)));
+            write(output_line, space);
+            write(output_line, to_integer(signed(Im_Data_out)));
             writeline(file_output, output_line);
 
-            wait until rising_edge(clk);
+            -- write(output_line, string'("CIAO FILIPPO"));
+            -- writeline(file_output, output_line);
+
+            --assert false report "CIAO FILIPPO" severity failure;
+
+            wait for CLK_PERIOD;
         end loop;
        
+        file_close(file_input);
+        file_close(file_output);
 
-
+        wait;
         
     end process;
 

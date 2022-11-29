@@ -82,17 +82,21 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.board} [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
+set_property ip_repo_paths c:/Github/FFFT/IP_Cores [current_project]
+update_ip_catalog
 set_property ip_output_repo c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd
+read_vhdl -library xil_defaultlib {
+  C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd
+  C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/new/SDF_Top.vhd
+}
 read_vhdl -vhdl2008 -library xil_defaultlib {
   C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/R2_BU.vhd
   C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/Rotator.vhd
   C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd
   C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd
-  C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/new/SDF_Top.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

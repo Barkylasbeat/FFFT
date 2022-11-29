@@ -55,13 +55,14 @@ Architecture Behavioral of SDF_Top is
     
     end component;
 
-    ------------------------------------CONSTANT------------------------------------------------
+------------------------------------CONSTANTS------------------------------------------------
     constant RE               : integer := 0;
     constant IM               : integer := 1; 
 
     constant NUM_STAGES     :   integer := integer(CEIL(LOG2(Real(FFT_TOT_POINTS))));
+----------------------------------END_CONSTANTS---------------------------------------------
 
-    ---------------------------------------WIRING------------------------------------------------
+---------------------------------------WIRING------------------------------------------------
     type CPLX_SLV    is array(1 downto 0) of std_logic_vector(DATA_WIDTH-1 downto 0);
     type data is array (0 to NUM_STAGES-1) of CPLX_SLV;
     signal stage_input, stage_output    : data;

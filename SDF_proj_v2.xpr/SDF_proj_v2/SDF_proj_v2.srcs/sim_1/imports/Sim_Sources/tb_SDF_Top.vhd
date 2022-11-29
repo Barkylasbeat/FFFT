@@ -107,7 +107,7 @@ begin
             wait until rising_edge(clk); 
         end loop;
 
-            wait for 15*CLK_PERIOD;            
+            wait for 10*CLK_PERIOD;            
 
             reset <= '1';
 
@@ -123,6 +123,8 @@ begin
             end loop;
         end loop;
             
+        Re_Data_in  <= (others => '0');
+        Im_Data_in  <= (others => '0');
         wait;
         
     end process;
