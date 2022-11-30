@@ -1,9 +1,14 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
+use IEEE.math_real.all;
+use IEEE.math_complex.all;
+
 
 entity AXI_Output_Interface is
     Generic(
-        DATA_WIDTH       : NATURAL  := 32
+        DATA_WIDTH       : NATURAL  := 32;
+        FFT_TOT_POINTS   : INTEGER  := 64
     );
     Port(
 
@@ -15,9 +20,9 @@ entity AXI_Output_Interface is
 
         m_axis_tdata    :   out std_logic_vector(DATA_WIDTH-1  downto 0);
         m_axis_tvalid   :   out std_logic;
-        m_axis_tready   :   in std_logic
+        m_axis_tready   :   in std_logic;
 
-        data_received   :   in std_logic;
+        data_received   :   in std_logic
         
      );
 end AXI_Output_Interface;
@@ -48,7 +53,7 @@ architecture Behavioral of AXI_Output_Interface is
 --------------------------------------------END_SIGNALS---------------------------------------------------
 
 -----------------------------------------------WIRING----------------------------------------------------
-    signal data_out         : CPLX_SLV := Others => '0';
+    signal data_out         : CPLX_SLV := (Others => (Others => '0'));
     signal reverse_addr     : std_logic_vector(NUM_STAGES-1 downto 0);
     signal addr             : std_logic_vector(0 to NUM_STAGES);
 --------------------------------------------END_WIRING---------------------------------------------------
@@ -57,7 +62,7 @@ begin
 -----------------------------------------------DATAFLOW----------------------------------------------------
     data_out(RE)    <= Re_data;
     data_out(IM)    <= Im_data;
-    addr            <= std_logic_vector(to_unsigned(data_counter));
+    addr            <= std_logic_vector(to_unsigned(data_counter,addr'length));
     reverse_addr    <= addr;
 ---------------------------------------------END_DATAFLOW--------------------------------------------------
 
@@ -67,7 +72,7 @@ begin
 
         output_buf      <= (Others => (Others => (Others => '0')));
         data_counter    <= 0;
-        state           <= WAIT_RE;
+        state           <= WAIT_INPUTS;
 
     elsif rising_edge(clk) then
 
@@ -94,14 +99,14 @@ begin
             when SEND_RE =>
                 m_axis_tvalid <= '1';
                 m_axis_tdata  <= output_buf(to_integer(unsigned(reverse_addr)))(RE);
-                if s_axis_tready => '1' then
+                if m_axis_tready = '1' then
                     state        <= SEND_IM;
                     m_axis_tdata <= output_buf(to_integer(unsigned(reverse_addr)))(IM);
                 end if;
 
             when SEND_IM =>
                 m_axis_tdata  <= output_buf(to_integer(unsigned(reverse_addr)))(IM);
-                if s_axis_tready = '1' then                
+                if m_axis_tready = '1' then                
                     if data_counter = FFT_TOT_POINTS-1 then
                         data_counter  <= 0;
                         state         <= WAIT_INPUTS;
@@ -109,9 +114,11 @@ begin
                     else
                         data_counter  <= data_counter + 1;
                         state         <= SEND_RE;
+                    end if;
                 end if;
             end case;                        
-    end if;
+        end if;
+    end process;
 
 
 end Behavioral;

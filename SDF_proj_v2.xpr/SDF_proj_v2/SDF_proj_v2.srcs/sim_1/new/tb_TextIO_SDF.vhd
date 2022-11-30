@@ -15,7 +15,7 @@ architecture Behavioral of tb_TextIO_SDF is
     constant CLK_PERIOD : time := 10 ns;
     constant RESET_WND  : time := 50 ns; 
 
-    constant FFT_TOT_POINTS : integer := 8;
+    constant FFT_TOT_POINTS : integer := 32;
     constant DATA_WIDTH     : integer := 16;
     constant PRECISION      : integer := 6;
     constant TF_WIDTH       : integer := 8;
@@ -107,7 +107,7 @@ begin
     begin
         
         file_open(file_input, "input_FFT.txt", read_mode);
-        file_open(file_output, "C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/new/output_FFT.txt", write_mode);
+        file_open(file_output, "C:\Users\donat\Desktop\NL2_FFT\Git_FFFT\FFFT\SDF_proj_v2.xpr\SDF_proj_v2\SDF_proj_v2.srcs\sim_1\new\output_FFT.txt", write_mode);
         
         reset <= '1';
 
@@ -130,7 +130,7 @@ begin
 
         end loop;
 
-        wait for CLK_PERIOD*NUM_STAGES*INTERNAL_PIPELINE + CLK_PERIOD*TOT_FIFO_LENGTH -7*CLK_PERIOD;
+        wait for CLK_PERIOD*NUM_STAGES*INTERNAL_PIPELINE;
 
         for i in 1 to FFT_TOT_POINTS loop
 

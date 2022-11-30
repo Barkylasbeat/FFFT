@@ -1,5 +1,8 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
+use ieee.numeric_std.all;
+use IEEE.math_real.all;
+use IEEE.math_complex.all;
 
 entity AXI_Input_Interface is
     Generic(
@@ -18,7 +21,7 @@ entity AXI_Input_Interface is
         Re_data         :   out std_logic_vector(DATA_WIDTH-1  downto 0);
         Im_data         :   out std_logic_vector(DATA_WIDTH-1  downto 0);
 
-        sending_in      :   out std_logic;
+        sending_in      :   out std_logic
         
      );
 end AXI_Input_Interface;
@@ -60,13 +63,13 @@ begin
             case state is
 
                 when WAIT_RE =>
-                    if s_axis_tvalid => '1' then
+                    if s_axis_tvalid = '1' then
                         input_buf(data_counter)(RE) <= s_axis_tdata;
                         state <= WAIT_IM;
                     end if;
 
                 when WAIT_IM =>
-                    if s_axis_tvalid => '1' then
+                    if s_axis_tvalid = '1' then
                         input_buf(data_counter)(IM) <= s_axis_tdata;
                         if data_counter = FFT_TOT_POINTS-1 then
                             data_counter <= 0;
@@ -78,18 +81,19 @@ begin
                         end if;
                     end if;
 
-                when TO_COMPUTE
+                when TO_COMPUTE =>
                     sending_in  <= '0';
                     Re_data     <= input_buf(data_counter)(RE);
                     Im_data     <= input_buf(data_counter)(IM);
-                    if data_counter = FFT_TOT_POINTS-1
+                    if data_counter = FFT_TOT_POINTS-1 then
                         data_counter <= 0;
                         state        <= WAIT_RE;
                     else
                         data_counter <= data_counter + 1;
-                    end if
+                    end if;
                 end case;                        
         end if;
+      end process;
 
 
 end Behavioral;
