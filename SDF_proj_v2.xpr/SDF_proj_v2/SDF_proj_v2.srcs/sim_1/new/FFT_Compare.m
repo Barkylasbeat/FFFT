@@ -32,9 +32,10 @@ xlabel('Sample number')
 ylabel({'Matlab (red)';'FPGA (green)'})
 
 figure
-title('Computation error (%)')
+title('Relative Percent Difference')
 hold
-error = abs((modZ_CPU-modZ_FPGA)./modZ_CPU);
+error = 2*(abs((modZ_CPU-modZ_FPGA))./(modZ_CPU+modZ_FPGA)); %Relative Percent Difference
+error(isnan(error))=0; % the 0/0 indeterminate form gives now a 0% deviation
 plot(error*100)
 xlabel('Sample number')
 ytickformat('percentage')
