@@ -16,7 +16,7 @@ entity SDF_Stage is
         PRECISION        : NATURAL  := 6; 
         TF_WIDTH         : POSITIVE := 8;
         STAGE            : POSITIVE := 1;
-        SR_INIT          : REAL     := 0.0
+        SR_INIT          : NATURAL  := 0
     );
     Port(
 
@@ -85,7 +85,7 @@ architecture Behavioral of SDF_Stage is
         Generic(
             SR_WIDTH    :   POSITIVE    := 8;    
             SR_DEPTH    :   POSITIVE    := 4;    
-            SR_INIT     :   REAL        := 0.0;  
+            SR_INIT     :   NATURAL     := 0;  
             PRECISION   :   NATURAL     := 6
         );
         Port(

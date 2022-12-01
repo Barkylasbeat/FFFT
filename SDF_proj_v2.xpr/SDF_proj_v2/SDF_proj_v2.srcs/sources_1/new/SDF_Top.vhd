@@ -13,7 +13,7 @@ entity SDF_Top is
         DATA_WIDTH       : NATURAL  := 16;
         PRECISION        : NATURAL  := 6; 
         TF_WIDTH         : POSITIVE := 8;
-        SR_INIT          : REAL     := 0.0
+        SR_INIT          : NATURAL  := 0
     );
     Port(
 
@@ -39,7 +39,7 @@ Architecture Behavioral of SDF_Top is
             PRECISION        : NATURAL  := 6; 
             TF_WIDTH         : POSITIVE := 8;
             STAGE            : POSITIVE := 1;
-            SR_INIT          : REAL     := 0.0
+            SR_INIT          : NATURAL  := 0
         );
         Port(
     

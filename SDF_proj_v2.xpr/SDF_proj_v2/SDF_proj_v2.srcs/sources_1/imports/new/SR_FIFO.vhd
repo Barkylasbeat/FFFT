@@ -15,7 +15,7 @@ entity SR_FIFO is
     Generic(
         SR_WIDTH    :   POSITIVE    := 8;   --The width of the data
         SR_DEPTH    :   POSITIVE    := 4;   --Lenght of the FIFO
-        SR_INIT     :   REAL        := 0.0;   --Initialization values
+        SR_INIT     :   NATURAL     := 0;   --Initialization values
         PRECISION   :   NATURAL     := 6
     );
     Port(

@@ -2,12 +2,12 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Tue Nov 29 16:54:49 2022
-# Process ID: 14524
+# Start of session at: Wed Nov 30 19:12:39 2022
+# Process ID: 14564
 # Current directory: C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1
-# Command line: vivado.exe -log SDF_Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source SDF_Top.tcl
-# Log file: C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/SDF_Top.vds
+# Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
+# Log file: C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/design_1_wrapper.vds
 # Journal file: C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1\vivado.jou
 # Running On: PcFraLenzi, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 2, Host memory: 16957 MB
 #-----------------------------------------------------------
-source SDF_Top.tcl -notrace
+source design_1_wrapper.tcl -notrace

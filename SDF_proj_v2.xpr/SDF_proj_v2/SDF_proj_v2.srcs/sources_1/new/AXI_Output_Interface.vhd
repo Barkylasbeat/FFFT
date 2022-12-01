@@ -55,7 +55,7 @@ architecture Behavioral of AXI_Output_Interface is
 -----------------------------------------------WIRING----------------------------------------------------
     signal data_out         : CPLX_SLV := (Others => (Others => '0'));
     signal reverse_addr     : std_logic_vector(NUM_STAGES-1 downto 0);
-    signal addr             : std_logic_vector(0 to NUM_STAGES);
+    signal addr             : std_logic_vector(0 to NUM_STAGES-1);
 --------------------------------------------END_WIRING---------------------------------------------------
 begin
 

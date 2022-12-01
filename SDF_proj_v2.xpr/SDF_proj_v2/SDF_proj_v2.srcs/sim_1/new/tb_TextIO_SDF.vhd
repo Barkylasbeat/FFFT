@@ -3,6 +3,10 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use IEEE.math_real.all;
 use IEEE.math_complex.all;
+use ieee.fixed_pkg.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std_unsigned.all;
 use STD.textio.all;
 use ieee.std_logic_textio.all;
 
@@ -15,7 +19,7 @@ architecture Behavioral of tb_TextIO_SDF is
     constant CLK_PERIOD : time := 10 ns;
     constant RESET_WND  : time := 50 ns; 
 
-    constant FFT_TOT_POINTS : integer := 32;
+    constant FFT_TOT_POINTS : integer := 8;
     constant DATA_WIDTH     : integer := 16;
     constant PRECISION      : integer := 6;
     constant TF_WIDTH       : integer := 8;
@@ -94,11 +98,11 @@ begin
         variable input_line     : line;
         variable output_line    : line;
 
-        variable input_RE       : integer;
-        variable input_IM       : integer;
+        variable input_RE       : real;
+        variable input_IM       : real;
 
-        --variable output_RE      : integer;
-        --variable output_IM      : integer;
+        variable output_RE      : real;
+        variable output_IM      : real;
         
 
         variable space          : character;
@@ -107,7 +111,7 @@ begin
     begin
         
         file_open(file_input, "input_FFT.txt", read_mode);
-        file_open(file_output, "C:\Users\donat\Desktop\NL2_FFT\Git_FFFT\FFFT\SDF_proj_v2.xpr\SDF_proj_v2\SDF_proj_v2.srcs\sim_1\new\output_FFT.txt", write_mode);
+        file_open(file_output, "C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/new/output_FFT.txt", write_mode);
         
         reset <= '1';
 
@@ -122,9 +126,8 @@ begin
             read(input_line, space);           -- read in the space character
             read(input_line, input_IM);
     
-            -- Pass the variable to a signal to allow the ripple-carry to use it
-            Re_Data_in <= std_logic_vector(to_signed(input_RE, DATA_WIDTH));
-            Im_Data_in <= std_logic_vector(to_signed(input_IM, DATA_WIDTH));
+            Re_Data_in <= to_slv(to_sfixed(input_RE, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(input_IM, DATA_WIDTH-1-PRECISION, -PRECISION));
     
             wait for CLK_PERIOD;
 
@@ -134,18 +137,16 @@ begin
 
         for i in 1 to FFT_TOT_POINTS loop
 
-            -- output_RE   := to_integer(signed(Re_Data_out));
-            -- output_IM   := to_integer(signed(Im_Data_out));
+            output_RE := to_real(to_sfixed(Re_Data_out, DATA_WIDTH-1-PRECISION, -PRECISION));
+            output_IM := to_real(to_sfixed(Im_Data_out, DATA_WIDTH-1-PRECISION, -PRECISION));
 
-            write(output_line, to_integer(signed(Re_Data_out)));
+            --output_RE := to_integer(signed(Re_Data_out));
+            --output_IM := to_integer(signed(Im_Data_out));
+
+            write(output_line, output_RE);
             write(output_line, space);
-            write(output_line, to_integer(signed(Im_Data_out)));
+            write(output_line, output_IM);
             writeline(file_output, output_line);
-
-            -- write(output_line, string'("CIAO FILIPPO"));
-            -- writeline(file_output, output_line);
-
-            --assert false report "CIAO FILIPPO" severity failure;
 
             wait for CLK_PERIOD;
         end loop;
