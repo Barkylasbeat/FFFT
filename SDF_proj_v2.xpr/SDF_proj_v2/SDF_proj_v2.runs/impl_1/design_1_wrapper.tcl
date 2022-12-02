@@ -125,6 +125,7 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 1
+  set_param xicom.use_bs_reader 1
   open_checkpoint design_1_wrapper_routed.dcp
   set_property webtalk.parent_dir C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.cache/wt [current_project]
 set_property TOP design_1_wrapper [current_fileset]

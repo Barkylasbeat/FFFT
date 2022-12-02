@@ -22,7 +22,7 @@ architecture Behavioral of tb_SDF_Top is
     constant PRECISION      : integer := 6;
     constant TF_WIDTH       : integer := 8;
     constant STAGE          : integer := 1;
-    constant SR_INIT        : real    := 0.0;
+    constant SR_INIT        : integer := 0;
 
     component SDF_Top is
         Generic(

@@ -56,6 +56,7 @@ begin
 
             input_buf       <= (Others => (Others => (Others => '0')));
             data_counter    <= 0;
+            sending_in      <= '0';
             state           <= WAIT_RE;
 
         elsif rising_edge(clk) then
@@ -72,7 +73,9 @@ begin
                     if s_axis_tvalid = '1' then
                         input_buf(data_counter)(IM) <= s_axis_tdata;
                         if data_counter = FFT_TOT_POINTS-1 then
-                            data_counter <= 0;
+                            data_counter <= 1;
+                            Re_data      <= input_buf(0)(RE);
+                            Im_data      <= input_buf(0)(IM);
                             sending_in   <= '1';
                             state        <= TO_COMPUTE;
                         else

@@ -41,7 +41,7 @@ architecture Behavioral of Rotator is
     -- incoming data (to accomodate temporairly the carry).
     type CPLX_SUM is array(1 downto 0) of sfixed(DATA_WIDTH-PRECISION downto -PRECISION);
 
-    signal Result   : CPLX_SUM;
+    signal Result   : CPLX_SUM      := (others => (others => '0'));
 
     signal Re_Re, Im_Re, Re_Im, Im_Im   : sfixed(DATA_WIDTH-1-PRECISION downto -PRECISION);
 
@@ -75,7 +75,9 @@ begin
             Result(Re) <= Re_Re - Im_Im;
             Result(Im) <= Im_Re + Re_Im;
 
-            -- We give out the result saturated of not
+            Re_Data_out <= resize(to_slv(Result(RE)), Re_Data_out);
+            Im_Data_out <= resize(to_slv(Result(IM)), Im_Data_out);
+            -- We give out the result saturated or not
             -- Real part saturation check and send
             if Result(RE) > HIGHER_BOUND then
                 Re_Data_out	<= to_slv(HIGHER_BOUND);

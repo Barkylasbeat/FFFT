@@ -14,8 +14,8 @@
       "clk_wiz": "",
       "rst_clk_wiz_100M": "",
       "AXI4Stream_UART_0": "",
-      "AXI_Input_Interface_0": "",
       "SDF_Top_0": "",
+      "AXI_Input_Interface_0": "",
       "AXI_Output_Interface_0": ""
     },
     "interface_ports": {
@@ -101,6 +101,82 @@
         "xci_name": "design_1_AXI4Stream_UART_0_2",
         "xci_path": "ip\\design_1_AXI4Stream_UART_0_2\\design_1_AXI4Stream_UART_0_2.xci",
         "inst_hier_path": "AXI4Stream_UART_0"
+      },
+      "SDF_Top_0": {
+        "vlnv": "xilinx.com:module_ref:SDF_Top:1.0",
+        "xci_name": "design_1_SDF_Top_0_0",
+        "xci_path": "ip\\design_1_SDF_Top_0_0\\design_1_SDF_Top_0_0.xci",
+        "inst_hier_path": "SDF_Top_0",
+        "parameters": {
+          "DATA_WIDTH": {
+            "value": "8"
+          },
+          "FFT_TOT_POINTS": {
+            "value": "16"
+          },
+          "PRECISION": {
+            "value": "3"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "SDF_Top",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "reset",
+                "value_src": "constant"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "reset": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_HIGH",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "Re_Data_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Im_Data_in": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Re_Data_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "Im_Data_out": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
       },
       "AXI_Input_Interface_0": {
         "vlnv": "xilinx.com:module_ref:AXI_Input_Interface:1.0",
@@ -235,79 +311,6 @@
           },
           "sending_in": {
             "direction": "O"
-          }
-        }
-      },
-      "SDF_Top_0": {
-        "vlnv": "xilinx.com:module_ref:SDF_Top:1.0",
-        "xci_name": "design_1_SDF_Top_0_0",
-        "xci_path": "ip\\design_1_SDF_Top_0_0\\design_1_SDF_Top_0_0.xci",
-        "inst_hier_path": "SDF_Top_0",
-        "parameters": {
-          "DATA_WIDTH": {
-            "value": "8"
-          },
-          "PRECISION": {
-            "value": "3"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "SDF_Top",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "reset",
-                "value_src": "constant"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
-          },
-          "reset": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_HIGH",
-                "value_src": "const_prop"
-              }
-            }
-          },
-          "Re_Data_in": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "Im_Data_in": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "Re_Data_out": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "Im_Data_out": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
           }
         }
       },
@@ -506,8 +509,8 @@
           "AXI4Stream_UART_0/clk_uart",
           "AXI4Stream_UART_0/m00_axis_rx_aclk",
           "AXI4Stream_UART_0/s00_axis_tx_aclk",
-          "AXI_Input_Interface_0/clk",
           "SDF_Top_0/clk",
+          "AXI_Input_Interface_0/clk",
           "AXI_Output_Interface_0/clk"
         ]
       },

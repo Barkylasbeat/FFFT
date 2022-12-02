@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
---Date        : Wed Nov 30 19:11:23 2022
+--Date        : Fri Dec  2 19:38:40 2022
 --Host        : PcFraLenzi running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -65,6 +65,16 @@ architecture STRUCTURE of design_1 is
     s00_axis_tx_tvalid : in STD_LOGIC
   );
   end component design_1_AXI4Stream_UART_0_2;
+  component design_1_SDF_Top_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    Re_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Im_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Re_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    Im_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component design_1_SDF_Top_0_0;
   component design_1_AXI_Input_Interface_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -77,16 +87,6 @@ architecture STRUCTURE of design_1 is
     sending_in : out STD_LOGIC
   );
   end component design_1_AXI_Input_Interface_0_0;
-  component design_1_SDF_Top_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    Re_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Im_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Re_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    Im_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component design_1_SDF_Top_0_0;
   component design_1_AXI_Output_Interface_0_0 is
   port (
     clk : in STD_LOGIC;

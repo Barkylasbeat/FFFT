@@ -19,12 +19,12 @@ architecture Behavioral of tb_TextIO_SDF is
     constant CLK_PERIOD : time := 10 ns;
     constant RESET_WND  : time := 50 ns; 
 
-    constant FFT_TOT_POINTS : integer := 8;
-    constant DATA_WIDTH     : integer := 16;
+    constant FFT_TOT_POINTS : integer := 4096;
+    constant DATA_WIDTH     : integer := 32;
     constant PRECISION      : integer := 6;
     constant TF_WIDTH       : integer := 8;
     constant STAGE          : integer := 1;
-    constant SR_INIT        : real    := 0.0;
+    constant SR_INIT        : integer := 0;
 
     component SDF_Top is
         Generic(
@@ -32,7 +32,7 @@ architecture Behavioral of tb_TextIO_SDF is
             DATA_WIDTH       : NATURAL  := 16;
             PRECISION        : NATURAL  := 6; 
             TF_WIDTH         : POSITIVE := 8;
-            SR_INIT          : REAL     := 0.0
+            SR_INIT          : NATURAL  := 0
         );
         Port(
     
@@ -110,8 +110,8 @@ begin
 
     begin
         
-        file_open(file_input, "input_FFT.txt", read_mode);
-        file_open(file_output, "C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/new/output_FFT.txt", write_mode);
+        file_open(file_input, "C:\Github\FFFT\Scripts_Matlab\input_FFT.txt", read_mode);
+        file_open(file_output, "C:\Github\FFFT\Scripts_Matlab\output_FFT.txt", write_mode);
         
         reset <= '1';
 
@@ -139,9 +139,6 @@ begin
 
             output_RE := to_real(to_sfixed(Re_Data_out, DATA_WIDTH-1-PRECISION, -PRECISION));
             output_IM := to_real(to_sfixed(Im_Data_out, DATA_WIDTH-1-PRECISION, -PRECISION));
-
-            --output_RE := to_integer(signed(Re_Data_out));
-            --output_IM := to_integer(signed(Im_Data_out));
 
             write(output_line, output_RE);
             write(output_line, space);

@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/constrs_1/new/io.xdc rfile:../../../SDF_proj_v2.srcs/constrs_1/new/io.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:1 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN A18 [get_ports usb_uart_rxd]
+set_property src_info {type:XDC file:1 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN B18 [get_ports usb_uart_txd]

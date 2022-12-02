@@ -22,7 +22,7 @@ architecture Behavioral of tb_SDF_Stage is
     constant PRECISION      : integer := 0;
     constant TF_WIDTH       : integer := 8;
     constant STAGE          : integer := 3;
-    constant SR_INIT        : real    := 0.0;
+    constant SR_INIT        : integer := 0;
 
     component SDF_Stage is
         Generic(
@@ -31,7 +31,7 @@ architecture Behavioral of tb_SDF_Stage is
             PRECISION        : NATURAL  := 0; 
             TF_WIDTH         : POSITIVE := 8;
             STAGE            : POSITIVE := 1;
-            SR_INIT          : REAL     := 0.0
+            SR_INIT          : NATURAL  := 0
         );
         Port(
     

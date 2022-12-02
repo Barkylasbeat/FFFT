@@ -20,7 +20,7 @@ architecture Behavioral of tb_SR_FIFO is
     constant SR_WIDTH   : integer := 16;
     constant PRECISION  : integer := 0;
     constant SR_DEPTH   : integer := 4;
-    constant SR_INIT    : real    := 0.0;
+    constant SR_INIT    : integer := 0;
 
     component SR_FIFO is
         Generic(
