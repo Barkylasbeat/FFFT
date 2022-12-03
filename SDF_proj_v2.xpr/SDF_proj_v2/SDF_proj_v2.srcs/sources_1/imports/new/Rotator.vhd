@@ -79,22 +79,22 @@ begin
             Im_Data_out <= resize(to_slv(Result(IM)), Im_Data_out);
             -- We give out the result saturated or not
             -- Real part saturation check and send
-            if Result(RE) > HIGHER_BOUND then
-                Re_Data_out	<= to_slv(HIGHER_BOUND);
-            elsif Result(RE) < LOWER_BOUND then
-                Re_Data_out	<= to_slv(LOWER_BOUND);
-            else
-                Re_Data_out <= resize(to_slv(Result(RE)), Re_Data_out);
-            end if;
+            -- if Result(RE) > HIGHER_BOUND then
+            --     Re_Data_out	<= to_slv(HIGHER_BOUND);
+            -- elsif Result(RE) < LOWER_BOUND then
+            --     Re_Data_out	<= to_slv(LOWER_BOUND);
+            -- else
+            --     Re_Data_out <= resize(to_slv(Result(RE)), Re_Data_out);
+            -- end if;
 
-            -- Imaginary part saturation check and send
-            if Result(IM) > HIGHER_BOUND then
-                Im_Data_out	<= to_slv(HIGHER_BOUND);
-            elsif Result(IM) < LOWER_BOUND then
-                Im_Data_out	<= to_slv(LOWER_BOUND);
-            else
-                Im_Data_out <= resize(to_slv(Result(IM)), Im_Data_out);
-            end if;
+            -- -- Imaginary part saturation check and send
+            -- if Result(IM) > HIGHER_BOUND then
+            --     Im_Data_out	<= to_slv(HIGHER_BOUND);
+            -- elsif Result(IM) < LOWER_BOUND then
+            --     Im_Data_out	<= to_slv(LOWER_BOUND);
+            -- else
+            --     Im_Data_out <= resize(to_slv(Result(IM)), Im_Data_out);
+            -- end if;
             
     end process;
 

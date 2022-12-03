@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../SDF_proj_v2.srcs/sources_1/new/AXI_Input_Interface.vhd" \
+"../../../../../SDF_proj_v2.srcs/sources_1/new/AXI_Output_Interface.vhd" \
+"../../../../../SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd" \
+"../../../../../SDF_proj_v2.srcs/sources_1/new/SDF_Top.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../../SDF_proj_v2.srcs/sources_1/imports/new/R2_BU.vhd" \
+"../../../../../SDF_proj_v2.srcs/sources_1/imports/new/Rotator.vhd" \
+"../../../../../SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd" \
+"../../../../../SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd" \
+"../../../../../SDF_proj_v2.srcs/sim_1/new/tb_AXI_Stream.vhd" \
+
+# Do not sort compile order
+nosort

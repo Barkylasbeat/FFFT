@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Fri Dec  2 19:40:06 2022
+// Date        : Sat Dec  3 22:23:02 2022
 // Host        : PcFraLenzi running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI_Output_Interface_0_0/design_1_AXI_Output_Interface_0_0_sim_netlist.v
@@ -25,7 +25,7 @@ module design_1_AXI_Output_Interface_0_0
     m_axis_tready,
     data_received);
   (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF m_axis, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, INSERT_VIP 0" *) input clk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input reset;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
   input [7:0]Re_data;
   input [7:0]Im_data;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) output [7:0]m_axis_tdata;
@@ -34,6 +34,7 @@ module design_1_AXI_Output_Interface_0_0
   input data_received;
 
   wire \<const0> ;
+  wire \<const1> ;
 
   assign m_axis_tdata[7] = \<const0> ;
   assign m_axis_tdata[6] = \<const0> ;
@@ -43,9 +44,11 @@ module design_1_AXI_Output_Interface_0_0
   assign m_axis_tdata[2] = \<const0> ;
   assign m_axis_tdata[1] = \<const0> ;
   assign m_axis_tdata[0] = \<const0> ;
-  assign m_axis_tvalid = \<const0> ;
+  assign m_axis_tvalid = \<const1> ;
   GND GND
        (.G(\<const0> ));
+  VCC VCC
+       (.P(\<const1> ));
 endmodule
 `ifndef GLBL
 `define GLBL

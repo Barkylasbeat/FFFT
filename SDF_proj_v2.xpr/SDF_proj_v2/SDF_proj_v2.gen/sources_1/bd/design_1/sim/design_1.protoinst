@@ -27,7 +27,7 @@
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "clk"},
-						"ARESETN": { "actual": "reset"},
+						"ARESET": { "actual": "reset"},
 						"TDATA": { "actual": "s_axis_tdata"},
 						"TREADY": { "actual": "s_axis_tready"},
 						"TVALID": { "actual": "s_axis_tvalid"}
@@ -37,7 +37,7 @@
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "clk"},
-						"ARESETN": { "actual": "reset"},
+						"ARESET": { "actual": "reset"},
 						"TDATA": { "actual": "m_axis_tdata"},
 						"TREADY": { "actual": "m_axis_tready"},
 						"TVALID": { "actual": "m_axis_tvalid"}

@@ -187,6 +187,8 @@ begin
         wait for RESET_WND;
         
         reset <= '0';
+
+        
                   
         for i in 1 to 2*FFT_TOT_POINTS loop
             

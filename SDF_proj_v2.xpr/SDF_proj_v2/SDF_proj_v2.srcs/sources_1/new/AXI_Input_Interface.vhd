@@ -48,7 +48,9 @@ constant IM               : integer := 1;
 begin
 
     with state select s_axis_tready <= '0' when TO_COMPUTE,
-                                       (NOT reset) when Others;
+                                        (NOT reset) when Others;
+
+    
 
     AXI : process(clk, reset)
     begin 

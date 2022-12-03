@@ -66,8 +66,8 @@ begin
     addr            <= std_logic_vector(to_unsigned(data_counter,addr'length));
     reverse_addr    <= addr(NUM_STAGES-1 downto 0);
 
-    with state select m_axis_tvalid <= '0' when WAIT_INPUTS,
-                                       '0' when WAIT_COMPUTE,
+    with state select m_axis_tvalid <= '1' when WAIT_INPUTS,
+                                       '1' when WAIT_COMPUTE,
                                        (NOT reset) when Others;
 ---------------------------------------------END_DATAFLOW--------------------------------------------------
 

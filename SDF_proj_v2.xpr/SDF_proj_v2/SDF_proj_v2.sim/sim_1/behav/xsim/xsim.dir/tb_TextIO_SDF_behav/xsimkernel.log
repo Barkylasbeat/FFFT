@@ -1,7 +1,0 @@
-Running: xsim.dir/tb_TextIO_SDF_behav/xsimk.exe -simmode gui -wdb tb_TextIO_SDF_behav.wdb -simrunnum 0 -socket 56677
-Design successfully loaded
-Design Loading Memory Usage: 9372 KB (Peak: 9372 KB)
-Design Loading CPU Usage: 15 ms
-Simulation completed
-Simulation Memory Usage: 12676 KB (Peak: 12676 KB)
-Simulation CPU Usage: 58233 ms
