@@ -21,6 +21,8 @@ entity bd_378d_wrapper is
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     probe1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     resetn : in STD_LOGIC
   );
 end bd_378d_wrapper;
@@ -31,6 +33,8 @@ architecture STRUCTURE of bd_378d_wrapper is
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     probe1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     resetn : in STD_LOGIC;
     SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     SLOT_0_AXIS_tlast : in STD_LOGIC;
@@ -56,6 +60,8 @@ bd_378d_i: component bd_378d
       clk => clk,
       probe0(7 downto 0) => probe0(7 downto 0),
       probe1(7 downto 0) => probe1(7 downto 0),
+      probe2(7 downto 0) => probe2(7 downto 0),
+      probe3(7 downto 0) => probe3(7 downto 0),
       resetn => resetn
     );
 end STRUCTURE;

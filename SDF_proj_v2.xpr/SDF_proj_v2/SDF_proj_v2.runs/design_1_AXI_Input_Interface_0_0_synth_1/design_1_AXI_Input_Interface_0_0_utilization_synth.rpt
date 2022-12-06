@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Tue Dec  6 17:08:40 2022
+| Date         : Tue Dec  6 19:12:37 2022
 | Host         : PcFraLenzi running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_AXI_Input_Interface_0_0_utilization_synth.rpt -pb design_1_AXI_Input_Interface_0_0_utilization_synth.pb
 | Design       : design_1_AXI_Input_Interface_0_0
@@ -31,13 +31,13 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  460 |     0 |          0 |     20800 |  2.21 |
-|   LUT as Logic          |  460 |     0 |          0 |     20800 |  2.21 |
+| Slice LUTs*             |   44 |     0 |          0 |     20800 |  0.21 |
+|   LUT as Logic          |   44 |     0 |          0 |     20800 |  0.21 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         | 1055 |     0 |          0 |     41600 |  2.54 |
-|   Register as Flip Flop | 1055 |     0 |          0 |     41600 |  2.54 |
+| Slice Registers         |   85 |     0 |          0 |     41600 |  0.20 |
+|   Register as Flip Flop |   85 |     0 |          0 |     41600 |  0.20 |
 |   Register as Latch     |    0 |     0 |          0 |     41600 |  0.00 |
-| F7 Muxes                |  128 |     0 |          0 |     16300 |  0.79 |
+| F7 Muxes                |    0 |     0 |          0 |     16300 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -56,7 +56,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 1039  |          Yes |           - |        Reset |
+| 69    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 16    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -150,14 +150,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     | 1039 |        Flop & Latch |
-| LUT6     |  409 |                 LUT |
-| MUXF7    |  128 |               MuxFx |
-| LUT5     |   34 |                 LUT |
-| LUT2     |   17 |                 LUT |
+| FDCE     |   69 |        Flop & Latch |
+| LUT6     |   18 |                 LUT |
+| LUT4     |   16 |                 LUT |
 | FDRE     |   16 |        Flop & Latch |
-| LUT3     |    8 |                 LUT |
-| LUT4     |    5 |                 LUT |
+| LUT5     |   11 |                 LUT |
+| LUT3     |    1 |                 LUT |
+| LUT2     |    1 |                 LUT |
 +----------+------+---------------------+
 
 

@@ -71,8 +71,8 @@ begin
     with state select m_axis_tvalid <= '0' when WAIT_INPUTS,
                                        '0' when WAIT_COMPUTE,
                                        '0' when RAM_FILL,
-                                       '1' when SEND_RE,
-                                       '1' when SEND_IM;
+                                       NOT reset when SEND_RE,
+                                       NOT reset when SEND_IM;
 ---------------------------------------------END_DATAFLOW--------------------------------------------------
 
 AXI : process(clk, reset)

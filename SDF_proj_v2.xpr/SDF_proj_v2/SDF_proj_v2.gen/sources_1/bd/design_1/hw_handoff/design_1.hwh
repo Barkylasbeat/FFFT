@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec  6 17:21:51 2022" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Dec  6 19:10:21 2022" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:basys3:part0:1.1" DEVICE="7a35t" NAME="design_1" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -175,7 +175,7 @@
     <MODULE COREREVISION="1" FULLNAME="/AXI_Input_Interface_0" HWVERSION="1.0" INSTANCE="AXI_Input_Interface_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="AXI_Input_Interface" VLNV="xilinx.com:module_ref:AXI_Input_Interface:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="FFT_TOT_POINTS" VALUE="64"/>
+        <PARAMETER NAME="FFT_TOT_POINTS" VALUE="4"/>
         <PARAMETER NAME="DATA_WIDTH" VALUE="8"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_AXI_Input_Interface_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -209,11 +209,13 @@
         <PORT DIR="O" LEFT="7" NAME="Re_data" RIGHT="0" SIGIS="undef" SIGNAME="AXI_Input_Interface_0_Re_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="SDF_Top_0" PORT="Re_Data_in"/>
+            <CONNECTION INSTANCE="system_ila_0" PORT="probe3"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="Im_data" RIGHT="0" SIGIS="undef" SIGNAME="AXI_Input_Interface_0_Im_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="SDF_Top_0" PORT="Im_Data_in"/>
+            <CONNECTION INSTANCE="system_ila_0" PORT="probe2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="sending_in" SIGIS="undef" SIGNAME="AXI_Input_Interface_0_sending_in">
@@ -249,7 +251,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_WIDTH" VALUE="8"/>
-        <PARAMETER NAME="FFT_TOT_POINTS" VALUE="64"/>
+        <PARAMETER NAME="FFT_TOT_POINTS" VALUE="4"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_AXI_Output_Interface_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -321,7 +323,7 @@
     <MODULE COREREVISION="1" FULLNAME="/SDF_Top_0" HWVERSION="1.0" INSTANCE="SDF_Top_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SDF_Top" VLNV="xilinx.com:module_ref:SDF_Top:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="FFT_TOT_POINTS" VALUE="16"/>
+        <PARAMETER NAME="FFT_TOT_POINTS" VALUE="4"/>
         <PARAMETER NAME="DATA_WIDTH" VALUE="8"/>
         <PARAMETER NAME="PRECISION" VALUE="3"/>
         <PARAMETER NAME="TF_WIDTH" VALUE="8"/>
@@ -963,8 +965,8 @@
             <CONNECTION INSTANCE="AXI4Stream_UART_0" PORT="s00_axis_tx_aclk"/>
             <CONNECTION INSTANCE="system_ila_0" PORT="clk"/>
             <CONNECTION INSTANCE="SDF_Top_0" PORT="clk"/>
-            <CONNECTION INSTANCE="AXI_Output_Interface_0" PORT="clk"/>
             <CONNECTION INSTANCE="AXI_Input_Interface_0" PORT="clk"/>
+            <CONNECTION INSTANCE="AXI_Output_Interface_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_locked">
@@ -1018,8 +1020,8 @@
           <CONNECTIONS>
             <CONNECTION INSTANCE="AXI4Stream_UART_0" PORT="rst"/>
             <CONNECTION INSTANCE="SDF_Top_0" PORT="reset"/>
-            <CONNECTION INSTANCE="AXI_Output_Interface_0" PORT="reset"/>
             <CONNECTION INSTANCE="AXI_Input_Interface_0" PORT="reset"/>
+            <CONNECTION INSTANCE="AXI_Output_Interface_0" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>
@@ -3602,7 +3604,7 @@
         <PARAMETER NAME="C_PROBE1_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE0_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="1024"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="2"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="4"/>
         <PARAMETER NAME="C_XLNX_HW_PROBE_INFO" VALUE="DEFAULT"/>
         <PARAMETER NAME="Component_Name" VALUE="design_1_system_ila_0_2"/>
         <PARAMETER NAME="C_PROBE70_WIDTH" VALUE="1"/>
@@ -4897,6 +4899,16 @@
         <PORT DIR="I" NAME="resetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="rst_clk_wiz_100M_peripheral_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="rst_clk_wiz_100M" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="probe2" RIGHT="0" SIGIS="undef" SIGNAME="AXI_Input_Interface_0_Im_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AXI_Input_Interface_0" PORT="Im_data"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="probe3" RIGHT="0" SIGIS="undef" SIGNAME="AXI_Input_Interface_0_Re_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="AXI_Input_Interface_0" PORT="Re_data"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

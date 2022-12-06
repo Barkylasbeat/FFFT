@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
---Date        : Tue Dec  6 17:21:46 2022
+--Date        : Tue Dec  6 19:10:17 2022
 --Host        : PcFraLenzi running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -78,7 +78,9 @@ architecture STRUCTURE of design_1 is
     SLOT_1_AXIS_tlast : in STD_LOGIC;
     SLOT_1_AXIS_tvalid : in STD_LOGIC;
     SLOT_1_AXIS_tready : in STD_LOGIC;
-    resetn : in STD_LOGIC
+    resetn : in STD_LOGIC;
+    probe2 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component design_1_system_ila_0_2;
   component design_1_SDF_Top_0_0 is
@@ -91,18 +93,6 @@ architecture STRUCTURE of design_1 is
     Im_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
   end component design_1_SDF_Top_0_0;
-  component design_1_AXI_Output_Interface_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    Re_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Im_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
-    data_received : in STD_LOGIC
-  );
-  end component design_1_AXI_Output_Interface_0_0;
   component design_1_AXI_Input_Interface_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -115,6 +105,18 @@ architecture STRUCTURE of design_1 is
     sending_in : out STD_LOGIC
   );
   end component design_1_AXI_Input_Interface_0_0;
+  component design_1_AXI_Output_Interface_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    Re_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Im_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_tvalid : out STD_LOGIC;
+    m_axis_tready : in STD_LOGIC;
+    data_received : in STD_LOGIC
+  );
+  end component design_1_AXI_Output_Interface_0_0;
   signal AXI4Stream_UART_0_M00_AXIS_RX_TDATA : STD_LOGIC_VECTOR ( 7 downto 0 );
   attribute CONN_BUS_INFO : string;
   attribute CONN_BUS_INFO of AXI4Stream_UART_0_M00_AXIS_RX_TDATA : signal is "AXI4Stream_UART_0_M00_AXIS_RX xilinx.com:interface:axis:1.0 None TDATA";
@@ -133,7 +135,11 @@ architecture STRUCTURE of design_1 is
   signal AXI4Stream_UART_0_UART_RxD : STD_LOGIC;
   signal AXI4Stream_UART_0_UART_TxD : STD_LOGIC;
   signal AXI_Input_Interface_0_Im_data : STD_LOGIC_VECTOR ( 7 downto 0 );
+  attribute DEBUG of AXI_Input_Interface_0_Im_data : signal is "true";
+  attribute MARK_DEBUG of AXI_Input_Interface_0_Im_data : signal is std.standard.true;
   signal AXI_Input_Interface_0_Re_data : STD_LOGIC_VECTOR ( 7 downto 0 );
+  attribute DEBUG of AXI_Input_Interface_0_Re_data : signal is "true";
+  attribute MARK_DEBUG of AXI_Input_Interface_0_Re_data : signal is std.standard.true;
   signal AXI_Input_Interface_0_sending_in : STD_LOGIC;
   signal AXI_Output_Interface_0_m_axis_TDATA : STD_LOGIC_VECTOR ( 7 downto 0 );
   attribute CONN_BUS_INFO of AXI_Output_Interface_0_m_axis_TDATA : signal is "AXI_Output_Interface_0_m_axis xilinx.com:interface:axis:1.0 None TDATA";
@@ -258,6 +264,8 @@ system_ila_0: component design_1_system_ila_0_2
       clk => clk_wiz_clk_out1,
       probe0(7 downto 0) => SDF_Top_0_Re_Data_out(7 downto 0),
       probe1(7 downto 0) => SDF_Top_0_Im_Data_out(7 downto 0),
+      probe2(7 downto 0) => AXI_Input_Interface_0_Im_data(7 downto 0),
+      probe3(7 downto 0) => AXI_Input_Interface_0_Re_data(7 downto 0),
       resetn => rst_clk_wiz_100M_peripheral_aresetn(0)
     );
 end STRUCTURE;

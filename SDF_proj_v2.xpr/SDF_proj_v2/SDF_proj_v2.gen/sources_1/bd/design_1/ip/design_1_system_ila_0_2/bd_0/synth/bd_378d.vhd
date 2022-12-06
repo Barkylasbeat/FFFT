@@ -21,10 +21,12 @@ entity bd_378d is
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     probe1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     resetn : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of bd_378d : entity is "bd_378d,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_378d,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=2,numReposBlks=2,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of bd_378d : entity is "bd_378d,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_378d,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=2,numReposBlks=2,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of bd_378d : entity is "design_1_system_ila_0_2.hwdef";
 end bd_378d;
@@ -35,14 +37,16 @@ architecture STRUCTURE of bd_378d is
     clk : in STD_LOGIC;
     probe0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     probe1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe2 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe3 : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    probe4 : in STD_LOGIC_VECTOR ( 31 downto 0 );
     probe5 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe6 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe6 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe7 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe8 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe9 : in STD_LOGIC_VECTOR ( 0 to 0 )
+    probe8 : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    probe9 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe10 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    probe11 : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component bd_378d_ila_lib_0;
   component bd_378d_g_inst_0 is
@@ -86,6 +90,8 @@ architecture STRUCTURE of bd_378d is
   signal net_slot_1_axis_tvalid : STD_LOGIC;
   signal probe0_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal probe1_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal probe2_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal probe3_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal resetn_1 : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of SLOT_0_AXIS_tlast : signal is "xilinx.com:interface:axis:1.0 SLOT_0_AXIS TLAST";
@@ -115,6 +121,8 @@ begin
   clk_1 <= clk;
   probe0_1(7 downto 0) <= probe0(7 downto 0);
   probe1_1(7 downto 0) <= probe1(7 downto 0);
+  probe2_1(7 downto 0) <= probe2(7 downto 0);
+  probe3_1(7 downto 0) <= probe3(7 downto 0);
   resetn_1 <= resetn;
 g_inst: component bd_378d_g_inst_0
      port map (
@@ -142,13 +150,15 @@ ila_lib: component bd_378d_ila_lib_0
       clk => clk_1,
       probe0(7 downto 0) => probe0_1(7 downto 0),
       probe1(7 downto 0) => probe1_1(7 downto 0),
-      probe2(31 downto 0) => net_slot_0_axis_tdata(31 downto 0),
-      probe3(0) => net_slot_0_axis_tvalid,
-      probe4(0) => net_slot_0_axis_tready,
-      probe5(0) => net_slot_0_axis_tlast,
-      probe6(31 downto 0) => net_slot_1_axis_tdata(31 downto 0),
-      probe7(0) => net_slot_1_axis_tvalid,
-      probe8(0) => net_slot_1_axis_tready,
-      probe9(0) => net_slot_1_axis_tlast
+      probe10(0) => net_slot_1_axis_tready,
+      probe11(0) => net_slot_1_axis_tlast,
+      probe2(7 downto 0) => probe2_1(7 downto 0),
+      probe3(7 downto 0) => probe3_1(7 downto 0),
+      probe4(31 downto 0) => net_slot_0_axis_tdata(31 downto 0),
+      probe5(0) => net_slot_0_axis_tvalid,
+      probe6(0) => net_slot_0_axis_tready,
+      probe7(0) => net_slot_0_axis_tlast,
+      probe8(31 downto 0) => net_slot_1_axis_tdata(31 downto 0),
+      probe9(0) => net_slot_1_axis_tvalid
     );
 end STRUCTURE;

@@ -18,11 +18,10 @@ architecture Behavioral of tb_Axi_Stream is
     constant RESET_WND   : time := 50 ns; 
     constant UART_PERIOD : time := 500 ns;
 
-    constant FFT_TOT_POINTS : integer := 8;
-    constant DATA_WIDTH     : integer := 16;
-    constant PRECISION      : integer := 6;
+    constant FFT_TOT_POINTS : integer := 4;
+    constant DATA_WIDTH     : integer := 8;
+    constant PRECISION      : integer := 0;
     constant TF_WIDTH       : integer := 8;
-    constant STAGE          : integer := 1;
     constant SR_INIT        : integer := 0;
 
     component SDF_Top is

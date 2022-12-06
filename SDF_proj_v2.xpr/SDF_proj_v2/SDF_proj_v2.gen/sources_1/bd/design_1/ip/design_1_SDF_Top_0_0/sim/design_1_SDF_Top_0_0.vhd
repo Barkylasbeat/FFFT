@@ -93,7 +93,7 @@ ARCHITECTURE design_1_SDF_Top_0_0_arch OF design_1_SDF_Top_0_0 IS
 BEGIN
   U0 : SDF_Top
     GENERIC MAP (
-      FFT_TOT_POINTS => 16,
+      FFT_TOT_POINTS => 4,
       DATA_WIDTH => 8,
       PRECISION => 3,
       TF_WIDTH => 8,

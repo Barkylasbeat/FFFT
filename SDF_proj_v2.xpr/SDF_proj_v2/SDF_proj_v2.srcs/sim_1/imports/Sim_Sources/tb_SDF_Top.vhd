@@ -21,7 +21,6 @@ architecture Behavioral of tb_SDF_Top is
     constant DATA_WIDTH     : integer := 16;
     constant PRECISION      : integer := 6;
     constant TF_WIDTH       : integer := 8;
-    constant STAGE          : integer := 1;
     constant SR_INIT        : integer := 0;
 
     component SDF_Top is
