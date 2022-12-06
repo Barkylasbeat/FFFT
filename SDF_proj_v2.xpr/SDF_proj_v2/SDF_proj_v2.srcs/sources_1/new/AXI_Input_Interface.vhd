@@ -47,8 +47,9 @@ constant IM               : integer := 1;
 --------------------------------------------END_SIGNALS---------------------------------------------------
 begin
 
-    with state select s_axis_tready <= '0' when TO_COMPUTE,
-                                        (NOT reset) when Others;
+    with state select s_axis_tready <= NOT reset when WAIT_RE,
+                                       NOT reset when WAIT_IM,
+                                       '0' when TO_COMPUTE;
 
     
 
@@ -93,7 +94,7 @@ begin
                     if data_counter = FFT_TOT_POINTS-1 then
                         data_counter <= 0;
                         state        <= WAIT_RE;
-                    else
+                    else 
                         data_counter <= data_counter + 1;
                     end if;
                 end case;                        

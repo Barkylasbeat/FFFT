@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Wed Nov 30 19:06:53 2022
+// Date        : Tue Dec  6 14:16:51 2022
 // Host        : PcFraLenzi running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI4Stream_UART_0_2/design_1_AXI4Stream_UART_0_2_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_AXI4Stream_UART_0_2 -prefix
+//               design_1_AXI4Stream_UART_0_2_ design_1_AXI4Stream_UART_0_2_stub.v
 // Design      : design_1_AXI4Stream_UART_0_2
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcpg236-1

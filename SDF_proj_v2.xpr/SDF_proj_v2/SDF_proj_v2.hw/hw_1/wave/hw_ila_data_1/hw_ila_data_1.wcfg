@@ -9,18 +9,18 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="63"></ZoomStartTime>
-      <ZoomEndTime time="128"></ZoomEndTime>
-      <Cursor1Time time="0"></Cursor1Time>
+      <ZoomStartTime time="0"></ZoomStartTime>
+      <ZoomEndTime time="33"></ZoomEndTime>
+      <Cursor1Time time="8"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="237"></NameColumnWidth>
-      <ValueColumnWidth column_width="87"></ValueColumnWidth>
+      <NameColumnWidth column_width="231"></NameColumnWidth>
+      <ValueColumnWidth column_width="98"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="2" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="group27" type="group">
+   <wvobject fp_name="group130" type="group">
       <obj_property name="label">slot_0 : AXI4Stream_UART_0_M00_AXIS_RX : Interface</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="Detail_Data">Interface_(i1:s0)_(AXI4Stream_UART_0_M00_AXIS_RX)_tooltip</obj_property>
@@ -30,7 +30,7 @@
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="group28" type="group">
+      <wvobject fp_name="group131" type="group">
          <obj_property name="label">slot_0 : AXI4Stream_UART_0_M00_AXIS_RX : T Channel</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="Detail_Data">T_Channel_(i1:s0)_(AXI4Stream_UART_0_M00_AXIS_RX)_tooltip</obj_property>
@@ -67,17 +67,17 @@
          </wvobject>
       </wvobject>
    </wvobject>
-   <wvobject fp_name="group33" type="group">
+   <wvobject fp_name="group136" type="group">
       <obj_property name="label">slot_1 : AXI_Output_Interface_0_m_axis : Interface</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="Detail_Data">Interface_(i1:s1)_(AXI_Output_Interface_0_m_axis)_tooltip</obj_property>
       <obj_property name="Render_Data">Interface_(i1:s1)_(AXI_Output_Interface_0_m_axis)</obj_property>
       <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
-      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject fp_name="group34" type="group">
+      <wvobject fp_name="group137" type="group">
          <obj_property name="label">slot_1 : AXI_Output_Interface_0_m_axis : T Channel</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="Detail_Data">T_Channel_(i1:s1)_(AXI_Output_Interface_0_m_axis)_tooltip</obj_property>
@@ -108,24 +108,6 @@
             <obj_property name="ElementShortName">design_1_i/system_ila_0/U0/net_slot_1_axis_tdata[31:0]</obj_property>
             <obj_property name="ObjectShortName">net_slot_1_axis_tdata[31:0]</obj_property>
             <obj_property name="label">slot_1 : AXI_Output_Interface_0_m_axis : TDATA</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="design_1_i/system_ila_0/U0/probe1_1" type="array">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">design_1_i/system_ila_0/U0/probe1_1[7:0]</obj_property>
-            <obj_property name="ObjectShortName">probe1_1[7:0]</obj_property>
-            <obj_property name="label">SDF_Top_0_Im_Data_out</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
-            <obj_property name="LABELRADIX">true</obj_property>
-            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-         </wvobject>
-         <wvobject fp_name="design_1_i/system_ila_0/U0/probe0_1" type="array">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">design_1_i/system_ila_0/U0/probe0_1[7:0]</obj_property>
-            <obj_property name="ObjectShortName">probe0_1[7:0]</obj_property>
-            <obj_property name="label">SDF_Top_0_Re_Data_out</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

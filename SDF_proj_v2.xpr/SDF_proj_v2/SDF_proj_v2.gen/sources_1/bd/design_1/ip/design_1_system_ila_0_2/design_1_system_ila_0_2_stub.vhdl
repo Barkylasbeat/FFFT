@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Sat Dec  3 22:25:01 2022
+-- Date        : Mon Dec  5 13:17:30 2022
 -- Host        : PcFraLenzi running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_2/design_1_system_ila_0_2_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_system_ila_0_2 -prefix
+--               design_1_system_ila_0_2_ design_1_system_ila_0_2_stub.vhdl
 -- Design      : design_1_system_ila_0_2
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

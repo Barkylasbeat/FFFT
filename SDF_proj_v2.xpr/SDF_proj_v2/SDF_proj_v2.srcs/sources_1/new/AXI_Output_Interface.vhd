@@ -57,6 +57,7 @@ architecture Behavioral of AXI_Output_Interface is
     signal data_out         : CPLX_SLV := (Others => (Others => '0'));
     signal reverse_addr     : std_logic_vector(NUM_STAGES-1 downto 0);
     signal addr             : std_logic_vector(NUM_STAGES-1 downto 0);
+    signal out_data         : std_logic_vector(m_axis_tdata'range) := (Others => '0');
 --------------------------------------------END_WIRING---------------------------------------------------
 begin
 
@@ -64,11 +65,14 @@ begin
     data_out(RE)    <= Re_data;
     data_out(IM)    <= Im_data;
     addr            <= std_logic_vector(to_unsigned(data_counter,addr'length));
+    m_axis_tdata    <= out_data;
     reverse_addr    <= addr(NUM_STAGES-1 downto 0);
 
     with state select m_axis_tvalid <= '0' when WAIT_INPUTS,
                                        '0' when WAIT_COMPUTE,
-                                       (NOT reset) when Others;
+                                       '0' when RAM_FILL,
+                                       '1' when SEND_RE,
+                                       '1' when SEND_IM;
 ---------------------------------------------END_DATAFLOW--------------------------------------------------
 
 AXI : process(clk, reset)
@@ -101,7 +105,7 @@ begin
                 if data_counter = FFT_TOT_POINTS-1 then
                     state         <= SEND_RE;
                     data_counter  <= 0;
-                    m_axis_tdata  <= output_buf(0)(RE);
+                    out_data  <= output_buf(0)(RE);
                 else
                     data_counter <= data_counter+1;
                 end if;
@@ -110,7 +114,7 @@ begin
               
                 if m_axis_tready = '1' then
                     
-                    m_axis_tdata <= output_buf(to_integer(unsigned(reverse_addr)))(IM);
+                    out_data <= output_buf(to_integer(unsigned(reverse_addr)))(IM);
 
                     if data_counter = FFT_TOT_POINTS - 1 then
                         state        <= SEND_IM;
@@ -128,7 +132,7 @@ begin
                         state <= WAIT_INPUTS;
                         last_data <= '0';
                     else
-                        m_axis_tdata  <= output_buf(to_integer(unsigned(reverse_addr)))(RE);
+                        out_data  <= output_buf(to_integer(unsigned(reverse_addr)))(RE);
                         state         <= SEND_RE;
                     end if;
                 end if;
