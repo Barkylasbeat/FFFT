@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Tue Dec  6 19:14:28 2022
+// Date        : Mon Dec 12 12:33:54 2022
 // Host        : PcFraLenzi running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI_Output_Interface_0_0/design_1_AXI_Output_Interface_0_0_sim_netlist.v
@@ -31,6 +31,49 @@ module design_1_AXI_Output_Interface_0_0
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) output [7:0]m_axis_tdata;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis TVALID" *) output m_axis_tvalid;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis TREADY" *) input m_axis_tready;
+  input data_received;
+
+  wire [7:0]Im_data;
+  wire [7:0]Re_data;
+  wire clk;
+  wire data_received;
+  wire [7:0]m_axis_tdata;
+  wire m_axis_tready;
+  wire m_axis_tvalid;
+  wire reset;
+
+  (* DATA_WIDTH = "8" *) 
+  (* DONT_TOUCH *) 
+  (* FFT_TOT_POINTS = "4" *) 
+  design_1_AXI_Output_Interface_0_0_AXI_Output_Interface U0
+       (.Im_data(Im_data),
+        .Re_data(Re_data),
+        .clk(clk),
+        .data_received(data_received),
+        .m_axis_tdata(m_axis_tdata),
+        .m_axis_tready(m_axis_tready),
+        .m_axis_tvalid(m_axis_tvalid),
+        .reset(reset));
+endmodule
+
+(* DATA_WIDTH = "8" *) (* FFT_TOT_POINTS = "4" *) (* ORIG_REF_NAME = "AXI_Output_Interface" *) 
+(* dont_touch = "true" *) 
+module design_1_AXI_Output_Interface_0_0_AXI_Output_Interface
+   (clk,
+    reset,
+    Re_data,
+    Im_data,
+    m_axis_tdata,
+    m_axis_tvalid,
+    m_axis_tready,
+    data_received);
+  input clk;
+  input reset;
+  input [7:0]Re_data;
+  input [7:0]Im_data;
+  output [7:0]m_axis_tdata;
+  output m_axis_tvalid;
+  input m_axis_tready;
   input data_received;
 
   wire \<const0> ;

@@ -24,7 +24,7 @@ architecture Behavioral of tb_TF_ROM is
         );
         Port(
     
-            address          :   in  STD_LOGIC_VECTOR(ADDR_LENGTH-1 downto 0);
+            TF_address          :   in  STD_LOGIC_VECTOR(ADDR_LENGTH-1 downto 0);
             
             TW_Re            :   out STD_LOGIC_VECTOR(TF_WIDTH-1 downto 0); --cosine
             TW_Im            :   out STD_LOGIC_VECTOR(TF_WIDTH-1 downto 0)  --negated sine
@@ -32,7 +32,7 @@ architecture Behavioral of tb_TF_ROM is
         end component;
 
     
-    signal address      : std_logic_vector(ADDR_LENGTH-1  downto 0)   := (Others => '0');
+    signal TF_address      : std_logic_vector(ADDR_LENGTH-1  downto 0)   := (Others => '0');
     
 
     signal Re_Data_out    : std_logic_vector(TF_WIDTH-1  downto 0) := (Others => '0');
@@ -47,7 +47,7 @@ begin
         )
         Port Map(
          
-            address     => address,
+            TF_address     => TF_address,
 
             TW_RE       => Re_Data_out,
             TW_IM       => Im_Data_out
@@ -60,15 +60,15 @@ begin
         
         wait for 10 ns;
 
-        address <= std_logic_vector(to_unsigned(4,ADDR_LENGTH));
+        TF_address <= std_logic_vector(to_unsigned(4,ADDR_LENGTH));
 
         wait for 10 ns;
 
-        address <= std_logic_vector(to_unsigned(23,ADDR_LENGTH));
+        TF_address <= std_logic_vector(to_unsigned(23,ADDR_LENGTH));
 
         wait for 10 ns;
 
-        address <= std_logic_vector(to_unsigned(9,ADDR_LENGTH));
+        TF_address <= std_logic_vector(to_unsigned(9,ADDR_LENGTH));
 
         wait;
         

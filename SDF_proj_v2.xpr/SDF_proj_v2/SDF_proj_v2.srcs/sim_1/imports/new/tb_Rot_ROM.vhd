@@ -53,7 +53,7 @@ architecture Behavioral of tb_Rot_ROM is
         );
         Port(
     
-            address          :   in  STD_LOGIC_VECTOR(ADDR_LENGTH-1 downto 0);
+            TF_address       :   in  STD_LOGIC_VECTOR(ADDR_LENGTH-1 downto 0);
             
             TW_Re            :   out STD_LOGIC_VECTOR(TF_WIDTH-1 downto 0); --cosine
             TW_Im            :   out STD_LOGIC_VECTOR(TF_WIDTH-1 downto 0)  --negated sine
@@ -69,7 +69,7 @@ architecture Behavioral of tb_Rot_ROM is
     signal Re_Data_out  : std_logic_vector(DATA_WIDTH-1  downto 0) := (Others => '0');
     signal Im_Data_out  : std_logic_vector(DATA_WIDTH-1  downto 0) := (Others => '0');
 
-    signal address      : std_logic_vector(ADDR_LENGTH-1  downto 0)   := (Others => '0');
+    signal TF_address   : std_logic_vector(ADDR_LENGTH-1  downto 0)   := (Others => '0');
     
     signal Re_TF        : std_logic_vector(TF_WIDTH-1  downto 0) := (Others => '0');
     signal Im_TF        : std_logic_vector(TF_WIDTH-1  downto 0) := (Others => '0');
@@ -105,7 +105,7 @@ begin
         )
         Port Map(
          
-            address     => address,
+            TF_address  => TF_address,
 
             TW_RE       => RE_TF,
             TW_IM       => Im_TF
@@ -128,7 +128,7 @@ begin
                 Re_Data_in <= std_logic_vector(to_sfixed(i, DATA_WIDTH-1-PRECISION, -PRECISION));
                 Im_Data_in <= std_logic_vector(to_sfixed(i*10, DATA_WIDTH-1-PRECISION, -PRECISION));
 
-                address     <= std_logic_vector(to_unsigned(i, ADDR_LENGTH));
+                TF_address     <= std_logic_vector(to_unsigned(i, ADDR_LENGTH));
 
                 wait until rising_edge(clk); 
             end loop;

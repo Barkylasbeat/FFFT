@@ -21,7 +21,8 @@ entity AXI_Input_Interface is
         Re_data         :   out std_logic_vector(DATA_WIDTH-1  downto 0);
         Im_data         :   out std_logic_vector(DATA_WIDTH-1  downto 0);
 
-        sending_in      :   out std_logic
+        sending_in      :   out std_logic;
+        go_data_counter :   out std_logic   --Start the data counter in SDF Stages
         
      );
 end AXI_Input_Interface;
@@ -35,13 +36,14 @@ architecture Behavioral of AXI_Input_Interface is
 --------------------------------------------END_TYPEDEFs--------------------------------------------------
 
 ---------------------------------------------CONSTANTS----------------------------------------------------
-constant RE               : integer := 0;
-constant IM               : integer := 1; 
+    constant RE               : integer := 0;
+    constant IM               : integer := 1; 
 -------------------------------------------END_CONSTANTS--------------------------------------------------
 
 -----------------------------------------------SIGNALS----------------------------------------------------
     -- signal data_in      : CPLX_SLV     := Others => '0';
     signal input_buf    : CPLX_RAM     := (Others => (Others => (Others => '0')));
+    signal Output       : CPLX_SLV     := (others => (others => '0')); 
     signal state        : state_type   := WAIT_RE;
     signal data_counter : integer range 0 to FFT_TOT_POINTS-1 := 0;
 --------------------------------------------END_SIGNALS---------------------------------------------------
@@ -51,6 +53,8 @@ begin
                                        NOT reset when WAIT_IM,
                                        '0' when TO_COMPUTE;
 
+    Re_data     <= Output(RE);
+    Im_data     <= Output(IM);
     
 
     AXI : process(clk, reset)
@@ -59,6 +63,7 @@ begin
 
             input_buf       <= (Others => (Others => (Others => '0')));
             data_counter    <= 0;
+            go_data_counter <= '0';
             sending_in      <= '0';
             state           <= WAIT_RE;
 
@@ -69,6 +74,7 @@ begin
                 when WAIT_RE =>
                     if s_axis_tvalid = '1' then
                         input_buf(data_counter)(RE) <= s_axis_tdata;
+                        go_data_counter <= '0';
                         state <= WAIT_IM;
                     end if;
 
@@ -77,10 +83,11 @@ begin
                         input_buf(data_counter)(IM) <= s_axis_tdata;
                         if data_counter = FFT_TOT_POINTS-1 then
                             data_counter <= 1;
-                            Re_data      <= input_buf(0)(RE);
-                            Im_data      <= input_buf(0)(IM);
-                            sending_in   <= '1';
-                            state        <= TO_COMPUTE;
+                            Output(RE)      <= input_buf(0)(RE);
+                            Output(IM)      <= input_buf(0)(IM);
+                            sending_in      <= '1';
+                            go_data_counter <= '1';
+                            state           <= TO_COMPUTE;
                         else
                             data_counter <= data_counter + 1;
                             state        <= WAIT_RE;
@@ -89,8 +96,8 @@ begin
 
                 when TO_COMPUTE =>
                     sending_in  <= '0';
-                    Re_data     <= input_buf(data_counter)(RE);
-                    Im_data     <= input_buf(data_counter)(IM);
+                    Output(RE)     <= input_buf(data_counter)(RE);
+                    Output(IM)     <= input_buf(data_counter)(IM);
                     if data_counter = FFT_TOT_POINTS-1 then
                         data_counter <= 0;
                         state        <= WAIT_RE;

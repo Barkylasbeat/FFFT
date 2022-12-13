@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Tue Dec  6 19:12:42 2022
+// Date        : Wed Dec 14 00:03:52 2022
 // Host        : PcFraLenzi running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0_stub.v
@@ -14,11 +14,12 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "SDF_Top,Vivado 2022.1" *)
-module design_1_SDF_Top_0_0(clk, reset, Re_Data_in, Im_Data_in, Re_Data_out, 
-  Im_Data_out)
-/* synthesis syn_black_box black_box_pad_pin="clk,reset,Re_Data_in[7:0],Im_Data_in[7:0],Re_Data_out[7:0],Im_Data_out[7:0]" */;
+module design_1_SDF_Top_0_0(clk, reset, go_data_counter, Re_Data_in, 
+  Im_Data_in, Re_Data_out, Im_Data_out)
+/* synthesis syn_black_box black_box_pad_pin="clk,reset,go_data_counter,Re_Data_in[7:0],Im_Data_in[7:0],Re_Data_out[7:0],Im_Data_out[7:0]" */;
   input clk;
   input reset;
+  input go_data_counter;
   input [7:0]Re_Data_in;
   input [7:0]Im_Data_in;
   output [7:0]Re_Data_out;

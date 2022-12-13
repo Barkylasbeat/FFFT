@@ -27,7 +27,7 @@ entity TF_ROM is
     );
     Port(
 
-        address          :   in  STD_LOGIC_VECTOR(ADDR_LENGTH-1 downto 0);
+        TF_address          :   in  STD_LOGIC_VECTOR(ADDR_LENGTH-1 downto 0);
         
         TW_Re            :   out STD_LOGIC_VECTOR(TF_WIDTH-1 downto 0); --cosine
         TW_Im            :   out STD_LOGIC_VECTOR(TF_WIDTH-1 downto 0)  --negated sine
@@ -81,7 +81,7 @@ entity TF_ROM is
 
 begin
 
-    TW_Re <= to_slv(Twiddle_ROM(to_integer(address))(RE));
-    TW_Im <= to_slv(Twiddle_ROM(to_integer(address))(IM));      
+    TW_Re <= to_slv(Twiddle_ROM(to_integer(TF_address))(RE));
+    TW_Im <= to_slv(Twiddle_ROM(to_integer(TF_address))(IM));      
 
 end Behavioral;

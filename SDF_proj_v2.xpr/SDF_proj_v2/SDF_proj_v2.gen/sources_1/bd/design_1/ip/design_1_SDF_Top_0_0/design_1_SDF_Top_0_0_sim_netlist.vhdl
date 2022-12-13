@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Tue Dec  6 19:12:43 2022
+-- Date        : Wed Dec 14 00:03:52 2022
 -- Host        : PcFraLenzi running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0_sim_netlist.vhdl
@@ -5871,6 +5871,7 @@ entity design_1_SDF_Top_0_0_SDF_Stage is
     \data_out_ppF_reg[1][7]_0\ : out STD_LOGIC_VECTOR ( 7 downto 0 );
     clk : in STD_LOGIC;
     reset : in STD_LOGIC;
+    go_data_counter : in STD_LOGIC;
     Re_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     Im_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
@@ -6006,7 +6007,7 @@ architecture STRUCTURE of design_1_SDF_Top_0_0_SDF_Stage is
   signal SR_FIFO_inst_n_8 : STD_LOGIC;
   signal SR_FIFO_inst_n_9 : STD_LOGIC;
   signal data_counter : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \data_counter[0]_i_1__0_n_0\ : STD_LOGIC;
+  signal \data_counter[0]_i_1_n_0\ : STD_LOGIC;
   signal \data_counter[1]_i_1_n_0\ : STD_LOGIC;
   signal data_counter_pp1 : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal data_counter_ppF : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -6190,7 +6191,7 @@ architecture STRUCTURE of design_1_SDF_Top_0_0_SDF_Stage is
   attribute XILINX_LEGACY_PRIM of \InDec_FIFOMux_reg[1][7]\ : label is "LD";
   attribute XILINX_TRANSFORM_PINMAP of \InDec_FIFOMux_reg[1][7]\ : label is "VCC:GE GND:CLR";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \data_counter[0]_i_1__0\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \data_counter[0]_i_1\ : label is "soft_lutpair24";
   attribute SOFT_HLUTNM of \data_counter[1]_i_1\ : label is "soft_lutpair24";
   attribute XILINX_LEGACY_PRIM of halfway_reg : label is "LDC";
   attribute XILINX_TRANSFORM_PINMAP of halfway_reg : label is "VCC:GE";
@@ -7960,21 +7961,23 @@ SR_FIFO_inst: entity work.design_1_SDF_Top_0_0_SR_FIFO
       clk => clk,
       reset => reset
     );
-\data_counter[0]_i_1__0\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => data_counter(0),
-      O => \data_counter[0]_i_1__0_n_0\
-    );
-\data_counter[1]_i_1\: unisim.vcomponents.LUT2
+\data_counter[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
-      I0 => data_counter(1),
+      I0 => go_data_counter,
       I1 => data_counter(0),
+      O => \data_counter[0]_i_1_n_0\
+    );
+\data_counter[1]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"78"
+    )
+        port map (
+      I0 => data_counter(0),
+      I1 => go_data_counter,
+      I2 => data_counter(1),
       O => \data_counter[1]_i_1_n_0\
     );
 \data_counter_pp1_reg[0]\: unisim.vcomponents.FDCE
@@ -8029,7 +8032,7 @@ SR_FIFO_inst: entity work.design_1_SDF_Top_0_0_SR_FIFO
       C => clk,
       CE => '1',
       CLR => reset,
-      D => \data_counter[0]_i_1__0_n_0\,
+      D => \data_counter[0]_i_1_n_0\,
       Q => data_counter(0)
     );
 \data_counter_reg[1]\: unisim.vcomponents.FDCE
@@ -8355,6 +8358,7 @@ entity \design_1_SDF_Top_0_0_SDF_Stage__parameterized1\ is
     Im_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
     clk : in STD_LOGIC;
     reset : in STD_LOGIC;
+    go_data_counter : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \Data_in_ppF_reg[1][7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
@@ -10577,13 +10581,14 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized1\
       clk => clk,
       reset => reset
     );
-\data_counter[0]_i_1\: unisim.vcomponents.LUT2
+\data_counter[0]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"6"
+      INIT => X"78"
     )
         port map (
       I0 => state,
-      I1 => \data_counter_reg_n_0_[0]\,
+      I1 => go_data_counter,
+      I2 => \data_counter_reg_n_0_[0]\,
       O => \data_counter[0]_i_1_n_0\
     );
 \data_counter_pp1_reg[0]\: unisim.vcomponents.FDCE
@@ -10920,14 +10925,15 @@ halfway_reg: unisim.vcomponents.LDCE
       I1 => \InDec_BU_reg_n_0_[1][4]\,
       O => \i__carry__0_i_4__2_n_0\
     );
-state_i_1: unisim.vcomponents.LUT3
+state_i_1: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"F8"
+      INIT => X"FF80"
     )
         port map (
-      I0 => \sync_counter_reg_n_0_[1]\,
-      I1 => \sync_counter_reg_n_0_[0]\,
-      I2 => state,
+      I0 => go_data_counter,
+      I1 => \sync_counter_reg_n_0_[1]\,
+      I2 => \sync_counter_reg_n_0_[0]\,
+      I3 => state,
       O => state_i_1_n_0
     );
 state_reg: unisim.vcomponents.FDCE
@@ -10941,23 +10947,25 @@ state_reg: unisim.vcomponents.FDCE
       D => state_i_1_n_0,
       Q => state
     );
-\sync_counter[0]_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"9"
-    )
-        port map (
-      I0 => state,
-      I1 => \sync_counter_reg_n_0_[0]\,
-      O => \sync_counter[0]_i_1_n_0\
-    );
-\sync_counter[1]_i_1\: unisim.vcomponents.LUT3
+\sync_counter[0]_i_1\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"D2"
     )
         port map (
-      I0 => \sync_counter_reg_n_0_[0]\,
+      I0 => go_data_counter,
       I1 => state,
-      I2 => \sync_counter_reg_n_0_[1]\,
+      I2 => \sync_counter_reg_n_0_[0]\,
+      O => \sync_counter[0]_i_1_n_0\
+    );
+\sync_counter[1]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"F708"
+    )
+        port map (
+      I0 => \sync_counter_reg_n_0_[0]\,
+      I1 => go_data_counter,
+      I2 => state,
+      I3 => \sync_counter_reg_n_0_[1]\,
       O => \sync_counter[1]_i_1_n_0\
     );
 \sync_counter_reg[0]\: unisim.vcomponents.FDCE
@@ -10992,6 +11000,7 @@ entity design_1_SDF_Top_0_0_SDF_Top is
     Re_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
     Im_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
     reset : in STD_LOGIC;
+    go_data_counter : in STD_LOGIC;
     clk : in STD_LOGIC;
     Re_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     Im_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 )
@@ -11011,6 +11020,7 @@ begin
       Re_Data_in(7 downto 0) => Re_Data_in(7 downto 0),
       clk => clk,
       \data_out_ppF_reg[1][7]_0\(7 downto 0) => \data_out_ppF_reg[1]\(7 downto 0),
+      go_data_counter => go_data_counter,
       reset => reset
     );
 \SDF_stage_wrap[2].SDF_stage_inst\: entity work.\design_1_SDF_Top_0_0_SDF_Stage__parameterized1\
@@ -11020,6 +11030,7 @@ begin
       Im_Data_out(7 downto 0) => Im_Data_out(7 downto 0),
       Re_Data_out(7 downto 0) => Re_Data_out(7 downto 0),
       clk => clk,
+      go_data_counter => go_data_counter,
       reset => reset
     );
 end STRUCTURE;
@@ -11031,6 +11042,7 @@ entity design_1_SDF_Top_0_0 is
   port (
     clk : in STD_LOGIC;
     reset : in STD_LOGIC;
+    go_data_counter : in STD_LOGIC;
     Re_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     Im_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     Re_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -11063,6 +11075,7 @@ U0: entity work.design_1_SDF_Top_0_0_SDF_Top
       Re_Data_in(7 downto 0) => Re_Data_in(7 downto 0),
       Re_Data_out(7 downto 0) => Re_Data_out(7 downto 0),
       clk => clk,
+      go_data_counter => go_data_counter,
       reset => reset
     );
 end STRUCTURE;

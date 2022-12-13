@@ -25,6 +25,10 @@ entity AXI_Output_Interface is
         data_received   :   in std_logic
         
      );
+
+     attribute dont_touch : string;
+     attribute dont_touch of AXI_Output_Interface : entity is "true";
+
 end AXI_Output_Interface;
 
 architecture Behavioral of AXI_Output_Interface is
@@ -68,11 +72,11 @@ begin
     m_axis_tdata    <= out_data;
     reverse_addr    <= addr(NUM_STAGES-1 downto 0);
 
-    with state select m_axis_tvalid <= '0' when WAIT_INPUTS,
-                                       '0' when WAIT_COMPUTE,
-                                       '0' when RAM_FILL,
-                                       NOT reset when SEND_RE,
-                                       NOT reset when SEND_IM;
+    with state select m_axis_tvalid <=  '0' when WAIT_INPUTS,
+                                        '0' when WAIT_COMPUTE,
+                                        '0' when RAM_FILL,
+                                        '1' when SEND_RE,
+                                        '1' when SEND_IM;
 ---------------------------------------------END_DATAFLOW--------------------------------------------------
 
 AXI : process(clk, reset)

@@ -20,14 +20,16 @@ entity SDF_Stage is
     );
     Port(
 
-        clk            :   in std_logic;
-        reset          :   in std_logic;
+        clk             :   in std_logic;
+        reset           :   in std_logic;
 
-        Re_Data_in     :   in std_logic_vector(DATA_WIDTH-1  downto 0);
-        Im_Data_in     :   in std_logic_vector(DATA_WIDTH-1  downto 0);
+        go_data_counter :   in std_logic;
 
-        Re_Data_out    :   out std_logic_vector(DATA_WIDTH-1 downto 0);
-        Im_Data_out    :   out std_logic_vector(DATA_WIDTH-1 downto 0)
+        Re_Data_in      :   in std_logic_vector(DATA_WIDTH-1  downto 0);
+        Im_Data_in      :   in std_logic_vector(DATA_WIDTH-1  downto 0);
+
+        Re_Data_out     :   out std_logic_vector(DATA_WIDTH-1 downto 0);
+        Im_Data_out     :   out std_logic_vector(DATA_WIDTH-1 downto 0)
      );
 
 end SDF_Stage;
@@ -109,7 +111,7 @@ architecture Behavioral of SDF_Stage is
         );
         Port(
 
-            address          :   in  STD_LOGIC_VECTOR(ADDR_LENGTH-1 downto 0);
+            TF_address       :   in  STD_LOGIC_VECTOR(ADDR_LENGTH-1 downto 0);
             
             TW_Re            :   out STD_LOGIC_VECTOR(TF_WIDTH-1 downto 0); 
             TW_Im            :   out STD_LOGIC_VECTOR(TF_WIDTH-1 downto 0) 
@@ -161,6 +163,7 @@ architecture Behavioral of SDF_Stage is
     signal BU_ROT_ppF                               :   CPLX_SLV    := (Others => (Others => '0'));
     signal FIFODec_OutMux_pp1, FIFODec_OutMux_ppF   :   CPLX_SLV    := (Others => (Others => '0'));
     signal data_out_ppF                             :   CPLX_SLV    := (Others => (Others => '0'));
+    signal TF_address                               :   std_logic_vector(ADDR_LENGTH-1 downto 0) := (Others => '0');
 --------------------------------END_PIPELINE_REGISTERS--------------------------------------
 
 
@@ -241,7 +244,7 @@ begin
     )
     Port map(
 
-        address         => std_logic_vector(to_unsigned(data_counter_ppF, ADDR_LENGTH)),
+        TF_address      => TF_address,
         
         TW_Re           => TF_ROT(RE),
         TW_Im           => TF_ROT(IM)
@@ -249,7 +252,8 @@ begin
     
 --------------------------------END_COMPONENTS_INSTANTIATION---------------------------------
     
-------------------------------------------DATAFLOW-------------------------------------------                
+------------------------------------------DATAFLOW-------------------------------------------       
+    TF_address <= std_logic_vector(to_unsigned(data_counter_ppF, ADDR_LENGTH));         
 
 -----------------------------------------HALFWAY CONTROL-------------------------------------
     halfway <=  '0' when data_counter < STAGE_POINTS/2 or reset = '1' else
@@ -321,36 +325,38 @@ begin
             --Output register
             data_out_ppF        <= data_out;
 
-            if STAGE /= 1 then
-                case state is 
+            if go_data_counter = '1' then
+                if STAGE /= 1 then
+                    case state is 
 
-                    when wait_sync =>
-                        
-                        --Wait for syncronization
-                        if sync_counter < ((STAGE-1)*4)-1 then  -- Every stage has an input delay referred to the output
-                            sync_counter <= sync_counter + 1;   -- of the previous stage equal to the pipeline depth of
-                        else                                    -- the previous stage, i.e. 4 for every stage.
-                            sync_counter <= 0;                  -- Referring to the first stage (since all counters start
-                            state <= go;                        -- simultaneously at startup), the input delay is the
-                        end if;                                 -- stage number (1st is 0) multiplied for the pp depth
+                        when wait_sync =>
+                            
+                            --Wait for syncronization
+                            if sync_counter < ((STAGE-1)*4)-1 then  -- Every stage has an input delay referred to the output
+                                sync_counter <= sync_counter + 1;   -- of the previous stage equal to the pipeline depth of
+                            else                                    -- the previous stage, i.e. 4 for every stage.
+                                sync_counter <= 0;                  -- Referring to the first stage (since all counters start
+                                state <= go;                        -- simultaneously at startup), the input delay is the
+                            end if;                                 -- stage number (1st is 0) multiplied for the pp depth
 
 
-                    when go =>
+                        when go =>
 
-                        --Incrementing the counter in circular mode
-                        if data_counter < STAGE_POINTS-1 then 
-                            data_counter <= data_counter + 1;
-                        else
-                            data_counter <= 0;
-                        end if;
+                            --Incrementing the counter in circular mode
+                            if data_counter < STAGE_POINTS-1 then 
+                                data_counter <= data_counter + 1;
+                            else
+                                data_counter <= 0;
+                            end if;
 
-                end case;
-            else
-                --Incrementing the counter in circular mode
-                if data_counter < STAGE_POINTS-1 then 
-                    data_counter <= data_counter + 1;
+                    end case;
                 else
-                    data_counter <= 0;
+                    --Incrementing the counter in circular mode
+                    if data_counter < STAGE_POINTS-1 then 
+                        data_counter <= data_counter + 1;
+                    else
+                        data_counter <= 0;
+                    end if;
                 end if;
             end if;
         end if;

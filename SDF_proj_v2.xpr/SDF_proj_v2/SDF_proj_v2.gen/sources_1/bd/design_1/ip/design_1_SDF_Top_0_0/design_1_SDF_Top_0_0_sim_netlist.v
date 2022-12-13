@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Tue Dec  6 19:12:42 2022
+// Date        : Wed Dec 14 00:03:52 2022
 // Host        : PcFraLenzi running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0_sim_netlist.v
@@ -18,12 +18,14 @@
 module design_1_SDF_Top_0_0
    (clk,
     reset,
+    go_data_counter,
     Re_Data_in,
     Im_Data_in,
     Re_Data_out,
     Im_Data_out);
   (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, INSERT_VIP 0" *) input clk;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
+  input go_data_counter;
   input [7:0]Re_Data_in;
   input [7:0]Im_Data_in;
   output [7:0]Re_Data_out;
@@ -34,6 +36,7 @@ module design_1_SDF_Top_0_0
   wire [7:0]Re_Data_in;
   wire [7:0]Re_Data_out;
   wire clk;
+  wire go_data_counter;
   wire reset;
 
   design_1_SDF_Top_0_0_SDF_Top U0
@@ -42,6 +45,7 @@ module design_1_SDF_Top_0_0
         .Re_Data_in(Re_Data_in),
         .Re_Data_out(Re_Data_out),
         .clk(clk),
+        .go_data_counter(go_data_counter),
         .reset(reset));
 endmodule
 
@@ -3782,12 +3786,14 @@ module design_1_SDF_Top_0_0_SDF_Stage
     \data_out_ppF_reg[1][7]_0 ,
     clk,
     reset,
+    go_data_counter,
     Re_Data_in,
     Im_Data_in);
   output [7:0]Q;
   output [7:0]\data_out_ppF_reg[1][7]_0 ;
   input clk;
   input reset;
+  input go_data_counter;
   input [7:0]Re_Data_in;
   input [7:0]Im_Data_in;
 
@@ -3922,13 +3928,14 @@ module design_1_SDF_Top_0_0_SDF_Stage
   wire SR_FIFO_inst_n_9;
   wire clk;
   wire [1:0]data_counter;
-  wire \data_counter[0]_i_1__0_n_0 ;
+  wire \data_counter[0]_i_1_n_0 ;
   wire \data_counter[1]_i_1_n_0 ;
   wire [1:0]data_counter_pp1;
   wire [1:0]data_counter_ppF;
   wire [7:0]\data_out_ppF_reg[1][7]_0 ;
   wire [7:0]dout_IM;
   wire [7:0]dout_RE;
+  wire go_data_counter;
   wire halfway;
   wire halfway_pp1;
   wire halfway_pp2;
@@ -5363,17 +5370,19 @@ module design_1_SDF_Top_0_0_SDF_Stage
         .clk(clk),
         .reset(reset));
   (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT1 #(
-    .INIT(2'h1)) 
-    \data_counter[0]_i_1__0 
-       (.I0(data_counter[0]),
-        .O(\data_counter[0]_i_1__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    \data_counter[1]_i_1 
-       (.I0(data_counter[1]),
+    \data_counter[0]_i_1 
+       (.I0(go_data_counter),
         .I1(data_counter[0]),
+        .O(\data_counter[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  LUT3 #(
+    .INIT(8'h78)) 
+    \data_counter[1]_i_1 
+       (.I0(data_counter[0]),
+        .I1(go_data_counter),
+        .I2(data_counter[1]),
         .O(\data_counter[1]_i_1_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
@@ -5413,7 +5422,7 @@ module design_1_SDF_Top_0_0_SDF_Stage
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter[0]_i_1__0_n_0 ),
+        .D(\data_counter[0]_i_1_n_0 ),
         .Q(data_counter[0]));
   FDCE #(
     .INIT(1'b0)) 
@@ -5647,12 +5656,14 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
     Im_Data_out,
     clk,
     reset,
+    go_data_counter,
     D,
     \Data_in_ppF_reg[1][7]_0 );
   output [7:0]Re_Data_out;
   output [7:0]Im_Data_out;
   input clk;
   input reset;
+  input go_data_counter;
   input [7:0]D;
   input [7:0]\Data_in_ppF_reg[1][7]_0 ;
 
@@ -5863,6 +5874,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
   wire \data_counter_reg_n_0_[0] ;
   wire [7:0]dout_IM;
   wire [7:0]dout_RE;
+  wire go_data_counter;
   wire halfway;
   wire halfway_pp1;
   wire halfway_pp2_reg_n_0;
@@ -7303,11 +7315,12 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
         .clk(clk),
         .reset(reset));
   (* SOFT_HLUTNM = "soft_lutpair50" *) 
-  LUT2 #(
-    .INIT(4'h6)) 
+  LUT3 #(
+    .INIT(8'h78)) 
     \data_counter[0]_i_1 
        (.I0(state),
-        .I1(\data_counter_reg_n_0_[0] ),
+        .I1(go_data_counter),
+        .I2(\data_counter_reg_n_0_[0] ),
         .O(\data_counter[0]_i_1_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
@@ -7550,12 +7563,13 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
         .I1(\InDec_BU_reg_n_0_[1][4] ),
         .O(i__carry__0_i_4__2_n_0));
   (* SOFT_HLUTNM = "soft_lutpair49" *) 
-  LUT3 #(
-    .INIT(8'hF8)) 
+  LUT4 #(
+    .INIT(16'hFF80)) 
     state_i_1
-       (.I0(\sync_counter_reg_n_0_[1] ),
-        .I1(\sync_counter_reg_n_0_[0] ),
-        .I2(state),
+       (.I0(go_data_counter),
+        .I1(\sync_counter_reg_n_0_[1] ),
+        .I2(\sync_counter_reg_n_0_[0] ),
+        .I3(state),
         .O(state_i_1_n_0));
   FDCE #(
     .INIT(1'b0)) 
@@ -7566,19 +7580,21 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
         .D(state_i_1_n_0),
         .Q(state));
   (* SOFT_HLUTNM = "soft_lutpair50" *) 
-  LUT2 #(
-    .INIT(4'h9)) 
-    \sync_counter[0]_i_1 
-       (.I0(state),
-        .I1(\sync_counter_reg_n_0_[0] ),
-        .O(\sync_counter[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT3 #(
     .INIT(8'hD2)) 
+    \sync_counter[0]_i_1 
+       (.I0(go_data_counter),
+        .I1(state),
+        .I2(\sync_counter_reg_n_0_[0] ),
+        .O(\sync_counter[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  LUT4 #(
+    .INIT(16'hF708)) 
     \sync_counter[1]_i_1 
        (.I0(\sync_counter_reg_n_0_[0] ),
-        .I1(state),
-        .I2(\sync_counter_reg_n_0_[1] ),
+        .I1(go_data_counter),
+        .I2(state),
+        .I3(\sync_counter_reg_n_0_[1] ),
         .O(\sync_counter[1]_i_1_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
@@ -7603,12 +7619,14 @@ module design_1_SDF_Top_0_0_SDF_Top
    (Re_Data_out,
     Im_Data_out,
     reset,
+    go_data_counter,
     clk,
     Re_Data_in,
     Im_Data_in);
   output [7:0]Re_Data_out;
   output [7:0]Im_Data_out;
   input reset;
+  input go_data_counter;
   input clk;
   input [7:0]Re_Data_in;
   input [7:0]Im_Data_in;
@@ -7620,6 +7638,7 @@ module design_1_SDF_Top_0_0_SDF_Top
   wire clk;
   wire [7:0]\data_out_ppF_reg[0] ;
   wire [7:0]\data_out_ppF_reg[1] ;
+  wire go_data_counter;
   wire reset;
 
   design_1_SDF_Top_0_0_SDF_Stage \SDF_stage_wrap[1].SDF_stage_inst 
@@ -7628,6 +7647,7 @@ module design_1_SDF_Top_0_0_SDF_Top
         .Re_Data_in(Re_Data_in),
         .clk(clk),
         .\data_out_ppF_reg[1][7]_0 (\data_out_ppF_reg[1] ),
+        .go_data_counter(go_data_counter),
         .reset(reset));
   design_1_SDF_Top_0_0_SDF_Stage__parameterized1 \SDF_stage_wrap[2].SDF_stage_inst 
        (.D(\data_out_ppF_reg[0] ),
@@ -7635,6 +7655,7 @@ module design_1_SDF_Top_0_0_SDF_Top
         .Im_Data_out(Im_Data_out),
         .Re_Data_out(Re_Data_out),
         .clk(clk),
+        .go_data_counter(go_data_counter),
         .reset(reset));
 endmodule
 

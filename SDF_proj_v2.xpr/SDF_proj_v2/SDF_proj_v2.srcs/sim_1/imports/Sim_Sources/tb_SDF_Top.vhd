@@ -17,10 +17,10 @@ architecture Behavioral of tb_SDF_Top is
     constant CLK_PERIOD : time := 10 ns;
     constant RESET_WND  : time := 50 ns; 
 
-    constant FFT_TOT_POINTS : integer := 8;
-    constant DATA_WIDTH     : integer := 16;
-    constant PRECISION      : integer := 6;
-    constant TF_WIDTH       : integer := 8;
+    constant FFT_TOT_POINTS : integer := 4; --8
+    constant DATA_WIDTH     : integer := 8; --16
+    constant PRECISION      : integer := 0; --6
+    constant TF_WIDTH       : integer := 8; 
     constant SR_INIT        : integer := 0;
 
     component SDF_Top is
@@ -29,12 +29,14 @@ architecture Behavioral of tb_SDF_Top is
             DATA_WIDTH       : NATURAL  := 16;
             PRECISION        : NATURAL  := 6; 
             TF_WIDTH         : POSITIVE := 8;
-            SR_INIT          : REAL     := 0.0
+            SR_INIT          : INTEGER  := 0
         );
         Port(
     
             clk              :   in std_logic;
             reset            :   in std_logic;
+
+            go_data_counter  :   in std_logic;
     
             Re_Data_in       :   in std_logic_vector(DATA_WIDTH-1  downto 0);
             Im_Data_in       :   in std_logic_vector(DATA_WIDTH-1  downto 0);
@@ -47,6 +49,8 @@ architecture Behavioral of tb_SDF_Top is
 
     signal clk   : std_logic := '1';
     signal reset : std_logic := '0';
+
+    signal go_data_counter      : std_logic := '1';
     
     signal Re_Data_in    : std_logic_vector(DATA_WIDTH-1  downto 0)   := (Others => '0');
     signal Im_Data_in    : std_logic_vector(DATA_WIDTH-1  downto 0)   := (Others => '0');
@@ -66,15 +70,17 @@ begin
         )
         Port Map(
             --------Reset/Clock--------
-            reset          => reset,
-            clk            => clk,
+            reset           => reset,
+            clk             => clk,
             ---------------------------
-            -------------Data----------          
-            Re_Data_in     => Re_Data_in,
-            Im_Data_in     => Im_Data_in,
+            go_data_counter => go_data_counter,
 
-            Re_Data_out    => Re_Data_out,
-            Im_Data_out    => Im_Data_out
+            -------------Data----------          
+            Re_Data_in      => Re_Data_in,
+            Im_Data_in      => Im_Data_in,
+
+            Re_Data_out     => Re_Data_out,
+            Im_Data_out     => Im_Data_out
         );
 
     clk <= not clk after CLK_PERIOD/2;
@@ -90,11 +96,35 @@ begin
         wait for RESET_WND;
         
         reset <= '0';
+
+        Re_Data_in <= to_slv(to_sfixed(1, DATA_WIDTH-1-PRECISION, -PRECISION));
+        Im_Data_in <= to_slv(to_sfixed(2, DATA_WIDTH-1-PRECISION, -PRECISION));
+                
+        wait until rising_edge(clk); 
+
+        Re_Data_in <= to_slv(to_sfixed(3, DATA_WIDTH-1-PRECISION, -PRECISION));
+        Im_Data_in <= to_slv(to_sfixed(4, DATA_WIDTH-1-PRECISION, -PRECISION));
+                
+        wait until rising_edge(clk); 
+
+        Re_Data_in <= to_slv(to_sfixed(5, DATA_WIDTH-1-PRECISION, -PRECISION));
+        Im_Data_in <= to_slv(to_sfixed(6, DATA_WIDTH-1-PRECISION, -PRECISION));
+                
+        wait until rising_edge(clk); 
+
+        Re_Data_in <= to_slv(to_sfixed(7, DATA_WIDTH-1-PRECISION, -PRECISION));
+        Im_Data_in <= to_slv(to_sfixed(8, DATA_WIDTH-1-PRECISION, -PRECISION));
+                
+        wait for 50 ns; 
+        
         
 
         for i in 1 to FFT_TOT_POINTS loop
-            Re_Data_in <= to_slv(to_sfixed(i*(i+1), DATA_WIDTH-1-PRECISION, -PRECISION));
-            Im_Data_in <= to_slv(to_sfixed(i*10, DATA_WIDTH-1-PRECISION, -PRECISION));
+            -- Re_Data_in <= to_slv(to_sfixed(i*(i+1), DATA_WIDTH-1-PRECISION, -PRECISION));
+            -- Im_Data_in <= to_slv(to_sfixed(i*10, DATA_WIDTH-1-PRECISION, -PRECISION));
+
+            Re_Data_in <= to_slv(to_sfixed(i, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(i*2, DATA_WIDTH-1-PRECISION, -PRECISION));
                 
             wait until rising_edge(clk); 
         end loop;

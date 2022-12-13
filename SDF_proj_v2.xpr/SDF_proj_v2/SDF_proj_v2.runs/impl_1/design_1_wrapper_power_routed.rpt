@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date             : Tue Dec  6 19:21:41 2022
+| Date             : Wed Dec 14 00:07:16 2022
 | Host             : PcFraLenzi running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -52,17 +52,17 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.014 |        6 |       --- |             --- |
-| Slice Logic              |     0.005 |     6971 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     1960 |     20800 |            9.42 |
-|   CARRY4                 |    <0.001 |      147 |      8150 |            1.80 |
-|   Register               |    <0.001 |     3583 |     41600 |            8.61 |
-|   LUT as Shift Register  |    <0.001 |      196 |      9600 |            2.04 |
+| Clocks                   |     0.015 |        6 |       --- |             --- |
+| Slice Logic              |     0.004 |     7176 |       --- |             --- |
+|   LUT as Logic           |     0.004 |     2011 |     20800 |            9.67 |
+|   CARRY4                 |    <0.001 |      162 |      8150 |            1.99 |
+|   Register               |    <0.001 |     3691 |     41600 |            8.87 |
+|   LUT as Shift Register  |    <0.001 |      201 |      9600 |            2.09 |
 |   LUT as Distributed RAM |    <0.001 |       24 |      9600 |            0.25 |
 |   F7/F8 Muxes            |    <0.001 |        4 |     32600 |            0.01 |
-|   Others                 |     0.000 |      421 |       --- |             --- |
+|   Others                 |     0.000 |      432 |       --- |             --- |
 |   BUFG                   |     0.000 |        2 |        32 |            6.25 |
-| Signals                  |     0.005 |     5078 |       --- |             --- |
+| Signals                  |     0.004 |     5222 |       --- |             --- |
 | Block RAM                |     0.004 |        4 |        50 |            8.00 |
 | MMCM                     |     0.106 |        1 |         5 |           20.00 |
 | I/O                      |    <0.001 |        4 |       106 |            3.77 |
@@ -156,12 +156,12 @@ Table of Contents
 |   design_1_i             |     0.131 |
 |     AXI4Stream_UART_0    |     0.005 |
 |       U0                 |     0.005 |
-|     SDF_Top_0            |     0.005 |
-|       U0                 |     0.005 |
+|     SDF_Top_0            |     0.004 |
+|       U0                 |     0.004 |
 |     clk_wiz              |     0.106 |
 |       inst               |     0.106 |
-|     system_ila_0         |     0.014 |
-|       U0                 |     0.014 |
+|     system_ila_0         |     0.015 |
+|       U0                 |     0.015 |
 +--------------------------+-----------+
 
 

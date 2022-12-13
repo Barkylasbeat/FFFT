@@ -17,14 +17,16 @@ entity SDF_Top is
     );
     Port(
 
-        clk            :   in std_logic;
-        reset          :   in std_logic;
+        clk             :   in std_logic;
+        reset           :   in std_logic;
+        
+        go_data_counter :   in std_logic;
 
-        Re_Data_in     :   in std_logic_vector(DATA_WIDTH-1  downto 0);
-        Im_Data_in     :   in std_logic_vector(DATA_WIDTH-1  downto 0);
+        Re_Data_in      :   in std_logic_vector(DATA_WIDTH-1  downto 0);
+        Im_Data_in      :   in std_logic_vector(DATA_WIDTH-1  downto 0);
 
-        Re_Data_out    :   out std_logic_vector(DATA_WIDTH-1 downto 0);
-        Im_Data_out    :   out std_logic_vector(DATA_WIDTH-1 downto 0)
+        Re_Data_out     :   out std_logic_vector(DATA_WIDTH-1 downto 0);
+        Im_Data_out     :   out std_logic_vector(DATA_WIDTH-1 downto 0)
      );
 
 end SDF_Top;
@@ -45,6 +47,8 @@ Architecture Behavioral of SDF_Top is
     
             clk             :   in std_logic;
             reset           :   in std_logic;
+
+            go_data_counter :   in std_logic;
     
             Re_Data_in      :   in std_logic_vector(DATA_WIDTH-1  downto 0);
             Im_Data_in      :   in std_logic_vector(DATA_WIDTH-1  downto 0);
@@ -63,8 +67,8 @@ Architecture Behavioral of SDF_Top is
 ----------------------------------END_CONSTANTS---------------------------------------------
 
 ---------------------------------------WIRING------------------------------------------------
-    type CPLX_SLV    is array(1 downto 0) of std_logic_vector(DATA_WIDTH-1 downto 0);
-    type data is array (0 to NUM_STAGES-1) of CPLX_SLV;
+    type CPLX_SLV   is array (1 downto 0)           of std_logic_vector(DATA_WIDTH-1 downto 0);
+    type data       is array (0 to NUM_STAGES-1)    of CPLX_SLV;
     signal stage_input, stage_output    : data;
 -------------------------------------END_WIRING---------------------------------------------
 
@@ -89,14 +93,16 @@ begin
             )
             Port Map(
         
-                clk            => clk,
-                reset          => reset,
+                clk             => clk,
+                reset           => reset,
+                
+                go_data_counter => go_data_counter,
         
-                Re_Data_in     => stage_input(i-1)(RE),
-                Im_Data_in     => stage_input(i-1)(IM),
+                Re_Data_in      => stage_input(i-1)(RE),
+                Im_Data_in      => stage_input(i-1)(IM),
         
-                Re_Data_out    => stage_output(i-1)(RE),
-                Im_Data_out    => stage_output(i-1)(IM)
+                Re_Data_out     => stage_output(i-1)(RE),
+                Im_Data_out     => stage_output(i-1)(IM)
             );
         
     end generate;

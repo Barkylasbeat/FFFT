@@ -99,12 +99,12 @@ set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_pro
 set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_0/design_1_rst_clk_wiz_100M_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_0/design_1_rst_clk_wiz_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI4Stream_UART_0_2/design_1_AXI4Stream_UART_0_2_board.xdc]
-set_property used_in_synthesis false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_2/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_2/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_2/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_2/bd_0/ip/ip_0/bd_378d_ila_lib_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_2/bd_0/bd_378d_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_2/design_1_system_ila_0_2_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_3/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_3/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_3/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_3/bd_0/ip/ip_0/bd_f74c_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_3/bd_0/bd_f74c_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_3/design_1_system_ila_0_3_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
@@ -116,6 +116,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/constrs_1/new/io.xdc
+set_property used_in_implementation false [get_files C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/constrs_1/new/io.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

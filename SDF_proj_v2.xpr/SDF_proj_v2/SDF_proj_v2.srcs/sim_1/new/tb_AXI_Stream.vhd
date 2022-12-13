@@ -36,6 +36,8 @@ architecture Behavioral of tb_Axi_Stream is
     
             clk              :   in std_logic;
             reset            :   in std_logic;
+
+            go_data_counter  :   in std_logic;
     
             Re_Data_in       :   in std_logic_vector(DATA_WIDTH-1  downto 0);
             Im_Data_in       :   in std_logic_vector(DATA_WIDTH-1  downto 0);
@@ -63,7 +65,8 @@ architecture Behavioral of tb_Axi_Stream is
             Re_data         :   out std_logic_vector(DATA_WIDTH-1  downto 0);
             Im_data         :   out std_logic_vector(DATA_WIDTH-1  downto 0);
     
-            sending_in      :   out std_logic
+            sending_in      :   out std_logic;
+            go_data_counter :   out std_logic
             
          );
     end component;
@@ -99,6 +102,8 @@ architecture Behavioral of tb_Axi_Stream is
     signal Re_Data_out   : std_logic_vector(DATA_WIDTH-1  downto 0)   := (Others => '0');
     signal Im_Data_out   : std_logic_vector(DATA_WIDTH-1  downto 0)   := (Others => '0');
 
+    signal go_data_counter : std_logic := '0';
+
     -----------------------AXI SIGNALS---------------------------------------------------
     signal input_data    : std_logic_vector(DATA_WIDTH-1  downto 0)   := (Others => '0');
     signal input_valid   : std_logic                                  := '0';
@@ -124,6 +129,8 @@ begin
             reset          => reset,
             clk            => clk,
             ---------------------------
+            go_data_counter => go_data_counter,
+
             -------------Data----------          
             Re_Data_in     => Re_Data_in,
             Im_Data_in     => Im_Data_in,
@@ -149,7 +156,8 @@ begin
             Re_data         => Re_Data_in,
             Im_data         => Im_Data_in,
             
-            sending_in      => delay_sig
+            sending_in      => delay_sig,
+            go_data_counter => go_data_counter
             
          );
     
@@ -186,9 +194,7 @@ begin
         wait for RESET_WND;
         
         reset <= '0';
-
-        
-                  
+     
         for i in 1 to 2*FFT_TOT_POINTS loop
             
             input_data   <= to_slv(to_sfixed(i, DATA_WIDTH-1-PRECISION, -PRECISION));
@@ -204,7 +210,7 @@ begin
 
         end loop;
 
-            wait for 10*UART_PERIOD;
+            -- wait for 10*UART_PERIOD;
 
             for i in 1 to 2*FFT_TOT_POINTS loop
             

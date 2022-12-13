@@ -72,6 +72,7 @@
                 &quot;ports&quot;: {
                   &quot;clk&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
                   &quot;reset&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
+                  &quot;go_data_counter&quot;: [ { &quot;direction&quot;: &quot;in&quot; } ],
                   &quot;Re_Data_in&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;7&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;Im_Data_in&quot;: [ { &quot;direction&quot;: &quot;in&quot;, &quot;size_left&quot;: &quot;7&quot;, &quot;size_right&quot;: &quot;0&quot; } ],
                   &quot;Re_Data_out&quot;: [ { &quot;direction&quot;: &quot;out&quot;, &quot;size_left&quot;: &quot;7&quot;, &quot;size_right&quot;: &quot;0&quot; } ],

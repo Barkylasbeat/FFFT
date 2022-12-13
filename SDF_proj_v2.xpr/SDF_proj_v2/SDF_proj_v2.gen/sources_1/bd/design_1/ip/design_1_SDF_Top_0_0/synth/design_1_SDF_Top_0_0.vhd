@@ -57,6 +57,7 @@ ENTITY design_1_SDF_Top_0_0 IS
   PORT (
     clk : IN STD_LOGIC;
     reset : IN STD_LOGIC;
+    go_data_counter : IN STD_LOGIC;
     Re_Data_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     Im_Data_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     Re_Data_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -78,6 +79,7 @@ ARCHITECTURE design_1_SDF_Top_0_0_arch OF design_1_SDF_Top_0_0 IS
     PORT (
       clk : IN STD_LOGIC;
       reset : IN STD_LOGIC;
+      go_data_counter : IN STD_LOGIC;
       Re_Data_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       Im_Data_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       Re_Data_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
@@ -110,6 +112,7 @@ BEGIN
     PORT MAP (
       clk => clk,
       reset => reset,
+      go_data_counter => go_data_counter,
       Re_Data_in => Re_Data_in,
       Im_Data_in => Im_Data_in,
       Re_Data_out => Re_Data_out,
