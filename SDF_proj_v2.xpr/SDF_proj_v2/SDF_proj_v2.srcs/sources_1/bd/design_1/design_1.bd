@@ -14,7 +14,6 @@
       "clk_wiz": "",
       "rst_clk_wiz_100M": "",
       "AXI4Stream_UART_0": "",
-      "system_ila_0": "",
       "SDF_Top_0": "",
       "AXI_Input_Interface_0": "",
       "AXI_Output_Interface_0": ""
@@ -129,74 +128,6 @@
           }
         }
       },
-      "system_ila_0": {
-        "vlnv": "xilinx.com:ip:system_ila:1.1",
-        "xci_name": "design_1_system_ila_0_3",
-        "xci_path": "ip\\design_1_system_ila_0_3\\design_1_system_ila_0_3.xci",
-        "inst_hier_path": "system_ila_0",
-        "parameters": {
-          "C_MON_TYPE": {
-            "value": "MIX"
-          },
-          "C_NUM_MONITOR_SLOTS": {
-            "value": "2"
-          },
-          "C_NUM_OF_PROBES": {
-            "value": "5"
-          },
-          "C_PROBE0_TYPE": {
-            "value": "0"
-          },
-          "C_PROBE1_TYPE": {
-            "value": "0"
-          },
-          "C_PROBE2_TYPE": {
-            "value": "0"
-          },
-          "C_PROBE3_TYPE": {
-            "value": "0"
-          },
-          "C_PROBE4_TYPE": {
-            "value": "0"
-          },
-          "C_SLOT_0_APC_EN": {
-            "value": "0"
-          },
-          "C_SLOT_0_AXI_DATA_SEL": {
-            "value": "1"
-          },
-          "C_SLOT_0_AXI_TRIG_SEL": {
-            "value": "1"
-          },
-          "C_SLOT_0_INTF_TYPE": {
-            "value": "xilinx.com:interface:axis_rtl:1.0"
-          },
-          "C_SLOT_1_APC_EN": {
-            "value": "0"
-          },
-          "C_SLOT_1_AXI_DATA_SEL": {
-            "value": "1"
-          },
-          "C_SLOT_1_AXI_TRIG_SEL": {
-            "value": "1"
-          },
-          "C_SLOT_1_INTF_TYPE": {
-            "value": "xilinx.com:interface:axis_rtl:1.0"
-          }
-        },
-        "interface_ports": {
-          "SLOT_0_AXIS": {
-            "mode": "Monitor",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          },
-          "SLOT_1_AXIS": {
-            "mode": "Monitor",
-            "vlnv_bus_definition": "xilinx.com:interface:axis:1.0",
-            "vlnv": "xilinx.com:interface:axis_rtl:1.0"
-          }
-        }
-      },
       "SDF_Top_0": {
         "vlnv": "xilinx.com:module_ref:SDF_Top:1.0",
         "xci_name": "design_1_SDF_Top_0_0",
@@ -207,7 +138,7 @@
             "value": "8"
           },
           "FFT_TOT_POINTS": {
-            "value": "4"
+            "value": "16"
           },
           "PRECISION": {
             "value": "3"
@@ -286,7 +217,7 @@
             "value": "8"
           },
           "FFT_TOT_POINTS": {
-            "value": "4"
+            "value": "16"
           }
         },
         "reference_info": {
@@ -428,7 +359,7 @@
             "value": "8"
           },
           "FFT_TOT_POINTS": {
-            "value": "4"
+            "value": "16"
           }
         },
         "reference_info": {
@@ -562,17 +493,8 @@
       "AXI4Stream_UART_0_M00_AXIS_RX": {
         "interface_ports": [
           "AXI_Input_Interface_0/s_axis",
-          "AXI4Stream_UART_0/M00_AXIS_RX",
-          "system_ila_0/SLOT_0_AXIS"
-        ],
-        "hdl_attributes": {
-          "DEBUG": {
-            "value": "true"
-          },
-          "MARK_DEBUG": {
-            "value": "true"
-          }
-        }
+          "AXI4Stream_UART_0/M00_AXIS_RX"
+        ]
       },
       "AXI4Stream_UART_0_UART": {
         "interface_ports": [
@@ -583,49 +505,22 @@
       "AXI_Output_Interface_0_m_axis": {
         "interface_ports": [
           "AXI4Stream_UART_0/S00_AXIS_TX",
-          "AXI_Output_Interface_0/m_axis",
-          "system_ila_0/SLOT_1_AXIS"
-        ],
-        "hdl_attributes": {
-          "DEBUG": {
-            "value": "true"
-          },
-          "MARK_DEBUG": {
-            "value": "true"
-          }
-        }
+          "AXI_Output_Interface_0/m_axis"
+        ]
       }
     },
     "nets": {
       "AXI_Input_Interface_0_Im_data": {
         "ports": [
           "AXI_Input_Interface_0/Im_data",
-          "system_ila_0/probe0",
           "SDF_Top_0/Im_Data_in"
-        ],
-        "hdl_attributes": {
-          "DEBUG": {
-            "value": "true"
-          },
-          "MARK_DEBUG": {
-            "value": "true"
-          }
-        }
+        ]
       },
       "AXI_Input_Interface_0_Re_data": {
         "ports": [
           "AXI_Input_Interface_0/Re_data",
-          "system_ila_0/probe1",
           "SDF_Top_0/Re_Data_in"
-        ],
-        "hdl_attributes": {
-          "DEBUG": {
-            "value": "true"
-          },
-          "MARK_DEBUG": {
-            "value": "true"
-          }
-        }
+        ]
       },
       "AXI_Input_Interface_0_go_data_counter": {
         "ports": [
@@ -636,47 +531,20 @@
       "AXI_Input_Interface_0_sending_in": {
         "ports": [
           "AXI_Input_Interface_0/sending_in",
-          "system_ila_0/probe2",
           "AXI_Output_Interface_0/data_received"
-        ],
-        "hdl_attributes": {
-          "DEBUG": {
-            "value": "true"
-          },
-          "MARK_DEBUG": {
-            "value": "true"
-          }
-        }
+        ]
       },
       "SDF_Top_0_Im_Data_out": {
         "ports": [
           "SDF_Top_0/Im_Data_out",
-          "system_ila_0/probe3",
           "AXI_Output_Interface_0/Im_data"
-        ],
-        "hdl_attributes": {
-          "DEBUG": {
-            "value": "true"
-          },
-          "MARK_DEBUG": {
-            "value": "true"
-          }
-        }
+        ]
       },
       "SDF_Top_0_Re_Data_out": {
         "ports": [
           "SDF_Top_0/Re_Data_out",
-          "system_ila_0/probe4",
           "AXI_Output_Interface_0/Re_data"
-        ],
-        "hdl_attributes": {
-          "DEBUG": {
-            "value": "true"
-          },
-          "MARK_DEBUG": {
-            "value": "true"
-          }
-        }
+        ]
       },
       "clk_wiz_clk_out1": {
         "ports": [
@@ -685,7 +553,6 @@
           "AXI4Stream_UART_0/clk_uart",
           "AXI4Stream_UART_0/m00_axis_rx_aclk",
           "AXI4Stream_UART_0/s00_axis_tx_aclk",
-          "system_ila_0/clk",
           "SDF_Top_0/clk",
           "AXI_Input_Interface_0/clk",
           "AXI_Output_Interface_0/clk"
@@ -708,8 +575,7 @@
         "ports": [
           "rst_clk_wiz_100M/peripheral_aresetn",
           "AXI4Stream_UART_0/m00_axis_rx_aresetn",
-          "AXI4Stream_UART_0/s00_axis_tx_aresetn",
-          "system_ila_0/resetn"
+          "AXI4Stream_UART_0/s00_axis_tx_aresetn"
         ]
       },
       "rst_clk_wiz_100M_peripheral_reset": {

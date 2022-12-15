@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
---Date        : Thu Dec 15 18:22:28 2022
+--Date        : Fri Dec 16 00:00:15 2022
 --Host        : PcFraLenzi running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -19,7 +19,7 @@ entity design_1 is
     usb_uart_txd : out STD_LOGIC
   );
   attribute core_generation_info : string;
-  attribute core_generation_info of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=7,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_board_cnt=1,da_clkrst_cnt=3,synth_mode=OOC_per_IP}";
+  attribute core_generation_info of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=6,numReposBlks=6,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_board_cnt=1,da_clkrst_cnt=3,synth_mode=OOC_per_IP}";
   attribute hw_handoff : string;
   attribute hw_handoff of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -65,25 +65,6 @@ architecture STRUCTURE of design_1 is
     s00_axis_tx_tvalid : in STD_LOGIC
   );
   end component design_1_AXI4Stream_UART_0_2;
-  component design_1_system_ila_0_3 is
-  port (
-    clk : in STD_LOGIC;
-    probe0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe1 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe2 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe3 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    probe4 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    SLOT_0_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    SLOT_0_AXIS_tlast : in STD_LOGIC;
-    SLOT_0_AXIS_tvalid : in STD_LOGIC;
-    SLOT_0_AXIS_tready : in STD_LOGIC;
-    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    SLOT_1_AXIS_tlast : in STD_LOGIC;
-    SLOT_1_AXIS_tvalid : in STD_LOGIC;
-    SLOT_1_AXIS_tready : in STD_LOGIC;
-    resetn : in STD_LOGIC
-  );
-  end component design_1_system_ila_0_3;
   component design_1_SDF_Top_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -121,50 +102,19 @@ architecture STRUCTURE of design_1 is
   );
   end component design_1_AXI_Output_Interface_0_0;
   signal AXI4Stream_UART_0_M00_AXIS_RX_TDATA : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute MARK_DEBUG : boolean;
-  attribute MARK_DEBUG of AXI4Stream_UART_0_M00_AXIS_RX_TDATA : signal is std.standard.true;
-  attribute conn_bus_info : string;
-  attribute conn_bus_info of AXI4Stream_UART_0_M00_AXIS_RX_TDATA : signal is "AXI4Stream_UART_0_M00_AXIS_RX xilinx.com:interface:axis:1.0 None TDATA";
-  attribute debug : string;
-  attribute debug of AXI4Stream_UART_0_M00_AXIS_RX_TDATA : signal is "true";
   signal AXI4Stream_UART_0_M00_AXIS_RX_TREADY : STD_LOGIC;
-  attribute MARK_DEBUG of AXI4Stream_UART_0_M00_AXIS_RX_TREADY : signal is std.standard.true;
-  attribute conn_bus_info of AXI4Stream_UART_0_M00_AXIS_RX_TREADY : signal is "AXI4Stream_UART_0_M00_AXIS_RX xilinx.com:interface:axis:1.0 None TREADY";
-  attribute debug of AXI4Stream_UART_0_M00_AXIS_RX_TREADY : signal is "true";
   signal AXI4Stream_UART_0_M00_AXIS_RX_TVALID : STD_LOGIC;
-  attribute MARK_DEBUG of AXI4Stream_UART_0_M00_AXIS_RX_TVALID : signal is std.standard.true;
-  attribute conn_bus_info of AXI4Stream_UART_0_M00_AXIS_RX_TVALID : signal is "AXI4Stream_UART_0_M00_AXIS_RX xilinx.com:interface:axis:1.0 None TVALID";
-  attribute debug of AXI4Stream_UART_0_M00_AXIS_RX_TVALID : signal is "true";
   signal AXI4Stream_UART_0_UART_RxD : STD_LOGIC;
   signal AXI4Stream_UART_0_UART_TxD : STD_LOGIC;
   signal AXI_Input_Interface_0_Im_data : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute MARK_DEBUG of AXI_Input_Interface_0_Im_data : signal is std.standard.true;
-  attribute debug of AXI_Input_Interface_0_Im_data : signal is "true";
   signal AXI_Input_Interface_0_Re_data : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute MARK_DEBUG of AXI_Input_Interface_0_Re_data : signal is std.standard.true;
-  attribute debug of AXI_Input_Interface_0_Re_data : signal is "true";
   signal AXI_Input_Interface_0_go_data_counter : STD_LOGIC;
   signal AXI_Input_Interface_0_sending_in : STD_LOGIC;
-  attribute MARK_DEBUG of AXI_Input_Interface_0_sending_in : signal is std.standard.true;
-  attribute debug of AXI_Input_Interface_0_sending_in : signal is "true";
   signal AXI_Output_Interface_0_m_axis_TDATA : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute MARK_DEBUG of AXI_Output_Interface_0_m_axis_TDATA : signal is std.standard.true;
-  attribute conn_bus_info of AXI_Output_Interface_0_m_axis_TDATA : signal is "AXI_Output_Interface_0_m_axis xilinx.com:interface:axis:1.0 None TDATA";
-  attribute debug of AXI_Output_Interface_0_m_axis_TDATA : signal is "true";
   signal AXI_Output_Interface_0_m_axis_TREADY : STD_LOGIC;
-  attribute MARK_DEBUG of AXI_Output_Interface_0_m_axis_TREADY : signal is std.standard.true;
-  attribute conn_bus_info of AXI_Output_Interface_0_m_axis_TREADY : signal is "AXI_Output_Interface_0_m_axis xilinx.com:interface:axis:1.0 None TREADY";
-  attribute debug of AXI_Output_Interface_0_m_axis_TREADY : signal is "true";
   signal AXI_Output_Interface_0_m_axis_TVALID : STD_LOGIC;
-  attribute MARK_DEBUG of AXI_Output_Interface_0_m_axis_TVALID : signal is std.standard.true;
-  attribute conn_bus_info of AXI_Output_Interface_0_m_axis_TVALID : signal is "AXI_Output_Interface_0_m_axis xilinx.com:interface:axis:1.0 None TVALID";
-  attribute debug of AXI_Output_Interface_0_m_axis_TVALID : signal is "true";
   signal SDF_Top_0_Im_Data_out : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute MARK_DEBUG of SDF_Top_0_Im_Data_out : signal is std.standard.true;
-  attribute debug of SDF_Top_0_Im_Data_out : signal is "true";
   signal SDF_Top_0_Re_Data_out : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute MARK_DEBUG of SDF_Top_0_Re_Data_out : signal is std.standard.true;
-  attribute debug of SDF_Top_0_Re_Data_out : signal is "true";
   signal clk_wiz_clk_out1 : STD_LOGIC;
   signal clk_wiz_locked : STD_LOGIC;
   signal reset_1 : STD_LOGIC;
@@ -256,25 +206,5 @@ rst_clk_wiz_100M: component design_1_rst_clk_wiz_100M_0
       peripheral_aresetn(0) => rst_clk_wiz_100M_peripheral_aresetn(0),
       peripheral_reset(0) => rst_clk_wiz_100M_peripheral_reset(0),
       slowest_sync_clk => clk_wiz_clk_out1
-    );
-system_ila_0: component design_1_system_ila_0_3
-     port map (
-      SLOT_0_AXIS_tdata(31 downto 8) => B"000000000000000000000000",
-      SLOT_0_AXIS_tdata(7 downto 0) => AXI4Stream_UART_0_M00_AXIS_RX_TDATA(7 downto 0),
-      SLOT_0_AXIS_tlast => '0',
-      SLOT_0_AXIS_tready => AXI4Stream_UART_0_M00_AXIS_RX_TREADY,
-      SLOT_0_AXIS_tvalid => AXI4Stream_UART_0_M00_AXIS_RX_TVALID,
-      SLOT_1_AXIS_tdata(31 downto 8) => B"000000000000000000000000",
-      SLOT_1_AXIS_tdata(7 downto 0) => AXI_Output_Interface_0_m_axis_TDATA(7 downto 0),
-      SLOT_1_AXIS_tlast => '0',
-      SLOT_1_AXIS_tready => AXI_Output_Interface_0_m_axis_TREADY,
-      SLOT_1_AXIS_tvalid => AXI_Output_Interface_0_m_axis_TVALID,
-      clk => clk_wiz_clk_out1,
-      probe0(7 downto 0) => AXI_Input_Interface_0_Im_data(7 downto 0),
-      probe1(7 downto 0) => AXI_Input_Interface_0_Re_data(7 downto 0),
-      probe2(0) => AXI_Input_Interface_0_sending_in,
-      probe3(7 downto 0) => SDF_Top_0_Im_Data_out(7 downto 0),
-      probe4(7 downto 0) => SDF_Top_0_Re_Data_out(7 downto 0),
-      resetn => rst_clk_wiz_100M_peripheral_aresetn(0)
     );
 end STRUCTURE;

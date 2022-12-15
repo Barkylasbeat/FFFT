@@ -18,7 +18,7 @@ architecture Behavioral of tb_Axi_Stream is
     constant RESET_WND   : time := 50 ns; 
     constant UART_PERIOD : time := 500 ns;
 
-    constant FFT_TOT_POINTS : integer := 4;
+    constant FFT_TOT_POINTS : integer := 16;
     constant DATA_WIDTH     : integer := 8;
     constant PRECISION      : integer := 0;
     constant TF_WIDTH       : integer := 8;

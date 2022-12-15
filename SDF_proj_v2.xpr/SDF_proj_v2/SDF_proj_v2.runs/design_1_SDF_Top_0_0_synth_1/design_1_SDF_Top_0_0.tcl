@@ -70,6 +70,10 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_1_SDF_Top_0_0_synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 1
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 set_param ips.modRefOverrideMrefDirPath c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/mref
@@ -81,7 +85,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.cache/wt [current_project]
 set_property parent.project_path C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.board} [current_project]

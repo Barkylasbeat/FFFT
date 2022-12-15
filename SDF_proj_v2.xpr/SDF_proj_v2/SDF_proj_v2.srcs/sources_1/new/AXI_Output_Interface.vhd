@@ -59,7 +59,6 @@ architecture Behavioral of AXI_Output_Interface is
 
 -----------------------------------------------WIRING----------------------------------------------------
     signal data_out         : CPLX_SLV := (Others => (Others => '0'));
-    signal reverse_addr     : std_logic_vector(NUM_STAGES-1 downto 0);
     signal addr             : std_logic_vector(NUM_STAGES-1 downto 0);
     signal out_data         : std_logic_vector(m_axis_tdata'range) := (Others => '0');
 --------------------------------------------END_WIRING---------------------------------------------------
@@ -68,9 +67,7 @@ begin
 -----------------------------------------------DATAFLOW----------------------------------------------------
     data_out(RE)    <= Re_data;
     data_out(IM)    <= Im_data;
-    addr            <= std_logic_vector(to_unsigned(data_counter,addr'length));
     m_axis_tdata    <= out_data;
-    reverse_addr    <= addr(NUM_STAGES-1 downto 0);
 
     with state select m_axis_tvalid <=  '0' when WAIT_INPUTS,
                                         '0' when WAIT_COMPUTE,
@@ -78,6 +75,18 @@ begin
                                         '1' when SEND_RE,
                                         '1' when SEND_IM;
 ---------------------------------------------END_DATAFLOW--------------------------------------------------
+
+-- We have to flip the bits and fill read the memory in a little endian fashion.
+Bit_Reordering : process(data_counter)
+    variable reverse_addr : std_logic_vector(addr'range);
+    variable temp_addr    : std_logic_vector(addr'range);
+begin
+    temp_addr := std_logic_vector(to_unsigned(FFT_TOT_POINTS-1 - data_counter,addr'length)); 
+    for i in addr'range loop
+        reverse_addr(i) := temp_addr(addr'length-1 - i);
+    end loop;
+    addr    <= reverse_addr;
+end process;
 
 AXI : process(clk, reset)
 begin 
@@ -110,7 +119,7 @@ begin
                 if data_counter = FFT_TOT_POINTS-1 then
                     state         <= SEND_RE;
                     data_counter  <= 0;
-                    out_data  <= output_buf(0)(RE);
+                    out_data      <= data_out(RE);  -- We have to bit reverse and flip the memory, so we start from the bottom
                 else
                     data_counter <= data_counter+1;
                 end if;
@@ -119,7 +128,7 @@ begin
               
                 if m_axis_tready = '1' then
                     
-                    out_data <= output_buf(to_integer(unsigned(reverse_addr)))(IM);
+                    out_data <= output_buf(to_integer(unsigned(addr)))(IM);
 
                     if data_counter = FFT_TOT_POINTS - 1 then
                         state        <= SEND_IM;
@@ -137,13 +146,12 @@ begin
                         state <= WAIT_INPUTS;
                         last_data <= '0';
                     else
-                        out_data  <= output_buf(to_integer(unsigned(reverse_addr)))(RE);
+                        out_data  <= output_buf(to_integer(unsigned(addr)))(RE);
                         state         <= SEND_RE;
                     end if;
                 end if;
             end case;                        
         end if;
     end process;
-
-
+    
 end Behavioral;

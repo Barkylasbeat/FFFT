@@ -283,7 +283,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:456db973</spirit:value>
+            <spirit:value>9:58db52cc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -294,7 +294,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:456db973</spirit:value>
+            <spirit:value>9:58db52cc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -310,11 +310,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 13 23:02:21 UTC 2022</spirit:value>
+            <spirit:value>Thu Dec 15 23:00:16 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:456db973</spirit:value>
+            <spirit:value>9:58db52cc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -326,7 +326,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b1064812</spirit:value>
+            <spirit:value>9:1a67c588</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -342,11 +342,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 13 23:02:21 UTC 2022</spirit:value>
+            <spirit:value>Thu Dec 15 23:00:16 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:b1064812</spirit:value>
+            <spirit:value>9:1a67c588</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -360,11 +360,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Tue Dec 13 23:03:50 UTC 2022</spirit:value>
+            <spirit:value>Thu Dec 15 23:02:29 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:456db973</spirit:value>
+            <spirit:value>9:58db52cc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -507,7 +507,7 @@
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="INTEGER">
         <spirit:name>FFT_TOT_POINTS</spirit:name>
         <spirit:displayName>Fft Tot Points</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FFT_TOT_POINTS">4</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FFT_TOT_POINTS">16</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>DATA_WIDTH</spirit:name>
@@ -575,7 +575,7 @@
     <spirit:parameter>
       <spirit:name>FFT_TOT_POINTS</spirit:name>
       <spirit:displayName>Fft Tot Points</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.FFT_TOT_POINTS">4</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.FFT_TOT_POINTS">16</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>DATA_WIDTH</spirit:name>

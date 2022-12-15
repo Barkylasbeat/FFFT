@@ -99,7 +99,7 @@ BEGIN
   U0 : AXI_Output_Interface
     GENERIC MAP (
       DATA_WIDTH => 8,
-      FFT_TOT_POINTS => 4
+      FFT_TOT_POINTS => 16
     )
     PORT MAP (
       clk => clk,

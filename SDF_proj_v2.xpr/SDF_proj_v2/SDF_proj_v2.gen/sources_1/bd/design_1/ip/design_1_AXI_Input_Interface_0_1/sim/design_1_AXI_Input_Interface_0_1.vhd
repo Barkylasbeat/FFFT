@@ -100,7 +100,7 @@ ARCHITECTURE design_1_AXI_Input_Interface_0_1_arch OF design_1_AXI_Input_Interfa
 BEGIN
   U0 : AXI_Input_Interface
     GENERIC MAP (
-      FFT_TOT_POINTS => 4,
+      FFT_TOT_POINTS => 16,
       DATA_WIDTH => 8
     )
     PORT MAP (

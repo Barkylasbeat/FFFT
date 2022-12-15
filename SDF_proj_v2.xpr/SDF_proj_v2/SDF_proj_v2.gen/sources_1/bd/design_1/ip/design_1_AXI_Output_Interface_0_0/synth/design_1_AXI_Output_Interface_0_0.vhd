@@ -90,7 +90,7 @@ ARCHITECTURE design_1_AXI_Output_Interface_0_0_arch OF design_1_AXI_Output_Inter
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_AXI_Output_Interface_0_0_arch : ARCHITECTURE IS "design_1_AXI_Output_Interface_0_0,AXI_Output_Interface,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_AXI_Output_Interface_0_0_arch: ARCHITECTURE IS "design_1_AXI_Output_Interface_0_0,AXI_Output_Interface,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=AXI_Output_Interface,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,DATA_WIDTH=8,FFT_TOT_POINTS=4}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_AXI_Output_Interface_0_0_arch: ARCHITECTURE IS "design_1_AXI_Output_Interface_0_0,AXI_Output_Interface,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=AXI_Output_Interface,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,DATA_WIDTH=8,FFT_TOT_POINTS=16}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_AXI_Output_Interface_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -107,7 +107,7 @@ BEGIN
   U0 : AXI_Output_Interface
     GENERIC MAP (
       DATA_WIDTH => 8,
-      FFT_TOT_POINTS => 4
+      FFT_TOT_POINTS => 16
     )
     PORT MAP (
       clk => clk,
