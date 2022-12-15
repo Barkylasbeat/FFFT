@@ -12,9 +12,9 @@ preplace inst clk_wiz -pg 1 -lvl 1 -x 100 -y 400 -defaultsOSRD
 preplace inst rst_clk_wiz_100M -pg 1 -lvl 2 -x 420 -y 350 -defaultsOSRD
 preplace inst AXI4Stream_UART_0 -pg 1 -lvl 5 -x 1500 -y 190 -defaultsOSRD
 preplace inst system_ila_0 -pg 1 -lvl 6 -x 1876 -y 40 -defaultsOSRD
-preplace inst AXI_Output_Interface_0 -pg 1 -lvl 4 -x 1140 -y 100 -defaultsOSRD
 preplace inst SDF_Top_0 -pg 1 -lvl 3 -x 800 -y 110 -defaultsOSRD
 preplace inst AXI_Input_Interface_0 -pg 1 -lvl 2 -x 420 -y 100 -defaultsOSRD
+preplace inst AXI_Output_Interface_0 -pg 1 -lvl 4 -x 1140 -y 100 -defaultsOSRD
 preplace netloc AXI_Input_Interface_0_Im_data 1 2 4 590 -70 N -70 N -70 1720
 preplace netloc AXI_Input_Interface_0_Re_data 1 2 4 610 -60 N -60 N -60 1710
 preplace netloc AXI_Input_Interface_0_go_data_counter 1 2 1 640 110n

@@ -26,8 +26,8 @@ entity AXI_Output_Interface is
         
      );
 
-     attribute dont_touch : string;
-     attribute dont_touch of AXI_Output_Interface : entity is "true";
+    --  attribute dont_touch : string;
+    --  attribute dont_touch of AXI_Output_Interface : entity is "true";
 
 end AXI_Output_Interface;
 
@@ -85,6 +85,7 @@ begin
 
         output_buf      <= (Others => (Others => (Others => '0')));
         data_counter    <= 0;
+        delay_counter   <= 1;
         state           <= WAIT_INPUTS;
 
     elsif rising_edge(clk) then
@@ -97,9 +98,9 @@ begin
                 end if;
             
             when WAIT_COMPUTE =>
-                if delay_counter = TOTAL_DELAY then
+                if delay_counter = TOTAL_DELAY-1 then
                     state <= RAM_FILL;
-                    delay_counter <= 0;
+                    delay_counter <= 1;
                 else
                     delay_counter <= delay_counter+1;
                 end if;

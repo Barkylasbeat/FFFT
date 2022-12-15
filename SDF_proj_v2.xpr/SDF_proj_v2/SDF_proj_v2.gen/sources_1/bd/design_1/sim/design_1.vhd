@@ -1,7 +1,7 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
---Date        : Wed Dec 14 00:02:17 2022
+--Date        : Thu Dec 15 18:22:28 2022
 --Host        : PcFraLenzi running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -18,10 +18,10 @@ entity design_1 is
     usb_uart_rxd : in STD_LOGIC;
     usb_uart_txd : out STD_LOGIC
   );
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=7,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_board_cnt=1,da_clkrst_cnt=3,synth_mode=OOC_per_IP}";
-  attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
+  attribute core_generation_info : string;
+  attribute core_generation_info of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=7,numNonXlnxBlks=1,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=3,numPkgbdBlks=0,bdsource=USER,da_board_cnt=1,da_clkrst_cnt=3,synth_mode=OOC_per_IP}";
+  attribute hw_handoff : string;
+  attribute hw_handoff of design_1 : entity is "design_1.hwdef";
 end design_1;
 
 architecture STRUCTURE of design_1 is
@@ -84,18 +84,6 @@ architecture STRUCTURE of design_1 is
     resetn : in STD_LOGIC
   );
   end component design_1_system_ila_0_3;
-  component design_1_AXI_Output_Interface_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    Re_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Im_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
-    data_received : in STD_LOGIC
-  );
-  end component design_1_AXI_Output_Interface_0_0;
   component design_1_SDF_Top_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -120,51 +108,63 @@ architecture STRUCTURE of design_1 is
     go_data_counter : out STD_LOGIC
   );
   end component design_1_AXI_Input_Interface_0_1;
+  component design_1_AXI_Output_Interface_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    Re_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Im_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_tvalid : out STD_LOGIC;
+    m_axis_tready : in STD_LOGIC;
+    data_received : in STD_LOGIC
+  );
+  end component design_1_AXI_Output_Interface_0_0;
   signal AXI4Stream_UART_0_M00_AXIS_RX_TDATA : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute CONN_BUS_INFO : string;
-  attribute CONN_BUS_INFO of AXI4Stream_UART_0_M00_AXIS_RX_TDATA : signal is "AXI4Stream_UART_0_M00_AXIS_RX xilinx.com:interface:axis:1.0 None TDATA";
-  attribute DEBUG : string;
-  attribute DEBUG of AXI4Stream_UART_0_M00_AXIS_RX_TDATA : signal is "true";
   attribute MARK_DEBUG : boolean;
   attribute MARK_DEBUG of AXI4Stream_UART_0_M00_AXIS_RX_TDATA : signal is std.standard.true;
+  attribute conn_bus_info : string;
+  attribute conn_bus_info of AXI4Stream_UART_0_M00_AXIS_RX_TDATA : signal is "AXI4Stream_UART_0_M00_AXIS_RX xilinx.com:interface:axis:1.0 None TDATA";
+  attribute debug : string;
+  attribute debug of AXI4Stream_UART_0_M00_AXIS_RX_TDATA : signal is "true";
   signal AXI4Stream_UART_0_M00_AXIS_RX_TREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of AXI4Stream_UART_0_M00_AXIS_RX_TREADY : signal is "AXI4Stream_UART_0_M00_AXIS_RX xilinx.com:interface:axis:1.0 None TREADY";
-  attribute DEBUG of AXI4Stream_UART_0_M00_AXIS_RX_TREADY : signal is "true";
   attribute MARK_DEBUG of AXI4Stream_UART_0_M00_AXIS_RX_TREADY : signal is std.standard.true;
+  attribute conn_bus_info of AXI4Stream_UART_0_M00_AXIS_RX_TREADY : signal is "AXI4Stream_UART_0_M00_AXIS_RX xilinx.com:interface:axis:1.0 None TREADY";
+  attribute debug of AXI4Stream_UART_0_M00_AXIS_RX_TREADY : signal is "true";
   signal AXI4Stream_UART_0_M00_AXIS_RX_TVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of AXI4Stream_UART_0_M00_AXIS_RX_TVALID : signal is "AXI4Stream_UART_0_M00_AXIS_RX xilinx.com:interface:axis:1.0 None TVALID";
-  attribute DEBUG of AXI4Stream_UART_0_M00_AXIS_RX_TVALID : signal is "true";
   attribute MARK_DEBUG of AXI4Stream_UART_0_M00_AXIS_RX_TVALID : signal is std.standard.true;
+  attribute conn_bus_info of AXI4Stream_UART_0_M00_AXIS_RX_TVALID : signal is "AXI4Stream_UART_0_M00_AXIS_RX xilinx.com:interface:axis:1.0 None TVALID";
+  attribute debug of AXI4Stream_UART_0_M00_AXIS_RX_TVALID : signal is "true";
   signal AXI4Stream_UART_0_UART_RxD : STD_LOGIC;
   signal AXI4Stream_UART_0_UART_TxD : STD_LOGIC;
   signal AXI_Input_Interface_0_Im_data : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute DEBUG of AXI_Input_Interface_0_Im_data : signal is "true";
   attribute MARK_DEBUG of AXI_Input_Interface_0_Im_data : signal is std.standard.true;
+  attribute debug of AXI_Input_Interface_0_Im_data : signal is "true";
   signal AXI_Input_Interface_0_Re_data : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute DEBUG of AXI_Input_Interface_0_Re_data : signal is "true";
   attribute MARK_DEBUG of AXI_Input_Interface_0_Re_data : signal is std.standard.true;
+  attribute debug of AXI_Input_Interface_0_Re_data : signal is "true";
   signal AXI_Input_Interface_0_go_data_counter : STD_LOGIC;
   signal AXI_Input_Interface_0_sending_in : STD_LOGIC;
-  attribute DEBUG of AXI_Input_Interface_0_sending_in : signal is "true";
   attribute MARK_DEBUG of AXI_Input_Interface_0_sending_in : signal is std.standard.true;
+  attribute debug of AXI_Input_Interface_0_sending_in : signal is "true";
   signal AXI_Output_Interface_0_m_axis_TDATA : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute CONN_BUS_INFO of AXI_Output_Interface_0_m_axis_TDATA : signal is "AXI_Output_Interface_0_m_axis xilinx.com:interface:axis:1.0 None TDATA";
-  attribute DEBUG of AXI_Output_Interface_0_m_axis_TDATA : signal is "true";
   attribute MARK_DEBUG of AXI_Output_Interface_0_m_axis_TDATA : signal is std.standard.true;
+  attribute conn_bus_info of AXI_Output_Interface_0_m_axis_TDATA : signal is "AXI_Output_Interface_0_m_axis xilinx.com:interface:axis:1.0 None TDATA";
+  attribute debug of AXI_Output_Interface_0_m_axis_TDATA : signal is "true";
   signal AXI_Output_Interface_0_m_axis_TREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of AXI_Output_Interface_0_m_axis_TREADY : signal is "AXI_Output_Interface_0_m_axis xilinx.com:interface:axis:1.0 None TREADY";
-  attribute DEBUG of AXI_Output_Interface_0_m_axis_TREADY : signal is "true";
   attribute MARK_DEBUG of AXI_Output_Interface_0_m_axis_TREADY : signal is std.standard.true;
+  attribute conn_bus_info of AXI_Output_Interface_0_m_axis_TREADY : signal is "AXI_Output_Interface_0_m_axis xilinx.com:interface:axis:1.0 None TREADY";
+  attribute debug of AXI_Output_Interface_0_m_axis_TREADY : signal is "true";
   signal AXI_Output_Interface_0_m_axis_TVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of AXI_Output_Interface_0_m_axis_TVALID : signal is "AXI_Output_Interface_0_m_axis xilinx.com:interface:axis:1.0 None TVALID";
-  attribute DEBUG of AXI_Output_Interface_0_m_axis_TVALID : signal is "true";
   attribute MARK_DEBUG of AXI_Output_Interface_0_m_axis_TVALID : signal is std.standard.true;
+  attribute conn_bus_info of AXI_Output_Interface_0_m_axis_TVALID : signal is "AXI_Output_Interface_0_m_axis xilinx.com:interface:axis:1.0 None TVALID";
+  attribute debug of AXI_Output_Interface_0_m_axis_TVALID : signal is "true";
   signal SDF_Top_0_Im_Data_out : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute DEBUG of SDF_Top_0_Im_Data_out : signal is "true";
   attribute MARK_DEBUG of SDF_Top_0_Im_Data_out : signal is std.standard.true;
+  attribute debug of SDF_Top_0_Im_Data_out : signal is "true";
   signal SDF_Top_0_Re_Data_out : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute DEBUG of SDF_Top_0_Re_Data_out : signal is "true";
   attribute MARK_DEBUG of SDF_Top_0_Re_Data_out : signal is std.standard.true;
+  attribute debug of SDF_Top_0_Re_Data_out : signal is "true";
   signal clk_wiz_clk_out1 : STD_LOGIC;
   signal clk_wiz_locked : STD_LOGIC;
   signal reset_1 : STD_LOGIC;
@@ -174,14 +174,14 @@ architecture STRUCTURE of design_1 is
   signal NLW_rst_clk_wiz_100M_mb_reset_UNCONNECTED : STD_LOGIC;
   signal NLW_rst_clk_wiz_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_clk_wiz_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of reset : signal is "xilinx.com:signal:reset:1.0 RST.RESET RST";
-  attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of reset : signal is "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_HIGH";
-  attribute X_INTERFACE_INFO of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
-  attribute X_INTERFACE_PARAMETER of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN design_1_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of usb_uart_rxd : signal is "xilinx.com:interface:uart:1.0 usb_uart RxD";
-  attribute X_INTERFACE_INFO of usb_uart_txd : signal is "xilinx.com:interface:uart:1.0 usb_uart TxD";
+  attribute x_interface_info : string;
+  attribute x_interface_info of reset : signal is "xilinx.com:signal:reset:1.0 RST.RESET RST";
+  attribute x_interface_parameter : string;
+  attribute x_interface_parameter of reset : signal is "XIL_INTERFACENAME RST.RESET, INSERT_VIP 0, POLARITY ACTIVE_HIGH";
+  attribute x_interface_info of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
+  attribute x_interface_parameter of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN design_1_sys_clock, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of usb_uart_rxd : signal is "xilinx.com:interface:uart:1.0 usb_uart RxD";
+  attribute x_interface_info of usb_uart_txd : signal is "xilinx.com:interface:uart:1.0 usb_uart TxD";
 begin
   AXI4Stream_UART_0_UART_RxD <= usb_uart_rxd;
   reset_1 <= reset;

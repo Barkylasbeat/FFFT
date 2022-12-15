@@ -10,11 +10,10 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source design_1_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1282.855 ; gain = 0.000
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Github/FFFT/IP_Cores'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1282.855 ; gain = 0.000
+add_files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 1294.320 ; gain = 0.000
 Command: read_checkpoint -auto_incremental -incremental C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/utils_1/imports/synth_1/SDF_Stage.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/utils_1/imports/synth_1/SDF_Stage.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -27,43 +26,43 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16200
+INFO: [Synth 8-7075] Helper process launched with PID 8460
 WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1282.855 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1294.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:23]
 INFO: [Synth 8-3491] module 'design_1' declared at 'c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:14' bound to instance 'design_1_i' of component 'design_1' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:33]
 INFO: [Synth 8-638] synthesizing module 'design_1' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:27]
-INFO: [Synth 8-3491] module 'design_1_AXI4Stream_UART_0_2' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_AXI4Stream_UART_0_2_stub.vhdl:5' bound to instance 'AXI4Stream_UART_0' of component 'design_1_AXI4Stream_UART_0_2' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:190]
-INFO: [Synth 8-638] synthesizing module 'design_1_AXI4Stream_UART_0_2' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_AXI4Stream_UART_0_2_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'design_1_AXI_Input_Interface_0_1' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_AXI_Input_Interface_0_1_stub.vhdl:5' bound to instance 'AXI_Input_Interface_0' of component 'design_1_AXI_Input_Interface_0_1' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:207]
-INFO: [Synth 8-638] synthesizing module 'design_1_AXI_Input_Interface_0_1' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_AXI_Input_Interface_0_1_stub.vhdl:20]
-INFO: [Synth 8-3491] module 'design_1_AXI_Output_Interface_0_0' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_AXI_Output_Interface_0_0_stub.vhdl:5' bound to instance 'AXI_Output_Interface_0' of component 'design_1_AXI_Output_Interface_0_0' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:219]
-INFO: [Synth 8-638] synthesizing module 'design_1_AXI_Output_Interface_0_0' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_AXI_Output_Interface_0_0_stub.vhdl:19]
-INFO: [Synth 8-3491] module 'design_1_SDF_Top_0_0' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_SDF_Top_0_0_stub.vhdl:5' bound to instance 'SDF_Top_0' of component 'design_1_SDF_Top_0_0' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:230]
-INFO: [Synth 8-638] synthesizing module 'design_1_SDF_Top_0_0' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_SDF_Top_0_0_stub.vhdl:18]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_0' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_clk_wiz_0_stub.vhdl:5' bound to instance 'clk_wiz' of component 'design_1_clk_wiz_0' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:240]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_clk_wiz_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_100M_0' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_rst_clk_wiz_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_100M' of component 'design_1_rst_clk_wiz_100M_0' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:247]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_100M_0' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_rst_clk_wiz_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_system_ila_0_3' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_system_ila_0_3_stub.vhdl:5' bound to instance 'system_ila_0' of component 'design_1_system_ila_0_3' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:260]
-INFO: [Synth 8-638] synthesizing module 'design_1_system_ila_0_3' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-5680-PcFraLenzi/realtime/design_1_system_ila_0_3_stub.vhdl:26]
+INFO: [Synth 8-3491] module 'design_1_AXI4Stream_UART_0_2' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_AXI4Stream_UART_0_2_stub.vhdl:5' bound to instance 'AXI4Stream_UART_0' of component 'design_1_AXI4Stream_UART_0_2' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:190]
+INFO: [Synth 8-638] synthesizing module 'design_1_AXI4Stream_UART_0_2' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_AXI4Stream_UART_0_2_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'design_1_AXI_Input_Interface_0_1' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_AXI_Input_Interface_0_1_stub.vhdl:5' bound to instance 'AXI_Input_Interface_0' of component 'design_1_AXI_Input_Interface_0_1' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:207]
+INFO: [Synth 8-638] synthesizing module 'design_1_AXI_Input_Interface_0_1' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_AXI_Input_Interface_0_1_stub.vhdl:20]
+INFO: [Synth 8-3491] module 'design_1_AXI_Output_Interface_0_0' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_AXI_Output_Interface_0_0_stub.vhdl:5' bound to instance 'AXI_Output_Interface_0' of component 'design_1_AXI_Output_Interface_0_0' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'design_1_AXI_Output_Interface_0_0' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_AXI_Output_Interface_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'design_1_SDF_Top_0_0' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_SDF_Top_0_0_stub.vhdl:5' bound to instance 'SDF_Top_0' of component 'design_1_SDF_Top_0_0' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:230]
+INFO: [Synth 8-638] synthesizing module 'design_1_SDF_Top_0_0' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_SDF_Top_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_clk_wiz_0_stub.vhdl:5' bound to instance 'clk_wiz' of component 'design_1_clk_wiz_0' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_clk_wiz_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_100M_0' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_rst_clk_wiz_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_100M' of component 'design_1_rst_clk_wiz_100M_0' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:247]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_100M_0' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_rst_clk_wiz_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_system_ila_0_3' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_system_ila_0_3_stub.vhdl:5' bound to instance 'system_ila_0' of component 'design_1_system_ila_0_3' [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:260]
+INFO: [Synth 8-638] synthesizing module 'design_1_system_ila_0_3' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/.Xil/Vivado-14712-PcFraLenzi/realtime/design_1_system_ila_0_3_stub.vhdl:26]
 INFO: [Synth 8-256] done synthesizing module 'design_1' (0#1) [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/synth/design_1.vhd:27]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1291.051 ; gain = 8.195
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1294.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1291.051 ; gain = 8.195
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1294.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1291.051 ; gain = 8.195
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1294.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1291.051 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1294.320 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -76,12 +75,12 @@ Parsing XDC File [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sou
 Finished Parsing XDC File [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI4Stream_UART_0_2/design_1_AXI4Stream_UART_0_2/design_1_AXI4Stream_UART_0_2_in_context.xdc] for cell 'design_1_i/AXI4Stream_UART_0'
 Parsing XDC File [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_3/design_1_system_ila_0_3/design_1_system_ila_0_3_in_context.xdc] for cell 'design_1_i/system_ila_0'
 Finished Parsing XDC File [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_system_ila_0_3/design_1_system_ila_0_3/design_1_system_ila_0_3_in_context.xdc] for cell 'design_1_i/system_ila_0'
-Parsing XDC File [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI_Output_Interface_0_0/design_1_AXI_Output_Interface_0_0/design_1_AXI_Output_Interface_0_0_in_context.xdc] for cell 'design_1_i/AXI_Output_Interface_0'
-Finished Parsing XDC File [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI_Output_Interface_0_0/design_1_AXI_Output_Interface_0_0/design_1_AXI_Output_Interface_0_0_in_context.xdc] for cell 'design_1_i/AXI_Output_Interface_0'
 Parsing XDC File [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0_in_context.xdc] for cell 'design_1_i/SDF_Top_0'
 Finished Parsing XDC File [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0_in_context.xdc] for cell 'design_1_i/SDF_Top_0'
 Parsing XDC File [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI_Input_Interface_0_1/design_1_AXI_Input_Interface_0_1/design_1_AXI_Input_Interface_0_1_in_context.xdc] for cell 'design_1_i/AXI_Input_Interface_0'
 Finished Parsing XDC File [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI_Input_Interface_0_1/design_1_AXI_Input_Interface_0_1/design_1_AXI_Input_Interface_0_1_in_context.xdc] for cell 'design_1_i/AXI_Input_Interface_0'
+Parsing XDC File [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI_Output_Interface_0_0/design_1_AXI_Output_Interface_0_0/design_1_AXI_Output_Interface_0_0_in_context.xdc] for cell 'design_1_i/AXI_Output_Interface_0'
+Finished Parsing XDC File [c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI_Output_Interface_0_0/design_1_AXI_Output_Interface_0_0/design_1_AXI_Output_Interface_0_0_in_context.xdc] for cell 'design_1_i/AXI_Output_Interface_0'
 Parsing XDC File [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/constrs_1/new/io.xdc]
 Finished Parsing XDC File [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/constrs_1/new/io.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/constrs_1/new/io.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -90,22 +89,22 @@ Parsing XDC File [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/sy
 Finished Parsing XDC File [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1291.051 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1294.320 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1291.051 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1294.320 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1291.051 ; gain = 8.195
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1294.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1291.051 ; gain = 8.195
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1294.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -117,14 +116,14 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/clk_wiz. (constraint f
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/rst_clk_wiz_100M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/AXI4Stream_UART_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/system_ila_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/AXI_Output_Interface_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/SDF_Top_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/AXI_Input_Interface_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_1_i/AXI_Output_Interface_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1291.051 ; gain = 8.195
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1294.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1291.051 ; gain = 8.195
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:17 . Memory (MB): peak = 1294.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -147,25 +146,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:20 . Memory (MB): peak = 1291.051 ; gain = 8.195
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:20 . Memory (MB): peak = 1294.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1291.051 ; gain = 8.195
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1294.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1291.051 ; gain = 8.195
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1294.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1298.500 ; gain = 15.645
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:26 . Memory (MB): peak = 1305.141 ; gain = 10.820
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -183,37 +182,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1303.262 ; gain = 20.406
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1309.938 ; gain = 15.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1303.262 ; gain = 20.406
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1309.938 ; gain = 15.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1303.262 ; gain = 20.406
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1309.938 ; gain = 15.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1303.262 ; gain = 20.406
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1309.938 ; gain = 15.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1303.262 ; gain = 20.406
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1309.938 ; gain = 15.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1303.262 ; gain = 20.406
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1309.938 ; gain = 15.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -247,16 +246,16 @@ Report Cell Usage:
 |9     |OBUF                                   |     1|
 +------+---------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1303.262 ; gain = 20.406
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:31 . Memory (MB): peak = 1309.938 ; gain = 15.617
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 1303.262 ; gain = 20.406
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:33 . Memory (MB): peak = 1303.262 ; gain = 20.406
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:29 . Memory (MB): peak = 1309.938 ; gain = 15.617
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:32 . Memory (MB): peak = 1309.938 ; gain = 15.617
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1315.328 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1322.234 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1321.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1329.371 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -264,7 +263,7 @@ Synth Design complete, checksum: d3c8a67e
 INFO: [Common 17-83] Releasing license: Synthesis
 41 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:38 . Memory (MB): peak = 1321.938 ; gain = 39.082
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:36 . Memory (MB): peak = 1329.371 ; gain = 35.051
 INFO: [Common 17-1381] The checkpoint 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 14 00:04:53 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 15 18:26:15 2022...

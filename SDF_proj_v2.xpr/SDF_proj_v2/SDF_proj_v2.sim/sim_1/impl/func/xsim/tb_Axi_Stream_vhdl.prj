@@ -1,6 +1,6 @@
 # compile vhdl design source files
 vhdl xil_defaultlib  \
-"tb_Axi_Stream_func_impl.vhd" \
+"tb_Axi_Stream_func_synth.vhd" \
 "../../../../../SDF_proj_v2.srcs/sources_1/new/AXI_Input_Interface.vhd" \
 "../../../../../SDF_proj_v2.srcs/sources_1/new/AXI_Output_Interface.vhd" \
 "../../../../../SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd" \
