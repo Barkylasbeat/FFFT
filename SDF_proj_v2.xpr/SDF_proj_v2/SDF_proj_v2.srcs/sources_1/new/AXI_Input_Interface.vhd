@@ -72,6 +72,7 @@ begin
             case state is
 
                 when WAIT_RE =>
+                    Output <= (Others => (others => '0')); 
                     if s_axis_tvalid = '1' then
                         input_buf(data_counter)(RE) <= s_axis_tdata;
                         go_data_counter <= '0';

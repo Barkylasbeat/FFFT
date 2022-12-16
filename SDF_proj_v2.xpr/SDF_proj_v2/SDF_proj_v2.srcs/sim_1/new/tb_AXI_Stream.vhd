@@ -212,7 +212,7 @@ begin
 
             -- wait for 10*UART_PERIOD;
 
-            for i in 1 to 2*FFT_TOT_POINTS loop
+        for i in 1 to 2*FFT_TOT_POINTS loop
             
                 output_ready  <= '1';
     
@@ -224,9 +224,42 @@ begin
                 
                 wait for UART_PERIOD;
     
-            end loop;
+        end loop;
 
-            wait;
+        wait for 2*UART_PERIOD;
+
+        for i in 1 to 2*FFT_TOT_POINTS loop
+            
+            input_data   <= to_slv(to_sfixed(i, DATA_WIDTH-1-PRECISION, -PRECISION));
+            input_valid  <= '1';
+
+            wait until rising_edge(clk);
+
+            if input_ready <= '1' then
+                input_valid <= '0';
+            end if;
+            
+            wait for UART_PERIOD;
+
+        end loop;
+
+            -- wait for 10*UART_PERIOD;
+
+        for i in 1 to 2*FFT_TOT_POINTS loop
+            
+                output_ready  <= '1';
+    
+                wait until rising_edge(clk);
+    
+                if output_valid <= '1' then
+                    output_ready <= '0';
+                end if;
+                
+                wait for UART_PERIOD;
+    
+        end loop;
+            
+        wait;
 
     end process;
 

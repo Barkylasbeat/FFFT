@@ -102,6 +102,7 @@ begin
         case state is
 
             when WAIT_INPUTS =>
+                out_data <= (Others => '0');
                 if data_received = '1' then
                     state <= WAIT_COMPUTE;
                 end if;
@@ -145,6 +146,7 @@ begin
                     if last_data = '1' then
                         state <= WAIT_INPUTS;
                         last_data <= '0';
+                        data_counter <= 0;
                     else
                         out_data  <= output_buf(to_integer(unsigned(addr)))(RE);
                         state         <= SEND_RE;

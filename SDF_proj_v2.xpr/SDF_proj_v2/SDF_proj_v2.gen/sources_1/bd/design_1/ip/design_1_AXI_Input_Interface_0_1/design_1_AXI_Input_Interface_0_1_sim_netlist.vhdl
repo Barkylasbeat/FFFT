@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Fri Dec 16 00:02:29 2022
--- Host        : PcFraLenzi running 64-bit major release  (build 9200)
+-- Date        : Fri Dec 16 14:15:38 2022
+-- Host        : GdF-intercettazioni running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI_Input_Interface_0_1/design_1_AXI_Input_Interface_0_1_sim_netlist.vhdl
+--               c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI_Input_Interface_0_1/design_1_AXI_Input_Interface_0_1_sim_netlist.vhdl
 -- Design      : design_1_AXI_Input_Interface_0_1
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -144,49 +144,49 @@ architecture STRUCTURE of design_1_AXI_Input_Interface_0_1_AXI_Input_Interface i
   signal \^go_data_counter\ : STD_LOGIC;
   signal go_data_counter_i_1_n_0 : STD_LOGIC;
   signal \input_buf[0][0][7]_i_2_n_0\ : STD_LOGIC;
-  signal \input_buf[0][0]_1\ : STD_LOGIC;
+  signal \input_buf[0][0]_3\ : STD_LOGIC;
   signal \input_buf[0][1][7]_i_2_n_0\ : STD_LOGIC;
-  signal \input_buf[0][1]_0\ : STD_LOGIC;
-  signal \input_buf[10][0]_21\ : STD_LOGIC;
+  signal \input_buf[0][1]_2\ : STD_LOGIC;
+  signal \input_buf[10][0]_23\ : STD_LOGIC;
   signal \input_buf[10][1][7]_i_2_n_0\ : STD_LOGIC;
-  signal \input_buf[10][1]_20\ : STD_LOGIC;
-  signal \input_buf[11][0]_23\ : STD_LOGIC;
-  signal \input_buf[11][1]_22\ : STD_LOGIC;
-  signal \input_buf[12][0]_25\ : STD_LOGIC;
+  signal \input_buf[10][1]_22\ : STD_LOGIC;
+  signal \input_buf[11][0]_25\ : STD_LOGIC;
+  signal \input_buf[11][1]_24\ : STD_LOGIC;
+  signal \input_buf[12][0]_27\ : STD_LOGIC;
   signal \input_buf[12][1][7]_i_2_n_0\ : STD_LOGIC;
-  signal \input_buf[12][1]_24\ : STD_LOGIC;
-  signal \input_buf[13][0]_27\ : STD_LOGIC;
+  signal \input_buf[12][1]_26\ : STD_LOGIC;
+  signal \input_buf[13][0]_29\ : STD_LOGIC;
   signal \input_buf[13][1][7]_i_2_n_0\ : STD_LOGIC;
-  signal \input_buf[13][1]_26\ : STD_LOGIC;
-  signal \input_buf[14][0]_29\ : STD_LOGIC;
+  signal \input_buf[13][1]_28\ : STD_LOGIC;
+  signal \input_buf[14][0]_31\ : STD_LOGIC;
   signal \input_buf[14][1][7]_i_2_n_0\ : STD_LOGIC;
-  signal \input_buf[14][1]_28\ : STD_LOGIC;
-  signal \input_buf[15][0]_30\ : STD_LOGIC;
-  signal \input_buf[15][1]_31\ : STD_LOGIC;
-  signal \input_buf[1][0]_3\ : STD_LOGIC;
-  signal \input_buf[1][1]_2\ : STD_LOGIC;
-  signal \input_buf[2][0]_5\ : STD_LOGIC;
-  signal \input_buf[2][1]_4\ : STD_LOGIC;
-  signal \input_buf[3][0]_7\ : STD_LOGIC;
+  signal \input_buf[14][1]_30\ : STD_LOGIC;
+  signal \input_buf[15][0]_1\ : STD_LOGIC;
+  signal \input_buf[15][1]_0\ : STD_LOGIC;
+  signal \input_buf[1][0]_5\ : STD_LOGIC;
+  signal \input_buf[1][1]_4\ : STD_LOGIC;
+  signal \input_buf[2][0]_7\ : STD_LOGIC;
+  signal \input_buf[2][1]_6\ : STD_LOGIC;
+  signal \input_buf[3][0]_9\ : STD_LOGIC;
   signal \input_buf[3][1][7]_i_2_n_0\ : STD_LOGIC;
-  signal \input_buf[3][1]_6\ : STD_LOGIC;
-  signal \input_buf[4][0]_9\ : STD_LOGIC;
+  signal \input_buf[3][1]_8\ : STD_LOGIC;
+  signal \input_buf[4][0]_11\ : STD_LOGIC;
   signal \input_buf[4][1][7]_i_2_n_0\ : STD_LOGIC;
-  signal \input_buf[4][1]_8\ : STD_LOGIC;
-  signal \input_buf[5][0]_11\ : STD_LOGIC;
+  signal \input_buf[4][1]_10\ : STD_LOGIC;
+  signal \input_buf[5][0]_13\ : STD_LOGIC;
   signal \input_buf[5][1][7]_i_2_n_0\ : STD_LOGIC;
-  signal \input_buf[5][1]_10\ : STD_LOGIC;
-  signal \input_buf[6][0]_13\ : STD_LOGIC;
+  signal \input_buf[5][1]_12\ : STD_LOGIC;
+  signal \input_buf[6][0]_15\ : STD_LOGIC;
   signal \input_buf[6][1][7]_i_2_n_0\ : STD_LOGIC;
-  signal \input_buf[6][1]_12\ : STD_LOGIC;
-  signal \input_buf[7][0]_15\ : STD_LOGIC;
-  signal \input_buf[7][1]_14\ : STD_LOGIC;
-  signal \input_buf[8][0]_17\ : STD_LOGIC;
+  signal \input_buf[6][1]_14\ : STD_LOGIC;
+  signal \input_buf[7][0]_17\ : STD_LOGIC;
+  signal \input_buf[7][1]_16\ : STD_LOGIC;
+  signal \input_buf[8][0]_19\ : STD_LOGIC;
   signal \input_buf[8][1][7]_i_2_n_0\ : STD_LOGIC;
-  signal \input_buf[8][1]_16\ : STD_LOGIC;
-  signal \input_buf[9][0]_19\ : STD_LOGIC;
+  signal \input_buf[8][1]_18\ : STD_LOGIC;
+  signal \input_buf[9][0]_21\ : STD_LOGIC;
   signal \input_buf[9][1][7]_i_2_n_0\ : STD_LOGIC;
-  signal \input_buf[9][1]_18\ : STD_LOGIC;
+  signal \input_buf[9][1]_20\ : STD_LOGIC;
   signal \input_buf_reg[0][0]\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \input_buf_reg[0][1]\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \input_buf_reg[10][0]\ : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -230,18 +230,18 @@ architecture STRUCTURE of design_1_AXI_Input_Interface_0_1_AXI_Input_Interface i
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_reg[0]\ : label is "wait_im:01,wait_re:00,to_compute:10";
   attribute FSM_ENCODED_STATES of \FSM_sequential_state_reg[1]\ : label is "wait_im:01,wait_re:00,to_compute:10";
-  attribute SOFT_HLUTNM of \Output[0][7]_i_3\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \Output[0][7]_i_3\ : label is "soft_lutpair1";
   attribute SOFT_HLUTNM of \data_counter[1]_i_1\ : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of \data_counter[2]_i_1\ : label is "soft_lutpair6";
   attribute SOFT_HLUTNM of \input_buf[0][0][7]_i_2\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \input_buf[10][1][7]_i_2\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \input_buf[10][1][7]_i_2\ : label is "soft_lutpair4";
   attribute SOFT_HLUTNM of \input_buf[12][1][7]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \input_buf[13][1][7]_i_2\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \input_buf[13][1][7]_i_2\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \input_buf[14][1][7]_i_2\ : label is "soft_lutpair5";
   attribute SOFT_HLUTNM of \input_buf[4][1][7]_i_2\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \input_buf[5][1][7]_i_2\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \input_buf[5][1][7]_i_2\ : label is "soft_lutpair2";
   attribute SOFT_HLUTNM of \input_buf[6][1][7]_i_2\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \input_buf[8][1][7]_i_2\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \input_buf[8][1][7]_i_2\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \input_buf[9][1][7]_i_2\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of sending_in_i_1 : label is "soft_lutpair7";
 begin
@@ -315,44 +315,18 @@ begin
     );
 \Output[0][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][0]\(0),
-      I1 => state(1),
-      I2 => \Output_reg[0][0]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[0][0]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[0][0]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[0][0]_i_3_n_0\,
       O => \Output[0]\(0)
     );
 \Output[0][0]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][0]\(0),
-      I1 => \input_buf_reg[10][0]\(0),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][0]\(0),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][0]\(0),
-      O => \Output[0][0]_i_4_n_0\
-    );
-\Output[0][0]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][0]\(0),
-      I1 => \input_buf_reg[14][0]\(0),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][0]\(0),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][0]\(0),
-      O => \Output[0][0]_i_5_n_0\
-    );
-\Output[0][0]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -363,9 +337,9 @@ begin
       I3 => \input_buf_reg[1][0]\(0),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][0]\(0),
-      O => \Output[0][0]_i_6_n_0\
+      O => \Output[0][0]_i_4_n_0\
     );
-\Output[0][0]_i_7\: unisim.vcomponents.LUT6
+\Output[0][0]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -376,48 +350,48 @@ begin
       I3 => \input_buf_reg[5][0]\(0),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][0]\(0),
+      O => \Output[0][0]_i_5_n_0\
+    );
+\Output[0][0]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][0]\(0),
+      I1 => \input_buf_reg[10][0]\(0),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][0]\(0),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][0]\(0),
+      O => \Output[0][0]_i_6_n_0\
+    );
+\Output[0][0]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][0]\(0),
+      I1 => \input_buf_reg[14][0]\(0),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][0]\(0),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][0]\(0),
       O => \Output[0][0]_i_7_n_0\
     );
 \Output[0][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][0]\(1),
-      I1 => state(1),
-      I2 => \Output_reg[0][1]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[0][1]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[0][1]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[0][1]_i_3_n_0\,
       O => \Output[0]\(1)
     );
 \Output[0][1]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][0]\(1),
-      I1 => \input_buf_reg[10][0]\(1),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][0]\(1),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][0]\(1),
-      O => \Output[0][1]_i_4_n_0\
-    );
-\Output[0][1]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][0]\(1),
-      I1 => \input_buf_reg[14][0]\(1),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][0]\(1),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][0]\(1),
-      O => \Output[0][1]_i_5_n_0\
-    );
-\Output[0][1]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -428,9 +402,9 @@ begin
       I3 => \input_buf_reg[1][0]\(1),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][0]\(1),
-      O => \Output[0][1]_i_6_n_0\
+      O => \Output[0][1]_i_4_n_0\
     );
-\Output[0][1]_i_7\: unisim.vcomponents.LUT6
+\Output[0][1]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -441,48 +415,48 @@ begin
       I3 => \input_buf_reg[5][0]\(1),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][0]\(1),
+      O => \Output[0][1]_i_5_n_0\
+    );
+\Output[0][1]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][0]\(1),
+      I1 => \input_buf_reg[10][0]\(1),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][0]\(1),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][0]\(1),
+      O => \Output[0][1]_i_6_n_0\
+    );
+\Output[0][1]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][0]\(1),
+      I1 => \input_buf_reg[14][0]\(1),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][0]\(1),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][0]\(1),
       O => \Output[0][1]_i_7_n_0\
     );
 \Output[0][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][0]\(2),
-      I1 => state(1),
-      I2 => \Output_reg[0][2]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[0][2]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[0][2]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[0][2]_i_3_n_0\,
       O => \Output[0]\(2)
     );
 \Output[0][2]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][0]\(2),
-      I1 => \input_buf_reg[10][0]\(2),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][0]\(2),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][0]\(2),
-      O => \Output[0][2]_i_4_n_0\
-    );
-\Output[0][2]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][0]\(2),
-      I1 => \input_buf_reg[14][0]\(2),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][0]\(2),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][0]\(2),
-      O => \Output[0][2]_i_5_n_0\
-    );
-\Output[0][2]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -493,9 +467,9 @@ begin
       I3 => \input_buf_reg[1][0]\(2),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][0]\(2),
-      O => \Output[0][2]_i_6_n_0\
+      O => \Output[0][2]_i_4_n_0\
     );
-\Output[0][2]_i_7\: unisim.vcomponents.LUT6
+\Output[0][2]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -506,48 +480,48 @@ begin
       I3 => \input_buf_reg[5][0]\(2),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][0]\(2),
+      O => \Output[0][2]_i_5_n_0\
+    );
+\Output[0][2]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][0]\(2),
+      I1 => \input_buf_reg[10][0]\(2),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][0]\(2),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][0]\(2),
+      O => \Output[0][2]_i_6_n_0\
+    );
+\Output[0][2]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][0]\(2),
+      I1 => \input_buf_reg[14][0]\(2),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][0]\(2),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][0]\(2),
       O => \Output[0][2]_i_7_n_0\
     );
 \Output[0][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][0]\(3),
-      I1 => state(1),
-      I2 => \Output_reg[0][3]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[0][3]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[0][3]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[0][3]_i_3_n_0\,
       O => \Output[0]\(3)
     );
 \Output[0][3]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][0]\(3),
-      I1 => \input_buf_reg[10][0]\(3),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][0]\(3),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][0]\(3),
-      O => \Output[0][3]_i_4_n_0\
-    );
-\Output[0][3]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][0]\(3),
-      I1 => \input_buf_reg[14][0]\(3),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][0]\(3),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][0]\(3),
-      O => \Output[0][3]_i_5_n_0\
-    );
-\Output[0][3]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -558,9 +532,9 @@ begin
       I3 => \input_buf_reg[1][0]\(3),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][0]\(3),
-      O => \Output[0][3]_i_6_n_0\
+      O => \Output[0][3]_i_4_n_0\
     );
-\Output[0][3]_i_7\: unisim.vcomponents.LUT6
+\Output[0][3]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -571,48 +545,48 @@ begin
       I3 => \input_buf_reg[5][0]\(3),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][0]\(3),
+      O => \Output[0][3]_i_5_n_0\
+    );
+\Output[0][3]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][0]\(3),
+      I1 => \input_buf_reg[10][0]\(3),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][0]\(3),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][0]\(3),
+      O => \Output[0][3]_i_6_n_0\
+    );
+\Output[0][3]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][0]\(3),
+      I1 => \input_buf_reg[14][0]\(3),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][0]\(3),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][0]\(3),
       O => \Output[0][3]_i_7_n_0\
     );
 \Output[0][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][0]\(4),
-      I1 => state(1),
-      I2 => \Output_reg[0][4]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[0][4]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[0][4]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[0][4]_i_3_n_0\,
       O => \Output[0]\(4)
     );
 \Output[0][4]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][0]\(4),
-      I1 => \input_buf_reg[10][0]\(4),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][0]\(4),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][0]\(4),
-      O => \Output[0][4]_i_4_n_0\
-    );
-\Output[0][4]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][0]\(4),
-      I1 => \input_buf_reg[14][0]\(4),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][0]\(4),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][0]\(4),
-      O => \Output[0][4]_i_5_n_0\
-    );
-\Output[0][4]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -623,9 +597,9 @@ begin
       I3 => \input_buf_reg[1][0]\(4),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][0]\(4),
-      O => \Output[0][4]_i_6_n_0\
+      O => \Output[0][4]_i_4_n_0\
     );
-\Output[0][4]_i_7\: unisim.vcomponents.LUT6
+\Output[0][4]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -636,48 +610,48 @@ begin
       I3 => \input_buf_reg[5][0]\(4),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][0]\(4),
+      O => \Output[0][4]_i_5_n_0\
+    );
+\Output[0][4]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][0]\(4),
+      I1 => \input_buf_reg[10][0]\(4),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][0]\(4),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][0]\(4),
+      O => \Output[0][4]_i_6_n_0\
+    );
+\Output[0][4]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][0]\(4),
+      I1 => \input_buf_reg[14][0]\(4),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][0]\(4),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][0]\(4),
       O => \Output[0][4]_i_7_n_0\
     );
 \Output[0][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][0]\(5),
-      I1 => state(1),
-      I2 => \Output_reg[0][5]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[0][5]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[0][5]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[0][5]_i_3_n_0\,
       O => \Output[0]\(5)
     );
 \Output[0][5]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][0]\(5),
-      I1 => \input_buf_reg[10][0]\(5),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][0]\(5),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][0]\(5),
-      O => \Output[0][5]_i_4_n_0\
-    );
-\Output[0][5]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][0]\(5),
-      I1 => \input_buf_reg[14][0]\(5),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][0]\(5),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][0]\(5),
-      O => \Output[0][5]_i_5_n_0\
-    );
-\Output[0][5]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -688,9 +662,9 @@ begin
       I3 => \input_buf_reg[1][0]\(5),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][0]\(5),
-      O => \Output[0][5]_i_6_n_0\
+      O => \Output[0][5]_i_4_n_0\
     );
-\Output[0][5]_i_7\: unisim.vcomponents.LUT6
+\Output[0][5]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -701,48 +675,48 @@ begin
       I3 => \input_buf_reg[5][0]\(5),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][0]\(5),
+      O => \Output[0][5]_i_5_n_0\
+    );
+\Output[0][5]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][0]\(5),
+      I1 => \input_buf_reg[10][0]\(5),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][0]\(5),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][0]\(5),
+      O => \Output[0][5]_i_6_n_0\
+    );
+\Output[0][5]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][0]\(5),
+      I1 => \input_buf_reg[14][0]\(5),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][0]\(5),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][0]\(5),
       O => \Output[0][5]_i_7_n_0\
     );
 \Output[0][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][0]\(6),
-      I1 => state(1),
-      I2 => \Output_reg[0][6]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[0][6]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[0][6]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[0][6]_i_3_n_0\,
       O => \Output[0]\(6)
     );
 \Output[0][6]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][0]\(6),
-      I1 => \input_buf_reg[10][0]\(6),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][0]\(6),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][0]\(6),
-      O => \Output[0][6]_i_4_n_0\
-    );
-\Output[0][6]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][0]\(6),
-      I1 => \input_buf_reg[14][0]\(6),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][0]\(6),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][0]\(6),
-      O => \Output[0][6]_i_5_n_0\
-    );
-\Output[0][6]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -753,9 +727,9 @@ begin
       I3 => \input_buf_reg[1][0]\(6),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][0]\(6),
-      O => \Output[0][6]_i_6_n_0\
+      O => \Output[0][6]_i_4_n_0\
     );
-\Output[0][6]_i_7\: unisim.vcomponents.LUT6
+\Output[0][6]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -766,30 +740,56 @@ begin
       I3 => \input_buf_reg[5][0]\(6),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][0]\(6),
+      O => \Output[0][6]_i_5_n_0\
+    );
+\Output[0][6]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][0]\(6),
+      I1 => \input_buf_reg[10][0]\(6),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][0]\(6),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][0]\(6),
+      O => \Output[0][6]_i_6_n_0\
+    );
+\Output[0][6]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][0]\(6),
+      I1 => \input_buf_reg[14][0]\(6),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][0]\(6),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][0]\(6),
       O => \Output[0][6]_i_7_n_0\
     );
 \Output[0][7]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"0062"
+      INIT => X"004F"
     )
         port map (
       I0 => state(1),
-      I1 => state(0),
-      I2 => \Output[0][7]_i_3_n_0\,
+      I1 => \Output[0][7]_i_3_n_0\,
+      I2 => state(0),
       I3 => reset,
       O => \Output[0][7]_i_1_n_0\
     );
 \Output[0][7]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][0]\(7),
-      I1 => state(1),
-      I2 => \Output_reg[0][7]_i_4_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[0][7]_i_5_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[0][7]_i_4_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[0][7]_i_5_n_0\,
       O => \Output[0]\(7)
     );
 \Output[0][7]_i_3\: unisim.vcomponents.LUT5
@@ -809,41 +809,15 @@ begin
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
-      I0 => \input_buf_reg[11][0]\(7),
-      I1 => \input_buf_reg[10][0]\(7),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][0]\(7),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][0]\(7),
-      O => \Output[0][7]_i_6_n_0\
-    );
-\Output[0][7]_i_7\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][0]\(7),
-      I1 => \input_buf_reg[14][0]\(7),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][0]\(7),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][0]\(7),
-      O => \Output[0][7]_i_7_n_0\
-    );
-\Output[0][7]_i_8\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
       I0 => \input_buf_reg[3][0]\(7),
       I1 => \input_buf_reg[2][0]\(7),
       I2 => \data_counter_reg_n_0_[1]\,
       I3 => \input_buf_reg[1][0]\(7),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][0]\(7),
-      O => \Output[0][7]_i_8_n_0\
+      O => \Output[0][7]_i_6_n_0\
     );
-\Output[0][7]_i_9\: unisim.vcomponents.LUT6
+\Output[0][7]_i_7\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -854,48 +828,48 @@ begin
       I3 => \input_buf_reg[5][0]\(7),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][0]\(7),
+      O => \Output[0][7]_i_7_n_0\
+    );
+\Output[0][7]_i_8\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][0]\(7),
+      I1 => \input_buf_reg[10][0]\(7),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][0]\(7),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][0]\(7),
+      O => \Output[0][7]_i_8_n_0\
+    );
+\Output[0][7]_i_9\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][0]\(7),
+      I1 => \input_buf_reg[14][0]\(7),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][0]\(7),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][0]\(7),
       O => \Output[0][7]_i_9_n_0\
     );
 \Output[1][0]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][1]\(0),
-      I1 => state(1),
-      I2 => \Output_reg[1][0]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[1][0]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[1][0]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[1][0]_i_3_n_0\,
       O => \Output[1]\(0)
     );
 \Output[1][0]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][1]\(0),
-      I1 => \input_buf_reg[10][1]\(0),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][1]\(0),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][1]\(0),
-      O => \Output[1][0]_i_4_n_0\
-    );
-\Output[1][0]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][1]\(0),
-      I1 => \input_buf_reg[14][1]\(0),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][1]\(0),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][1]\(0),
-      O => \Output[1][0]_i_5_n_0\
-    );
-\Output[1][0]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -906,9 +880,9 @@ begin
       I3 => \input_buf_reg[1][1]\(0),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][1]\(0),
-      O => \Output[1][0]_i_6_n_0\
+      O => \Output[1][0]_i_4_n_0\
     );
-\Output[1][0]_i_7\: unisim.vcomponents.LUT6
+\Output[1][0]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -919,48 +893,48 @@ begin
       I3 => \input_buf_reg[5][1]\(0),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][1]\(0),
+      O => \Output[1][0]_i_5_n_0\
+    );
+\Output[1][0]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][1]\(0),
+      I1 => \input_buf_reg[10][1]\(0),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][1]\(0),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][1]\(0),
+      O => \Output[1][0]_i_6_n_0\
+    );
+\Output[1][0]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][1]\(0),
+      I1 => \input_buf_reg[14][1]\(0),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][1]\(0),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][1]\(0),
       O => \Output[1][0]_i_7_n_0\
     );
 \Output[1][1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][1]\(1),
-      I1 => state(1),
-      I2 => \Output_reg[1][1]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[1][1]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[1][1]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[1][1]_i_3_n_0\,
       O => \Output[1]\(1)
     );
 \Output[1][1]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][1]\(1),
-      I1 => \input_buf_reg[10][1]\(1),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][1]\(1),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][1]\(1),
-      O => \Output[1][1]_i_4_n_0\
-    );
-\Output[1][1]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][1]\(1),
-      I1 => \input_buf_reg[14][1]\(1),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][1]\(1),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][1]\(1),
-      O => \Output[1][1]_i_5_n_0\
-    );
-\Output[1][1]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -971,9 +945,9 @@ begin
       I3 => \input_buf_reg[1][1]\(1),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][1]\(1),
-      O => \Output[1][1]_i_6_n_0\
+      O => \Output[1][1]_i_4_n_0\
     );
-\Output[1][1]_i_7\: unisim.vcomponents.LUT6
+\Output[1][1]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -984,48 +958,48 @@ begin
       I3 => \input_buf_reg[5][1]\(1),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][1]\(1),
+      O => \Output[1][1]_i_5_n_0\
+    );
+\Output[1][1]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][1]\(1),
+      I1 => \input_buf_reg[10][1]\(1),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][1]\(1),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][1]\(1),
+      O => \Output[1][1]_i_6_n_0\
+    );
+\Output[1][1]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][1]\(1),
+      I1 => \input_buf_reg[14][1]\(1),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][1]\(1),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][1]\(1),
       O => \Output[1][1]_i_7_n_0\
     );
 \Output[1][2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][1]\(2),
-      I1 => state(1),
-      I2 => \Output_reg[1][2]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[1][2]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[1][2]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[1][2]_i_3_n_0\,
       O => \Output[1]\(2)
     );
 \Output[1][2]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][1]\(2),
-      I1 => \input_buf_reg[10][1]\(2),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][1]\(2),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][1]\(2),
-      O => \Output[1][2]_i_4_n_0\
-    );
-\Output[1][2]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][1]\(2),
-      I1 => \input_buf_reg[14][1]\(2),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][1]\(2),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][1]\(2),
-      O => \Output[1][2]_i_5_n_0\
-    );
-\Output[1][2]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1036,9 +1010,9 @@ begin
       I3 => \input_buf_reg[1][1]\(2),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][1]\(2),
-      O => \Output[1][2]_i_6_n_0\
+      O => \Output[1][2]_i_4_n_0\
     );
-\Output[1][2]_i_7\: unisim.vcomponents.LUT6
+\Output[1][2]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1049,48 +1023,48 @@ begin
       I3 => \input_buf_reg[5][1]\(2),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][1]\(2),
+      O => \Output[1][2]_i_5_n_0\
+    );
+\Output[1][2]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][1]\(2),
+      I1 => \input_buf_reg[10][1]\(2),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][1]\(2),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][1]\(2),
+      O => \Output[1][2]_i_6_n_0\
+    );
+\Output[1][2]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][1]\(2),
+      I1 => \input_buf_reg[14][1]\(2),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][1]\(2),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][1]\(2),
       O => \Output[1][2]_i_7_n_0\
     );
 \Output[1][3]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][1]\(3),
-      I1 => state(1),
-      I2 => \Output_reg[1][3]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[1][3]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[1][3]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[1][3]_i_3_n_0\,
       O => \Output[1]\(3)
     );
 \Output[1][3]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][1]\(3),
-      I1 => \input_buf_reg[10][1]\(3),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][1]\(3),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][1]\(3),
-      O => \Output[1][3]_i_4_n_0\
-    );
-\Output[1][3]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][1]\(3),
-      I1 => \input_buf_reg[14][1]\(3),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][1]\(3),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][1]\(3),
-      O => \Output[1][3]_i_5_n_0\
-    );
-\Output[1][3]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1101,9 +1075,9 @@ begin
       I3 => \input_buf_reg[1][1]\(3),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][1]\(3),
-      O => \Output[1][3]_i_6_n_0\
+      O => \Output[1][3]_i_4_n_0\
     );
-\Output[1][3]_i_7\: unisim.vcomponents.LUT6
+\Output[1][3]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1114,48 +1088,48 @@ begin
       I3 => \input_buf_reg[5][1]\(3),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][1]\(3),
+      O => \Output[1][3]_i_5_n_0\
+    );
+\Output[1][3]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][1]\(3),
+      I1 => \input_buf_reg[10][1]\(3),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][1]\(3),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][1]\(3),
+      O => \Output[1][3]_i_6_n_0\
+    );
+\Output[1][3]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][1]\(3),
+      I1 => \input_buf_reg[14][1]\(3),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][1]\(3),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][1]\(3),
       O => \Output[1][3]_i_7_n_0\
     );
 \Output[1][4]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][1]\(4),
-      I1 => state(1),
-      I2 => \Output_reg[1][4]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[1][4]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[1][4]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[1][4]_i_3_n_0\,
       O => \Output[1]\(4)
     );
 \Output[1][4]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][1]\(4),
-      I1 => \input_buf_reg[10][1]\(4),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][1]\(4),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][1]\(4),
-      O => \Output[1][4]_i_4_n_0\
-    );
-\Output[1][4]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][1]\(4),
-      I1 => \input_buf_reg[14][1]\(4),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][1]\(4),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][1]\(4),
-      O => \Output[1][4]_i_5_n_0\
-    );
-\Output[1][4]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1166,9 +1140,9 @@ begin
       I3 => \input_buf_reg[1][1]\(4),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][1]\(4),
-      O => \Output[1][4]_i_6_n_0\
+      O => \Output[1][4]_i_4_n_0\
     );
-\Output[1][4]_i_7\: unisim.vcomponents.LUT6
+\Output[1][4]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1179,48 +1153,48 @@ begin
       I3 => \input_buf_reg[5][1]\(4),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][1]\(4),
+      O => \Output[1][4]_i_5_n_0\
+    );
+\Output[1][4]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][1]\(4),
+      I1 => \input_buf_reg[10][1]\(4),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][1]\(4),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][1]\(4),
+      O => \Output[1][4]_i_6_n_0\
+    );
+\Output[1][4]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][1]\(4),
+      I1 => \input_buf_reg[14][1]\(4),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][1]\(4),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][1]\(4),
       O => \Output[1][4]_i_7_n_0\
     );
 \Output[1][5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][1]\(5),
-      I1 => state(1),
-      I2 => \Output_reg[1][5]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[1][5]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[1][5]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[1][5]_i_3_n_0\,
       O => \Output[1]\(5)
     );
 \Output[1][5]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][1]\(5),
-      I1 => \input_buf_reg[10][1]\(5),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][1]\(5),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][1]\(5),
-      O => \Output[1][5]_i_4_n_0\
-    );
-\Output[1][5]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][1]\(5),
-      I1 => \input_buf_reg[14][1]\(5),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][1]\(5),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][1]\(5),
-      O => \Output[1][5]_i_5_n_0\
-    );
-\Output[1][5]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1231,9 +1205,9 @@ begin
       I3 => \input_buf_reg[1][1]\(5),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][1]\(5),
-      O => \Output[1][5]_i_6_n_0\
+      O => \Output[1][5]_i_4_n_0\
     );
-\Output[1][5]_i_7\: unisim.vcomponents.LUT6
+\Output[1][5]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1244,48 +1218,48 @@ begin
       I3 => \input_buf_reg[5][1]\(5),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][1]\(5),
+      O => \Output[1][5]_i_5_n_0\
+    );
+\Output[1][5]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][1]\(5),
+      I1 => \input_buf_reg[10][1]\(5),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][1]\(5),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][1]\(5),
+      O => \Output[1][5]_i_6_n_0\
+    );
+\Output[1][5]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][1]\(5),
+      I1 => \input_buf_reg[14][1]\(5),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][1]\(5),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][1]\(5),
       O => \Output[1][5]_i_7_n_0\
     );
 \Output[1][6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][1]\(6),
-      I1 => state(1),
-      I2 => \Output_reg[1][6]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[1][6]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[1][6]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[1][6]_i_3_n_0\,
       O => \Output[1]\(6)
     );
 \Output[1][6]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][1]\(6),
-      I1 => \input_buf_reg[10][1]\(6),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][1]\(6),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][1]\(6),
-      O => \Output[1][6]_i_4_n_0\
-    );
-\Output[1][6]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][1]\(6),
-      I1 => \input_buf_reg[14][1]\(6),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][1]\(6),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][1]\(6),
-      O => \Output[1][6]_i_5_n_0\
-    );
-\Output[1][6]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1296,9 +1270,9 @@ begin
       I3 => \input_buf_reg[1][1]\(6),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][1]\(6),
-      O => \Output[1][6]_i_6_n_0\
+      O => \Output[1][6]_i_4_n_0\
     );
-\Output[1][6]_i_7\: unisim.vcomponents.LUT6
+\Output[1][6]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1309,48 +1283,48 @@ begin
       I3 => \input_buf_reg[5][1]\(6),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][1]\(6),
+      O => \Output[1][6]_i_5_n_0\
+    );
+\Output[1][6]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][1]\(6),
+      I1 => \input_buf_reg[10][1]\(6),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][1]\(6),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][1]\(6),
+      O => \Output[1][6]_i_6_n_0\
+    );
+\Output[1][6]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][1]\(6),
+      I1 => \input_buf_reg[14][1]\(6),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][1]\(6),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][1]\(6),
       O => \Output[1][6]_i_7_n_0\
     );
 \Output[1][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"22222222F2FFF222"
+      INIT => X"3838380808083808"
     )
         port map (
       I0 => \input_buf_reg[0][1]\(7),
-      I1 => state(1),
-      I2 => \Output_reg[1][7]_i_2_n_0\,
-      I3 => \data_counter_reg_n_0_[3]\,
-      I4 => \Output_reg[1][7]_i_3_n_0\,
-      I5 => state(0),
+      I1 => state(0),
+      I2 => state(1),
+      I3 => \Output_reg[1][7]_i_2_n_0\,
+      I4 => \data_counter_reg_n_0_[3]\,
+      I5 => \Output_reg[1][7]_i_3_n_0\,
       O => \Output[1]\(7)
     );
 \Output[1][7]_i_4\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[11][1]\(7),
-      I1 => \input_buf_reg[10][1]\(7),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[9][1]\(7),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[8][1]\(7),
-      O => \Output[1][7]_i_4_n_0\
-    );
-\Output[1][7]_i_5\: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"AFA0CFCFAFA0C0C0"
-    )
-        port map (
-      I0 => \input_buf_reg[15][1]\(7),
-      I1 => \input_buf_reg[14][1]\(7),
-      I2 => \data_counter_reg_n_0_[1]\,
-      I3 => \input_buf_reg[13][1]\(7),
-      I4 => \data_counter_reg_n_0_[0]\,
-      I5 => \input_buf_reg[12][1]\(7),
-      O => \Output[1][7]_i_5_n_0\
-    );
-\Output[1][7]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1361,9 +1335,9 @@ begin
       I3 => \input_buf_reg[1][1]\(7),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[0][1]\(7),
-      O => \Output[1][7]_i_6_n_0\
+      O => \Output[1][7]_i_4_n_0\
     );
-\Output[1][7]_i_7\: unisim.vcomponents.LUT6
+\Output[1][7]_i_5\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1374,6 +1348,32 @@ begin
       I3 => \input_buf_reg[5][1]\(7),
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf_reg[4][1]\(7),
+      O => \Output[1][7]_i_5_n_0\
+    );
+\Output[1][7]_i_6\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[11][1]\(7),
+      I1 => \input_buf_reg[10][1]\(7),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[9][1]\(7),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[8][1]\(7),
+      O => \Output[1][7]_i_6_n_0\
+    );
+\Output[1][7]_i_7\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"AFA0CFCFAFA0C0C0"
+    )
+        port map (
+      I0 => \input_buf_reg[15][1]\(7),
+      I1 => \input_buf_reg[14][1]\(7),
+      I2 => \data_counter_reg_n_0_[1]\,
+      I3 => \input_buf_reg[13][1]\(7),
+      I4 => \data_counter_reg_n_0_[0]\,
+      I5 => \input_buf_reg[12][1]\(7),
       O => \Output[1][7]_i_7_n_0\
     );
 \Output_reg[0][0]\: unisim.vcomponents.FDRE
@@ -1910,7 +1910,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[0]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[0][0]_1\
+      O => \input_buf[0][0]_3\
     );
 \input_buf[0][0][7]_i_2\: unisim.vcomponents.LUT2
     generic map(
@@ -1932,7 +1932,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[0]\,
       I4 => \data_counter_reg_n_0_[1]\,
       I5 => \input_buf[0][1][7]_i_2_n_0\,
-      O => \input_buf[0][1]_0\
+      O => \input_buf[0][1]_2\
     );
 \input_buf[0][1][7]_i_2\: unisim.vcomponents.LUT2
     generic map(
@@ -1954,7 +1954,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[1]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[10][0]_21\
+      O => \input_buf[10][0]_23\
     );
 \input_buf[10][1][7]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -1964,7 +1964,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I0 => state(1),
       I1 => state(0),
       I2 => \input_buf[10][1][7]_i_2_n_0\,
-      O => \input_buf[10][1]_20\
+      O => \input_buf[10][1]_22\
     );
 \input_buf[10][1][7]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -1989,7 +1989,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[0]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[11][0]_23\
+      O => \input_buf[11][0]_25\
     );
 \input_buf[11][1][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2002,7 +2002,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \input_buf[3][1][7]_i_2_n_0\,
       I4 => \data_counter_reg_n_0_[3]\,
       I5 => \data_counter_reg_n_0_[2]\,
-      O => \input_buf[11][1]_22\
+      O => \input_buf[11][1]_24\
     );
 \input_buf[12][0][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2015,7 +2015,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[3]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[12][0]_25\
+      O => \input_buf[12][0]_27\
     );
 \input_buf[12][1][7]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -2025,7 +2025,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I0 => state(1),
       I1 => state(0),
       I2 => \input_buf[12][1][7]_i_2_n_0\,
-      O => \input_buf[12][1]_24\
+      O => \input_buf[12][1]_26\
     );
 \input_buf[12][1][7]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -2050,7 +2050,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[0]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[13][0]_27\
+      O => \input_buf[13][0]_29\
     );
 \input_buf[13][1][7]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -2060,7 +2060,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I0 => state(1),
       I1 => state(0),
       I2 => \input_buf[13][1][7]_i_2_n_0\,
-      O => \input_buf[13][1]_26\
+      O => \input_buf[13][1]_28\
     );
 \input_buf[13][1][7]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -2085,7 +2085,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[1]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[14][0]_29\
+      O => \input_buf[14][0]_31\
     );
 \input_buf[14][1][7]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -2095,7 +2095,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I0 => state(1),
       I1 => state(0),
       I2 => \input_buf[14][1][7]_i_2_n_0\,
-      O => \input_buf[14][1]_28\
+      O => \input_buf[14][1]_30\
     );
 \input_buf[14][1][7]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -2120,7 +2120,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[3]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[15][0]_30\
+      O => \input_buf[15][0]_1\
     );
 \input_buf[15][1][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2133,7 +2133,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[3]\,
       I4 => \data_counter_reg_n_0_[2]\,
       I5 => \input_buf[3][1][7]_i_2_n_0\,
-      O => \input_buf[15][1]_31\
+      O => \input_buf[15][1]_0\
     );
 \input_buf[1][0][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2146,7 +2146,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[1]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[1][0]_3\
+      O => \input_buf[1][0]_5\
     );
 \input_buf[1][1][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2159,7 +2159,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[1]\,
       I4 => \data_counter_reg_n_0_[0]\,
       I5 => \input_buf[0][1][7]_i_2_n_0\,
-      O => \input_buf[1][1]_2\
+      O => \input_buf[1][1]_4\
     );
 \input_buf[2][0][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2172,7 +2172,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[0]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[2][0]_5\
+      O => \input_buf[2][0]_7\
     );
 \input_buf[2][1][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2185,7 +2185,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[0]\,
       I4 => \data_counter_reg_n_0_[1]\,
       I5 => \input_buf[0][1][7]_i_2_n_0\,
-      O => \input_buf[2][1]_4\
+      O => \input_buf[2][1]_6\
     );
 \input_buf[3][0][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2198,7 +2198,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[0]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[3][0]_7\
+      O => \input_buf[3][0]_9\
     );
 \input_buf[3][1][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2211,7 +2211,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \input_buf[3][1][7]_i_2_n_0\,
       I4 => \data_counter_reg_n_0_[3]\,
       I5 => \data_counter_reg_n_0_[2]\,
-      O => \input_buf[3][1]_6\
+      O => \input_buf[3][1]_8\
     );
 \input_buf[3][1][7]_i_2\: unisim.vcomponents.LUT2
     generic map(
@@ -2233,7 +2233,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[0]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[4][0]_9\
+      O => \input_buf[4][0]_11\
     );
 \input_buf[4][1][7]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -2243,7 +2243,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I0 => state(1),
       I1 => state(0),
       I2 => \input_buf[4][1][7]_i_2_n_0\,
-      O => \input_buf[4][1]_8\
+      O => \input_buf[4][1]_10\
     );
 \input_buf[4][1][7]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -2268,7 +2268,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[0]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[5][0]_11\
+      O => \input_buf[5][0]_13\
     );
 \input_buf[5][1][7]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -2278,7 +2278,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I0 => state(1),
       I1 => state(0),
       I2 => \input_buf[5][1][7]_i_2_n_0\,
-      O => \input_buf[5][1]_10\
+      O => \input_buf[5][1]_12\
     );
 \input_buf[5][1][7]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -2303,7 +2303,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[1]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[6][0]_13\
+      O => \input_buf[6][0]_15\
     );
 \input_buf[6][1][7]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -2313,7 +2313,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I0 => state(1),
       I1 => state(0),
       I2 => \input_buf[6][1][7]_i_2_n_0\,
-      O => \input_buf[6][1]_12\
+      O => \input_buf[6][1]_14\
     );
 \input_buf[6][1][7]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -2338,7 +2338,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[0]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[7][0]_15\
+      O => \input_buf[7][0]_17\
     );
 \input_buf[7][1][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2351,7 +2351,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \input_buf[3][1][7]_i_2_n_0\,
       I4 => \data_counter_reg_n_0_[2]\,
       I5 => \data_counter_reg_n_0_[3]\,
-      O => \input_buf[7][1]_14\
+      O => \input_buf[7][1]_16\
     );
 \input_buf[8][0][7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2364,7 +2364,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[0]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[8][0]_17\
+      O => \input_buf[8][0]_19\
     );
 \input_buf[8][1][7]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -2374,7 +2374,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I0 => state(1),
       I1 => state(0),
       I2 => \input_buf[8][1][7]_i_2_n_0\,
-      O => \input_buf[8][1]_16\
+      O => \input_buf[8][1]_18\
     );
 \input_buf[8][1][7]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -2399,7 +2399,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I3 => \data_counter_reg_n_0_[0]\,
       I4 => s_axis_tvalid,
       I5 => \input_buf[0][0][7]_i_2_n_0\,
-      O => \input_buf[9][0]_19\
+      O => \input_buf[9][0]_21\
     );
 \input_buf[9][1][7]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -2409,7 +2409,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
       I0 => state(1),
       I1 => state(0),
       I2 => \input_buf[9][1][7]_i_2_n_0\,
-      O => \input_buf[9][1]_18\
+      O => \input_buf[9][1]_20\
     );
 \input_buf[9][1][7]_i_2\: unisim.vcomponents.LUT5
     generic map(
@@ -2429,7 +2429,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][0]_1\,
+      CE => \input_buf[0][0]_3\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[0][0]\(0)
@@ -2440,7 +2440,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][0]_1\,
+      CE => \input_buf[0][0]_3\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[0][0]\(1)
@@ -2451,7 +2451,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][0]_1\,
+      CE => \input_buf[0][0]_3\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[0][0]\(2)
@@ -2462,7 +2462,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][0]_1\,
+      CE => \input_buf[0][0]_3\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[0][0]\(3)
@@ -2473,7 +2473,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][0]_1\,
+      CE => \input_buf[0][0]_3\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[0][0]\(4)
@@ -2484,7 +2484,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][0]_1\,
+      CE => \input_buf[0][0]_3\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[0][0]\(5)
@@ -2495,7 +2495,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][0]_1\,
+      CE => \input_buf[0][0]_3\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[0][0]\(6)
@@ -2506,7 +2506,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][0]_1\,
+      CE => \input_buf[0][0]_3\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[0][0]\(7)
@@ -2517,7 +2517,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][1]_0\,
+      CE => \input_buf[0][1]_2\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[0][1]\(0)
@@ -2528,7 +2528,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][1]_0\,
+      CE => \input_buf[0][1]_2\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[0][1]\(1)
@@ -2539,7 +2539,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][1]_0\,
+      CE => \input_buf[0][1]_2\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[0][1]\(2)
@@ -2550,7 +2550,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][1]_0\,
+      CE => \input_buf[0][1]_2\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[0][1]\(3)
@@ -2561,7 +2561,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][1]_0\,
+      CE => \input_buf[0][1]_2\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[0][1]\(4)
@@ -2572,7 +2572,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][1]_0\,
+      CE => \input_buf[0][1]_2\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[0][1]\(5)
@@ -2583,7 +2583,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][1]_0\,
+      CE => \input_buf[0][1]_2\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[0][1]\(6)
@@ -2594,7 +2594,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[0][1]_0\,
+      CE => \input_buf[0][1]_2\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[0][1]\(7)
@@ -2605,7 +2605,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][0]_21\,
+      CE => \input_buf[10][0]_23\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[10][0]\(0)
@@ -2616,7 +2616,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][0]_21\,
+      CE => \input_buf[10][0]_23\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[10][0]\(1)
@@ -2627,7 +2627,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][0]_21\,
+      CE => \input_buf[10][0]_23\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[10][0]\(2)
@@ -2638,7 +2638,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][0]_21\,
+      CE => \input_buf[10][0]_23\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[10][0]\(3)
@@ -2649,7 +2649,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][0]_21\,
+      CE => \input_buf[10][0]_23\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[10][0]\(4)
@@ -2660,7 +2660,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][0]_21\,
+      CE => \input_buf[10][0]_23\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[10][0]\(5)
@@ -2671,7 +2671,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][0]_21\,
+      CE => \input_buf[10][0]_23\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[10][0]\(6)
@@ -2682,7 +2682,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][0]_21\,
+      CE => \input_buf[10][0]_23\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[10][0]\(7)
@@ -2693,7 +2693,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][1]_20\,
+      CE => \input_buf[10][1]_22\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[10][1]\(0)
@@ -2704,7 +2704,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][1]_20\,
+      CE => \input_buf[10][1]_22\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[10][1]\(1)
@@ -2715,7 +2715,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][1]_20\,
+      CE => \input_buf[10][1]_22\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[10][1]\(2)
@@ -2726,7 +2726,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][1]_20\,
+      CE => \input_buf[10][1]_22\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[10][1]\(3)
@@ -2737,7 +2737,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][1]_20\,
+      CE => \input_buf[10][1]_22\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[10][1]\(4)
@@ -2748,7 +2748,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][1]_20\,
+      CE => \input_buf[10][1]_22\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[10][1]\(5)
@@ -2759,7 +2759,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][1]_20\,
+      CE => \input_buf[10][1]_22\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[10][1]\(6)
@@ -2770,7 +2770,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[10][1]_20\,
+      CE => \input_buf[10][1]_22\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[10][1]\(7)
@@ -2781,7 +2781,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][0]_23\,
+      CE => \input_buf[11][0]_25\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[11][0]\(0)
@@ -2792,7 +2792,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][0]_23\,
+      CE => \input_buf[11][0]_25\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[11][0]\(1)
@@ -2803,7 +2803,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][0]_23\,
+      CE => \input_buf[11][0]_25\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[11][0]\(2)
@@ -2814,7 +2814,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][0]_23\,
+      CE => \input_buf[11][0]_25\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[11][0]\(3)
@@ -2825,7 +2825,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][0]_23\,
+      CE => \input_buf[11][0]_25\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[11][0]\(4)
@@ -2836,7 +2836,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][0]_23\,
+      CE => \input_buf[11][0]_25\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[11][0]\(5)
@@ -2847,7 +2847,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][0]_23\,
+      CE => \input_buf[11][0]_25\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[11][0]\(6)
@@ -2858,7 +2858,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][0]_23\,
+      CE => \input_buf[11][0]_25\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[11][0]\(7)
@@ -2869,7 +2869,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][1]_22\,
+      CE => \input_buf[11][1]_24\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[11][1]\(0)
@@ -2880,7 +2880,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][1]_22\,
+      CE => \input_buf[11][1]_24\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[11][1]\(1)
@@ -2891,7 +2891,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][1]_22\,
+      CE => \input_buf[11][1]_24\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[11][1]\(2)
@@ -2902,7 +2902,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][1]_22\,
+      CE => \input_buf[11][1]_24\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[11][1]\(3)
@@ -2913,7 +2913,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][1]_22\,
+      CE => \input_buf[11][1]_24\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[11][1]\(4)
@@ -2924,7 +2924,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][1]_22\,
+      CE => \input_buf[11][1]_24\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[11][1]\(5)
@@ -2935,7 +2935,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][1]_22\,
+      CE => \input_buf[11][1]_24\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[11][1]\(6)
@@ -2946,7 +2946,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[11][1]_22\,
+      CE => \input_buf[11][1]_24\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[11][1]\(7)
@@ -2957,7 +2957,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][0]_25\,
+      CE => \input_buf[12][0]_27\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[12][0]\(0)
@@ -2968,7 +2968,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][0]_25\,
+      CE => \input_buf[12][0]_27\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[12][0]\(1)
@@ -2979,7 +2979,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][0]_25\,
+      CE => \input_buf[12][0]_27\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[12][0]\(2)
@@ -2990,7 +2990,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][0]_25\,
+      CE => \input_buf[12][0]_27\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[12][0]\(3)
@@ -3001,7 +3001,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][0]_25\,
+      CE => \input_buf[12][0]_27\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[12][0]\(4)
@@ -3012,7 +3012,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][0]_25\,
+      CE => \input_buf[12][0]_27\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[12][0]\(5)
@@ -3023,7 +3023,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][0]_25\,
+      CE => \input_buf[12][0]_27\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[12][0]\(6)
@@ -3034,7 +3034,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][0]_25\,
+      CE => \input_buf[12][0]_27\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[12][0]\(7)
@@ -3045,7 +3045,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][1]_24\,
+      CE => \input_buf[12][1]_26\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[12][1]\(0)
@@ -3056,7 +3056,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][1]_24\,
+      CE => \input_buf[12][1]_26\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[12][1]\(1)
@@ -3067,7 +3067,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][1]_24\,
+      CE => \input_buf[12][1]_26\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[12][1]\(2)
@@ -3078,7 +3078,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][1]_24\,
+      CE => \input_buf[12][1]_26\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[12][1]\(3)
@@ -3089,7 +3089,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][1]_24\,
+      CE => \input_buf[12][1]_26\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[12][1]\(4)
@@ -3100,7 +3100,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][1]_24\,
+      CE => \input_buf[12][1]_26\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[12][1]\(5)
@@ -3111,7 +3111,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][1]_24\,
+      CE => \input_buf[12][1]_26\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[12][1]\(6)
@@ -3122,7 +3122,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[12][1]_24\,
+      CE => \input_buf[12][1]_26\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[12][1]\(7)
@@ -3133,7 +3133,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][0]_27\,
+      CE => \input_buf[13][0]_29\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[13][0]\(0)
@@ -3144,7 +3144,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][0]_27\,
+      CE => \input_buf[13][0]_29\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[13][0]\(1)
@@ -3155,7 +3155,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][0]_27\,
+      CE => \input_buf[13][0]_29\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[13][0]\(2)
@@ -3166,7 +3166,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][0]_27\,
+      CE => \input_buf[13][0]_29\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[13][0]\(3)
@@ -3177,7 +3177,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][0]_27\,
+      CE => \input_buf[13][0]_29\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[13][0]\(4)
@@ -3188,7 +3188,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][0]_27\,
+      CE => \input_buf[13][0]_29\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[13][0]\(5)
@@ -3199,7 +3199,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][0]_27\,
+      CE => \input_buf[13][0]_29\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[13][0]\(6)
@@ -3210,7 +3210,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][0]_27\,
+      CE => \input_buf[13][0]_29\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[13][0]\(7)
@@ -3221,7 +3221,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][1]_26\,
+      CE => \input_buf[13][1]_28\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[13][1]\(0)
@@ -3232,7 +3232,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][1]_26\,
+      CE => \input_buf[13][1]_28\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[13][1]\(1)
@@ -3243,7 +3243,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][1]_26\,
+      CE => \input_buf[13][1]_28\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[13][1]\(2)
@@ -3254,7 +3254,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][1]_26\,
+      CE => \input_buf[13][1]_28\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[13][1]\(3)
@@ -3265,7 +3265,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][1]_26\,
+      CE => \input_buf[13][1]_28\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[13][1]\(4)
@@ -3276,7 +3276,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][1]_26\,
+      CE => \input_buf[13][1]_28\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[13][1]\(5)
@@ -3287,7 +3287,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][1]_26\,
+      CE => \input_buf[13][1]_28\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[13][1]\(6)
@@ -3298,7 +3298,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[13][1]_26\,
+      CE => \input_buf[13][1]_28\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[13][1]\(7)
@@ -3309,7 +3309,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][0]_29\,
+      CE => \input_buf[14][0]_31\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[14][0]\(0)
@@ -3320,7 +3320,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][0]_29\,
+      CE => \input_buf[14][0]_31\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[14][0]\(1)
@@ -3331,7 +3331,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][0]_29\,
+      CE => \input_buf[14][0]_31\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[14][0]\(2)
@@ -3342,7 +3342,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][0]_29\,
+      CE => \input_buf[14][0]_31\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[14][0]\(3)
@@ -3353,7 +3353,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][0]_29\,
+      CE => \input_buf[14][0]_31\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[14][0]\(4)
@@ -3364,7 +3364,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][0]_29\,
+      CE => \input_buf[14][0]_31\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[14][0]\(5)
@@ -3375,7 +3375,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][0]_29\,
+      CE => \input_buf[14][0]_31\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[14][0]\(6)
@@ -3386,7 +3386,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][0]_29\,
+      CE => \input_buf[14][0]_31\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[14][0]\(7)
@@ -3397,7 +3397,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][1]_28\,
+      CE => \input_buf[14][1]_30\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[14][1]\(0)
@@ -3408,7 +3408,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][1]_28\,
+      CE => \input_buf[14][1]_30\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[14][1]\(1)
@@ -3419,7 +3419,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][1]_28\,
+      CE => \input_buf[14][1]_30\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[14][1]\(2)
@@ -3430,7 +3430,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][1]_28\,
+      CE => \input_buf[14][1]_30\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[14][1]\(3)
@@ -3441,7 +3441,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][1]_28\,
+      CE => \input_buf[14][1]_30\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[14][1]\(4)
@@ -3452,7 +3452,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][1]_28\,
+      CE => \input_buf[14][1]_30\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[14][1]\(5)
@@ -3463,7 +3463,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][1]_28\,
+      CE => \input_buf[14][1]_30\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[14][1]\(6)
@@ -3474,7 +3474,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[14][1]_28\,
+      CE => \input_buf[14][1]_30\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[14][1]\(7)
@@ -3485,7 +3485,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][0]_30\,
+      CE => \input_buf[15][0]_1\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[15][0]\(0)
@@ -3496,7 +3496,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][0]_30\,
+      CE => \input_buf[15][0]_1\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[15][0]\(1)
@@ -3507,7 +3507,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][0]_30\,
+      CE => \input_buf[15][0]_1\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[15][0]\(2)
@@ -3518,7 +3518,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][0]_30\,
+      CE => \input_buf[15][0]_1\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[15][0]\(3)
@@ -3529,7 +3529,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][0]_30\,
+      CE => \input_buf[15][0]_1\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[15][0]\(4)
@@ -3540,7 +3540,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][0]_30\,
+      CE => \input_buf[15][0]_1\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[15][0]\(5)
@@ -3551,7 +3551,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][0]_30\,
+      CE => \input_buf[15][0]_1\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[15][0]\(6)
@@ -3562,7 +3562,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][0]_30\,
+      CE => \input_buf[15][0]_1\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[15][0]\(7)
@@ -3573,7 +3573,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][1]_31\,
+      CE => \input_buf[15][1]_0\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[15][1]\(0)
@@ -3584,7 +3584,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][1]_31\,
+      CE => \input_buf[15][1]_0\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[15][1]\(1)
@@ -3595,7 +3595,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][1]_31\,
+      CE => \input_buf[15][1]_0\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[15][1]\(2)
@@ -3606,7 +3606,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][1]_31\,
+      CE => \input_buf[15][1]_0\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[15][1]\(3)
@@ -3617,7 +3617,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][1]_31\,
+      CE => \input_buf[15][1]_0\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[15][1]\(4)
@@ -3628,7 +3628,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][1]_31\,
+      CE => \input_buf[15][1]_0\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[15][1]\(5)
@@ -3639,7 +3639,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][1]_31\,
+      CE => \input_buf[15][1]_0\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[15][1]\(6)
@@ -3650,7 +3650,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[15][1]_31\,
+      CE => \input_buf[15][1]_0\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[15][1]\(7)
@@ -3661,7 +3661,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][0]_3\,
+      CE => \input_buf[1][0]_5\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[1][0]\(0)
@@ -3672,7 +3672,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][0]_3\,
+      CE => \input_buf[1][0]_5\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[1][0]\(1)
@@ -3683,7 +3683,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][0]_3\,
+      CE => \input_buf[1][0]_5\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[1][0]\(2)
@@ -3694,7 +3694,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][0]_3\,
+      CE => \input_buf[1][0]_5\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[1][0]\(3)
@@ -3705,7 +3705,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][0]_3\,
+      CE => \input_buf[1][0]_5\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[1][0]\(4)
@@ -3716,7 +3716,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][0]_3\,
+      CE => \input_buf[1][0]_5\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[1][0]\(5)
@@ -3727,7 +3727,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][0]_3\,
+      CE => \input_buf[1][0]_5\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[1][0]\(6)
@@ -3738,7 +3738,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][0]_3\,
+      CE => \input_buf[1][0]_5\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[1][0]\(7)
@@ -3749,7 +3749,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][1]_2\,
+      CE => \input_buf[1][1]_4\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[1][1]\(0)
@@ -3760,7 +3760,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][1]_2\,
+      CE => \input_buf[1][1]_4\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[1][1]\(1)
@@ -3771,7 +3771,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][1]_2\,
+      CE => \input_buf[1][1]_4\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[1][1]\(2)
@@ -3782,7 +3782,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][1]_2\,
+      CE => \input_buf[1][1]_4\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[1][1]\(3)
@@ -3793,7 +3793,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][1]_2\,
+      CE => \input_buf[1][1]_4\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[1][1]\(4)
@@ -3804,7 +3804,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][1]_2\,
+      CE => \input_buf[1][1]_4\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[1][1]\(5)
@@ -3815,7 +3815,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][1]_2\,
+      CE => \input_buf[1][1]_4\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[1][1]\(6)
@@ -3826,7 +3826,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[1][1]_2\,
+      CE => \input_buf[1][1]_4\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[1][1]\(7)
@@ -3837,7 +3837,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][0]_5\,
+      CE => \input_buf[2][0]_7\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[2][0]\(0)
@@ -3848,7 +3848,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][0]_5\,
+      CE => \input_buf[2][0]_7\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[2][0]\(1)
@@ -3859,7 +3859,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][0]_5\,
+      CE => \input_buf[2][0]_7\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[2][0]\(2)
@@ -3870,7 +3870,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][0]_5\,
+      CE => \input_buf[2][0]_7\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[2][0]\(3)
@@ -3881,7 +3881,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][0]_5\,
+      CE => \input_buf[2][0]_7\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[2][0]\(4)
@@ -3892,7 +3892,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][0]_5\,
+      CE => \input_buf[2][0]_7\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[2][0]\(5)
@@ -3903,7 +3903,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][0]_5\,
+      CE => \input_buf[2][0]_7\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[2][0]\(6)
@@ -3914,7 +3914,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][0]_5\,
+      CE => \input_buf[2][0]_7\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[2][0]\(7)
@@ -3925,7 +3925,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][1]_4\,
+      CE => \input_buf[2][1]_6\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[2][1]\(0)
@@ -3936,7 +3936,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][1]_4\,
+      CE => \input_buf[2][1]_6\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[2][1]\(1)
@@ -3947,7 +3947,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][1]_4\,
+      CE => \input_buf[2][1]_6\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[2][1]\(2)
@@ -3958,7 +3958,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][1]_4\,
+      CE => \input_buf[2][1]_6\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[2][1]\(3)
@@ -3969,7 +3969,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][1]_4\,
+      CE => \input_buf[2][1]_6\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[2][1]\(4)
@@ -3980,7 +3980,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][1]_4\,
+      CE => \input_buf[2][1]_6\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[2][1]\(5)
@@ -3991,7 +3991,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][1]_4\,
+      CE => \input_buf[2][1]_6\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[2][1]\(6)
@@ -4002,7 +4002,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[2][1]_4\,
+      CE => \input_buf[2][1]_6\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[2][1]\(7)
@@ -4013,7 +4013,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][0]_7\,
+      CE => \input_buf[3][0]_9\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[3][0]\(0)
@@ -4024,7 +4024,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][0]_7\,
+      CE => \input_buf[3][0]_9\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[3][0]\(1)
@@ -4035,7 +4035,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][0]_7\,
+      CE => \input_buf[3][0]_9\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[3][0]\(2)
@@ -4046,7 +4046,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][0]_7\,
+      CE => \input_buf[3][0]_9\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[3][0]\(3)
@@ -4057,7 +4057,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][0]_7\,
+      CE => \input_buf[3][0]_9\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[3][0]\(4)
@@ -4068,7 +4068,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][0]_7\,
+      CE => \input_buf[3][0]_9\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[3][0]\(5)
@@ -4079,7 +4079,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][0]_7\,
+      CE => \input_buf[3][0]_9\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[3][0]\(6)
@@ -4090,7 +4090,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][0]_7\,
+      CE => \input_buf[3][0]_9\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[3][0]\(7)
@@ -4101,7 +4101,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][1]_6\,
+      CE => \input_buf[3][1]_8\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[3][1]\(0)
@@ -4112,7 +4112,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][1]_6\,
+      CE => \input_buf[3][1]_8\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[3][1]\(1)
@@ -4123,7 +4123,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][1]_6\,
+      CE => \input_buf[3][1]_8\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[3][1]\(2)
@@ -4134,7 +4134,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][1]_6\,
+      CE => \input_buf[3][1]_8\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[3][1]\(3)
@@ -4145,7 +4145,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][1]_6\,
+      CE => \input_buf[3][1]_8\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[3][1]\(4)
@@ -4156,7 +4156,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][1]_6\,
+      CE => \input_buf[3][1]_8\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[3][1]\(5)
@@ -4167,7 +4167,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][1]_6\,
+      CE => \input_buf[3][1]_8\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[3][1]\(6)
@@ -4178,7 +4178,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[3][1]_6\,
+      CE => \input_buf[3][1]_8\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[3][1]\(7)
@@ -4189,7 +4189,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][0]_9\,
+      CE => \input_buf[4][0]_11\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[4][0]\(0)
@@ -4200,7 +4200,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][0]_9\,
+      CE => \input_buf[4][0]_11\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[4][0]\(1)
@@ -4211,7 +4211,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][0]_9\,
+      CE => \input_buf[4][0]_11\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[4][0]\(2)
@@ -4222,7 +4222,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][0]_9\,
+      CE => \input_buf[4][0]_11\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[4][0]\(3)
@@ -4233,7 +4233,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][0]_9\,
+      CE => \input_buf[4][0]_11\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[4][0]\(4)
@@ -4244,7 +4244,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][0]_9\,
+      CE => \input_buf[4][0]_11\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[4][0]\(5)
@@ -4255,7 +4255,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][0]_9\,
+      CE => \input_buf[4][0]_11\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[4][0]\(6)
@@ -4266,7 +4266,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][0]_9\,
+      CE => \input_buf[4][0]_11\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[4][0]\(7)
@@ -4277,7 +4277,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][1]_8\,
+      CE => \input_buf[4][1]_10\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[4][1]\(0)
@@ -4288,7 +4288,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][1]_8\,
+      CE => \input_buf[4][1]_10\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[4][1]\(1)
@@ -4299,7 +4299,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][1]_8\,
+      CE => \input_buf[4][1]_10\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[4][1]\(2)
@@ -4310,7 +4310,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][1]_8\,
+      CE => \input_buf[4][1]_10\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[4][1]\(3)
@@ -4321,7 +4321,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][1]_8\,
+      CE => \input_buf[4][1]_10\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[4][1]\(4)
@@ -4332,7 +4332,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][1]_8\,
+      CE => \input_buf[4][1]_10\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[4][1]\(5)
@@ -4343,7 +4343,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][1]_8\,
+      CE => \input_buf[4][1]_10\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[4][1]\(6)
@@ -4354,7 +4354,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[4][1]_8\,
+      CE => \input_buf[4][1]_10\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[4][1]\(7)
@@ -4365,7 +4365,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][0]_11\,
+      CE => \input_buf[5][0]_13\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[5][0]\(0)
@@ -4376,7 +4376,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][0]_11\,
+      CE => \input_buf[5][0]_13\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[5][0]\(1)
@@ -4387,7 +4387,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][0]_11\,
+      CE => \input_buf[5][0]_13\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[5][0]\(2)
@@ -4398,7 +4398,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][0]_11\,
+      CE => \input_buf[5][0]_13\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[5][0]\(3)
@@ -4409,7 +4409,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][0]_11\,
+      CE => \input_buf[5][0]_13\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[5][0]\(4)
@@ -4420,7 +4420,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][0]_11\,
+      CE => \input_buf[5][0]_13\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[5][0]\(5)
@@ -4431,7 +4431,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][0]_11\,
+      CE => \input_buf[5][0]_13\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[5][0]\(6)
@@ -4442,7 +4442,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][0]_11\,
+      CE => \input_buf[5][0]_13\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[5][0]\(7)
@@ -4453,7 +4453,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][1]_10\,
+      CE => \input_buf[5][1]_12\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[5][1]\(0)
@@ -4464,7 +4464,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][1]_10\,
+      CE => \input_buf[5][1]_12\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[5][1]\(1)
@@ -4475,7 +4475,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][1]_10\,
+      CE => \input_buf[5][1]_12\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[5][1]\(2)
@@ -4486,7 +4486,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][1]_10\,
+      CE => \input_buf[5][1]_12\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[5][1]\(3)
@@ -4497,7 +4497,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][1]_10\,
+      CE => \input_buf[5][1]_12\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[5][1]\(4)
@@ -4508,7 +4508,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][1]_10\,
+      CE => \input_buf[5][1]_12\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[5][1]\(5)
@@ -4519,7 +4519,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][1]_10\,
+      CE => \input_buf[5][1]_12\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[5][1]\(6)
@@ -4530,7 +4530,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[5][1]_10\,
+      CE => \input_buf[5][1]_12\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[5][1]\(7)
@@ -4541,7 +4541,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][0]_13\,
+      CE => \input_buf[6][0]_15\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[6][0]\(0)
@@ -4552,7 +4552,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][0]_13\,
+      CE => \input_buf[6][0]_15\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[6][0]\(1)
@@ -4563,7 +4563,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][0]_13\,
+      CE => \input_buf[6][0]_15\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[6][0]\(2)
@@ -4574,7 +4574,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][0]_13\,
+      CE => \input_buf[6][0]_15\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[6][0]\(3)
@@ -4585,7 +4585,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][0]_13\,
+      CE => \input_buf[6][0]_15\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[6][0]\(4)
@@ -4596,7 +4596,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][0]_13\,
+      CE => \input_buf[6][0]_15\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[6][0]\(5)
@@ -4607,7 +4607,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][0]_13\,
+      CE => \input_buf[6][0]_15\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[6][0]\(6)
@@ -4618,7 +4618,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][0]_13\,
+      CE => \input_buf[6][0]_15\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[6][0]\(7)
@@ -4629,7 +4629,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][1]_12\,
+      CE => \input_buf[6][1]_14\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[6][1]\(0)
@@ -4640,7 +4640,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][1]_12\,
+      CE => \input_buf[6][1]_14\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[6][1]\(1)
@@ -4651,7 +4651,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][1]_12\,
+      CE => \input_buf[6][1]_14\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[6][1]\(2)
@@ -4662,7 +4662,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][1]_12\,
+      CE => \input_buf[6][1]_14\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[6][1]\(3)
@@ -4673,7 +4673,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][1]_12\,
+      CE => \input_buf[6][1]_14\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[6][1]\(4)
@@ -4684,7 +4684,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][1]_12\,
+      CE => \input_buf[6][1]_14\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[6][1]\(5)
@@ -4695,7 +4695,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][1]_12\,
+      CE => \input_buf[6][1]_14\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[6][1]\(6)
@@ -4706,7 +4706,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[6][1]_12\,
+      CE => \input_buf[6][1]_14\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[6][1]\(7)
@@ -4717,7 +4717,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][0]_15\,
+      CE => \input_buf[7][0]_17\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[7][0]\(0)
@@ -4728,7 +4728,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][0]_15\,
+      CE => \input_buf[7][0]_17\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[7][0]\(1)
@@ -4739,7 +4739,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][0]_15\,
+      CE => \input_buf[7][0]_17\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[7][0]\(2)
@@ -4750,7 +4750,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][0]_15\,
+      CE => \input_buf[7][0]_17\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[7][0]\(3)
@@ -4761,7 +4761,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][0]_15\,
+      CE => \input_buf[7][0]_17\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[7][0]\(4)
@@ -4772,7 +4772,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][0]_15\,
+      CE => \input_buf[7][0]_17\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[7][0]\(5)
@@ -4783,7 +4783,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][0]_15\,
+      CE => \input_buf[7][0]_17\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[7][0]\(6)
@@ -4794,7 +4794,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][0]_15\,
+      CE => \input_buf[7][0]_17\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[7][0]\(7)
@@ -4805,7 +4805,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][1]_14\,
+      CE => \input_buf[7][1]_16\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[7][1]\(0)
@@ -4816,7 +4816,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][1]_14\,
+      CE => \input_buf[7][1]_16\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[7][1]\(1)
@@ -4827,7 +4827,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][1]_14\,
+      CE => \input_buf[7][1]_16\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[7][1]\(2)
@@ -4838,7 +4838,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][1]_14\,
+      CE => \input_buf[7][1]_16\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[7][1]\(3)
@@ -4849,7 +4849,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][1]_14\,
+      CE => \input_buf[7][1]_16\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[7][1]\(4)
@@ -4860,7 +4860,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][1]_14\,
+      CE => \input_buf[7][1]_16\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[7][1]\(5)
@@ -4871,7 +4871,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][1]_14\,
+      CE => \input_buf[7][1]_16\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[7][1]\(6)
@@ -4882,7 +4882,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[7][1]_14\,
+      CE => \input_buf[7][1]_16\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[7][1]\(7)
@@ -4893,7 +4893,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][0]_17\,
+      CE => \input_buf[8][0]_19\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[8][0]\(0)
@@ -4904,7 +4904,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][0]_17\,
+      CE => \input_buf[8][0]_19\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[8][0]\(1)
@@ -4915,7 +4915,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][0]_17\,
+      CE => \input_buf[8][0]_19\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[8][0]\(2)
@@ -4926,7 +4926,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][0]_17\,
+      CE => \input_buf[8][0]_19\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[8][0]\(3)
@@ -4937,7 +4937,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][0]_17\,
+      CE => \input_buf[8][0]_19\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[8][0]\(4)
@@ -4948,7 +4948,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][0]_17\,
+      CE => \input_buf[8][0]_19\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[8][0]\(5)
@@ -4959,7 +4959,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][0]_17\,
+      CE => \input_buf[8][0]_19\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[8][0]\(6)
@@ -4970,7 +4970,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][0]_17\,
+      CE => \input_buf[8][0]_19\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[8][0]\(7)
@@ -4981,7 +4981,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][1]_16\,
+      CE => \input_buf[8][1]_18\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[8][1]\(0)
@@ -4992,7 +4992,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][1]_16\,
+      CE => \input_buf[8][1]_18\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[8][1]\(1)
@@ -5003,7 +5003,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][1]_16\,
+      CE => \input_buf[8][1]_18\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[8][1]\(2)
@@ -5014,7 +5014,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][1]_16\,
+      CE => \input_buf[8][1]_18\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[8][1]\(3)
@@ -5025,7 +5025,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][1]_16\,
+      CE => \input_buf[8][1]_18\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[8][1]\(4)
@@ -5036,7 +5036,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][1]_16\,
+      CE => \input_buf[8][1]_18\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[8][1]\(5)
@@ -5047,7 +5047,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][1]_16\,
+      CE => \input_buf[8][1]_18\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[8][1]\(6)
@@ -5058,7 +5058,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[8][1]_16\,
+      CE => \input_buf[8][1]_18\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[8][1]\(7)
@@ -5069,7 +5069,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][0]_19\,
+      CE => \input_buf[9][0]_21\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[9][0]\(0)
@@ -5080,7 +5080,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][0]_19\,
+      CE => \input_buf[9][0]_21\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[9][0]\(1)
@@ -5091,7 +5091,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][0]_19\,
+      CE => \input_buf[9][0]_21\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[9][0]\(2)
@@ -5102,7 +5102,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][0]_19\,
+      CE => \input_buf[9][0]_21\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[9][0]\(3)
@@ -5113,7 +5113,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][0]_19\,
+      CE => \input_buf[9][0]_21\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[9][0]\(4)
@@ -5124,7 +5124,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][0]_19\,
+      CE => \input_buf[9][0]_21\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[9][0]\(5)
@@ -5135,7 +5135,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][0]_19\,
+      CE => \input_buf[9][0]_21\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[9][0]\(6)
@@ -5146,7 +5146,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][0]_19\,
+      CE => \input_buf[9][0]_21\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[9][0]\(7)
@@ -5157,7 +5157,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][1]_18\,
+      CE => \input_buf[9][1]_20\,
       CLR => reset,
       D => s_axis_tdata(0),
       Q => \input_buf_reg[9][1]\(0)
@@ -5168,7 +5168,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][1]_18\,
+      CE => \input_buf[9][1]_20\,
       CLR => reset,
       D => s_axis_tdata(1),
       Q => \input_buf_reg[9][1]\(1)
@@ -5179,7 +5179,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][1]_18\,
+      CE => \input_buf[9][1]_20\,
       CLR => reset,
       D => s_axis_tdata(2),
       Q => \input_buf_reg[9][1]\(2)
@@ -5190,7 +5190,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][1]_18\,
+      CE => \input_buf[9][1]_20\,
       CLR => reset,
       D => s_axis_tdata(3),
       Q => \input_buf_reg[9][1]\(3)
@@ -5201,7 +5201,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][1]_18\,
+      CE => \input_buf[9][1]_20\,
       CLR => reset,
       D => s_axis_tdata(4),
       Q => \input_buf_reg[9][1]\(4)
@@ -5212,7 +5212,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][1]_18\,
+      CE => \input_buf[9][1]_20\,
       CLR => reset,
       D => s_axis_tdata(5),
       Q => \input_buf_reg[9][1]\(5)
@@ -5223,7 +5223,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][1]_18\,
+      CE => \input_buf[9][1]_20\,
       CLR => reset,
       D => s_axis_tdata(6),
       Q => \input_buf_reg[9][1]\(6)
@@ -5234,7 +5234,7 @@ go_data_counter_reg: unisim.vcomponents.FDCE
     )
         port map (
       C => clk,
-      CE => \input_buf[9][1]_18\,
+      CE => \input_buf[9][1]_20\,
       CLR => reset,
       D => s_axis_tdata(7),
       Q => \input_buf_reg[9][1]\(7)

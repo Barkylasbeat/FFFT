@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1671145225" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/SDF_Stage.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1671196487" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/SDF_Stage.dcp">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
   <File Type="RDS-RDS" Name="design_1_wrapper.vds"/>
   <File Type="RDS-UTIL" Name="design_1_wrapper_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="design_1_wrapper_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="design_1_wrapper.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="design_1_wrapper_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="design_1_wrapper_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/AXI_Output_Interface.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/imports/new/SDF_Stage.vhd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../SDF_proj_v1/SDF_proj_v1.srcs/sources_1/new/SDF_Stage.vhd"/>
@@ -66,6 +57,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/AXI_Input_Interface.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/AXI_Output_Interface.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -123,7 +120,7 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI_Input_Interface_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_SDF_Top_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_AXI_Output_Interface_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_AXI_Input_Interface_0_1"/>
 </GenRun>
