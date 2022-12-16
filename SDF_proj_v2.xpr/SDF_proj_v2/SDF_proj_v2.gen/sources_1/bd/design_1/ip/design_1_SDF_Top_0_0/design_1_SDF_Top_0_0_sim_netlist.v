@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Fri Dec 16 00:02:41 2022
+// Date        : Fri Dec 16 21:33:18 2022
 // Host        : PcFraLenzi running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0_sim_netlist.v
@@ -16355,13 +16355,13 @@ module design_1_SDF_Top_0_0_SDF_Stage
   wire SR_FIFO_inst_n_40;
   wire SR_FIFO_inst_n_41;
   wire clk;
-  wire \data_counter[0]_i_1__2_n_0 ;
-  wire \data_counter[1]_i_1__1_n_0 ;
-  wire \data_counter[2]_i_1__0_n_0 ;
+  wire [3:0]data_counter;
+  wire \data_counter[0]_i_1_n_0 ;
+  wire \data_counter[1]_i_1_n_0 ;
+  wire \data_counter[2]_i_1_n_0 ;
   wire \data_counter[3]_i_1_n_0 ;
   wire [3:0]data_counter_pp1;
   wire [3:0]data_counter_ppF;
-  wire [3:0]data_counter_reg;
   wire [7:0]\data_out_ppF_reg[1][7]_0 ;
   wire [7:0]dout_IM;
   wire [7:0]dout_RE;
@@ -17675,34 +17675,38 @@ module design_1_SDF_Top_0_0_SDF_Stage
         .clk(clk),
         .reset(reset));
   (* SOFT_HLUTNM = "soft_lutpair40" *) 
-  LUT1 #(
-    .INIT(2'h1)) 
-    \data_counter[0]_i_1__2 
-       (.I0(data_counter_reg[0]),
-        .O(\data_counter[0]_i_1__2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT2 #(
-    .INIT(4'h6)) 
-    \data_counter[1]_i_1__1 
-       (.I0(data_counter_reg[0]),
-        .I1(data_counter_reg[1]),
-        .O(\data_counter[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+    .INIT(4'h2)) 
+    \data_counter[0]_i_1 
+       (.I0(go_data_counter),
+        .I1(data_counter[0]),
+        .O(\data_counter[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT3 #(
-    .INIT(8'h78)) 
-    \data_counter[2]_i_1__0 
-       (.I0(data_counter_reg[0]),
-        .I1(data_counter_reg[1]),
-        .I2(data_counter_reg[2]),
-        .O(\data_counter[2]_i_1__0_n_0 ));
+    .INIT(8'h28)) 
+    \data_counter[1]_i_1 
+       (.I0(go_data_counter),
+        .I1(data_counter[0]),
+        .I2(data_counter[1]),
+        .O(\data_counter[1]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT4 #(
-    .INIT(16'h78F0)) 
+    .INIT(16'h2A80)) 
+    \data_counter[2]_i_1 
+       (.I0(go_data_counter),
+        .I1(data_counter[0]),
+        .I2(data_counter[1]),
+        .I3(data_counter[2]),
+        .O(\data_counter[2]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  LUT5 #(
+    .INIT(32'h2AAA8000)) 
     \data_counter[3]_i_1 
-       (.I0(data_counter_reg[0]),
-        .I1(data_counter_reg[1]),
-        .I2(data_counter_reg[3]),
-        .I3(data_counter_reg[2]),
+       (.I0(go_data_counter),
+        .I1(data_counter[1]),
+        .I2(data_counter[0]),
+        .I3(data_counter[2]),
+        .I4(data_counter[3]),
         .O(\data_counter[3]_i_1_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
@@ -17710,7 +17714,7 @@ module design_1_SDF_Top_0_0_SDF_Stage
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(data_counter_reg[0]),
+        .D(data_counter[0]),
         .Q(data_counter_pp1[0]));
   FDCE #(
     .INIT(1'b0)) 
@@ -17718,7 +17722,7 @@ module design_1_SDF_Top_0_0_SDF_Stage
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(data_counter_reg[1]),
+        .D(data_counter[1]),
         .Q(data_counter_pp1[1]));
   FDCE #(
     .INIT(1'b0)) 
@@ -17726,7 +17730,7 @@ module design_1_SDF_Top_0_0_SDF_Stage
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(data_counter_reg[2]),
+        .D(data_counter[2]),
         .Q(data_counter_pp1[2]));
   FDCE #(
     .INIT(1'b0)) 
@@ -17734,7 +17738,7 @@ module design_1_SDF_Top_0_0_SDF_Stage
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(data_counter_reg[3]),
+        .D(data_counter[3]),
         .Q(data_counter_pp1[3]));
   FDCE #(
     .INIT(1'b0)) 
@@ -17772,34 +17776,34 @@ module design_1_SDF_Top_0_0_SDF_Stage
     .INIT(1'b0)) 
     \data_counter_reg[0] 
        (.C(clk),
-        .CE(go_data_counter),
+        .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter[0]_i_1__2_n_0 ),
-        .Q(data_counter_reg[0]));
+        .D(\data_counter[0]_i_1_n_0 ),
+        .Q(data_counter[0]));
   FDCE #(
     .INIT(1'b0)) 
     \data_counter_reg[1] 
        (.C(clk),
-        .CE(go_data_counter),
+        .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter[1]_i_1__1_n_0 ),
-        .Q(data_counter_reg[1]));
+        .D(\data_counter[1]_i_1_n_0 ),
+        .Q(data_counter[1]));
   FDCE #(
     .INIT(1'b0)) 
     \data_counter_reg[2] 
        (.C(clk),
-        .CE(go_data_counter),
+        .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter[2]_i_1__0_n_0 ),
-        .Q(data_counter_reg[2]));
+        .D(\data_counter[2]_i_1_n_0 ),
+        .Q(data_counter[2]));
   FDCE #(
     .INIT(1'b0)) 
     \data_counter_reg[3] 
        (.C(clk),
-        .CE(go_data_counter),
+        .CE(1'b1),
         .CLR(reset),
         .D(\data_counter[3]_i_1_n_0 ),
-        .Q(data_counter_reg[3]));
+        .Q(data_counter[3]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_ppF_reg[0][0] 
@@ -17958,15 +17962,15 @@ module design_1_SDF_Top_0_0_SDF_Stage
     .INIT(1'b0)) 
     halfway_reg
        (.CLR(halfway_reg_i_1_n_0),
-        .D(data_counter_reg[3]),
-        .G(data_counter_reg[3]),
+        .D(data_counter[3]),
+        .G(data_counter[3]),
         .GE(1'b1),
         .Q(halfway));
   LUT2 #(
     .INIT(4'hB)) 
     halfway_reg_i_1
        (.I0(reset),
-        .I1(data_counter_reg[3]),
+        .I1(data_counter[3]),
         .O(halfway_reg_i_1_n_0));
   LUT2 #(
     .INIT(4'h9)) 
@@ -18251,16 +18255,14 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
   wire SR_FIFO_inst_n_40;
   wire SR_FIFO_inst_n_41;
   wire clk;
-  wire \data_counter[0]_i_1_n_0 ;
-  wire \data_counter[1]_i_1_n_0 ;
-  wire \data_counter[2]_i_1_n_0 ;
+  wire [2:0]data_counter;
+  wire \data_counter[0]_i_1__0_n_0 ;
+  wire \data_counter[1]_i_1__0_n_0 ;
+  wire \data_counter[2]_i_1__0_n_0 ;
   wire [2:0]data_counter_pp1;
   wire [2:0]data_counter_ppF;
   wire \data_counter_ppF_reg[0]_rep_n_0 ;
   wire \data_counter_ppF_reg[2]_rep_n_0 ;
-  wire \data_counter_reg_n_0_[0] ;
-  wire \data_counter_reg_n_0_[1] ;
-  wire \data_counter_reg_n_0_[2] ;
   wire [7:0]\data_out_ppF_reg[1][7]_0 ;
   wire [7:0]dout_IM;
   wire [7:0]dout_RE;
@@ -18279,12 +18281,11 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
   wire i__carry__0_i_4__12_n_0;
   wire i__carry__0_i_4__13_n_0;
   wire reset;
+  wire state;
   wire state_i_1_n_0;
-  wire state_reg_n_0;
+  wire [1:0]sync_counter;
   wire \sync_counter[0]_i_1_n_0 ;
   wire \sync_counter[1]_i_1_n_0 ;
-  wire \sync_counter_reg_n_0_[0] ;
-  wire \sync_counter_reg_n_0_[1] ;
 
   FDCE #(
     .INIT(1'b0)) 
@@ -19583,38 +19584,38 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
         .reset(reset));
   (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
-    .INIT(8'h78)) 
-    \data_counter[0]_i_1 
-       (.I0(go_data_counter),
-        .I1(state_reg_n_0),
-        .I2(\data_counter_reg_n_0_[0] ),
-        .O(\data_counter[0]_i_1_n_0 ));
+    .INIT(8'h48)) 
+    \data_counter[0]_i_1__0 
+       (.I0(state),
+        .I1(go_data_counter),
+        .I2(data_counter[0]),
+        .O(\data_counter[0]_i_1__0_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT4 #(
-    .INIT(16'h7F80)) 
-    \data_counter[1]_i_1 
-       (.I0(\data_counter_reg_n_0_[0] ),
-        .I1(go_data_counter),
-        .I2(state_reg_n_0),
-        .I3(\data_counter_reg_n_0_[1] ),
-        .O(\data_counter[1]_i_1_n_0 ));
+    .INIT(16'h7080)) 
+    \data_counter[1]_i_1__0 
+       (.I0(data_counter[0]),
+        .I1(state),
+        .I2(go_data_counter),
+        .I3(data_counter[1]),
+        .O(\data_counter[1]_i_1__0_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair70" *) 
   LUT5 #(
-    .INIT(32'h7FFF8000)) 
-    \data_counter[2]_i_1 
-       (.I0(\data_counter_reg_n_0_[1] ),
-        .I1(\data_counter_reg_n_0_[0] ),
-        .I2(go_data_counter),
-        .I3(state_reg_n_0),
-        .I4(\data_counter_reg_n_0_[2] ),
-        .O(\data_counter[2]_i_1_n_0 ));
+    .INIT(32'h7F008000)) 
+    \data_counter[2]_i_1__0 
+       (.I0(data_counter[0]),
+        .I1(data_counter[1]),
+        .I2(state),
+        .I3(go_data_counter),
+        .I4(data_counter[2]),
+        .O(\data_counter[2]_i_1__0_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
     \data_counter_pp1_reg[0] 
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter_reg_n_0_[0] ),
+        .D(data_counter[0]),
         .Q(data_counter_pp1[0]));
   FDCE #(
     .INIT(1'b0)) 
@@ -19622,7 +19623,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter_reg_n_0_[1] ),
+        .D(data_counter[1]),
         .Q(data_counter_pp1[1]));
   FDCE #(
     .INIT(1'b0)) 
@@ -19630,7 +19631,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter_reg_n_0_[2] ),
+        .D(data_counter[2]),
         .Q(data_counter_pp1[2]));
   (* ORIG_CELL_NAME = "data_counter_ppF_reg[0]" *) 
   FDCE #(
@@ -19682,24 +19683,24 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter[0]_i_1_n_0 ),
-        .Q(\data_counter_reg_n_0_[0] ));
+        .D(\data_counter[0]_i_1__0_n_0 ),
+        .Q(data_counter[0]));
   FDCE #(
     .INIT(1'b0)) 
     \data_counter_reg[1] 
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter[1]_i_1_n_0 ),
-        .Q(\data_counter_reg_n_0_[1] ));
+        .D(\data_counter[1]_i_1__0_n_0 ),
+        .Q(data_counter[1]));
   FDCE #(
     .INIT(1'b0)) 
     \data_counter_reg[2] 
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter[2]_i_1_n_0 ),
-        .Q(\data_counter_reg_n_0_[2] ));
+        .D(\data_counter[2]_i_1__0_n_0 ),
+        .Q(data_counter[2]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_ppF_reg[0][0] 
@@ -19858,15 +19859,15 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
     .INIT(1'b0)) 
     halfway_reg
        (.CLR(halfway_reg_i_1__0_n_0),
-        .D(\data_counter_reg_n_0_[2] ),
-        .G(\data_counter_reg_n_0_[2] ),
+        .D(data_counter[2]),
+        .G(data_counter[2]),
         .GE(1'b1),
         .Q(halfway));
   LUT2 #(
     .INIT(4'hB)) 
     halfway_reg_i_1__0
        (.I0(reset),
-        .I1(\data_counter_reg_n_0_[2] ),
+        .I1(data_counter[2]),
         .O(halfway_reg_i_1__0_n_0));
   LUT2 #(
     .INIT(4'h9)) 
@@ -19918,12 +19919,12 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
         .O(i__carry__0_i_4__13_n_0));
   (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT4 #(
-    .INIT(16'hFF80)) 
+    .INIT(16'hF800)) 
     state_i_1
-       (.I0(go_data_counter),
-        .I1(\sync_counter_reg_n_0_[1] ),
-        .I2(\sync_counter_reg_n_0_[0] ),
-        .I3(state_reg_n_0),
+       (.I0(sync_counter[1]),
+        .I1(sync_counter[0]),
+        .I2(state),
+        .I3(go_data_counter),
         .O(state_i_1_n_0));
   FDCE #(
     .INIT(1'b0)) 
@@ -19932,23 +19933,23 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
         .CE(1'b1),
         .CLR(reset),
         .D(state_i_1_n_0),
-        .Q(state_reg_n_0));
+        .Q(state));
   (* SOFT_HLUTNM = "soft_lutpair72" *) 
   LUT3 #(
-    .INIT(8'hD2)) 
+    .INIT(8'h82)) 
     \sync_counter[0]_i_1 
        (.I0(go_data_counter),
-        .I1(state_reg_n_0),
-        .I2(\sync_counter_reg_n_0_[0] ),
+        .I1(state),
+        .I2(sync_counter[0]),
         .O(\sync_counter[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair71" *) 
   LUT4 #(
-    .INIT(16'hF708)) 
+    .INIT(16'hC408)) 
     \sync_counter[1]_i_1 
-       (.I0(\sync_counter_reg_n_0_[0] ),
+       (.I0(sync_counter[0]),
         .I1(go_data_counter),
-        .I2(state_reg_n_0),
-        .I3(\sync_counter_reg_n_0_[1] ),
+        .I2(state),
+        .I3(sync_counter[1]),
         .O(\sync_counter[1]_i_1_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
@@ -19957,7 +19958,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
         .CE(1'b1),
         .CLR(reset),
         .D(\sync_counter[0]_i_1_n_0 ),
-        .Q(\sync_counter_reg_n_0_[0] ));
+        .Q(sync_counter[0]));
   FDCE #(
     .INIT(1'b0)) 
     \sync_counter_reg[1] 
@@ -19965,7 +19966,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized1
         .CE(1'b1),
         .CLR(reset),
         .D(\sync_counter[1]_i_1_n_0 ),
-        .Q(\sync_counter_reg_n_0_[1] ));
+        .Q(sync_counter[1]));
 endmodule
 
 (* ORIG_REF_NAME = "SDF_Stage" *) 
@@ -20105,12 +20106,11 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized3
   wire SR_FIFO_inst_n_8;
   wire SR_FIFO_inst_n_9;
   wire clk;
-  wire \data_counter[0]_i_1__0_n_0 ;
-  wire \data_counter[1]_i_1__0_n_0 ;
+  wire [1:0]data_counter;
+  wire \data_counter[0]_i_1__1_n_0 ;
+  wire \data_counter[1]_i_1__1_n_0 ;
   wire [1:0]data_counter_pp1;
   wire [1:0]data_counter_ppF;
-  wire \data_counter_reg_n_0_[0] ;
-  wire \data_counter_reg_n_0_[1] ;
   wire [7:0]\data_out_ppF_reg[1][7]_0 ;
   wire [7:0]dout_IM;
   wire [7:0]dout_RE;
@@ -20129,14 +20129,12 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized3
   wire i__carry__0_i_4__15_n_0;
   wire i__carry__0_i_4__16_n_0;
   wire reset;
+  wire state;
   wire state_i_1__0_n_0;
-  wire state_reg_n_0;
+  wire [2:0]sync_counter;
   wire \sync_counter[0]_i_1__0_n_0 ;
   wire \sync_counter[1]_i_1__0_n_0 ;
   wire \sync_counter[2]_i_1_n_0 ;
-  wire \sync_counter_reg_n_0_[0] ;
-  wire \sync_counter_reg_n_0_[1] ;
-  wire \sync_counter_reg_n_0_[2] ;
 
   FDCE #(
     .INIT(1'b0)) 
@@ -21401,28 +21399,28 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized3
         .reset(reset));
   (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT3 #(
-    .INIT(8'h78)) 
-    \data_counter[0]_i_1__0 
-       (.I0(go_data_counter),
-        .I1(state_reg_n_0),
-        .I2(\data_counter_reg_n_0_[0] ),
-        .O(\data_counter[0]_i_1__0_n_0 ));
+    .INIT(8'h48)) 
+    \data_counter[0]_i_1__1 
+       (.I0(state),
+        .I1(go_data_counter),
+        .I2(data_counter[0]),
+        .O(\data_counter[0]_i_1__1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair98" *) 
   LUT4 #(
-    .INIT(16'h7F80)) 
-    \data_counter[1]_i_1__0 
-       (.I0(\data_counter_reg_n_0_[0] ),
-        .I1(go_data_counter),
-        .I2(state_reg_n_0),
-        .I3(\data_counter_reg_n_0_[1] ),
-        .O(\data_counter[1]_i_1__0_n_0 ));
+    .INIT(16'h7080)) 
+    \data_counter[1]_i_1__1 
+       (.I0(data_counter[0]),
+        .I1(state),
+        .I2(go_data_counter),
+        .I3(data_counter[1]),
+        .O(\data_counter[1]_i_1__1_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
     \data_counter_pp1_reg[0] 
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter_reg_n_0_[0] ),
+        .D(data_counter[0]),
         .Q(data_counter_pp1[0]));
   FDCE #(
     .INIT(1'b0)) 
@@ -21430,7 +21428,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized3
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter_reg_n_0_[1] ),
+        .D(data_counter[1]),
         .Q(data_counter_pp1[1]));
   FDCE #(
     .INIT(1'b0)) 
@@ -21454,16 +21452,16 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized3
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter[0]_i_1__0_n_0 ),
-        .Q(\data_counter_reg_n_0_[0] ));
+        .D(\data_counter[0]_i_1__1_n_0 ),
+        .Q(data_counter[0]));
   FDCE #(
     .INIT(1'b0)) 
     \data_counter_reg[1] 
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter[1]_i_1__0_n_0 ),
-        .Q(\data_counter_reg_n_0_[1] ));
+        .D(\data_counter[1]_i_1__1_n_0 ),
+        .Q(data_counter[1]));
   FDCE #(
     .INIT(1'b0)) 
     \data_out_ppF_reg[0][0] 
@@ -21622,15 +21620,15 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized3
     .INIT(1'b0)) 
     halfway_reg
        (.CLR(halfway_reg_i_1__1_n_0),
-        .D(\data_counter_reg_n_0_[1] ),
-        .G(\data_counter_reg_n_0_[1] ),
+        .D(data_counter[1]),
+        .G(data_counter[1]),
         .GE(1'b1),
         .Q(halfway));
   LUT2 #(
     .INIT(4'hB)) 
     halfway_reg_i_1__1
        (.I0(reset),
-        .I1(\data_counter_reg_n_0_[1] ),
+        .I1(data_counter[1]),
         .O(halfway_reg_i_1__1_n_0));
   LUT2 #(
     .INIT(4'h9)) 
@@ -21682,13 +21680,13 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized3
         .O(i__carry__0_i_4__16_n_0));
   (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT5 #(
-    .INIT(32'hFFFF8000)) 
+    .INIT(32'hFF800000)) 
     state_i_1__0
-       (.I0(go_data_counter),
-        .I1(\sync_counter_reg_n_0_[2] ),
-        .I2(\sync_counter_reg_n_0_[1] ),
-        .I3(\sync_counter_reg_n_0_[0] ),
-        .I4(state_reg_n_0),
+       (.I0(sync_counter[2]),
+        .I1(sync_counter[1]),
+        .I2(sync_counter[0]),
+        .I3(state),
+        .I4(go_data_counter),
         .O(state_i_1__0_n_0));
   FDCE #(
     .INIT(1'b0)) 
@@ -21697,33 +21695,33 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized3
         .CE(1'b1),
         .CLR(reset),
         .D(state_i_1__0_n_0),
-        .Q(state_reg_n_0));
+        .Q(state));
   (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT3 #(
-    .INIT(8'hD2)) 
+    .INIT(8'h82)) 
     \sync_counter[0]_i_1__0 
        (.I0(go_data_counter),
-        .I1(state_reg_n_0),
-        .I2(\sync_counter_reg_n_0_[0] ),
+        .I1(state),
+        .I2(sync_counter[0]),
         .O(\sync_counter[0]_i_1__0_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair99" *) 
   LUT4 #(
-    .INIT(16'hF708)) 
+    .INIT(16'hC408)) 
     \sync_counter[1]_i_1__0 
-       (.I0(\sync_counter_reg_n_0_[0] ),
+       (.I0(sync_counter[0]),
         .I1(go_data_counter),
-        .I2(state_reg_n_0),
-        .I3(\sync_counter_reg_n_0_[1] ),
+        .I2(state),
+        .I3(sync_counter[1]),
         .O(\sync_counter[1]_i_1__0_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair97" *) 
   LUT5 #(
-    .INIT(32'hFF7F0080)) 
+    .INIT(32'hF0700080)) 
     \sync_counter[2]_i_1 
-       (.I0(\sync_counter_reg_n_0_[1] ),
-        .I1(\sync_counter_reg_n_0_[0] ),
+       (.I0(sync_counter[0]),
+        .I1(sync_counter[1]),
         .I2(go_data_counter),
-        .I3(state_reg_n_0),
-        .I4(\sync_counter_reg_n_0_[2] ),
+        .I3(state),
+        .I4(sync_counter[2]),
         .O(\sync_counter[2]_i_1_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
@@ -21732,7 +21730,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized3
         .CE(1'b1),
         .CLR(reset),
         .D(\sync_counter[0]_i_1__0_n_0 ),
-        .Q(\sync_counter_reg_n_0_[0] ));
+        .Q(sync_counter[0]));
   FDCE #(
     .INIT(1'b0)) 
     \sync_counter_reg[1] 
@@ -21740,7 +21738,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized3
         .CE(1'b1),
         .CLR(reset),
         .D(\sync_counter[1]_i_1__0_n_0 ),
-        .Q(\sync_counter_reg_n_0_[1] ));
+        .Q(sync_counter[1]));
   FDCE #(
     .INIT(1'b0)) 
     \sync_counter_reg[2] 
@@ -21748,22 +21746,22 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized3
         .CE(1'b1),
         .CLR(reset),
         .D(\sync_counter[2]_i_1_n_0 ),
-        .Q(\sync_counter_reg_n_0_[2] ));
+        .Q(sync_counter[2]));
 endmodule
 
 (* ORIG_REF_NAME = "SDF_Stage" *) 
 module design_1_SDF_Top_0_0_SDF_Stage__parameterized5
    (Re_Data_out,
     Im_Data_out,
-    reset,
     go_data_counter,
+    reset,
     clk,
     D,
     \Data_in_ppF_reg[1][7]_0 );
   output [7:0]Re_Data_out;
   output [7:0]Im_Data_out;
-  input reset;
   input go_data_counter;
+  input reset;
   input clk;
   input [7:0]D;
   input [7:0]\Data_in_ppF_reg[1][7]_0 ;
@@ -21889,7 +21887,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized5
   wire SR_FIFO_inst_n_8;
   wire SR_FIFO_inst_n_9;
   wire clk;
-  wire \data_counter[0]_i_1__1_n_0 ;
+  wire \data_counter[0]_i_1__2_n_0 ;
   wire data_counter_pp1;
   wire data_counter_ppF;
   wire \data_counter_reg_n_0_[0] ;
@@ -21912,12 +21910,12 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized5
   wire reset;
   wire state;
   wire state_i_1__1_n_0;
+  wire [3:0]sync_counter;
   wire \sync_counter[0]_i_1__1_n_0 ;
   wire \sync_counter[1]_i_1__1_n_0 ;
   wire \sync_counter[2]_i_1__0_n_0 ;
   wire \sync_counter[3]_i_1_n_0 ;
   wire \sync_counter[3]_i_2_n_0 ;
-  wire [3:0]sync_counter_reg;
 
   FDCE #(
     .INIT(1'b0)) 
@@ -23181,12 +23179,12 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized5
         .clk(clk),
         .reset(reset));
   LUT3 #(
-    .INIT(8'h78)) 
-    \data_counter[0]_i_1__1 
+    .INIT(8'h48)) 
+    \data_counter[0]_i_1__2 
        (.I0(state),
         .I1(go_data_counter),
         .I2(\data_counter_reg_n_0_[0] ),
-        .O(\data_counter[0]_i_1__1_n_0 ));
+        .O(\data_counter[0]_i_1__2_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
     \data_counter_pp1_reg[0] 
@@ -23209,7 +23207,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized5
        (.C(clk),
         .CE(1'b1),
         .CLR(reset),
-        .D(\data_counter[0]_i_1__1_n_0 ),
+        .D(\data_counter[0]_i_1__2_n_0 ),
         .Q(\data_counter_reg_n_0_[0] ));
   FDCE #(
     .INIT(1'b0)) 
@@ -23428,14 +23426,14 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized5
         .I1(\InDec_BU_reg_n_0_[1][4] ),
         .O(i__carry__0_i_4__8_n_0));
   LUT6 #(
-    .INIT(64'hECECECCCECCCECCC)) 
+    .INIT(64'hFFFFEA0000000000)) 
     state_i_1__1
-       (.I0(go_data_counter),
-        .I1(state),
-        .I2(sync_counter_reg[3]),
-        .I3(sync_counter_reg[2]),
-        .I4(sync_counter_reg[1]),
-        .I5(sync_counter_reg[0]),
+       (.I0(sync_counter[2]),
+        .I1(sync_counter[1]),
+        .I2(sync_counter[0]),
+        .I3(sync_counter[3]),
+        .I4(state),
+        .I5(go_data_counter),
         .O(state_i_1__1_n_0));
   FDCE #(
     .INIT(1'b0)) 
@@ -23446,45 +23444,49 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized5
         .D(state_i_1__1_n_0),
         .Q(state));
   (* SOFT_HLUTNM = "soft_lutpair125" *) 
-  LUT3 #(
-    .INIT(8'h15)) 
+  LUT4 #(
+    .INIT(16'h0222)) 
     \sync_counter[0]_i_1__1 
-       (.I0(sync_counter_reg[0]),
-        .I1(sync_counter_reg[2]),
-        .I2(sync_counter_reg[3]),
+       (.I0(go_data_counter),
+        .I1(sync_counter[0]),
+        .I2(sync_counter[2]),
+        .I3(sync_counter[3]),
         .O(\sync_counter[0]_i_1__1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair124" *) 
-  LUT4 #(
-    .INIT(16'h0666)) 
+  LUT5 #(
+    .INIT(32'h00282828)) 
     \sync_counter[1]_i_1__1 
-       (.I0(sync_counter_reg[0]),
-        .I1(sync_counter_reg[1]),
-        .I2(sync_counter_reg[2]),
-        .I3(sync_counter_reg[3]),
+       (.I0(go_data_counter),
+        .I1(sync_counter[0]),
+        .I2(sync_counter[1]),
+        .I3(sync_counter[2]),
+        .I4(sync_counter[3]),
         .O(\sync_counter[1]_i_1__1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair125" *) 
-  LUT4 #(
-    .INIT(16'h0078)) 
+  (* SOFT_HLUTNM = "soft_lutpair124" *) 
+  LUT5 #(
+    .INIT(32'h00002A80)) 
     \sync_counter[2]_i_1__0 
-       (.I0(sync_counter_reg[0]),
-        .I1(sync_counter_reg[1]),
-        .I2(sync_counter_reg[2]),
-        .I3(sync_counter_reg[3]),
+       (.I0(go_data_counter),
+        .I1(sync_counter[0]),
+        .I2(sync_counter[1]),
+        .I3(sync_counter[2]),
+        .I4(sync_counter[3]),
         .O(\sync_counter[2]_i_1__0_n_0 ));
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'h7)) 
     \sync_counter[3]_i_1 
        (.I0(go_data_counter),
         .I1(state),
         .O(\sync_counter[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair124" *) 
-  LUT4 #(
-    .INIT(16'h0780)) 
+  (* SOFT_HLUTNM = "soft_lutpair125" *) 
+  LUT5 #(
+    .INIT(32'h002A8000)) 
     \sync_counter[3]_i_2 
-       (.I0(sync_counter_reg[0]),
-        .I1(sync_counter_reg[1]),
-        .I2(sync_counter_reg[2]),
-        .I3(sync_counter_reg[3]),
+       (.I0(go_data_counter),
+        .I1(sync_counter[1]),
+        .I2(sync_counter[0]),
+        .I3(sync_counter[2]),
+        .I4(sync_counter[3]),
         .O(\sync_counter[3]_i_2_n_0 ));
   FDCE #(
     .INIT(1'b0)) 
@@ -23493,7 +23495,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized5
         .CE(\sync_counter[3]_i_1_n_0 ),
         .CLR(reset),
         .D(\sync_counter[0]_i_1__1_n_0 ),
-        .Q(sync_counter_reg[0]));
+        .Q(sync_counter[0]));
   FDCE #(
     .INIT(1'b0)) 
     \sync_counter_reg[1] 
@@ -23501,7 +23503,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized5
         .CE(\sync_counter[3]_i_1_n_0 ),
         .CLR(reset),
         .D(\sync_counter[1]_i_1__1_n_0 ),
-        .Q(sync_counter_reg[1]));
+        .Q(sync_counter[1]));
   FDCE #(
     .INIT(1'b0)) 
     \sync_counter_reg[2] 
@@ -23509,7 +23511,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized5
         .CE(\sync_counter[3]_i_1_n_0 ),
         .CLR(reset),
         .D(\sync_counter[2]_i_1__0_n_0 ),
-        .Q(sync_counter_reg[2]));
+        .Q(sync_counter[2]));
   FDCE #(
     .INIT(1'b0)) 
     \sync_counter_reg[3] 
@@ -23517,7 +23519,7 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized5
         .CE(\sync_counter[3]_i_1_n_0 ),
         .CLR(reset),
         .D(\sync_counter[3]_i_2_n_0 ),
-        .Q(sync_counter_reg[3]));
+        .Q(sync_counter[3]));
 endmodule
 
 (* ORIG_REF_NAME = "SDF_Top" *) 

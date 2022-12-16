@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-| Date         : Fri Dec 16 00:02:41 2022
+| Date         : Fri Dec 16 21:33:18 2022
 | Host         : PcFraLenzi running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_SDF_Top_0_0_utilization_synth.rpt -pb design_1_SDF_Top_0_0_utilization_synth.pb
 | Design       : design_1_SDF_Top_0_0
@@ -154,13 +154,13 @@ Table of Contents
 +----------+------+---------------------+
 | FDCE     |  575 |        Flop & Latch |
 | LUT6     |  426 |                 LUT |
-| LUT4     |  348 |                 LUT |
+| LUT4     |  346 |                 LUT |
 | LUT2     |  280 |                 LUT |
 | LDCE     |  260 |        Flop & Latch |
-| LUT5     |  207 |                 LUT |
+| LUT5     |  211 |                 LUT |
 | CARRY4   |  192 |          CarryLogic |
-| LUT3     |  132 |                 LUT |
-| LUT1     |   51 |                 LUT |
+| LUT3     |  131 |                 LUT |
+| LUT1     |   50 |                 LUT |
 | SRL16E   |   32 |  Distributed Memory |
 | FDRE     |   32 |        Flop & Latch |
 +----------+------+---------------------+

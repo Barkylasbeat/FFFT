@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Fri Dec 16 00:02:41 2022
+-- Date        : Fri Dec 16 21:33:18 2022
 -- Host        : PcFraLenzi running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0_sim_netlist.vhdl
@@ -24248,13 +24248,13 @@ architecture STRUCTURE of design_1_SDF_Top_0_0_SDF_Stage is
   signal SR_FIFO_inst_n_39 : STD_LOGIC;
   signal SR_FIFO_inst_n_40 : STD_LOGIC;
   signal SR_FIFO_inst_n_41 : STD_LOGIC;
-  signal \data_counter[0]_i_1__2_n_0\ : STD_LOGIC;
-  signal \data_counter[1]_i_1__1_n_0\ : STD_LOGIC;
-  signal \data_counter[2]_i_1__0_n_0\ : STD_LOGIC;
+  signal data_counter : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal \data_counter[0]_i_1_n_0\ : STD_LOGIC;
+  signal \data_counter[1]_i_1_n_0\ : STD_LOGIC;
+  signal \data_counter[2]_i_1_n_0\ : STD_LOGIC;
   signal \data_counter[3]_i_1_n_0\ : STD_LOGIC;
   signal data_counter_pp1 : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal data_counter_ppF : STD_LOGIC_VECTOR ( 3 downto 0 );
-  signal data_counter_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal dout_IM : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal dout_RE : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal halfway : STD_LOGIC;
@@ -24434,9 +24434,9 @@ architecture STRUCTURE of design_1_SDF_Top_0_0_SDF_Stage is
   attribute XILINX_LEGACY_PRIM of \InDec_FIFOMux_reg[1][7]\ : label is "LD";
   attribute XILINX_TRANSFORM_PINMAP of \InDec_FIFOMux_reg[1][7]\ : label is "VCC:GE GND:CLR";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \data_counter[0]_i_1__2\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \data_counter[1]_i_1__1\ : label is "soft_lutpair40";
-  attribute SOFT_HLUTNM of \data_counter[2]_i_1__0\ : label is "soft_lutpair39";
+  attribute SOFT_HLUTNM of \data_counter[0]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \data_counter[1]_i_1\ : label is "soft_lutpair40";
+  attribute SOFT_HLUTNM of \data_counter[2]_i_1\ : label is "soft_lutpair39";
   attribute SOFT_HLUTNM of \data_counter[3]_i_1\ : label is "soft_lutpair39";
   attribute XILINX_LEGACY_PRIM of halfway_reg : label is "LDC";
   attribute XILINX_TRANSFORM_PINMAP of halfway_reg : label is "VCC:GE";
@@ -26042,42 +26042,46 @@ SR_FIFO_inst: entity work.design_1_SDF_Top_0_0_SR_FIFO
       clk => clk,
       reset => reset
     );
-\data_counter[0]_i_1__2\: unisim.vcomponents.LUT1
+\data_counter[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"1"
+      INIT => X"2"
     )
         port map (
-      I0 => data_counter_reg(0),
-      O => \data_counter[0]_i_1__2_n_0\
+      I0 => go_data_counter,
+      I1 => data_counter(0),
+      O => \data_counter[0]_i_1_n_0\
     );
-\data_counter[1]_i_1__1\: unisim.vcomponents.LUT2
+\data_counter[1]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"6"
+      INIT => X"28"
     )
         port map (
-      I0 => data_counter_reg(0),
-      I1 => data_counter_reg(1),
-      O => \data_counter[1]_i_1__1_n_0\
+      I0 => go_data_counter,
+      I1 => data_counter(0),
+      I2 => data_counter(1),
+      O => \data_counter[1]_i_1_n_0\
     );
-\data_counter[2]_i_1__0\: unisim.vcomponents.LUT3
+\data_counter[2]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"78"
+      INIT => X"2A80"
     )
         port map (
-      I0 => data_counter_reg(0),
-      I1 => data_counter_reg(1),
-      I2 => data_counter_reg(2),
-      O => \data_counter[2]_i_1__0_n_0\
+      I0 => go_data_counter,
+      I1 => data_counter(0),
+      I2 => data_counter(1),
+      I3 => data_counter(2),
+      O => \data_counter[2]_i_1_n_0\
     );
-\data_counter[3]_i_1\: unisim.vcomponents.LUT4
+\data_counter[3]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"78F0"
+      INIT => X"2AAA8000"
     )
         port map (
-      I0 => data_counter_reg(0),
-      I1 => data_counter_reg(1),
-      I2 => data_counter_reg(3),
-      I3 => data_counter_reg(2),
+      I0 => go_data_counter,
+      I1 => data_counter(1),
+      I2 => data_counter(0),
+      I3 => data_counter(2),
+      I4 => data_counter(3),
       O => \data_counter[3]_i_1_n_0\
     );
 \data_counter_pp1_reg[0]\: unisim.vcomponents.FDCE
@@ -26088,7 +26092,7 @@ SR_FIFO_inst: entity work.design_1_SDF_Top_0_0_SR_FIFO
       C => clk,
       CE => '1',
       CLR => reset,
-      D => data_counter_reg(0),
+      D => data_counter(0),
       Q => data_counter_pp1(0)
     );
 \data_counter_pp1_reg[1]\: unisim.vcomponents.FDCE
@@ -26099,7 +26103,7 @@ SR_FIFO_inst: entity work.design_1_SDF_Top_0_0_SR_FIFO
       C => clk,
       CE => '1',
       CLR => reset,
-      D => data_counter_reg(1),
+      D => data_counter(1),
       Q => data_counter_pp1(1)
     );
 \data_counter_pp1_reg[2]\: unisim.vcomponents.FDCE
@@ -26110,7 +26114,7 @@ SR_FIFO_inst: entity work.design_1_SDF_Top_0_0_SR_FIFO
       C => clk,
       CE => '1',
       CLR => reset,
-      D => data_counter_reg(2),
+      D => data_counter(2),
       Q => data_counter_pp1(2)
     );
 \data_counter_pp1_reg[3]\: unisim.vcomponents.FDCE
@@ -26121,7 +26125,7 @@ SR_FIFO_inst: entity work.design_1_SDF_Top_0_0_SR_FIFO
       C => clk,
       CE => '1',
       CLR => reset,
-      D => data_counter_reg(3),
+      D => data_counter(3),
       Q => data_counter_pp1(3)
     );
 \data_counter_ppF_reg[0]\: unisim.vcomponents.FDCE
@@ -26174,10 +26178,10 @@ SR_FIFO_inst: entity work.design_1_SDF_Top_0_0_SR_FIFO
     )
         port map (
       C => clk,
-      CE => go_data_counter,
+      CE => '1',
       CLR => reset,
-      D => \data_counter[0]_i_1__2_n_0\,
-      Q => data_counter_reg(0)
+      D => \data_counter[0]_i_1_n_0\,
+      Q => data_counter(0)
     );
 \data_counter_reg[1]\: unisim.vcomponents.FDCE
     generic map(
@@ -26185,10 +26189,10 @@ SR_FIFO_inst: entity work.design_1_SDF_Top_0_0_SR_FIFO
     )
         port map (
       C => clk,
-      CE => go_data_counter,
+      CE => '1',
       CLR => reset,
-      D => \data_counter[1]_i_1__1_n_0\,
-      Q => data_counter_reg(1)
+      D => \data_counter[1]_i_1_n_0\,
+      Q => data_counter(1)
     );
 \data_counter_reg[2]\: unisim.vcomponents.FDCE
     generic map(
@@ -26196,10 +26200,10 @@ SR_FIFO_inst: entity work.design_1_SDF_Top_0_0_SR_FIFO
     )
         port map (
       C => clk,
-      CE => go_data_counter,
+      CE => '1',
       CLR => reset,
-      D => \data_counter[2]_i_1__0_n_0\,
-      Q => data_counter_reg(2)
+      D => \data_counter[2]_i_1_n_0\,
+      Q => data_counter(2)
     );
 \data_counter_reg[3]\: unisim.vcomponents.FDCE
     generic map(
@@ -26207,10 +26211,10 @@ SR_FIFO_inst: entity work.design_1_SDF_Top_0_0_SR_FIFO
     )
         port map (
       C => clk,
-      CE => go_data_counter,
+      CE => '1',
       CLR => reset,
       D => \data_counter[3]_i_1_n_0\,
-      Q => data_counter_reg(3)
+      Q => data_counter(3)
     );
 \data_out_ppF_reg[0][0]\: unisim.vcomponents.FDCE
     generic map(
@@ -26427,8 +26431,8 @@ halfway_reg: unisim.vcomponents.LDCE
     )
         port map (
       CLR => halfway_reg_i_1_n_0,
-      D => data_counter_reg(3),
-      G => data_counter_reg(3),
+      D => data_counter(3),
+      G => data_counter(3),
       GE => '1',
       Q => halfway
     );
@@ -26438,7 +26442,7 @@ halfway_reg_i_1: unisim.vcomponents.LUT2
     )
         port map (
       I0 => reset,
-      I1 => data_counter_reg(3),
+      I1 => data_counter(3),
       O => halfway_reg_i_1_n_0
     );
 \i__carry__0_i_1__10\: unisim.vcomponents.LUT2
@@ -26681,16 +26685,14 @@ architecture STRUCTURE of \design_1_SDF_Top_0_0_SDF_Stage__parameterized1\ is
   signal SR_FIFO_inst_n_39 : STD_LOGIC;
   signal SR_FIFO_inst_n_40 : STD_LOGIC;
   signal SR_FIFO_inst_n_41 : STD_LOGIC;
-  signal \data_counter[0]_i_1_n_0\ : STD_LOGIC;
-  signal \data_counter[1]_i_1_n_0\ : STD_LOGIC;
-  signal \data_counter[2]_i_1_n_0\ : STD_LOGIC;
+  signal data_counter : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal \data_counter[0]_i_1__0_n_0\ : STD_LOGIC;
+  signal \data_counter[1]_i_1__0_n_0\ : STD_LOGIC;
+  signal \data_counter[2]_i_1__0_n_0\ : STD_LOGIC;
   signal data_counter_pp1 : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal data_counter_ppF : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \data_counter_ppF_reg[0]_rep_n_0\ : STD_LOGIC;
   signal \data_counter_ppF_reg[2]_rep_n_0\ : STD_LOGIC;
-  signal \data_counter_reg_n_0_[0]\ : STD_LOGIC;
-  signal \data_counter_reg_n_0_[1]\ : STD_LOGIC;
-  signal \data_counter_reg_n_0_[2]\ : STD_LOGIC;
   signal dout_IM : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal dout_RE : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal halfway : STD_LOGIC;
@@ -26706,12 +26708,11 @@ architecture STRUCTURE of \design_1_SDF_Top_0_0_SDF_Stage__parameterized1\ is
   signal \i__carry__0_i_3__13_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_4__12_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_4__13_n_0\ : STD_LOGIC;
+  signal state : STD_LOGIC;
   signal state_i_1_n_0 : STD_LOGIC;
-  signal state_reg_n_0 : STD_LOGIC;
+  signal sync_counter : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \sync_counter[0]_i_1_n_0\ : STD_LOGIC;
   signal \sync_counter[1]_i_1_n_0\ : STD_LOGIC;
-  signal \sync_counter_reg_n_0_[0]\ : STD_LOGIC;
-  signal \sync_counter_reg_n_0_[1]\ : STD_LOGIC;
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of \FIFODec_BU_reg[0][0]\ : label is "LD";
   attribute XILINX_TRANSFORM_PINMAP : string;
@@ -26876,9 +26877,9 @@ architecture STRUCTURE of \design_1_SDF_Top_0_0_SDF_Stage__parameterized1\ is
   attribute XILINX_LEGACY_PRIM of \InDec_FIFOMux_reg[1][7]\ : label is "LD";
   attribute XILINX_TRANSFORM_PINMAP of \InDec_FIFOMux_reg[1][7]\ : label is "VCC:GE GND:CLR";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \data_counter[0]_i_1\ : label is "soft_lutpair72";
-  attribute SOFT_HLUTNM of \data_counter[1]_i_1\ : label is "soft_lutpair70";
-  attribute SOFT_HLUTNM of \data_counter[2]_i_1\ : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of \data_counter[0]_i_1__0\ : label is "soft_lutpair72";
+  attribute SOFT_HLUTNM of \data_counter[1]_i_1__0\ : label is "soft_lutpair70";
+  attribute SOFT_HLUTNM of \data_counter[2]_i_1__0\ : label is "soft_lutpair70";
   attribute ORIG_CELL_NAME : string;
   attribute ORIG_CELL_NAME of \data_counter_ppF_reg[0]\ : label is "data_counter_ppF_reg[0]";
   attribute ORIG_CELL_NAME of \data_counter_ppF_reg[0]_rep\ : label is "data_counter_ppF_reg[0]";
@@ -28493,38 +28494,38 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized1\
       clk => clk,
       reset => reset
     );
-\data_counter[0]_i_1\: unisim.vcomponents.LUT3
+\data_counter[0]_i_1__0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"78"
+      INIT => X"48"
     )
         port map (
-      I0 => go_data_counter,
-      I1 => state_reg_n_0,
-      I2 => \data_counter_reg_n_0_[0]\,
-      O => \data_counter[0]_i_1_n_0\
-    );
-\data_counter[1]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7F80"
-    )
-        port map (
-      I0 => \data_counter_reg_n_0_[0]\,
+      I0 => state,
       I1 => go_data_counter,
-      I2 => state_reg_n_0,
-      I3 => \data_counter_reg_n_0_[1]\,
-      O => \data_counter[1]_i_1_n_0\
+      I2 => data_counter(0),
+      O => \data_counter[0]_i_1__0_n_0\
     );
-\data_counter[2]_i_1\: unisim.vcomponents.LUT5
+\data_counter[1]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"7FFF8000"
+      INIT => X"7080"
     )
         port map (
-      I0 => \data_counter_reg_n_0_[1]\,
-      I1 => \data_counter_reg_n_0_[0]\,
+      I0 => data_counter(0),
+      I1 => state,
       I2 => go_data_counter,
-      I3 => state_reg_n_0,
-      I4 => \data_counter_reg_n_0_[2]\,
-      O => \data_counter[2]_i_1_n_0\
+      I3 => data_counter(1),
+      O => \data_counter[1]_i_1__0_n_0\
+    );
+\data_counter[2]_i_1__0\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7F008000"
+    )
+        port map (
+      I0 => data_counter(0),
+      I1 => data_counter(1),
+      I2 => state,
+      I3 => go_data_counter,
+      I4 => data_counter(2),
+      O => \data_counter[2]_i_1__0_n_0\
     );
 \data_counter_pp1_reg[0]\: unisim.vcomponents.FDCE
     generic map(
@@ -28534,7 +28535,7 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized1\
       C => clk,
       CE => '1',
       CLR => reset,
-      D => \data_counter_reg_n_0_[0]\,
+      D => data_counter(0),
       Q => data_counter_pp1(0)
     );
 \data_counter_pp1_reg[1]\: unisim.vcomponents.FDCE
@@ -28545,7 +28546,7 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized1\
       C => clk,
       CE => '1',
       CLR => reset,
-      D => \data_counter_reg_n_0_[1]\,
+      D => data_counter(1),
       Q => data_counter_pp1(1)
     );
 \data_counter_pp1_reg[2]\: unisim.vcomponents.FDCE
@@ -28556,7 +28557,7 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized1\
       C => clk,
       CE => '1',
       CLR => reset,
-      D => \data_counter_reg_n_0_[2]\,
+      D => data_counter(2),
       Q => data_counter_pp1(2)
     );
 \data_counter_ppF_reg[0]\: unisim.vcomponents.FDCE
@@ -28622,8 +28623,8 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized1\
       C => clk,
       CE => '1',
       CLR => reset,
-      D => \data_counter[0]_i_1_n_0\,
-      Q => \data_counter_reg_n_0_[0]\
+      D => \data_counter[0]_i_1__0_n_0\,
+      Q => data_counter(0)
     );
 \data_counter_reg[1]\: unisim.vcomponents.FDCE
     generic map(
@@ -28633,8 +28634,8 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized1\
       C => clk,
       CE => '1',
       CLR => reset,
-      D => \data_counter[1]_i_1_n_0\,
-      Q => \data_counter_reg_n_0_[1]\
+      D => \data_counter[1]_i_1__0_n_0\,
+      Q => data_counter(1)
     );
 \data_counter_reg[2]\: unisim.vcomponents.FDCE
     generic map(
@@ -28644,8 +28645,8 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized1\
       C => clk,
       CE => '1',
       CLR => reset,
-      D => \data_counter[2]_i_1_n_0\,
-      Q => \data_counter_reg_n_0_[2]\
+      D => \data_counter[2]_i_1__0_n_0\,
+      Q => data_counter(2)
     );
 \data_out_ppF_reg[0][0]\: unisim.vcomponents.FDCE
     generic map(
@@ -28862,8 +28863,8 @@ halfway_reg: unisim.vcomponents.LDCE
     )
         port map (
       CLR => \halfway_reg_i_1__0_n_0\,
-      D => \data_counter_reg_n_0_[2]\,
-      G => \data_counter_reg_n_0_[2]\,
+      D => data_counter(2),
+      G => data_counter(2),
       GE => '1',
       Q => halfway
     );
@@ -28873,7 +28874,7 @@ halfway_reg: unisim.vcomponents.LDCE
     )
         port map (
       I0 => reset,
-      I1 => \data_counter_reg_n_0_[2]\,
+      I1 => data_counter(2),
       O => \halfway_reg_i_1__0_n_0\
     );
 \i__carry__0_i_1__12\: unisim.vcomponents.LUT2
@@ -28950,13 +28951,13 @@ halfway_reg: unisim.vcomponents.LDCE
     );
 state_i_1: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FF80"
+      INIT => X"F800"
     )
         port map (
-      I0 => go_data_counter,
-      I1 => \sync_counter_reg_n_0_[1]\,
-      I2 => \sync_counter_reg_n_0_[0]\,
-      I3 => state_reg_n_0,
+      I0 => sync_counter(1),
+      I1 => sync_counter(0),
+      I2 => state,
+      I3 => go_data_counter,
       O => state_i_1_n_0
     );
 state_reg: unisim.vcomponents.FDCE
@@ -28968,27 +28969,27 @@ state_reg: unisim.vcomponents.FDCE
       CE => '1',
       CLR => reset,
       D => state_i_1_n_0,
-      Q => state_reg_n_0
+      Q => state
     );
 \sync_counter[0]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"D2"
+      INIT => X"82"
     )
         port map (
       I0 => go_data_counter,
-      I1 => state_reg_n_0,
-      I2 => \sync_counter_reg_n_0_[0]\,
+      I1 => state,
+      I2 => sync_counter(0),
       O => \sync_counter[0]_i_1_n_0\
     );
 \sync_counter[1]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"F708"
+      INIT => X"C408"
     )
         port map (
-      I0 => \sync_counter_reg_n_0_[0]\,
+      I0 => sync_counter(0),
       I1 => go_data_counter,
-      I2 => state_reg_n_0,
-      I3 => \sync_counter_reg_n_0_[1]\,
+      I2 => state,
+      I3 => sync_counter(1),
       O => \sync_counter[1]_i_1_n_0\
     );
 \sync_counter_reg[0]\: unisim.vcomponents.FDCE
@@ -29000,7 +29001,7 @@ state_reg: unisim.vcomponents.FDCE
       CE => '1',
       CLR => reset,
       D => \sync_counter[0]_i_1_n_0\,
-      Q => \sync_counter_reg_n_0_[0]\
+      Q => sync_counter(0)
     );
 \sync_counter_reg[1]\: unisim.vcomponents.FDCE
     generic map(
@@ -29011,7 +29012,7 @@ state_reg: unisim.vcomponents.FDCE
       CE => '1',
       CLR => reset,
       D => \sync_counter[1]_i_1_n_0\,
-      Q => \sync_counter_reg_n_0_[1]\
+      Q => sync_counter(1)
     );
 end STRUCTURE;
 library IEEE;
@@ -29149,12 +29150,11 @@ architecture STRUCTURE of \design_1_SDF_Top_0_0_SDF_Stage__parameterized3\ is
   signal SR_FIFO_inst_n_7 : STD_LOGIC;
   signal SR_FIFO_inst_n_8 : STD_LOGIC;
   signal SR_FIFO_inst_n_9 : STD_LOGIC;
-  signal \data_counter[0]_i_1__0_n_0\ : STD_LOGIC;
-  signal \data_counter[1]_i_1__0_n_0\ : STD_LOGIC;
+  signal data_counter : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal \data_counter[0]_i_1__1_n_0\ : STD_LOGIC;
+  signal \data_counter[1]_i_1__1_n_0\ : STD_LOGIC;
   signal data_counter_pp1 : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal data_counter_ppF : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \data_counter_reg_n_0_[0]\ : STD_LOGIC;
-  signal \data_counter_reg_n_0_[1]\ : STD_LOGIC;
   signal dout_IM : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal dout_RE : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal halfway : STD_LOGIC;
@@ -29170,14 +29170,12 @@ architecture STRUCTURE of \design_1_SDF_Top_0_0_SDF_Stage__parameterized3\ is
   signal \i__carry__0_i_3__16_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_4__15_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_4__16_n_0\ : STD_LOGIC;
+  signal state : STD_LOGIC;
   signal \state_i_1__0_n_0\ : STD_LOGIC;
-  signal state_reg_n_0 : STD_LOGIC;
+  signal sync_counter : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \sync_counter[0]_i_1__0_n_0\ : STD_LOGIC;
   signal \sync_counter[1]_i_1__0_n_0\ : STD_LOGIC;
   signal \sync_counter[2]_i_1_n_0\ : STD_LOGIC;
-  signal \sync_counter_reg_n_0_[0]\ : STD_LOGIC;
-  signal \sync_counter_reg_n_0_[1]\ : STD_LOGIC;
-  signal \sync_counter_reg_n_0_[2]\ : STD_LOGIC;
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of \FIFODec_BU_reg[0][0]\ : label is "LD";
   attribute XILINX_TRANSFORM_PINMAP : string;
@@ -29342,8 +29340,8 @@ architecture STRUCTURE of \design_1_SDF_Top_0_0_SDF_Stage__parameterized3\ is
   attribute XILINX_LEGACY_PRIM of \InDec_FIFOMux_reg[1][7]\ : label is "LD";
   attribute XILINX_TRANSFORM_PINMAP of \InDec_FIFOMux_reg[1][7]\ : label is "VCC:GE GND:CLR";
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \data_counter[0]_i_1__0\ : label is "soft_lutpair98";
-  attribute SOFT_HLUTNM of \data_counter[1]_i_1__0\ : label is "soft_lutpair98";
+  attribute SOFT_HLUTNM of \data_counter[0]_i_1__1\ : label is "soft_lutpair98";
+  attribute SOFT_HLUTNM of \data_counter[1]_i_1__1\ : label is "soft_lutpair98";
   attribute XILINX_LEGACY_PRIM of halfway_reg : label is "LDC";
   attribute XILINX_TRANSFORM_PINMAP of halfway_reg : label is "VCC:GE";
   attribute SOFT_HLUTNM of \state_i_1__0\ : label is "soft_lutpair97";
@@ -30920,26 +30918,26 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized3\
       clk => clk,
       reset => reset
     );
-\data_counter[0]_i_1__0\: unisim.vcomponents.LUT3
+\data_counter[0]_i_1__1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"78"
+      INIT => X"48"
     )
         port map (
-      I0 => go_data_counter,
-      I1 => state_reg_n_0,
-      I2 => \data_counter_reg_n_0_[0]\,
-      O => \data_counter[0]_i_1__0_n_0\
-    );
-\data_counter[1]_i_1__0\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7F80"
-    )
-        port map (
-      I0 => \data_counter_reg_n_0_[0]\,
+      I0 => state,
       I1 => go_data_counter,
-      I2 => state_reg_n_0,
-      I3 => \data_counter_reg_n_0_[1]\,
-      O => \data_counter[1]_i_1__0_n_0\
+      I2 => data_counter(0),
+      O => \data_counter[0]_i_1__1_n_0\
+    );
+\data_counter[1]_i_1__1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7080"
+    )
+        port map (
+      I0 => data_counter(0),
+      I1 => state,
+      I2 => go_data_counter,
+      I3 => data_counter(1),
+      O => \data_counter[1]_i_1__1_n_0\
     );
 \data_counter_pp1_reg[0]\: unisim.vcomponents.FDCE
     generic map(
@@ -30949,7 +30947,7 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized3\
       C => clk,
       CE => '1',
       CLR => reset,
-      D => \data_counter_reg_n_0_[0]\,
+      D => data_counter(0),
       Q => data_counter_pp1(0)
     );
 \data_counter_pp1_reg[1]\: unisim.vcomponents.FDCE
@@ -30960,7 +30958,7 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized3\
       C => clk,
       CE => '1',
       CLR => reset,
-      D => \data_counter_reg_n_0_[1]\,
+      D => data_counter(1),
       Q => data_counter_pp1(1)
     );
 \data_counter_ppF_reg[0]\: unisim.vcomponents.FDCE
@@ -30993,8 +30991,8 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized3\
       C => clk,
       CE => '1',
       CLR => reset,
-      D => \data_counter[0]_i_1__0_n_0\,
-      Q => \data_counter_reg_n_0_[0]\
+      D => \data_counter[0]_i_1__1_n_0\,
+      Q => data_counter(0)
     );
 \data_counter_reg[1]\: unisim.vcomponents.FDCE
     generic map(
@@ -31004,8 +31002,8 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized3\
       C => clk,
       CE => '1',
       CLR => reset,
-      D => \data_counter[1]_i_1__0_n_0\,
-      Q => \data_counter_reg_n_0_[1]\
+      D => \data_counter[1]_i_1__1_n_0\,
+      Q => data_counter(1)
     );
 \data_out_ppF_reg[0][0]\: unisim.vcomponents.FDCE
     generic map(
@@ -31222,8 +31220,8 @@ halfway_reg: unisim.vcomponents.LDCE
     )
         port map (
       CLR => \halfway_reg_i_1__1_n_0\,
-      D => \data_counter_reg_n_0_[1]\,
-      G => \data_counter_reg_n_0_[1]\,
+      D => data_counter(1),
+      G => data_counter(1),
       GE => '1',
       Q => halfway
     );
@@ -31233,7 +31231,7 @@ halfway_reg: unisim.vcomponents.LDCE
     )
         port map (
       I0 => reset,
-      I1 => \data_counter_reg_n_0_[1]\,
+      I1 => data_counter(1),
       O => \halfway_reg_i_1__1_n_0\
     );
 \i__carry__0_i_1__14\: unisim.vcomponents.LUT2
@@ -31310,14 +31308,14 @@ halfway_reg: unisim.vcomponents.LDCE
     );
 \state_i_1__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFF8000"
+      INIT => X"FF800000"
     )
         port map (
-      I0 => go_data_counter,
-      I1 => \sync_counter_reg_n_0_[2]\,
-      I2 => \sync_counter_reg_n_0_[1]\,
-      I3 => \sync_counter_reg_n_0_[0]\,
-      I4 => state_reg_n_0,
+      I0 => sync_counter(2),
+      I1 => sync_counter(1),
+      I2 => sync_counter(0),
+      I3 => state,
+      I4 => go_data_counter,
       O => \state_i_1__0_n_0\
     );
 state_reg: unisim.vcomponents.FDCE
@@ -31329,39 +31327,39 @@ state_reg: unisim.vcomponents.FDCE
       CE => '1',
       CLR => reset,
       D => \state_i_1__0_n_0\,
-      Q => state_reg_n_0
+      Q => state
     );
 \sync_counter[0]_i_1__0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"D2"
+      INIT => X"82"
     )
         port map (
       I0 => go_data_counter,
-      I1 => state_reg_n_0,
-      I2 => \sync_counter_reg_n_0_[0]\,
+      I1 => state,
+      I2 => sync_counter(0),
       O => \sync_counter[0]_i_1__0_n_0\
     );
 \sync_counter[1]_i_1__0\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"F708"
+      INIT => X"C408"
     )
         port map (
-      I0 => \sync_counter_reg_n_0_[0]\,
+      I0 => sync_counter(0),
       I1 => go_data_counter,
-      I2 => state_reg_n_0,
-      I3 => \sync_counter_reg_n_0_[1]\,
+      I2 => state,
+      I3 => sync_counter(1),
       O => \sync_counter[1]_i_1__0_n_0\
     );
 \sync_counter[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FF7F0080"
+      INIT => X"F0700080"
     )
         port map (
-      I0 => \sync_counter_reg_n_0_[1]\,
-      I1 => \sync_counter_reg_n_0_[0]\,
+      I0 => sync_counter(0),
+      I1 => sync_counter(1),
       I2 => go_data_counter,
-      I3 => state_reg_n_0,
-      I4 => \sync_counter_reg_n_0_[2]\,
+      I3 => state,
+      I4 => sync_counter(2),
       O => \sync_counter[2]_i_1_n_0\
     );
 \sync_counter_reg[0]\: unisim.vcomponents.FDCE
@@ -31373,7 +31371,7 @@ state_reg: unisim.vcomponents.FDCE
       CE => '1',
       CLR => reset,
       D => \sync_counter[0]_i_1__0_n_0\,
-      Q => \sync_counter_reg_n_0_[0]\
+      Q => sync_counter(0)
     );
 \sync_counter_reg[1]\: unisim.vcomponents.FDCE
     generic map(
@@ -31384,7 +31382,7 @@ state_reg: unisim.vcomponents.FDCE
       CE => '1',
       CLR => reset,
       D => \sync_counter[1]_i_1__0_n_0\,
-      Q => \sync_counter_reg_n_0_[1]\
+      Q => sync_counter(1)
     );
 \sync_counter_reg[2]\: unisim.vcomponents.FDCE
     generic map(
@@ -31395,7 +31393,7 @@ state_reg: unisim.vcomponents.FDCE
       CE => '1',
       CLR => reset,
       D => \sync_counter[2]_i_1_n_0\,
-      Q => \sync_counter_reg_n_0_[2]\
+      Q => sync_counter(2)
     );
 end STRUCTURE;
 library IEEE;
@@ -31406,8 +31404,8 @@ entity \design_1_SDF_Top_0_0_SDF_Stage__parameterized5\ is
   port (
     Re_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
     Im_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    reset : in STD_LOGIC;
     go_data_counter : in STD_LOGIC;
+    reset : in STD_LOGIC;
     clk : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \Data_in_ppF_reg[1][7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
@@ -31533,7 +31531,7 @@ architecture STRUCTURE of \design_1_SDF_Top_0_0_SDF_Stage__parameterized5\ is
   signal SR_FIFO_inst_n_7 : STD_LOGIC;
   signal SR_FIFO_inst_n_8 : STD_LOGIC;
   signal SR_FIFO_inst_n_9 : STD_LOGIC;
-  signal \data_counter[0]_i_1__1_n_0\ : STD_LOGIC;
+  signal \data_counter[0]_i_1__2_n_0\ : STD_LOGIC;
   signal data_counter_pp1 : STD_LOGIC;
   signal data_counter_ppF : STD_LOGIC;
   signal \data_counter_reg_n_0_[0]\ : STD_LOGIC;
@@ -31554,12 +31552,12 @@ architecture STRUCTURE of \design_1_SDF_Top_0_0_SDF_Stage__parameterized5\ is
   signal \i__carry__0_i_4__8_n_0\ : STD_LOGIC;
   signal state : STD_LOGIC;
   signal \state_i_1__1_n_0\ : STD_LOGIC;
+  signal sync_counter : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \sync_counter[0]_i_1__1_n_0\ : STD_LOGIC;
   signal \sync_counter[1]_i_1__1_n_0\ : STD_LOGIC;
   signal \sync_counter[2]_i_1__0_n_0\ : STD_LOGIC;
   signal \sync_counter[3]_i_1_n_0\ : STD_LOGIC;
   signal \sync_counter[3]_i_2_n_0\ : STD_LOGIC;
-  signal sync_counter_reg : STD_LOGIC_VECTOR ( 3 downto 0 );
   attribute XILINX_LEGACY_PRIM : string;
   attribute XILINX_LEGACY_PRIM of \FIFODec_BU_reg[0][0]\ : label is "LD";
   attribute XILINX_TRANSFORM_PINMAP : string;
@@ -31728,8 +31726,8 @@ architecture STRUCTURE of \design_1_SDF_Top_0_0_SDF_Stage__parameterized5\ is
   attribute SOFT_HLUTNM : string;
   attribute SOFT_HLUTNM of \sync_counter[0]_i_1__1\ : label is "soft_lutpair125";
   attribute SOFT_HLUTNM of \sync_counter[1]_i_1__1\ : label is "soft_lutpair124";
-  attribute SOFT_HLUTNM of \sync_counter[2]_i_1__0\ : label is "soft_lutpair125";
-  attribute SOFT_HLUTNM of \sync_counter[3]_i_2\ : label is "soft_lutpair124";
+  attribute SOFT_HLUTNM of \sync_counter[2]_i_1__0\ : label is "soft_lutpair124";
+  attribute SOFT_HLUTNM of \sync_counter[3]_i_2\ : label is "soft_lutpair125";
 begin
 \BU_ROT_ppF_reg[0][0]\: unisim.vcomponents.FDCE
     generic map(
@@ -33300,15 +33298,15 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized5\
       clk => clk,
       reset => reset
     );
-\data_counter[0]_i_1__1\: unisim.vcomponents.LUT3
+\data_counter[0]_i_1__2\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"78"
+      INIT => X"48"
     )
         port map (
       I0 => state,
       I1 => go_data_counter,
       I2 => \data_counter_reg_n_0_[0]\,
-      O => \data_counter[0]_i_1__1_n_0\
+      O => \data_counter[0]_i_1__2_n_0\
     );
 \data_counter_pp1_reg[0]\: unisim.vcomponents.FDCE
     generic map(
@@ -33340,7 +33338,7 @@ SR_FIFO_inst: entity work.\design_1_SDF_Top_0_0_SR_FIFO__parameterized5\
       C => clk,
       CE => '1',
       CLR => reset,
-      D => \data_counter[0]_i_1__1_n_0\,
+      D => \data_counter[0]_i_1__2_n_0\,
       Q => \data_counter_reg_n_0_[0]\
     );
 \data_out_ppF_reg[0][0]\: unisim.vcomponents.FDCE
@@ -33646,15 +33644,15 @@ halfway_reg: unisim.vcomponents.LDCE
     );
 \state_i_1__1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"ECECECCCECCCECCC"
+      INIT => X"FFFFEA0000000000"
     )
         port map (
-      I0 => go_data_counter,
-      I1 => state,
-      I2 => sync_counter_reg(3),
-      I3 => sync_counter_reg(2),
-      I4 => sync_counter_reg(1),
-      I5 => sync_counter_reg(0),
+      I0 => sync_counter(2),
+      I1 => sync_counter(1),
+      I2 => sync_counter(0),
+      I3 => sync_counter(3),
+      I4 => state,
+      I5 => go_data_counter,
       O => \state_i_1__1_n_0\
     );
 state_reg: unisim.vcomponents.FDCE
@@ -33668,56 +33666,60 @@ state_reg: unisim.vcomponents.FDCE
       D => \state_i_1__1_n_0\,
       Q => state
     );
-\sync_counter[0]_i_1__1\: unisim.vcomponents.LUT3
+\sync_counter[0]_i_1__1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"15"
+      INIT => X"0222"
     )
         port map (
-      I0 => sync_counter_reg(0),
-      I1 => sync_counter_reg(2),
-      I2 => sync_counter_reg(3),
+      I0 => go_data_counter,
+      I1 => sync_counter(0),
+      I2 => sync_counter(2),
+      I3 => sync_counter(3),
       O => \sync_counter[0]_i_1__1_n_0\
     );
-\sync_counter[1]_i_1__1\: unisim.vcomponents.LUT4
+\sync_counter[1]_i_1__1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0666"
+      INIT => X"00282828"
     )
         port map (
-      I0 => sync_counter_reg(0),
-      I1 => sync_counter_reg(1),
-      I2 => sync_counter_reg(2),
-      I3 => sync_counter_reg(3),
+      I0 => go_data_counter,
+      I1 => sync_counter(0),
+      I2 => sync_counter(1),
+      I3 => sync_counter(2),
+      I4 => sync_counter(3),
       O => \sync_counter[1]_i_1__1_n_0\
     );
-\sync_counter[2]_i_1__0\: unisim.vcomponents.LUT4
+\sync_counter[2]_i_1__0\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0078"
+      INIT => X"00002A80"
     )
         port map (
-      I0 => sync_counter_reg(0),
-      I1 => sync_counter_reg(1),
-      I2 => sync_counter_reg(2),
-      I3 => sync_counter_reg(3),
+      I0 => go_data_counter,
+      I1 => sync_counter(0),
+      I2 => sync_counter(1),
+      I3 => sync_counter(2),
+      I4 => sync_counter(3),
       O => \sync_counter[2]_i_1__0_n_0\
     );
 \sync_counter[3]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"2"
+      INIT => X"7"
     )
         port map (
       I0 => go_data_counter,
       I1 => state,
       O => \sync_counter[3]_i_1_n_0\
     );
-\sync_counter[3]_i_2\: unisim.vcomponents.LUT4
+\sync_counter[3]_i_2\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"0780"
+      INIT => X"002A8000"
     )
         port map (
-      I0 => sync_counter_reg(0),
-      I1 => sync_counter_reg(1),
-      I2 => sync_counter_reg(2),
-      I3 => sync_counter_reg(3),
+      I0 => go_data_counter,
+      I1 => sync_counter(1),
+      I2 => sync_counter(0),
+      I3 => sync_counter(2),
+      I4 => sync_counter(3),
       O => \sync_counter[3]_i_2_n_0\
     );
 \sync_counter_reg[0]\: unisim.vcomponents.FDCE
@@ -33729,7 +33731,7 @@ state_reg: unisim.vcomponents.FDCE
       CE => \sync_counter[3]_i_1_n_0\,
       CLR => reset,
       D => \sync_counter[0]_i_1__1_n_0\,
-      Q => sync_counter_reg(0)
+      Q => sync_counter(0)
     );
 \sync_counter_reg[1]\: unisim.vcomponents.FDCE
     generic map(
@@ -33740,7 +33742,7 @@ state_reg: unisim.vcomponents.FDCE
       CE => \sync_counter[3]_i_1_n_0\,
       CLR => reset,
       D => \sync_counter[1]_i_1__1_n_0\,
-      Q => sync_counter_reg(1)
+      Q => sync_counter(1)
     );
 \sync_counter_reg[2]\: unisim.vcomponents.FDCE
     generic map(
@@ -33751,7 +33753,7 @@ state_reg: unisim.vcomponents.FDCE
       CE => \sync_counter[3]_i_1_n_0\,
       CLR => reset,
       D => \sync_counter[2]_i_1__0_n_0\,
-      Q => sync_counter_reg(2)
+      Q => sync_counter(2)
     );
 \sync_counter_reg[3]\: unisim.vcomponents.FDCE
     generic map(
@@ -33762,7 +33764,7 @@ state_reg: unisim.vcomponents.FDCE
       CE => \sync_counter[3]_i_1_n_0\,
       CLR => reset,
       D => \sync_counter[3]_i_2_n_0\,
-      Q => sync_counter_reg(3)
+      Q => sync_counter(3)
     );
 end STRUCTURE;
 library IEEE;

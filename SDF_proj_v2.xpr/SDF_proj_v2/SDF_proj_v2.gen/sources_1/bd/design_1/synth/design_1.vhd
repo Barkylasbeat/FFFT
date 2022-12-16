@@ -1,8 +1,8 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
---Date        : Fri Dec 16 14:14:41 2022
---Host        : GdF-intercettazioni running 64-bit major release  (build 9200)
+--Date        : Fri Dec 16 21:31:46 2022
+--Host        : PcFraLenzi running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
 --Purpose     : IP block netlist
@@ -65,29 +65,6 @@ architecture STRUCTURE of design_1 is
     s00_axis_tx_tvalid : in STD_LOGIC
   );
   end component design_1_AXI4Stream_UART_0_2;
-  component design_1_SDF_Top_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    go_data_counter : in STD_LOGIC;
-    Re_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Im_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Re_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    Im_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 )
-  );
-  end component design_1_SDF_Top_0_0;
-  component design_1_AXI_Output_Interface_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    reset : in STD_LOGIC;
-    Re_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Im_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
-    data_received : in STD_LOGIC
-  );
-  end component design_1_AXI_Output_Interface_0_0;
   component design_1_AXI_Input_Interface_0_1 is
   port (
     clk : in STD_LOGIC;
@@ -101,6 +78,29 @@ architecture STRUCTURE of design_1 is
     go_data_counter : out STD_LOGIC
   );
   end component design_1_AXI_Input_Interface_0_1;
+  component design_1_AXI_Output_Interface_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    Re_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Im_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    m_axis_tvalid : out STD_LOGIC;
+    m_axis_tready : in STD_LOGIC;
+    data_received : in STD_LOGIC
+  );
+  end component design_1_AXI_Output_Interface_0_0;
+  component design_1_SDF_Top_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    reset : in STD_LOGIC;
+    go_data_counter : in STD_LOGIC;
+    Re_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Im_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    Re_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    Im_Data_out : out STD_LOGIC_VECTOR ( 7 downto 0 )
+  );
+  end component design_1_SDF_Top_0_0;
   signal AXI4Stream_UART_0_M00_AXIS_RX_TDATA : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal AXI4Stream_UART_0_M00_AXIS_RX_TREADY : STD_LOGIC;
   signal AXI4Stream_UART_0_M00_AXIS_RX_TVALID : STD_LOGIC;

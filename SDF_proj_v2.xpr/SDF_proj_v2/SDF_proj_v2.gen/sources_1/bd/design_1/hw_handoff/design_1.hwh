@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 16 14:14:41 2022" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Dec 16 21:31:47 2022" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:basys3:part0:1.1" DEVICE="7a35t" NAME="design_1" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -969,9 +969,9 @@
             <CONNECTION INSTANCE="AXI4Stream_UART_0" PORT="clk_uart"/>
             <CONNECTION INSTANCE="AXI4Stream_UART_0" PORT="m00_axis_rx_aclk"/>
             <CONNECTION INSTANCE="AXI4Stream_UART_0" PORT="s00_axis_tx_aclk"/>
-            <CONNECTION INSTANCE="SDF_Top_0" PORT="clk"/>
-            <CONNECTION INSTANCE="AXI_Output_Interface_0" PORT="clk"/>
             <CONNECTION INSTANCE="AXI_Input_Interface_0" PORT="clk"/>
+            <CONNECTION INSTANCE="AXI_Output_Interface_0" PORT="clk"/>
+            <CONNECTION INSTANCE="SDF_Top_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_locked">
@@ -1024,9 +1024,9 @@
         <PORT DIR="O" LEFT="0" NAME="peripheral_reset" POLARITY="ACTIVE_HIGH" RIGHT="0" SIGIS="rst" SIGNAME="rst_clk_wiz_100M_peripheral_reset">
           <CONNECTIONS>
             <CONNECTION INSTANCE="AXI4Stream_UART_0" PORT="rst"/>
-            <CONNECTION INSTANCE="SDF_Top_0" PORT="reset"/>
-            <CONNECTION INSTANCE="AXI_Output_Interface_0" PORT="reset"/>
             <CONNECTION INSTANCE="AXI_Input_Interface_0" PORT="reset"/>
+            <CONNECTION INSTANCE="AXI_Output_Interface_0" PORT="reset"/>
+            <CONNECTION INSTANCE="SDF_Top_0" PORT="reset"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst"/>

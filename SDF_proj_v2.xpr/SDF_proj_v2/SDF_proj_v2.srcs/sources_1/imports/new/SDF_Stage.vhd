@@ -358,6 +358,10 @@ begin
                         data_counter <= 0;
                     end if;
                 end if;
+            else
+                state           <= wait_sync;
+                sync_counter    <= 0;
+                data_counter    <= 0;
             end if;
         end if;
     end process;
