@@ -115,6 +115,18 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config  -id {Vivado 12-1790}  -string {{Evaluation} {features} {should} {NOT} {be} {used} {in} {production} {systems.}}  -new_severity {WARNING} 
+set_msg_config  -id {Designutils 20-3303}  -string {{HDPYFinalizeIO}}  -new_severity {INFO} 
+set_msg_config  -id {Place 30-73}  -string {{axi_spi}}  -new_severity {WARNING} 
+set_msg_config  -string {{PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY}}  -new_severity {WARNING} 
+set_msg_config  -id {BD 41-1343}  -new_severity {WARNING} 
+set_msg_config  -id {BD 41-1306}  -new_severity {WARNING} 
+set_msg_config  -id {BD 41-1276}  -severity {CRITICAL WARNING}  -new_severity {ERROR} 
+set_msg_config  -id {IP_Flow 19-3656}  -new_severity {INFO} 
+set_msg_config  -id {IP_Flow 19-4623}  -new_severity {INFO} 
+set_msg_config  -id {IP_Flow 19-459}  -new_severity {INFO} 
+set_msg_config  -id {Synth 8-3331}  -new_severity {INFO} 
+set_msg_config  -id {Synth 8-2490}  -new_severity {WARNING} 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }

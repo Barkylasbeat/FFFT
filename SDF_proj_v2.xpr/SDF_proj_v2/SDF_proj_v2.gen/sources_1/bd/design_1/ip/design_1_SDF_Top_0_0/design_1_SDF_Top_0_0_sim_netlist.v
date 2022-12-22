@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Fri Dec 16 21:33:18 2022
+// Date        : Fri Dec 16 21:33:17 2022
 // Host        : PcFraLenzi running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_SDF_Top_0_0 -prefix
+//               design_1_SDF_Top_0_0_ design_1_SDF_Top_0_0_sim_netlist.v
 // Design      : design_1_SDF_Top_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,44 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_SDF_Top_0_0,SDF_Top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "SDF_Top,Vivado 2022.1" *) 
-(* NotValidForBitStream *)
-module design_1_SDF_Top_0_0
-   (clk,
-    reset,
-    go_data_counter,
-    Re_Data_in,
-    Im_Data_in,
-    Re_Data_out,
-    Im_Data_out);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, INSERT_VIP 0" *) input clk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
-  input go_data_counter;
-  input [7:0]Re_Data_in;
-  input [7:0]Im_Data_in;
-  output [7:0]Re_Data_out;
-  output [7:0]Im_Data_out;
-
-  wire [7:0]Im_Data_in;
-  wire [7:0]Im_Data_out;
-  wire [7:0]Re_Data_in;
-  wire [7:0]Re_Data_out;
-  wire clk;
-  wire go_data_counter;
-  wire reset;
-
-  design_1_SDF_Top_0_0_SDF_Top U0
-       (.Im_Data_in(Im_Data_in),
-        .Im_Data_out(Im_Data_out),
-        .Re_Data_in(Re_Data_in),
-        .Re_Data_out(Re_Data_out),
-        .clk(clk),
-        .go_data_counter(go_data_counter),
-        .reset(reset));
-endmodule
-
-(* ORIG_REF_NAME = "R2_BU" *) 
 module design_1_SDF_Top_0_0_R2_BU
    (D,
     reset_0,
@@ -2505,7 +2467,6 @@ module design_1_SDF_Top_0_0_R2_BU_4
         .O(i__carry_i_4__8_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "Rotator" *) 
 module design_1_SDF_Top_0_0_Rotator
    (D,
     \Im_Re_reg[4]_0 ,
@@ -16122,7 +16083,6 @@ module design_1_SDF_Top_0_0_Rotator_5
         .O(i___84_carry_i_8__1_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "SDF_Stage" *) 
 module design_1_SDF_Top_0_0_SDF_Stage
    (\FIFO_reg[6][0][7]_U0_SDF_stage_wrap_c_5 ,
     \FIFO_reg[6][0][6]_U0_SDF_stage_wrap_c_5 ,
@@ -23522,7 +23482,6 @@ module design_1_SDF_Top_0_0_SDF_Stage__parameterized5
         .Q(sync_counter[3]));
 endmodule
 
-(* ORIG_REF_NAME = "SDF_Top" *) 
 module design_1_SDF_Top_0_0_SDF_Top
    (Re_Data_out,
     Im_Data_out,
@@ -23988,7 +23947,6 @@ module design_1_SDF_Top_0_0_SDF_Top
         .O(SDF_stage_wrap_gate__9_n_0));
 endmodule
 
-(* ORIG_REF_NAME = "SR_FIFO" *) 
 module design_1_SDF_Top_0_0_SR_FIFO
    (\FIFO_reg[6][0][7]_U0_SDF_stage_wrap_c_5_0 ,
     D,
@@ -25660,6 +25618,43 @@ module design_1_SDF_Top_0_0_SR_FIFO__parameterized5
        (.I0(\arg_inferred__0/i__carry__0 [0]),
         .I1(\arg_inferred__0/i__carry__0_0 [0]),
         .O(\Data_in_ppF_reg[1][7] [0]));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_SDF_Top_0_0,SDF_Top,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "SDF_Top,Vivado 2022.1" *) 
+(* NotValidForBitStream *)
+module design_1_SDF_Top_0_0
+   (clk,
+    reset,
+    go_data_counter,
+    Re_Data_in,
+    Im_Data_in,
+    Re_Data_out,
+    Im_Data_out);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, INSERT_VIP 0" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
+  input go_data_counter;
+  input [7:0]Re_Data_in;
+  input [7:0]Im_Data_in;
+  output [7:0]Re_Data_out;
+  output [7:0]Im_Data_out;
+
+  wire [7:0]Im_Data_in;
+  wire [7:0]Im_Data_out;
+  wire [7:0]Re_Data_in;
+  wire [7:0]Re_Data_out;
+  wire clk;
+  wire go_data_counter;
+  wire reset;
+
+  design_1_SDF_Top_0_0_SDF_Top U0
+       (.Im_Data_in(Im_Data_in),
+        .Im_Data_out(Im_Data_out),
+        .Re_Data_in(Re_Data_in),
+        .Re_Data_out(Re_Data_out),
+        .clk(clk),
+        .go_data_counter(go_data_counter),
+        .reset(reset));
 endmodule
 `ifndef GLBL
 `define GLBL

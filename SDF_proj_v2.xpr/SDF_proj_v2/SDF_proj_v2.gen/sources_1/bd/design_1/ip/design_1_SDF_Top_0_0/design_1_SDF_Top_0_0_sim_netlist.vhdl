@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Fri Dec 16 21:33:18 2022
+-- Date        : Fri Dec 16 21:33:17 2022
 -- Host        : PcFraLenzi running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_SDF_Top_0_0 -prefix
+--               design_1_SDF_Top_0_0_ design_1_SDF_Top_0_0_sim_netlist.vhdl
 -- Design      : design_1_SDF_Top_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -35,8 +35,6 @@ entity design_1_SDF_Top_0_0_R2_BU is
     \FIFO_reg[0][0][7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \FIFO_reg[0][1][7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_SDF_Top_0_0_R2_BU : entity is "R2_BU";
 end design_1_SDF_Top_0_0_R2_BU;
 
 architecture STRUCTURE of design_1_SDF_Top_0_0_R2_BU is
@@ -3271,8 +3269,6 @@ entity design_1_SDF_Top_0_0_Rotator is
     \data_out_ppF_reg[0][7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \data_out_ppF_reg[1][7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_SDF_Top_0_0_Rotator : entity is "Rotator";
 end design_1_SDF_Top_0_0_Rotator;
 
 architecture STRUCTURE of design_1_SDF_Top_0_0_Rotator is
@@ -22256,8 +22252,6 @@ entity design_1_SDF_Top_0_0_SR_FIFO is
     \arg_inferred__0/i__carry__0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     \arg_inferred__0/i__carry__0_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_SDF_Top_0_0_SR_FIFO : entity is "SR_FIFO";
 end design_1_SDF_Top_0_0_SR_FIFO;
 
 architecture STRUCTURE of design_1_SDF_Top_0_0_SR_FIFO is
@@ -24127,8 +24121,6 @@ entity design_1_SDF_Top_0_0_SDF_Stage is
     Im_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     go_data_counter : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_SDF_Top_0_0_SDF_Stage : entity is "SDF_Stage";
 end design_1_SDF_Top_0_0_SDF_Stage;
 
 architecture STRUCTURE of design_1_SDF_Top_0_0_SDF_Stage is
@@ -33781,8 +33773,6 @@ entity design_1_SDF_Top_0_0_SDF_Top is
     Re_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 );
     Im_Data_in : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_SDF_Top_0_0_SDF_Top : entity is "SDF_Top";
 end design_1_SDF_Top_0_0_SDF_Top;
 
 architecture STRUCTURE of design_1_SDF_Top_0_0_SDF_Top is

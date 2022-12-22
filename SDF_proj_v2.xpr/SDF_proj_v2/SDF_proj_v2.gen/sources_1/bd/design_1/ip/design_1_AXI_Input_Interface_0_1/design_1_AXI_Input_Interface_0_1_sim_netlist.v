@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
 // Date        : Fri Dec 16 14:15:38 2022
 // Host        : GdF-intercettazioni running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI_Input_Interface_0_1/design_1_AXI_Input_Interface_0_1_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_AXI_Input_Interface_0_1 -prefix
+//               design_1_AXI_Input_Interface_0_1_ design_1_AXI_Input_Interface_0_1_sim_netlist.v
 // Design      : design_1_AXI_Input_Interface_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -12,52 +12,6 @@
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CHECK_LICENSE_TYPE = "design_1_AXI_Input_Interface_0_1,AXI_Input_Interface,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
-(* x_core_info = "AXI_Input_Interface,Vivado 2022.1" *) 
-(* NotValidForBitStream *)
-module design_1_AXI_Input_Interface_0_1
-   (clk,
-    reset,
-    s_axis_tdata,
-    s_axis_tvalid,
-    s_axis_tready,
-    Re_data,
-    Im_data,
-    sending_in,
-    go_data_counter);
-  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF s_axis, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, INSERT_VIP 0" *) input clk;
-  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axis, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) input [7:0]s_axis_tdata;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis TVALID" *) input s_axis_tvalid;
-  (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis TREADY" *) output s_axis_tready;
-  output [7:0]Re_data;
-  output [7:0]Im_data;
-  output sending_in;
-  output go_data_counter;
-
-  wire [7:0]Im_data;
-  wire [7:0]Re_data;
-  wire clk;
-  wire go_data_counter;
-  wire reset;
-  wire [7:0]s_axis_tdata;
-  wire s_axis_tready;
-  wire s_axis_tvalid;
-  wire sending_in;
-
-  design_1_AXI_Input_Interface_0_1_AXI_Input_Interface U0
-       (.Im_data(Im_data),
-        .Re_data(Re_data),
-        .clk(clk),
-        .go_data_counter(go_data_counter),
-        .reset(reset),
-        .s_axis_tdata(s_axis_tdata),
-        .s_axis_tready(s_axis_tready),
-        .s_axis_tvalid(s_axis_tvalid),
-        .sending_in(sending_in));
-endmodule
-
-(* ORIG_REF_NAME = "AXI_Input_Interface" *) 
 module design_1_AXI_Input_Interface_0_1_AXI_Input_Interface
    (s_axis_tready,
     Re_data,
@@ -4002,6 +3956,51 @@ module design_1_AXI_Input_Interface_0_1_AXI_Input_Interface
         .CLR(reset),
         .D(sending_in_i_1_n_0),
         .Q(sending_in));
+endmodule
+
+(* CHECK_LICENSE_TYPE = "design_1_AXI_Input_Interface_0_1,AXI_Input_Interface,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 
+(* x_core_info = "AXI_Input_Interface,Vivado 2022.1" *) 
+(* NotValidForBitStream *)
+module design_1_AXI_Input_Interface_0_1
+   (clk,
+    reset,
+    s_axis_tdata,
+    s_axis_tvalid,
+    s_axis_tready,
+    Re_data,
+    Im_data,
+    sending_in,
+    go_data_counter);
+  (* x_interface_info = "xilinx.com:signal:clock:1.0 clk CLK" *) (* x_interface_parameter = "XIL_INTERFACENAME clk, ASSOCIATED_BUSIF s_axis, ASSOCIATED_RESET reset, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, INSERT_VIP 0" *) input clk;
+  (* x_interface_info = "xilinx.com:signal:reset:1.0 reset RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input reset;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis TDATA" *) (* x_interface_parameter = "XIL_INTERFACENAME s_axis, TDATA_NUM_BYTES 1, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) input [7:0]s_axis_tdata;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis TVALID" *) input s_axis_tvalid;
+  (* x_interface_info = "xilinx.com:interface:axis:1.0 s_axis TREADY" *) output s_axis_tready;
+  output [7:0]Re_data;
+  output [7:0]Im_data;
+  output sending_in;
+  output go_data_counter;
+
+  wire [7:0]Im_data;
+  wire [7:0]Re_data;
+  wire clk;
+  wire go_data_counter;
+  wire reset;
+  wire [7:0]s_axis_tdata;
+  wire s_axis_tready;
+  wire s_axis_tvalid;
+  wire sending_in;
+
+  design_1_AXI_Input_Interface_0_1_AXI_Input_Interface U0
+       (.Im_data(Im_data),
+        .Re_data(Re_data),
+        .clk(clk),
+        .go_data_counter(go_data_counter),
+        .reset(reset),
+        .s_axis_tdata(s_axis_tdata),
+        .s_axis_tready(s_axis_tready),
+        .s_axis_tvalid(s_axis_tvalid),
+        .sending_in(sending_in));
 endmodule
 `ifndef GLBL
 `define GLBL

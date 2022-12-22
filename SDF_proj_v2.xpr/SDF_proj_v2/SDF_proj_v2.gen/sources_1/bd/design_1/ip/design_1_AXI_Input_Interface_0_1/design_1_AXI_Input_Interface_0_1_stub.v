@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
 // Date        : Fri Dec 16 14:15:38 2022
 // Host        : GdF-intercettazioni running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.gen/sources_1/bd/design_1/ip/design_1_AXI_Input_Interface_0_1/design_1_AXI_Input_Interface_0_1_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_AXI_Input_Interface_0_1 -prefix
+//               design_1_AXI_Input_Interface_0_1_ design_1_AXI_Input_Interface_0_1_stub.v
 // Design      : design_1_AXI_Input_Interface_0_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcpg236-1
