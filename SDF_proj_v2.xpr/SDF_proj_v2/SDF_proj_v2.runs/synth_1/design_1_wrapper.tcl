@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 1
 set_msg_config  -id {Vivado 12-1790}  -string {{Evaluation} {features} {should} {NOT} {be} {used} {in} {production} {systems.}}  -new_severity {WARNING} 
 set_msg_config  -id {Designutils 20-3303}  -string {{HDPYFinalizeIO}}  -new_severity {INFO} 
 set_msg_config  -id {Place 30-73}  -string {{axi_spi}}  -new_severity {WARNING} 
