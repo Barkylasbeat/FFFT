@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
--- Date        : Thu Dec 29 12:46:30 2022
+-- Date        : Thu Dec 29 17:27:02 2022
 -- Host        : PcFraLenzi running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0_stub.vhdl
+--               c:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0_stub.vhdl
 -- Design      : design_1_SDF_Top_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7a35tcpg236-1

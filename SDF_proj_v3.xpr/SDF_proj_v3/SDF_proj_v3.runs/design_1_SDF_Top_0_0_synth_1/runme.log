@@ -20,142 +20,382 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 24768
+INFO: [Synth 8-7075] Helper process launched with PID 10108
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1294.398 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1294.891 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_SDF_Top_0_0' [c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/synth/design_1_SDF_Top_0_0.vhd:68]
-	Parameter FFT_TOT_POINTS bound to: 16 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'design_1_SDF_Top_0_0' [c:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/synth/design_1_SDF_Top_0_0.vhd:68]
+	Parameter FFT_TOT_POINTS bound to: 4096 - type: integer 
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
 	Parameter SR_INIT bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'SDF_Top' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/new/SDF_Top.vhd:10' bound to instance 'U0' of component 'SDF_Top' [c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/synth/design_1_SDF_Top_0_0.vhd:104]
-INFO: [Synth 8-638] synthesizing module 'SDF_Top' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/new/SDF_Top.vhd:34]
-	Parameter FFT_TOT_POINTS bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'SDF_Top' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:10' bound to instance 'U0' of component 'SDF_Top' [c:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/synth/design_1_SDF_Top_0_0.vhd:104]
+INFO: [Synth 8-638] synthesizing module 'SDF_Top' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:34]
+	Parameter FFT_TOT_POINTS bound to: 4096 - type: integer 
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
 	Parameter STAGE bound to: 1 - type: integer 
 	Parameter SR_INIT bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/new/SDF_Top.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:37]
+INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:174]
-INFO: [Synth 8-638] synthesizing module 'R2_BU' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/R2_BU.vhd:36]
-INFO: [Synth 8-256] done synthesizing module 'R2_BU' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/R2_BU.vhd:36]
+INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:174]
+INFO: [Synth 8-638] synthesizing module 'R2_BU' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:36]
+INFO: [Synth 8-256] done synthesizing module 'R2_BU' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:36]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:196]
-INFO: [Synth 8-638] synthesizing module 'Rotator' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/Rotator.vhd:35]
-INFO: [Synth 8-256] done synthesizing module 'Rotator' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/Rotator.vhd:35]
+INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:196]
+INFO: [Synth 8-638] synthesizing module 'Rotator' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:35]
+INFO: [Synth 8-256] done synthesizing module 'Rotator' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:35]
 	Parameter SR_WIDTH bound to: 8 - type: integer 
-	Parameter SR_DEPTH bound to: 8 - type: integer 
+	Parameter SR_DEPTH bound to: 2048 - type: integer 
 	Parameter SR_INIT bound to: 0 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:219]
-INFO: [Synth 8-638] synthesizing module 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'SR_FIFO' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd:37]
-	Parameter ADDR_LENGTH bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'SR_FIFO' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+	Parameter ADDR_LENGTH bound to: 12 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:240]
-INFO: [Synth 8-638] synthesizing module 'TF_ROM' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'TF_ROM' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'SDF_Stage' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:37]
-	Parameter FFT_TOT_POINTS bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'TF_ROM' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'TF_ROM' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SDF_Stage' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter FFT_TOT_POINTS bound to: 4096 - type: integer 
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
 	Parameter STAGE bound to: 2 - type: integer 
 	Parameter SR_INIT bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/new/SDF_Top.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized1' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:37]
+INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized1' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:174]
+INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:174]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:196]
+INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:196]
 	Parameter SR_WIDTH bound to: 8 - type: integer 
-	Parameter SR_DEPTH bound to: 4 - type: integer 
+	Parameter SR_DEPTH bound to: 1024 - type: integer 
 	Parameter SR_INIT bound to: 0 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:219]
-INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized1' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized1' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd:37]
-	Parameter ADDR_LENGTH bound to: 3 - type: integer 
+INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized1' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized1' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+	Parameter ADDR_LENGTH bound to: 11 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:240]
-INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized1' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized1' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized1' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:37]
-	Parameter FFT_TOT_POINTS bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized1' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized1' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized1' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter FFT_TOT_POINTS bound to: 4096 - type: integer 
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
 	Parameter STAGE bound to: 3 - type: integer 
 	Parameter SR_INIT bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/new/SDF_Top.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized3' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:37]
+INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized3' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:174]
+INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:174]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:196]
+INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:196]
 	Parameter SR_WIDTH bound to: 8 - type: integer 
-	Parameter SR_DEPTH bound to: 2 - type: integer 
+	Parameter SR_DEPTH bound to: 512 - type: integer 
 	Parameter SR_INIT bound to: 0 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:219]
-INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized3' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized3' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd:37]
-	Parameter ADDR_LENGTH bound to: 2 - type: integer 
+INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized3' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized3' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+	Parameter ADDR_LENGTH bound to: 10 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:240]
-INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized3' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized3' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized3' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:37]
-	Parameter FFT_TOT_POINTS bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized3' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized3' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized3' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter FFT_TOT_POINTS bound to: 4096 - type: integer 
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
 	Parameter STAGE bound to: 4 - type: integer 
 	Parameter SR_INIT bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/new/SDF_Top.vhd:85]
-INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized5' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:37]
+INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized5' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:174]
+INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:174]
 	Parameter DATA_WIDTH bound to: 8 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:196]
+INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:196]
+	Parameter SR_WIDTH bound to: 8 - type: integer 
+	Parameter SR_DEPTH bound to: 256 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized5' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized5' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+	Parameter ADDR_LENGTH bound to: 9 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized5' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized5' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized5' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter FFT_TOT_POINTS bound to: 4096 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter STAGE bound to: 5 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized7' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:174]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:196]
+	Parameter SR_WIDTH bound to: 8 - type: integer 
+	Parameter SR_DEPTH bound to: 128 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized7' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized7' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+	Parameter ADDR_LENGTH bound to: 8 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized7' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized7' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized7' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter FFT_TOT_POINTS bound to: 4096 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter STAGE bound to: 6 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized9' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:174]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:196]
+	Parameter SR_WIDTH bound to: 8 - type: integer 
+	Parameter SR_DEPTH bound to: 64 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized9' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized9' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+	Parameter ADDR_LENGTH bound to: 7 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized9' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized9' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized9' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter FFT_TOT_POINTS bound to: 4096 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter STAGE bound to: 7 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized11' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:174]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:196]
+	Parameter SR_WIDTH bound to: 8 - type: integer 
+	Parameter SR_DEPTH bound to: 32 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized11' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized11' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+	Parameter ADDR_LENGTH bound to: 6 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized11' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized11' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized11' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter FFT_TOT_POINTS bound to: 4096 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter STAGE bound to: 8 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized13' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:174]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:196]
+	Parameter SR_WIDTH bound to: 8 - type: integer 
+	Parameter SR_DEPTH bound to: 16 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized13' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized13' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+	Parameter ADDR_LENGTH bound to: 5 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized13' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized13' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized13' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter FFT_TOT_POINTS bound to: 4096 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter STAGE bound to: 9 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized15' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:174]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:196]
+	Parameter SR_WIDTH bound to: 8 - type: integer 
+	Parameter SR_DEPTH bound to: 8 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized15' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized15' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+	Parameter ADDR_LENGTH bound to: 4 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized15' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized15' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized15' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter FFT_TOT_POINTS bound to: 4096 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter STAGE bound to: 10 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized17' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:174]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:196]
+	Parameter SR_WIDTH bound to: 8 - type: integer 
+	Parameter SR_DEPTH bound to: 4 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized17' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized17' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+	Parameter ADDR_LENGTH bound to: 3 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized17' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized17' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized17' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter FFT_TOT_POINTS bound to: 4096 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter STAGE bound to: 11 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized19' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:174]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:196]
+	Parameter SR_WIDTH bound to: 8 - type: integer 
+	Parameter SR_DEPTH bound to: 2 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized19' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized19' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+	Parameter ADDR_LENGTH bound to: 2 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized19' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized19' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized19' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter FFT_TOT_POINTS bound to: 4096 - type: integer 
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter STAGE bound to: 12 - type: integer 
+	Parameter SR_INIT bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'SDF_Stage' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:12' bound to instance 'SDF_stage_inst' of component 'SDF_Stage' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SDF_Stage__parameterized21' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'R2_BU' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/R2_BU.vhd:13' bound to instance 'BU_inst' of component 'R2_BU' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:174]
+	Parameter DATA_WIDTH bound to: 8 - type: integer 
+	Parameter TF_WIDTH bound to: 8 - type: integer 
+	Parameter PRECISION bound to: 6 - type: integer 
+INFO: [Synth 8-3491] module 'Rotator' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:11' bound to instance 'Rotator_inst' of component 'Rotator' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:196]
 	Parameter SR_WIDTH bound to: 8 - type: integer 
 	Parameter SR_DEPTH bound to: 1 - type: integer 
 	Parameter SR_INIT bound to: 0 - type: integer 
 	Parameter PRECISION bound to: 6 - type: integer 
-INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:219]
-INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized5' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized5' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SR_FIFO.vhd:37]
+INFO: [Synth 8-3491] module 'SR_FIFO' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:14' bound to instance 'SR_FIFO_inst' of component 'SR_FIFO' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:219]
+INFO: [Synth 8-638] synthesizing module 'SR_FIFO__parameterized21' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'SR_FIFO__parameterized21' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SR_FIFO.vhd:37]
 	Parameter ADDR_LENGTH bound to: 1 - type: integer 
 	Parameter TF_WIDTH bound to: 8 - type: integer 
-INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:240]
-INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized5' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized5' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/TF_ROM.vhd:44]
-INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized5' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'SDF_Top' (0#1) [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/new/SDF_Top.vhd:34]
-INFO: [Synth 8-256] done synthesizing module 'design_1_SDF_Top_0_0' (0#1) [c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/synth/design_1_SDF_Top_0_0.vhd:68]
-WARNING: [Synth 8-3936] Found unconnected internal register 'Result_reg[0]' and it is trimmed from '9' to '8' bits. [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/Rotator.vhd:58]
-WARNING: [Synth 8-3936] Found unconnected internal register 'Result_reg[1]' and it is trimmed from '9' to '8' bits. [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/Rotator.vhd:58]
+INFO: [Synth 8-3491] module 'TF_ROM' declared at 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:23' bound to instance 'TF_ROM_inst' of component 'TF_ROM' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:240]
+INFO: [Synth 8-638] synthesizing module 'TF_ROM__parameterized21' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'TF_ROM__parameterized21' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/TF_ROM.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'SDF_Stage__parameterized21' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'SDF_Top' (0#1) [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/new/SDF_Top.vhd:34]
+INFO: [Synth 8-256] done synthesizing module 'design_1_SDF_Top_0_0' (0#1) [c:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/synth/design_1_SDF_Top_0_0.vhd:68]
+WARNING: [Synth 8-3936] Found unconnected internal register 'Result_reg[0]' and it is trimmed from '9' to '8' bits. [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:58]
+WARNING: [Synth 8-3936] Found unconnected internal register 'Result_reg[1]' and it is trimmed from '9' to '8' bits. [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/Rotator.vhd:58]
 WARNING: [Synth 8-5856] 3D RAM FIFO_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
 WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  FIFO_reg 
-WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:300]
-WARNING: [Synth 8-6014] Unused sequential element sync_counter_reg was removed.  [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:289]
+WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:300]
+WARNING: [Synth 8-6014] Unused sequential element sync_counter_reg was removed.  [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:289]
+WARNING: [Synth 8-5856] 3D RAM FIFO_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  FIFO_reg 
+WARNING: [Synth 8-5856] 3D RAM FIFO_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  FIFO_reg 
+WARNING: [Synth 8-5856] 3D RAM FIFO_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  FIFO_reg 
+WARNING: [Synth 8-5856] 3D RAM FIFO_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  FIFO_reg 
+WARNING: [Synth 8-5856] 3D RAM FIFO_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  FIFO_reg 
+WARNING: [Synth 8-5856] 3D RAM FIFO_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  FIFO_reg 
+WARNING: [Synth 8-5856] 3D RAM FIFO_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  FIFO_reg 
+WARNING: [Synth 8-5856] 3D RAM FIFO_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
+WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  FIFO_reg 
 WARNING: [Synth 8-5856] 3D RAM FIFO_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
 WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  FIFO_reg 
 WARNING: [Synth 8-5856] 3D RAM FIFO_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
@@ -163,113 +403,198 @@ WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/S
 WARNING: [Synth 8-5856] 3D RAM FIFO_reg  for this pattern/configuration is not supported. This will most likely be implemented in registers
 WARNING: [Synth 8-10225] Potential Runtime issue for 3D-RAM or RAM from Record/Structs for RAM  FIFO_reg 
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1294.398 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:34 . Memory (MB): peak = 1518.945 ; gain = 224.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1294.398 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:35 . Memory (MB): peak = 1518.945 ; gain = 224.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1294.398 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:35 . Memory (MB): peak = 1518.945 ; gain = 224.055
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1294.398 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.739 . Memory (MB): peak = 1518.945 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1296.273 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1623.285 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1296.273 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1633.723 ; gain = 10.438
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1296.273 ; gain = 1.875
+Finished Constraint Validation : Time (s): cpu = 00:00:24 ; elapsed = 00:00:53 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1296.273 ; gain = 1.875
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:24 ; elapsed = 00:00:53 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1296.273 ; gain = 1.875
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:53 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:259]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:321]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:321]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:184]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:184]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:186]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:186]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:377]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:377]
-WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:259]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:321]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:321]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:184]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:184]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:186]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:186]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:377]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:377]
-WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:259]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:321]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:321]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:184]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:184]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:186]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:186]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:377]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:377]
-WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:259]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:321]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:321]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:184]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:184]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:186]
-WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:186]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:377]
-WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:259]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:259]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:259]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:259]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:259]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:259]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:259]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:259]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:259]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:259]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:259]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_OutMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:321]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:184]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'FIFODec_BU_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:186]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[0]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'InDec_FIFOMux_reg[1]' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:377]
+WARNING: [Synth 8-327] inferring latch for variable 'halfway_reg' [C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/sources_1/imports/new/SDF_Stage.vhd:259]
+INFO: [Common 17-14] Message 'Synth 8-327' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:20 . Memory (MB): peak = 1296.273 ; gain = 1.875
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:39 ; elapsed = 00:01:30 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input    9 Bit       Adders := 24    
-	   3 Input    9 Bit       Adders := 8     
-	   3 Input    8 Bit       Adders := 4     
-	   2 Input    8 Bit       Adders := 4     
-	   2 Input    4 Bit       Adders := 2     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 73    
+	   3 Input    9 Bit       Adders := 24    
+	   3 Input    8 Bit       Adders := 12    
+	   2 Input    8 Bit       Adders := 13    
+	   2 Input    7 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 4     
+	   2 Input    5 Bit       Adders := 5     
+	   2 Input    4 Bit       Adders := 3     
 	   2 Input    3 Bit       Adders := 2     
 	   2 Input    2 Bit       Adders := 2     
 	   2 Input    1 Bit       Adders := 1     
 +---Registers : 
-	                8 Bit    Registers := 86    
+	               12 Bit    Registers := 3     
+	               11 Bit    Registers := 3     
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 8361  
+	                7 Bit    Registers := 3     
+	                6 Bit    Registers := 7     
+	                5 Bit    Registers := 7     
 	                4 Bit    Registers := 5     
 	                3 Bit    Registers := 4     
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 18    
+	                1 Bit    Registers := 50    
 +---Muxes : 
-	   2 Input    8 Bit        Muxes := 144   
-	   3 Input    8 Bit        Muxes := 16    
+	   2 Input   12 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 434   
+	   3 Input    8 Bit        Muxes := 48    
 	   8 Input    8 Bit        Muxes := 2     
 	   4 Input    8 Bit        Muxes := 2     
-	   2 Input    4 Bit        Muxes := 4     
+	   2 Input    7 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 8     
+	   2 Input    5 Bit        Muxes := 10    
+	   2 Input    4 Bit        Muxes := 6     
 	   2 Input    3 Bit        Muxes := 4     
 	   2 Input    2 Bit        Muxes := 4     
-	   2 Input    1 Bit        Muxes := 31    
+	   2 Input    1 Bit        Muxes := 103   
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -287,25 +612,70 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:28 . Memory (MB): peak = 1296.273 ; gain = 1.875
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:03:10 . Memory (MB): peak = 1633.723 ; gain = 338.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++---------------------+-------------------------------+---------------+----------------+
+|Module Name          | RTL Object                    | Depth x Width | Implemented As | 
++---------------------+-------------------------------+---------------+----------------+
+|TF_ROM               | Twiddle_ROM[0][0]             | 4096x8        | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][1]             | 4096x8        | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][0]             | 2048x8        | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][1]             | 2048x8        | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][0]             | 1024x8        | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][1]             | 1024x8        | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][0]             | 512x8         | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][1]             | 512x8         | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][0]             | 256x8         | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][1]             | 256x8         | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][0]             | 128x8         | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][1]             | 128x8         | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][0]             | 64x8          | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][1]             | 64x8          | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][0]             | 32x8          | LUT            | 
+|TF_ROM               | Twiddle_ROM[0][1]             | 32x8          | LUT            | 
+|design_1_SDF_Top_0_0 | TF_ROM_inst/Twiddle_ROM[0][1] | 4096x8        | LUT            | 
+|design_1_SDF_Top_0_0 | TF_ROM_inst/Twiddle_ROM[0][0] | 4096x8        | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][1] | 32x8          | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][0] | 32x8          | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][1] | 1024x8        | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][0] | 1024x8        | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][1] | 512x8         | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][0] | 512x8         | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][1] | 256x8         | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][0] | 256x8         | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][1] | 128x8         | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][0] | 128x8         | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][1] | 64x8          | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][0] | 64x8          | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][1] | 2048x8        | LUT            | 
+|SDF_Stage            | TF_ROM_inst/Twiddle_ROM[0][0] | 2048x8        | LUT            | 
++---------------------+-------------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1296.273 ; gain = 1.875
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:25 ; elapsed = 00:03:18 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1296.273 ; gain = 1.875
+Finished Timing Optimization : Time (s): cpu = 00:01:25 ; elapsed = 00:03:18 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:35 . Memory (MB): peak = 1296.273 ; gain = 1.875
+Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:03:25 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -323,49 +693,61 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 1305.238 ; gain = 10.840
+Finished IO Insertion : Time (s): cpu = 00:01:30 ; elapsed = 00:03:31 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:41 . Memory (MB): peak = 1305.238 ; gain = 10.840
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:30 ; elapsed = 00:03:31 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 1305.238 ; gain = 10.840
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:03:32 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 1305.238 ; gain = 10.840
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:03:32 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 1305.238 ; gain = 10.840
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:31 ; elapsed = 00:03:32 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 1305.238 ; gain = 10.840
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:31 ; elapsed = 00:03:32 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+---------------------+--------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name          | RTL Name                                                           | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+---------------------+--------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|design_1_SDF_Top_0_0 | U0/SDF_stage_wrap[1].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[7][0][7] | 8      | 16    | YES          | NO                 | YES               | 16     | 0       | 
-|design_1_SDF_Top_0_0 | U0/SDF_stage_wrap[2].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[3][0][7] | 4      | 16    | YES          | NO                 | YES               | 16     | 0       | 
-+---------------------+--------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++---------------------+----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name          | RTL Name                                                             | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------+----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|SR_FIFO              | FIFO_reg[2047][0][7]                                                 | 2048   | 16    | YES          | NO                 | YES               | 0      | 1024    | 
+|SDF_Top__GCB0        | SDF_stage_wrap[3].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[511][0][7]    | 512    | 16    | YES          | NO                 | YES               | 0      | 256     | 
+|SDF_Top__GCB0        | SDF_stage_wrap[4].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[255][0][7]    | 256    | 16    | YES          | NO                 | YES               | 0      | 128     | 
+|SDF_Top__GCB1        | SDF_stage_wrap[2].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[1023][0][7]   | 1024   | 16    | YES          | NO                 | YES               | 0      | 512     | 
+|design_1_SDF_Top_0_0 | U0/SDF_stage_wrap[1].SDF_stage_inst/SR_FIFO_inst/FIFO_reg_c_2045     | 2047   | 1     | YES          | NO                 | YES               | 0      | 64      | 
+|design_1_SDF_Top_0_0 | U0/SDF_stage_wrap[8].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[15][0][7]  | 16     | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|design_1_SDF_Top_0_0 | U0/SDF_stage_wrap[5].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[127][0][7] | 128    | 16    | YES          | NO                 | YES               | 0      | 64      | 
+|design_1_SDF_Top_0_0 | U0/SDF_stage_wrap[6].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[63][0][7]  | 64     | 16    | YES          | NO                 | YES               | 0      | 32      | 
+|design_1_SDF_Top_0_0 | U0/SDF_stage_wrap[7].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[31][0][7]  | 32     | 16    | YES          | NO                 | YES               | 0      | 16      | 
+|design_1_SDF_Top_0_0 | U0/SDF_stage_wrap_c_2299                                             | 255    | 1     | YES          | NO                 | YES               | 0      | 8       | 
+|design_1_SDF_Top_0_0 | U0/SDF_stage_wrap_c_2555                                             | 256    | 1     | YES          | NO                 | YES               | 0      | 8       | 
+|design_1_SDF_Top_0_0 | U0/SDF_stage_wrap[9].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[7][0][7]   | 8      | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|design_1_SDF_Top_0_0 | U0/SDF_stage_wrap[10].SDF_stage_inst/SR_FIFO_inst/FIFO_reg[3][0][7]  | 4      | 16    | YES          | NO                 | YES               | 16     | 0       | 
+|design_1_SDF_Top_0_0 | U0/SDF_stage_wrap_c_3578                                             | 1023   | 1     | YES          | NO                 | YES               | 0      | 32      | 
++---------------------+----------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -381,49 +763,52 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------+------+
-|      |Cell   |Count |
-+------+-------+------+
-|1     |CARRY4 |   192|
-|2     |LUT1   |    54|
-|3     |LUT2   |   280|
-|4     |LUT3   |   131|
-|5     |LUT4   |   346|
-|6     |LUT5   |   211|
-|7     |LUT6   |   426|
-|8     |SRL16E |    32|
-|9     |FDCE   |   575|
-|10    |FDRE   |    32|
-|11    |LD     |   256|
-|12    |LDC    |     4|
-+------+-------+------+
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |   707|
+|2     |LUT1    |    79|
+|3     |LUT2    |  1763|
+|4     |LUT3    |   542|
+|5     |LUT4    |  1346|
+|6     |LUT5    |   922|
+|7     |LUT6    |  2628|
+|8     |MUXF7   |   250|
+|9     |MUXF8   |    68|
+|10    |SRL16E  |    48|
+|11    |SRLC32E |  2144|
+|12    |FDCE    |  3977|
+|13    |FDRE    |   164|
+|14    |LD      |   768|
+|15    |LDC     |    12|
++------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 1305.238 ; gain = 10.840
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:31 ; elapsed = 00:03:33 . Memory (MB): peak = 1633.723 ; gain = 338.832
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:40 . Memory (MB): peak = 1305.238 ; gain = 8.965
-Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:42 . Memory (MB): peak = 1305.238 ; gain = 10.840
+Synthesis finished with 0 errors, 0 critical warnings and 109 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:10 ; elapsed = 00:03:22 . Memory (MB): peak = 1633.723 ; gain = 224.055
+Synthesis Optimization Complete : Time (s): cpu = 00:01:31 ; elapsed = 00:03:33 . Memory (MB): peak = 1633.723 ; gain = 338.832
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1317.293 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 452 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.216 . Memory (MB): peak = 1633.723 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1805 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Opt 31-138] Pushed 4 inverter(s) to 128 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1320.957 ; gain = 0.000
+INFO: [Opt 31-138] Pushed 12 inverter(s) to 384 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1633.723 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 260 instances were transformed.
-  LD => LDCE: 128 instances
-  LD => LDCE (inverted pins: G): 128 instances
-  LDC => LDCE: 4 instances
+  A total of 780 instances were transformed.
+  LD => LDCE: 384 instances
+  LD => LDCE (inverted pins: G): 384 instances
+  LDC => LDCE: 12 instances
 
-Synth Design complete, checksum: 668007ff
+Synth Design complete, checksum: 7caebc76
 INFO: [Common 17-83] Releasing license: Synthesis
-71 Infos, 49 Warnings, 0 Critical Warnings and 0 Errors encountered.
+160 Infos, 129 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:47 . Memory (MB): peak = 1320.957 ; gain = 26.559
-INFO: [Common 17-1381] The checkpoint 'C:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.runs/design_1_SDF_Top_0_0_synth_1/design_1_SDF_Top_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_SDF_Top_0_0, cache-ID = 5e55cd38cf7b3a04
-INFO: [Coretcl 2-1174] Renamed 17 cell refs.
-INFO: [Common 17-1381] The checkpoint 'C:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.runs/design_1_SDF_Top_0_0_synth_1/design_1_SDF_Top_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:01:35 ; elapsed = 00:03:40 . Memory (MB): peak = 1633.723 ; gain = 338.832
+INFO: [Common 17-1381] The checkpoint 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.runs/design_1_SDF_Top_0_0_synth_1/design_1_SDF_Top_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_SDF_Top_0_0, cache-ID = 046885eb7394b087
+INFO: [Coretcl 2-1174] Renamed 55 cell refs.
+INFO: [Common 17-1381] The checkpoint 'C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.runs/design_1_SDF_Top_0_0_synth_1/design_1_SDF_Top_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_SDF_Top_0_0_utilization_synth.rpt -pb design_1_SDF_Top_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 29 12:46:30 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 29 17:27:04 2022...

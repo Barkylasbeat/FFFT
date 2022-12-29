@@ -88,7 +88,7 @@
             "value": "8"
           },
           "FFT_TOT_POINTS": {
-            "value": "16"
+            "value": "4096"
           }
         },
         "reference_info": {

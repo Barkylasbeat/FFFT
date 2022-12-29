@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.runs/design_1_SDF_Top_0_0_synth_1'
+HD_PWD='C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.runs/design_1_SDF_Top_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
