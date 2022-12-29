@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 29 12:45:26 2022" VIVADOVERSION="2022.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec 29 19:33:49 2022" VIVADOVERSION="2022.1">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:basys3:part0:1.1" DEVICE="7a35t" NAME="design_1" PACKAGE="cpg236" SPEEDGRADE="-1"/>
 
@@ -20,24 +20,24 @@
         <CONNECTION INSTANCE="SDF_Top_0" PORT="go_data_counter"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="7" NAME="Im_Data_in_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Im_Data_in_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="SDF_Top_0" PORT="Im_Data_in"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="7" NAME="Re_Data_in_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Re_Data_in_0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="SDF_Top_0" PORT="Re_Data_in"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="7" NAME="Re_Data_out_0" RIGHT="0" SIGIS="undef" SIGNAME="SDF_Top_0_Re_Data_out">
+    <PORT DIR="O" LEFT="15" NAME="Re_Data_out_0" RIGHT="0" SIGIS="undef" SIGNAME="SDF_Top_0_Re_Data_out">
       <CONNECTIONS>
         <CONNECTION INSTANCE="SDF_Top_0" PORT="Re_Data_out"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="7" NAME="Im_Data_out_0" RIGHT="0" SIGIS="undef" SIGNAME="SDF_Top_0_Im_Data_out">
+    <PORT DIR="O" LEFT="15" NAME="Im_Data_out_0" RIGHT="0" SIGIS="undef" SIGNAME="SDF_Top_0_Im_Data_out">
       <CONNECTIONS>
         <CONNECTION INSTANCE="SDF_Top_0" PORT="Im_Data_out"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="15" NAME="Re_Data_in_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Re_Data_in_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SDF_Top_0" PORT="Re_Data_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="15" NAME="Im_Data_in_0" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Im_Data_in_0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="SDF_Top_0" PORT="Im_Data_in"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -48,8 +48,8 @@
     <MODULE COREREVISION="1" FULLNAME="/SDF_Top_0" HWVERSION="1.0" INSTANCE="SDF_Top_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="SDF_Top" VLNV="xilinx.com:module_ref:SDF_Top:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="FFT_TOT_POINTS" VALUE="16"/>
-        <PARAMETER NAME="DATA_WIDTH" VALUE="8"/>
+        <PARAMETER NAME="FFT_TOT_POINTS" VALUE="512"/>
+        <PARAMETER NAME="DATA_WIDTH" VALUE="16"/>
         <PARAMETER NAME="PRECISION" VALUE="6"/>
         <PARAMETER NAME="TF_WIDTH" VALUE="8"/>
         <PARAMETER NAME="SR_INIT" VALUE="0"/>
@@ -72,22 +72,22 @@
             <CONNECTION INSTANCE="External_Ports" PORT="go_data_counter_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="Re_Data_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Re_Data_in_0">
+        <PORT DIR="I" LEFT="15" NAME="Re_Data_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Re_Data_in_0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="Re_Data_in_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="Im_Data_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Im_Data_in_0">
+        <PORT DIR="I" LEFT="15" NAME="Im_Data_in" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_Im_Data_in_0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="Im_Data_in_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="Re_Data_out" RIGHT="0" SIGIS="undef" SIGNAME="SDF_Top_0_Re_Data_out">
+        <PORT DIR="O" LEFT="15" NAME="Re_Data_out" RIGHT="0" SIGIS="undef" SIGNAME="SDF_Top_0_Re_Data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="Re_Data_out_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="7" NAME="Im_Data_out" RIGHT="0" SIGIS="undef" SIGNAME="SDF_Top_0_Im_Data_out">
+        <PORT DIR="O" LEFT="15" NAME="Im_Data_out" RIGHT="0" SIGIS="undef" SIGNAME="SDF_Top_0_Im_Data_out">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="Im_Data_out_0"/>
           </CONNECTIONS>

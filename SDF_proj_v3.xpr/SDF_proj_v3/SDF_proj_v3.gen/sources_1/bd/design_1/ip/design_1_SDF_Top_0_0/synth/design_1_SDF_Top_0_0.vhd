@@ -58,10 +58,10 @@ ENTITY design_1_SDF_Top_0_0 IS
     clk : IN STD_LOGIC;
     reset : IN STD_LOGIC;
     go_data_counter : IN STD_LOGIC;
-    Re_Data_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    Im_Data_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    Re_Data_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-    Im_Data_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+    Re_Data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    Im_Data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    Re_Data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    Im_Data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END design_1_SDF_Top_0_0;
 
@@ -80,10 +80,10 @@ ARCHITECTURE design_1_SDF_Top_0_0_arch OF design_1_SDF_Top_0_0 IS
       clk : IN STD_LOGIC;
       reset : IN STD_LOGIC;
       go_data_counter : IN STD_LOGIC;
-      Re_Data_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      Im_Data_in : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-      Re_Data_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-      Im_Data_out : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+      Re_Data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      Im_Data_in : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      Re_Data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      Im_Data_out : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT SDF_Top;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -91,7 +91,7 @@ ARCHITECTURE design_1_SDF_Top_0_0_arch OF design_1_SDF_Top_0_0 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_SDF_Top_0_0_arch : ARCHITECTURE IS "design_1_SDF_Top_0_0,SDF_Top,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_SDF_Top_0_0_arch: ARCHITECTURE IS "design_1_SDF_Top_0_0,SDF_Top,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=SDF_Top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,FFT_TOT_POINTS=16,DATA_WIDTH=8,PRECISION=6,TF_WIDTH=8,SR_INIT=0}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_SDF_Top_0_0_arch: ARCHITECTURE IS "design_1_SDF_Top_0_0,SDF_Top,{x_ipProduct=Vivado 2022.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=SDF_Top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,FFT_TOT_POINTS=4096,DATA_WIDTH=32,PRECISION=6,TF_WIDTH=8,SR_INIT=0}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_SDF_Top_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -103,8 +103,8 @@ ARCHITECTURE design_1_SDF_Top_0_0_arch OF design_1_SDF_Top_0_0 IS
 BEGIN
   U0 : SDF_Top
     GENERIC MAP (
-      FFT_TOT_POINTS => 16,
-      DATA_WIDTH => 8,
+      FFT_TOT_POINTS => 4096,
+      DATA_WIDTH => 32,
       PRECISION => 6,
       TF_WIDTH => 8,
       SR_INIT => 0

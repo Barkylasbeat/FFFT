@@ -1,8 +1,8 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
---Date        : Thu Dec 29 12:45:25 2022
---Host        : PcFraLenzi running 64-bit major release  (build 9200)
+--Date        : Thu Dec 29 19:33:48 2022
+--Host        : GdF-intercettazioni running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
 --Purpose     : IP block netlist
@@ -13,10 +13,10 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_wrapper is
   port (
-    Im_Data_in_0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Im_Data_out_0 : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    Re_Data_in_0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Re_Data_out_0 : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    Im_Data_in_0 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    Im_Data_out_0 : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    Re_Data_in_0 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    Re_Data_out_0 : out STD_LOGIC_VECTOR ( 15 downto 0 );
     go_data_counter_0 : in STD_LOGIC;
     reset : in STD_LOGIC;
     sys_clock : in STD_LOGIC
@@ -29,19 +29,19 @@ architecture STRUCTURE of design_1_wrapper is
     sys_clock : in STD_LOGIC;
     reset : in STD_LOGIC;
     go_data_counter_0 : in STD_LOGIC;
-    Im_Data_in_0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Re_Data_in_0 : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    Re_Data_out_0 : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    Im_Data_out_0 : out STD_LOGIC_VECTOR ( 7 downto 0 )
+    Re_Data_out_0 : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    Im_Data_out_0 : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    Re_Data_in_0 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    Im_Data_in_0 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component design_1;
 begin
 design_1_i: component design_1
      port map (
-      Im_Data_in_0(7 downto 0) => Im_Data_in_0(7 downto 0),
-      Im_Data_out_0(7 downto 0) => Im_Data_out_0(7 downto 0),
-      Re_Data_in_0(7 downto 0) => Re_Data_in_0(7 downto 0),
-      Re_Data_out_0(7 downto 0) => Re_Data_out_0(7 downto 0),
+      Im_Data_in_0(15 downto 0) => Im_Data_in_0(15 downto 0),
+      Im_Data_out_0(15 downto 0) => Im_Data_out_0(15 downto 0),
+      Re_Data_in_0(15 downto 0) => Re_Data_in_0(15 downto 0),
+      Re_Data_out_0(15 downto 0) => Re_Data_out_0(15 downto 0),
       go_data_counter_0 => go_data_counter_0,
       reset => reset,
       sys_clock => sys_clock

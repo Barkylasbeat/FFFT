@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.runs/synth_1/design_1_wrapper.tcl"
+  variable script "C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.runs/synth_1/design_1_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
 set_msg_config  -id {Vivado 12-1790}  -string {{Evaluation} {features} {should} {NOT} {be} {used} {in} {production} {systems.}}  -new_severity {WARNING} 
 set_msg_config  -id {Designutils 20-3303}  -string {{HDPYFinalizeIO}}  -new_severity {INFO} 
 set_msg_config  -id {Place 30-73}  -string {{axi_spi}}  -new_severity {WARNING} 
@@ -90,26 +89,26 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.cache/wt [current_project]
-set_property parent.project_path C:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.cache/wt [current_project]
+set_property parent.project_path C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.xpr [current_project]
 set_property XPM_LIBRARIES XPM_CDC [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part_repo_paths {C:/Users/kekko/AppData/Roaming/Xilinx/Vivado/2022.1/xhub/board_store/xilinx_board_store} [current_project]
+set_property board_part_repo_paths {C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.board} [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.cache/ip [current_project]
+set_property ip_output_repo c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
-add_files C:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_0/design_1_rst_clk_wiz_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_0/design_1_rst_clk_wiz_100M_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_0/design_1_rst_clk_wiz_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/design_1_ooc.xdc]
+read_vhdl -library xil_defaultlib C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/imports/design_1_wrapper.vhd
+add_files C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/sources_1/bd/design_1/design_1.bd
+set_property used_in_implementation false [get_files -all c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_clk_wiz_0/design_1_clk_wiz_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_0/design_1_rst_clk_wiz_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_0/design_1_rst_clk_wiz_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_rst_clk_wiz_100M_0/design_1_rst_clk_wiz_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -124,7 +123,7 @@ read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
-read_checkpoint -auto_incremental -incremental C:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
+read_checkpoint -auto_incremental -incremental C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.srcs/utils_1/imports/synth_1/design_1_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

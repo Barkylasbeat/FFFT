@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
-// Date        : Thu Dec 29 12:46:30 2022
-// Host        : PcFraLenzi running 64-bit major release  (build 9200)
+// Date        : Thu Dec 29 20:42:33 2022
+// Host        : GdF-intercettazioni running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               c:/Users/kekko/Desktop/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0_stub.v
+//               c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.gen/sources_1/bd/design_1/ip/design_1_SDF_Top_0_0/design_1_SDF_Top_0_0_stub.v
 // Design      : design_1_SDF_Top_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7a35tcpg236-1
@@ -16,12 +16,12 @@
 (* x_core_info = "SDF_Top,Vivado 2022.1" *)
 module design_1_SDF_Top_0_0(clk, reset, go_data_counter, Re_Data_in, 
   Im_Data_in, Re_Data_out, Im_Data_out)
-/* synthesis syn_black_box black_box_pad_pin="clk,reset,go_data_counter,Re_Data_in[7:0],Im_Data_in[7:0],Re_Data_out[7:0],Im_Data_out[7:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clk,reset,go_data_counter,Re_Data_in[31:0],Im_Data_in[31:0],Re_Data_out[31:0],Im_Data_out[31:0]" */;
   input clk;
   input reset;
   input go_data_counter;
-  input [7:0]Re_Data_in;
-  input [7:0]Im_Data_in;
-  output [7:0]Re_Data_out;
-  output [7:0]Im_Data_out;
+  input [31:0]Re_Data_in;
+  input [31:0]Im_Data_in;
+  output [31:0]Re_Data_out;
+  output [31:0]Im_Data_out;
 endmodule
