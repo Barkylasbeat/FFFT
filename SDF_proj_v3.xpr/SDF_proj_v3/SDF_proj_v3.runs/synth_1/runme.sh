@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Github/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.runs/synth_1'
+HD_PWD='C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v3.xpr/SDF_proj_v3/SDF_proj_v3.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
