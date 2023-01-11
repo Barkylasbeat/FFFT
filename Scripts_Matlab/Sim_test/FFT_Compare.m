@@ -31,11 +31,12 @@ f = (-n_points/2:(n_points/2-1));
 figure
 subplot(2,1,1)
 title('FFT modulus plot')
+semilogy(f,FPGA_Results,'color',[0.9290 0.6940 0.1250],"LineWidth",1.5)
 hold on
-plot(f,CPU_Results, 'r')
-plot(f,FPGA_Results, 'g')
+semilogy(f,CPU_Results, 'color','#3E5F8A',"LineWidth",1)
 xlabel('Frequency (Hz)')
 ylabel('FFT Modulus')
+xlim([-25 25]);
 hold off
 legend('Matlab','FPGA')
 
@@ -56,7 +57,8 @@ norm_FPGA = modZ_FPGA/max(modZ_FPGA);
 error = abs(norm_CPU-norm_FPGA);
 plot_error = [error((n_points/2+1):n_points);error(1:n_points/2)];
 subplot(2,1,2)
-plot(f,plot_error*100)
+plot(f,plot_error*100, 'color',[0.6350 0.0780 0.1840],"LineWidth",1.5)
 title('Normalized Difference')
 xlabel('frequency (Hz)')
+xlim([-25 25]);
 ytickformat('percentage')
