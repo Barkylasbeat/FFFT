@@ -20,29 +20,43 @@ Output_data = bitrevorder(flip(Output_data));
 %modulus calculation
 modZ_CPU  = abs(Z);
 modZ_FPGA = abs(Output_data);
-CPU_Results = [modZ_CPU(2049:4096);modZ_CPU(1:2048)];
-FPGA_Results = [modZ_FPGA(2049:4096);modZ_FPGA(1:2048)];
+n_points  = length(modZ_CPU);
+CPU_Results = [modZ_CPU((n_points/2+1):n_points);modZ_CPU(1:n_points/2)];
+FPGA_Results = [modZ_FPGA((n_points/2+1):n_points);modZ_FPGA(1:n_points/2)];
 
 
 %% Plot
-f = (-2048:2047);
+f = (-n_points/2:(n_points/2-1));
 
 figure
+subplot(2,1,1)
 title('FFT modulus plot')
 hold on
 plot(f,CPU_Results, 'r')
 plot(f,FPGA_Results, 'g')
-xlabel('Sample number')
-ylabel({'Matlab (red)';'FPGA (green)'})
+xlabel('Frequency (Hz)')
+ylabel('FFT Modulus')
+hold off
+legend('Matlab','FPGA')
 
-%%Da cambiare il tipo di errore
-figure
-title('Relative Percent Difference')
-hold
-error = 2*(abs((modZ_CPU-modZ_FPGA))./(modZ_CPU+modZ_FPGA)); %Relative Percent Difference
-error(isnan(error))=0; % the 0/0 indeterminate form gives now a 0% deviation
-plot(error*100)
-xlabel('Sample number')
+%%Mean square error calculation
+mean = 1/n_points * sum(modZ_CPU);
+RMS = 1/(n_points-1) * sum((modZ_FPGA-mean).^2);
+rel_RMS = RMS/mean;
+
+%%Normalizaton
+norm_CPU  = modZ_CPU/max(modZ_CPU);
+norm_FPGA = modZ_FPGA/max(modZ_FPGA);
+
+%%Error Calculation and plot
+%error = 2*(abs((modZ_CPU-modZ_FPGA))./(modZ_CPU+modZ_FPGA)); %Relative Percent Difference
+%error = 2*(abs((norm_FPGA-norm_CPU))./(norm_CPU+norm_FPGA));
+%error(isnan(error))=0; % the 0/0 indeterminate form gives now a 0% deviation
+%error = abs((modZ_CPU-modZ_FPGA)./RMS);    %Sigma related error (not good)
+error = abs(norm_CPU-norm_FPGA);
+plot_error = [error((n_points/2+1):n_points);error(1:n_points/2)];
+subplot(2,1,2)
+plot(f,plot_error*100)
+title('Normalized Difference')
+xlabel('frequency (Hz)')
 ytickformat('percentage')
-
-
