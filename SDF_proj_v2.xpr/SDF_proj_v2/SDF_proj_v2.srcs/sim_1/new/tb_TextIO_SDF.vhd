@@ -41,6 +41,8 @@ architecture Behavioral of tb_TextIO_SDF is
     
             Re_Data_in       :   in std_logic_vector(DATA_WIDTH-1  downto 0);
             Im_Data_in       :   in std_logic_vector(DATA_WIDTH-1  downto 0);
+            
+            go_data_counter  :   in std_logic;
     
             Re_Data_out      :   out std_logic_vector(DATA_WIDTH-1 downto 0);
             Im_Data_out      :   out std_logic_vector(DATA_WIDTH-1 downto 0)
@@ -83,6 +85,8 @@ begin
             -------------Data----------          
             Re_Data_in     => Re_Data_in,
             Im_Data_in     => Im_Data_in,
+            
+            go_data_counter =>'1',
 
             Re_Data_out    => Re_Data_out,
             Im_Data_out    => Im_Data_out

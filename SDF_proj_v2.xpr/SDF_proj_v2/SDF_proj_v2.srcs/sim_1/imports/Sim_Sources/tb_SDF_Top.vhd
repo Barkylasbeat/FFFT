@@ -97,25 +97,35 @@ begin
         
         reset <= '0';
 
-        Re_Data_in <= to_slv(to_sfixed(1, DATA_WIDTH-1-PRECISION, -PRECISION));
-        Im_Data_in <= to_slv(to_sfixed(2, DATA_WIDTH-1-PRECISION, -PRECISION));
-                
-        wait until rising_edge(clk); 
+        for j in 0 to 1 loop
 
-        Re_Data_in <= to_slv(to_sfixed(3, DATA_WIDTH-1-PRECISION, -PRECISION));
-        Im_Data_in <= to_slv(to_sfixed(4, DATA_WIDTH-1-PRECISION, -PRECISION));
-                
-        wait until rising_edge(clk); 
+            Re_Data_in <= to_slv(to_sfixed(1, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(2, DATA_WIDTH-1-PRECISION, -PRECISION));
+                    
+            wait until rising_edge(clk); 
 
-        Re_Data_in <= to_slv(to_sfixed(5, DATA_WIDTH-1-PRECISION, -PRECISION));
-        Im_Data_in <= to_slv(to_sfixed(6, DATA_WIDTH-1-PRECISION, -PRECISION));
-                
-        wait until rising_edge(clk); 
+            Re_Data_in <= to_slv(to_sfixed(3, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(4, DATA_WIDTH-1-PRECISION, -PRECISION));
+                    
+            wait until rising_edge(clk); 
 
-        Re_Data_in <= to_slv(to_sfixed(7, DATA_WIDTH-1-PRECISION, -PRECISION));
-        Im_Data_in <= to_slv(to_sfixed(8, DATA_WIDTH-1-PRECISION, -PRECISION));
-                
-        wait for 50 ns; 
+            Re_Data_in <= to_slv(to_sfixed(5, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(6, DATA_WIDTH-1-PRECISION, -PRECISION));
+                    
+            wait until rising_edge(clk); 
+
+            Re_Data_in <= to_slv(to_sfixed(7, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(8, DATA_WIDTH-1-PRECISION, -PRECISION));
+            
+            wait until rising_edge(clk);
+        
+        end loop;
+
+        Re_Data_in <= to_slv(to_sfixed(0, DATA_WIDTH-1-PRECISION, -PRECISION));
+        Im_Data_in <= to_slv(to_sfixed(0, DATA_WIDTH-1-PRECISION, -PRECISION));
+              
+        wait for 250 ns; 
+
         
         
 

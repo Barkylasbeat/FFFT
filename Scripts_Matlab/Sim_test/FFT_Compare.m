@@ -31,9 +31,9 @@ f = (-n_points/2:(n_points/2-1));
 figure
 subplot(2,1,1)
 title('FFT modulus plot')
-semilogy(f,FPGA_Results,'color',[0.9290 0.6940 0.1250],"LineWidth",1.5)
+plot(f,FPGA_Results,'color',[0.9290 0.6940 0.1250],"LineWidth",2.5)
 hold on
-semilogy(f,CPU_Results, 'color','#3E5F8A',"LineWidth",1)
+plot(f,CPU_Results, 'color','#3E5F8A',"LineWidth",1.5)
 xlabel('Frequency (Hz)')
 ylabel('FFT Modulus')
 xlim([-25 25]);
