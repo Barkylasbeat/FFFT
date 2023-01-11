@@ -20,17 +20,22 @@ Output_data = bitrevorder(flip(Output_data));
 %modulus calculation
 modZ_CPU  = abs(Z);
 modZ_FPGA = abs(Output_data);
+CPU_Results = [modZ_CPU(2049:4096);modZ_CPU(1:2048)];
+FPGA_Results = [modZ_FPGA(2049:4096);modZ_FPGA(1:2048)];
 
 
 %% Plot
+f = (-2048:2047);
+
 figure
 title('FFT modulus plot')
 hold on
-plot(modZ_CPU, 'r')
-plot(modZ_FPGA, 'g')
+plot(f,CPU_Results, 'r')
+plot(f,FPGA_Results, 'g')
 xlabel('Sample number')
 ylabel({'Matlab (red)';'FPGA (green)'})
 
+%%Da cambiare il tipo di errore
 figure
 title('Relative Percent Difference')
 hold
