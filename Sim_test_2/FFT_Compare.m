@@ -36,7 +36,7 @@ hold on
 plot(f,CPU_Results, 'color','#3E5F8A',"LineWidth",1.5)
 xlabel('Frequency (Hz)')
 ylabel('FFT Modulus')
-xlim([-2048 2048]);
+xlim([-25 25]);
 hold off
 legend('FPGA','Matlab')
 
@@ -61,5 +61,5 @@ subplot(2,1,2)
 plot(f,plot_error*100, 'color',[0.6350 0.0780 0.1840],"LineWidth",1.5)
 title('Normalized Difference')
 xlabel('frequency (Hz)')
-xlim([-2048 2048]);
+xlim([-25 25]);
 ytickformat('percentage')

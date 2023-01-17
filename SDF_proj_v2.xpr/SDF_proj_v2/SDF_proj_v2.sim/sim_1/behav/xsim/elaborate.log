@@ -1,33 +1,8 @@
 Vivado Simulator v2022.1
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_SDF_Top_behav xil_defaultlib.tb_SDF_Top xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_TextIO_SDF_behav xil_defaultlib.tb_TextIO_SDF xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package ieee.math_real
-Compiling package ieee.math_complex
-Compiling package ieee.fixed_float_types
-Compiling package ieee.fixed_pkg
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_unsigned
-Compiling package ieee.numeric_std_unsigned
-Compiling module xil_defaultlib.glbl
-Compiling architecture behavioral of entity xil_defaultlib.R2_BU [\R2_BU(precision=0)\]
-Compiling architecture behavioral of entity xil_defaultlib.Rotator [\Rotator(data_width=8,precision=...]
-Compiling architecture behavioral of entity xil_defaultlib.SR_FIFO [\SR_FIFO(sr_depth=2,precision=0)...]
-Compiling architecture behavioral of entity xil_defaultlib.TF_ROM [\TF_ROM(addr_length=2)\]
-Compiling architecture behavioral of entity xil_defaultlib.SDF_Stage [\SDF_Stage(fft_tot_points=4,data...]
-Compiling architecture behavioral of entity xil_defaultlib.SR_FIFO [\SR_FIFO(sr_depth=1,precision=0)...]
-Compiling architecture behavioral of entity xil_defaultlib.TF_ROM [\TF_ROM(addr_length=1)\]
-Compiling architecture behavioral of entity xil_defaultlib.SDF_Stage [\SDF_Stage(fft_tot_points=4,data...]
-Compiling architecture behavioral of entity xil_defaultlib.SDF_Top [\SDF_Top(fft_tot_points=4,data_w...]
-Compiling architecture behavioral of entity xil_defaultlib.tb_sdf_top
-Built simulation snapshot tb_SDF_Top_behav
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel

@@ -20,10 +20,9 @@ architecture Behavioral of tb_TextIO_SDF is
     constant RESET_WND  : time := 50 ns; 
 
     constant FFT_TOT_POINTS : integer := 4096;
-    constant DATA_WIDTH     : integer := 32;
-    constant PRECISION      : integer := 6;
-    constant TF_WIDTH       : integer := 8;
-    constant STAGE          : integer := 1;
+    constant DATA_WIDTH     : integer := 64;
+    constant PRECISION      : integer := 32;
+    constant TF_WIDTH       : integer := 34;
     constant SR_INIT        : integer := 0;
 
     component SDF_Top is
@@ -114,8 +113,8 @@ begin
 
     begin
         
-        file_open(file_input, "C:\Github\FFFT\Scripts_Matlab\input_FFT.txt", read_mode);
-        file_open(file_output, "C:\Github\FFFT\Scripts_Matlab\output_FFT.txt", write_mode);
+        file_open(file_input, "C:\Github\FFFT\Sim_test_2\input_FFT.txt", read_mode);
+        file_open(file_output, "C:\Github\FFFT\Sim_test_2\output_FFT.txt", write_mode);
         
         reset <= '1';
 
