@@ -124,46 +124,60 @@ begin
         Re_Data_in <= to_slv(to_sfixed(0, DATA_WIDTH-1-PRECISION, -PRECISION));
         Im_Data_in <= to_slv(to_sfixed(0, DATA_WIDTH-1-PRECISION, -PRECISION));
               
-        wait for 250 ns; 
+        wait for 240 ns; 
 
-        
-        
+        for j in 0 to 1 loop
 
-        for i in 1 to FFT_TOT_POINTS loop
-            -- Re_Data_in <= to_slv(to_sfixed(i*(i+1), DATA_WIDTH-1-PRECISION, -PRECISION));
-            -- Im_Data_in <= to_slv(to_sfixed(i*10, DATA_WIDTH-1-PRECISION, -PRECISION));
-
-            Re_Data_in <= to_slv(to_sfixed(i, DATA_WIDTH-1-PRECISION, -PRECISION));
-            Im_Data_in <= to_slv(to_sfixed(i*2, DATA_WIDTH-1-PRECISION, -PRECISION));
-                
+            Re_Data_in <= to_slv(to_sfixed(1, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(2, DATA_WIDTH-1-PRECISION, -PRECISION));
+                    
             wait until rising_edge(clk); 
-        end loop;
 
-        for i in 1 to FFT_TOT_POINTS loop
-            Re_Data_in <= to_slv(to_sfixed(i*(i+1), DATA_WIDTH-1-PRECISION, -PRECISION));
-            Im_Data_in <= to_slv(to_sfixed(i*10, DATA_WIDTH-1-PRECISION, -PRECISION));
-                
+            Re_Data_in <= to_slv(to_sfixed(3, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(4, DATA_WIDTH-1-PRECISION, -PRECISION));
+                    
             wait until rising_edge(clk); 
-        end loop;
 
-            wait for 10*CLK_PERIOD;            
+            Re_Data_in <= to_slv(to_sfixed(5, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(6, DATA_WIDTH-1-PRECISION, -PRECISION));
+                    
+            wait until rising_edge(clk); 
 
-            reset <= '1';
-
-            wait for RESET_WND;
-
-            reset <= '0';
-
-        for j in 1 to 24 loop
-            for i in 1 to FFT_TOT_POINTS loop
-                Re_Data_in <= to_slv(to_sfixed((i+j), DATA_WIDTH-1-PRECISION, -PRECISION));
-                Im_Data_in <= to_slv(to_sfixed(-(10*i+j), DATA_WIDTH-1-PRECISION, -PRECISION));                    
-                wait until rising_edge(clk); 
-            end loop;
-        end loop;
+            Re_Data_in <= to_slv(to_sfixed(7, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(8, DATA_WIDTH-1-PRECISION, -PRECISION));
             
-        Re_Data_in  <= (others => '0');
-        Im_Data_in  <= (others => '0');
+            wait until rising_edge(clk);
+        
+        end loop;
+
+        for j in 0 to 1 loop
+
+            Re_Data_in <= to_slv(to_sfixed(1, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(2, DATA_WIDTH-1-PRECISION, -PRECISION));
+                    
+            wait until rising_edge(clk); 
+
+            Re_Data_in <= to_slv(to_sfixed(3, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(4, DATA_WIDTH-1-PRECISION, -PRECISION));
+                    
+            wait until rising_edge(clk); 
+
+            Re_Data_in <= to_slv(to_sfixed(5, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(6, DATA_WIDTH-1-PRECISION, -PRECISION));
+                    
+            wait until rising_edge(clk); 
+
+            Re_Data_in <= to_slv(to_sfixed(7, DATA_WIDTH-1-PRECISION, -PRECISION));
+            Im_Data_in <= to_slv(to_sfixed(8, DATA_WIDTH-1-PRECISION, -PRECISION));
+            
+            wait until rising_edge(clk);
+        
+        end loop;
+
+        Re_Data_in <= to_slv(to_sfixed(0, DATA_WIDTH-1-PRECISION, -PRECISION));
+        Im_Data_in <= to_slv(to_sfixed(0, DATA_WIDTH-1-PRECISION, -PRECISION));
+        
+        
         wait;
         
     end process;

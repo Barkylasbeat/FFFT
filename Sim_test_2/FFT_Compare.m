@@ -29,16 +29,22 @@ FPGA_Results = [modZ_FPGA((n_points/2+1):n_points);modZ_FPGA(1:n_points/2)];
 f = (-n_points/2:(n_points/2-1));
 
 figure
-subplot(2,1,1)
-plot(f,FPGA_Results,'color',[0.9290 0.6940 0.1250],"LineWidth",2.5)
-title('FFT modulus plot')
-hold on
-plot(f,CPU_Results, 'color','#3E5F8A',"LineWidth",1.5)
+subplot(1,2,1)
+loglog(f,FPGA_Results,'color',[0.9290 0.6940 0.1250],"LineWidth",4)
+title('FPGA FFT modulus plot')
 xlabel('Frequency (Hz)')
 ylabel('FFT Modulus')
-xlim([-25 25]);
-hold off
-legend('FPGA','Matlab')
+xlim([0 2048]);
+ylim([0 1000]);
+subplot(1,2,2)
+loglog(f,CPU_Results, 'color','#3E5F8A',"LineWidth",4)
+title('MATLAB FFT modulus plot')
+xlabel('Frequency (Hz)')
+ylabel('FFT Modulus')
+xlim([0 2048]);
+ylim([0 1000]);
+%hold off
+%legend('FPGA','Matlab')
 
 %%Mean square error calculation
 mean = 1/n_points * sum(modZ_CPU);
@@ -57,9 +63,17 @@ error = abs((modZ_CPU)-(modZ_FPGA))./(modZ_CPU);
 %error = abs((modZ_CPU-modZ_FPGA)./RMS);    %Sigma related error (not good)
 %error = abs(norm_CPU-norm_FPGA);
 plot_error = [error((n_points/2+1):n_points);error(1:n_points/2)];
-subplot(2,1,2)
-plot(f,plot_error*100, 'color',[0.6350 0.0780 0.1840],"LineWidth",1.5)
-title('Normalized Difference')
-xlabel('frequency (Hz)')
-xlim([-25 25]);
-ytickformat('percentage')
+mean_error = movmean(plot_error, 100);
+%subplot(2,1,2)
+% figure
+% semilogx(f,plot_error, 'color',[0.6350 0.0780 0.1840],"LineWidth",1.5)
+% title('Normalized Difference')
+% xlabel('Frequency (Hz)')
+% xlim([0 2048]);
+%ytickformat('Percentage')
+figure
+semilogx(f,mean_error, 'color',[0.6350 0.0780 0.1840],"LineWidth",3)
+title('Normalized Error')
+xlabel('Frequency (Hz)')
+xlim([0 2048]);
+ylim([0 0.000001]);

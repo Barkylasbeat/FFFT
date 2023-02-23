@@ -1,0 +1,24 @@
+TEST CONFRONTO MATLAB
+1. Genero il file input.txt (con il segnale che voglio trasformare) --> FunctionGeneration.m
+2. Avviare testbench su Vivado ---> tb_TextIO_SDF.vhd
+3. Runnarla per 90us
+4. Run di FFT_Compare.m
+
+TEST PIPELINE
+1. Settatre tb_SDF_Top come TOP
+
+TEST AXI_STREAM
+1. Settare tb_AXI_Stream come TOP
+2. Runnare la simulazione per 33 us
+
+TEST UART
+
+Onda quadra su 16 punti per docklight
+
+Squarewave
+
+01000100FF00FF0001000100FF00FF0001000100FF00FF0001000100FF00FF00
+
+lowpass
+000001000300700150015001500150015001500150015001500150015001500
+

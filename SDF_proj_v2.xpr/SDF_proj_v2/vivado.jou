@@ -2,41 +2,118 @@
 # Vivado v2022.1 (64-bit)
 # SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
 # IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Fri Dec 16 16:00:49 2022
-# Process ID: 21704
-# Current directory: C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v2.xpr/SDF_proj_v2
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12744 C:\Users\donat\Desktop\NL2_FFT\Git_FFFT\FFFT\SDF_proj_v2.xpr\SDF_proj_v2\SDF_proj_v2.xpr
-# Log file: C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/vivado.log
-# Journal file: C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v2.xpr/SDF_proj_v2\vivado.jou
-# Running On: GdF-intercettazioni, OS: Windows, CPU Frequency: 1996 MHz, CPU Physical cores: 8, Host memory: 16505 MB
+# Start of session at: Thu Feb 23 14:58:22 2023
+# Process ID: 2732
+# Current directory: C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7012 C:\Github\FFFT\SDF_proj_v2.xpr\SDF_proj_v2\SDF_proj_v2.xpr
+# Log file: C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/vivado.log
+# Journal file: C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2\vivado.jou
+# Running On: PcFraLenzi, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 2, Host memory: 16957 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.xpr
-launch_simulation
-open_wave_config C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
-open_wave_config C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v2/tb_SDF_Stage_behav.wcfg
-open_wave_config C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_SDF_Top_behav.wcfg
-open_wave_config C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_Axi_Stream_behav.wcfg
-source tb_Axi_Stream.tcl
+open_project C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.xpr
 update_compile_order -fileset sources_1
-run 10 us
-run 10 us
-run 10 us
-run 10 us
-run 10 us
-run 10 us
+launch_simulation
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v2/tb_SDF_Stage_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_SDF_Top_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_Axi_Stream_behav.wcfg
+source tb_TextIO_SDF.tcl
+relaunch_sim
+close_sim
+launch_simulation
+launch_simulation
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v2/tb_SDF_Stage_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_SDF_Top_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_Axi_Stream_behav.wcfg
+source tb_TextIO_SDF.tcl
+create_wave_config
+save_wave_config {C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_TextIO_SDF_behav.wcfg}
+add_files -fileset sim_1 -norecurse C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_TextIO_SDF_behav.wcfg
+set_property xsim.view {C:/SDF_proj_v2/tb_SDF_Stage_behav.wcfg C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_SDF_Top_behav.wcfg C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_Axi_Stream_behav.wcfg C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_TextIO_SDF_behav.wcfg} [get_filesets sim_1]
+relaunch_sim
+run 500 us
+run 500 us
+close_sim
+launch_simulation
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v2/tb_SDF_Stage_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_SDF_Top_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_Axi_Stream_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_TextIO_SDF_behav.wcfg
+source tb_TextIO_SDF.tcl
+run all
+run 500 us
+save_wave_config {C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_TextIO_SDF_behav.wcfg}
+relaunch_sim
+run 90 us
+relaunch_sim
+run 90 us
+relaunch_sim
+run 90 us
+relaunch_sim
+run 90 us
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_Axi_Stream [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v2/tb_SDF_Stage_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_SDF_Top_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_Axi_Stream_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_TextIO_SDF_behav.wcfg
+source tb_Axi_Stream.tcl
+run 90 us
+relaunch_sim
+run 33 us
+save_wave_config {C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_Axi_Stream_behav.wcfg}
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_SDF_Top [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v2/tb_SDF_Stage_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_SDF_Top_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_Axi_Stream_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_TextIO_SDF_behav.wcfg
+source tb_SDF_Top.tcl
 relaunch_sim
 relaunch_sim
-run 10 us
-run 10 us
-run 50 us
-relaunch_sim
-run 50 us
-run 50 us
-relaunch_sim
-run 50 us
-run 50 us
-relaunch_sim
-relaunch_sim
-run 50 us
-run 50 us
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Github/FFFT/Bitstreams/FFT_16p_8bit_3pre.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw_manager
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top tb_TextIO_SDF [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v1/tb_Rot_ROM_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/SDF_proj_v2.srcs/sim_1/imports/SDF_proj_v2/tb_SDF_Stage_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_SDF_Top_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_Axi_Stream_behav.wcfg
+open_wave_config C:/Github/FFFT/SDF_proj_v2.xpr/SDF_proj_v2/tb_TextIO_SDF_behav.wcfg
+source tb_TextIO_SDF.tcl
+run 90 us
