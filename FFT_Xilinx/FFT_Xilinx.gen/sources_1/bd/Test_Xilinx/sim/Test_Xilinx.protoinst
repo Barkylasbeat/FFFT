@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"Test_Xilinx": {
+			"proto_instances": {
+			}
+		}
+	}
+}
