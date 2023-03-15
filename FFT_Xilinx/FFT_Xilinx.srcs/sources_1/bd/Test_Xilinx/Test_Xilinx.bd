@@ -1,12 +1,12 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x40BFD57AA4B5A002",
+      "boundary_crc": "0x5780AE07150595EF",
       "device": "xc7a35tcpg236-1",
       "gen_directory": "../../../../FFT_Xilinx.gen/sources_1/bd/Test_Xilinx",
       "name": "Test_Xilinx",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "Hierarchical",
+      "synth_flow_mode": "None",
       "tool_version": "2022.1",
       "validated": "true"
     },
@@ -15,6 +15,19 @@
       "clk_wiz_0": ""
     },
     "ports": {
+      "Reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
       "sys_clock": {
         "type": "clk",
         "direction": "I",
@@ -36,19 +49,6 @@
           },
           "PHASE": {
             "value": "0.0"
-          }
-        }
-      },
-      "reset": {
-        "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_HIGH"
           }
         }
       }
@@ -73,7 +73,7 @@
             "value": "distributed_ram"
           },
           "number_of_stages_using_block_ram_for_data_and_phase_factors": {
-            "value": "3"
+            "value": "0"
           },
           "output_ordering": {
             "value": "natural_order"
@@ -83,20 +83,26 @@
           },
           "scaling_options": {
             "value": "scaled"
+          },
+          "target_clock_frequency": {
+            "value": "100"
+          },
+          "transform_length": {
+            "value": "32"
           }
         }
       },
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "Test_Xilinx_clk_wiz_0_0",
-        "xci_path": "ip\\Test_Xilinx_clk_wiz_0_0\\Test_Xilinx_clk_wiz_0_0.xci",
+        "xci_name": "Test_Xilinx_clk_wiz_0_1",
+        "xci_path": "ip\\Test_Xilinx_clk_wiz_0_1\\Test_Xilinx_clk_wiz_0_1.xci",
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
           "CLK_IN1_BOARD_INTERFACE": {
             "value": "sys_clock"
           },
           "RESET_BOARD_INTERFACE": {
-            "value": "reset"
+            "value": "Reset"
           },
           "USE_BOARD_FLOW": {
             "value": "true"
@@ -105,16 +111,16 @@
       }
     },
     "nets": {
+      "Reset_1": {
+        "ports": [
+          "Reset",
+          "clk_wiz_0/reset"
+        ]
+      },
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
           "xfft_0/aclk"
-        ]
-      },
-      "reset_1": {
-        "ports": [
-          "reset",
-          "clk_wiz_0/reset"
         ]
       },
       "sys_clock_1": {

@@ -7,7 +7,15 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Test_Xilinx
 # IP: bd/Test_Xilinx/ip/Test_Xilinx_xfft_0_0/Test_Xilinx_xfft_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Test_Xilinx_xfft_0_0 || ORIG_REF_NAME==Test_Xilinx_xfft_0_0} -quiet] -quiet
 
-# IP: bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_0/Test_Xilinx_clk_wiz_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Test_Xilinx_clk_wiz_0_0 || ORIG_REF_NAME==Test_Xilinx_clk_wiz_0_0} -quiet] -quiet
+# IP: bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Test_Xilinx_clk_wiz_0_1 || ORIG_REF_NAME==Test_Xilinx_clk_wiz_0_1} -quiet] -quiet
 
-# XDC: c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/Test_Xilinx_ooc.xdc
+# XDC: c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1_board.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==Test_Xilinx_clk_wiz_0_1 || ORIG_REF_NAME==Test_Xilinx_clk_wiz_0_1} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1.xdc
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==Test_Xilinx_clk_wiz_0_1 || ORIG_REF_NAME==Test_Xilinx_clk_wiz_0_1} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1_ooc.xdc
+
+# XDC: c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/Test_Xilinx_ooc.xdc

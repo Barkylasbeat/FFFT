@@ -1,0 +1,5 @@
+Test_Xilinx_xfft_0_0.vhd,vhdl,xil_defaultlib,../../../bd/Test_Xilinx/ip/Test_Xilinx_xfft_0_0/sim/Test_Xilinx_xfft_0_0.vhd,incdir="$ref_dir/../../../../FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/4e49"incdir="../../../../FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/4e49"
+Test_Xilinx_clk_wiz_0_1_clk_wiz.v,verilog,xil_defaultlib,../../../bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1_clk_wiz.v,incdir="$ref_dir/../../../../FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/4e49"incdir="../../../../FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/4e49"
+Test_Xilinx_clk_wiz_0_1.v,verilog,xil_defaultlib,../../../bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1.v,incdir="$ref_dir/../../../../FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/4e49"incdir="../../../../FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/4e49"
+Test_Xilinx.vhd,vhdl,xil_defaultlib,../../../bd/Test_Xilinx/sim/Test_Xilinx.vhd,incdir="$ref_dir/../../../../FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/4e49"incdir="../../../../FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/4e49"
+glbl.v,Verilog,xil_defaultlib,glbl.v

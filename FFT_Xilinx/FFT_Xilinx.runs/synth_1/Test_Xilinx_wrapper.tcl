@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.runs/synth_1/Test_Xilinx_wrapper.tcl"
+  variable script "C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.runs/synth_1/Test_Xilinx_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -77,24 +78,24 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.cache/wt [current_project]
-set_property parent.project_path C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.cache/wt [current_project]
+set_property parent.project_path C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part_repo_paths {C:/Users/kekko/AppData/Roaming/Xilinx/Vivado/2022.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
-set_property ip_output_repo c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.cache/ip [current_project]
+set_property ip_repo_paths c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/IP_Cores/IP_repo [current_project]
+update_ip_catalog
+set_property ip_output_repo c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/hdl/Test_Xilinx_wrapper.vhd
-add_files C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.srcs/sources_1/bd/Test_Xilinx/Test_Xilinx.bd
-set_property used_in_implementation false [get_files -all c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_xfft_0_0/Test_Xilinx_xfft_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_0/Test_Xilinx_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_0/Test_Xilinx_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_0/Test_Xilinx_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/Test_Xilinx_ooc.xdc]
+read_vhdl -library xil_defaultlib C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/hdl/Test_Xilinx_wrapper.vhd
+add_files C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.srcs/sources_1/bd/Test_Xilinx/Test_Xilinx.bd
+set_property used_in_implementation false [get_files -all c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/Test_Xilinx_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -108,6 +109,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/donat/Desktop/NL2_FFT/Git_FFFT/FFFT/FFT_Xilinx/FFT_Xilinx.srcs/utils_1/imports/synth_1/Test_Xilinx_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

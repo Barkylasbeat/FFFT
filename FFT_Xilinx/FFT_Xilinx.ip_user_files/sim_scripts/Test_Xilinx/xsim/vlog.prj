@@ -1,0 +1,7 @@
+verilog xil_defaultlib --include "../../../../FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/4e49" \
+"../../../bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1_clk_wiz.v" \
+"../../../bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
