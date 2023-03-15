@@ -1,0 +1,1837 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Mar 15 19:36:13 2023
+| Host         : PcFraLenzi running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 10 -input_pins -routable_nets -datasheet -name timing_1 -file C:/Users/kekko/Desktop/timing_report_16.txt
+| Design       : Test_Xilinx_wrapper
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (0)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (0)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      6.995        0.000                      0                 4100        0.062        0.000                      0                 4100        3.000        0.000                       0                  1887  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock                               Waveform(ns)       Period(ns)      Frequency(MHz)
+-----                               ------------       ----------      --------------
+sys_clock                           {0.000 5.000}      10.000          100.000         
+  clk_out1_Test_Xilinx_clk_wiz_0_0  {0.000 5.000}      10.000          100.000         
+  clkfbout_Test_Xilinx_clk_wiz_0_0  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock                                   WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----                                   -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clock                                                                                                                                                                             3.000        0.000                       0                     1  
+  clk_out1_Test_Xilinx_clk_wiz_0_0        6.995        0.000                      0                 4100        0.062        0.000                      0                 4100        3.750        0.000                       0                  1883  
+  clkfbout_Test_Xilinx_clk_wiz_0_0                                                                                                                                                    7.845        0.000                       0                     3  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| User Ignored Path Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock    
+----------    ----------    --------    
+
+
+------------------------------------------------------------------------------------------------
+| Unconstrained Path Table
+| ------------------------
+------------------------------------------------------------------------------------------------
+
+Path Group                        From Clock                        To Clock                        
+----------                        ----------                        --------                        
+(none)                            clkfbout_Test_Xilinx_clk_wiz_0_0                                    
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clock
+  To Clock:  sys_clock
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        3.000ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clock
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { sys_clock }
+
+Check Type        Corner  Lib Pin            Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     MMCME2_ADV/CLKIN1  n/a            1.249         10.000      8.751                Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+Max Period        n/a     MMCME2_ADV/CLKIN1  n/a            100.000       10.000      90.000               Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+Low Pulse Width   Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Slow    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+High Pulse Width  Fast    MMCME2_ADV/CLKIN1  n/a            2.000         5.000       3.000                Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk_out1_Test_Xilinx_clk_wiz_0_0
+  To Clock:  clk_out1_Test_Xilinx_clk_wiz_0_0
+
+Setup :            0  Failing Endpoints,  Worst Slack        6.995ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.062ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        3.750ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             6.995ns  (required time - arrival time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@10.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        2.815ns  (logic 0.993ns (35.275%)  route 1.822ns (64.725%))
+  Logic Levels:           3  (LUT2=1 LUT3=1 LUT6=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.261ns = ( 7.739 - 10.000 ) 
+    Source Clock Delay      (SCD):    -1.586ns
+    Clock Pessimism Removal (CPR):    0.530ns
+  Clock Uncertainty:      0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.131ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.584     2.042    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.108    -3.065 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.800    -2.266    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.096    -2.170 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.584    -1.586    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456    -1.130 r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/Q
+                         net (fo=1532, unplaced)      0.881    -0.249    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/gen_non_real_time.gen_has_skid_buffer.data_out_reg_full_2_reg
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     0.046 r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0_i_1/O
+                         net (fo=6, unplaced)         0.481     0.527    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/rd_enable
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/rd_valid_2_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.118     0.645 r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/rd_valid_2_i_1/O
+                         net (fo=2, unplaced)         0.460     1.105    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/rd_valid_2_i_1_n_0
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1[3]_i_1/I2
+                         LUT6 (Prop_lut6_I2_O)        0.124     1.229 r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1[3]_i_1/O
+                         net (fo=1, unplaced)         0.000     1.229    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1[3]_i_1_n_0
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000    10.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.439    11.827    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.378     6.449 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.760     7.209    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.091     7.300 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.439     7.739    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1_reg[3]/C
+                         clock pessimism              0.530     8.269    
+                         clock uncertainty           -0.074     8.195    
+                         FDRE (Setup_fdre_C_D)        0.029     8.224    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1_reg[3]
+  -------------------------------------------------------------------
+                         required time                          8.224    
+                         arrival time                          -1.229    
+  -------------------------------------------------------------------
+                         slack                                  6.995    
+
+Slack (MET) :             7.000ns  (required time - arrival time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@10.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        2.810ns  (logic 0.999ns (35.552%)  route 1.811ns (64.448%))
+  Logic Levels:           3  (LUT3=1 LUT4=1 LUT6=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.261ns = ( 7.739 - 10.000 ) 
+    Source Clock Delay      (SCD):    -1.586ns
+    Clock Pessimism Removal (CPR):    0.530ns
+  Clock Uncertainty:      0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.131ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.584     2.042    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.108    -3.065 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.800    -2.266    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.096    -2.170 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.584    -1.586    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456    -1.130 f  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/Q
+                         net (fo=1532, unplaced)      0.881    -0.249    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/gen_non_real_time.gen_has_skid_buffer.data_out_reg_full_2_reg
+                                                                      f  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0_i_1/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295     0.046 f  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0_i_1/O
+                         net (fo=6, unplaced)         0.481     0.527    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/rd_enable
+                                                                      f  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1[4]_i_2/I3
+                         LUT6 (Prop_lut6_I3_O)        0.124     0.651 r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1[4]_i_2/O
+                         net (fo=1, unplaced)         0.449     1.100    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1[4]_i_2_n_0
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1[4]_i_1/I0
+                         LUT4 (Prop_lut4_I0_O)        0.124     1.224 r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1[4]_i_1/O
+                         net (fo=1, unplaced)         0.000     1.224    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1[4]_i_1_n_0
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000    10.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.439    11.827    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.378     6.449 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.760     7.209    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.091     7.300 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.439     7.739    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1_reg[4]/C
+                         clock pessimism              0.530     8.269    
+                         clock uncertainty           -0.074     8.195    
+                         FDRE (Setup_fdre_C_D)        0.029     8.224    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/fifo0/add_1_reg[4]
+  -------------------------------------------------------------------
+                         required time                          8.224    
+                         arrival time                          -1.224    
+  -------------------------------------------------------------------
+                         slack                                  7.000    
+
+Slack (MET) :             7.037ns  (required time - arrival time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.DV_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@10.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        2.773ns  (logic 0.875ns (31.554%)  route 1.898ns (68.446%))
+  Logic Levels:           2  (LUT3=1 LUT6=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.261ns = ( 7.739 - 10.000 ) 
+    Source Clock Delay      (SCD):    -1.586ns
+    Clock Pessimism Removal (CPR):    0.530ns
+  Clock Uncertainty:      0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.131ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.584     2.042    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.108    -3.065 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.800    -2.266    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.096    -2.170 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.584    -1.586    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.DV_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456    -1.130 f  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.DV_reg/Q
+                         net (fo=11, unplaced)        0.787    -0.343    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.DV_reg_0
+                                                                      f  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/gen_ce_non_real_time.ce_predicted_i_2/I0
+                         LUT3 (Prop_lut3_I0_O)        0.295    -0.048 f  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/gen_ce_non_real_time.ce_predicted_i_2/O
+                         net (fo=1, unplaced)         1.111     1.063    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/proc0_counter/gen_ce_non_real_time.ce_predicted_reg
+                                                                      f  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/proc0_counter/gen_ce_non_real_time.ce_predicted_i_1/I0
+                         LUT6 (Prop_lut6_I0_O)        0.124     1.187 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/proc0_counter/gen_ce_non_real_time.ce_predicted_i_1/O
+                         net (fo=1, unplaced)         0.000     1.187    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg_1
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000    10.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.439    11.827    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.378     6.449 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.760     7.209    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.091     7.300 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.439     7.739    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/C
+                         clock pessimism              0.530     8.269    
+                         clock uncertainty           -0.074     8.195    
+                         FDRE (Setup_fdre_C_D)        0.029     8.224    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg
+  -------------------------------------------------------------------
+                         required time                          8.224    
+                         arrival time                          -1.187    
+  -------------------------------------------------------------------
+                         slack                                  7.037    
+
+Slack (MET) :             7.091ns  (required time - arrival time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/FW_1.BF_1/mux_out_B/use_lut6_2.latency1.Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[16].ff/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@10.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        2.752ns  (logic 1.991ns (72.347%)  route 0.761ns (27.653%))
+  Logic Levels:           6  (CARRY4=5 LUT4=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.261ns = ( 7.739 - 10.000 ) 
+    Source Clock Delay      (SCD):    -1.586ns
+    Clock Pessimism Removal (CPR):    0.530ns
+  Clock Uncertainty:      0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.131ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.584     2.042    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.108    -3.065 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.800    -2.266    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.096    -2.170 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.584    -1.586    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/FW_1.BF_1/mux_out_B/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/FW_1.BF_1/mux_out_B/use_lut6_2.latency1.Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456    -1.130 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/FW_1.BF_1/mux_out_B/use_lut6_2.latency1.Q_reg[0]/Q
+                         net (fo=2, unplaced)         0.752    -0.378    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/bf2_in_im[0]
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/comp_gen[0].first.carrymux_i_1/I1
+                         LUT4 (Prop_lut4_I1_O)        0.295    -0.083 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/comp_gen[0].first.carrymux_i_1/O
+                         net (fo=1, unplaced)         0.000    -0.083    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[0].lut_out
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/cincarrymux_CARRY4/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     0.467 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/cincarrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.009     0.476    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/cc_2
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[3].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     0.590 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[3].other.carrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     0.590    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/cc_6
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[7].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     0.704 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[7].other.carrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     0.704    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/cc_10
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[11].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     0.818 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[11].other.carrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     0.818    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/cc_14
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[15].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.348     1.166 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[15].other.carrymux_CARRY4/O[1]
+                         net (fo=1, unplaced)         0.000     1.166    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[16].xor_out
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[16].ff/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000    10.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.439    11.827    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.378     6.449 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.760     7.209    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.091     7.300 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.439     7.739    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[16].ff/C
+                         clock pessimism              0.530     8.269    
+                         clock uncertainty           -0.074     8.195    
+                         FDRE (Setup_fdre_C_D)        0.062     8.257    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[16].ff
+  -------------------------------------------------------------------
+                         required time                          8.257    
+                         arrival time                          -1.166    
+  -------------------------------------------------------------------
+                         slack                                  7.091    
+
+Slack (MET) :             7.091ns  (required time - arrival time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/FW_1.BF_1/mux_out_B/use_lut6_2.latency1.Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[16].ff/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@10.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        2.752ns  (logic 1.991ns (72.347%)  route 0.761ns (27.653%))
+  Logic Levels:           6  (CARRY4=5 LUT4=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.261ns = ( 7.739 - 10.000 ) 
+    Source Clock Delay      (SCD):    -1.586ns
+    Clock Pessimism Removal (CPR):    0.530ns
+  Clock Uncertainty:      0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.131ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.584     2.042    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.108    -3.065 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.800    -2.266    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.096    -2.170 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.584    -1.586    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/FW_1.BF_1/mux_out_B/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/FW_1.BF_1/mux_out_B/use_lut6_2.latency1.Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456    -1.130 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/FW_1.BF_1/mux_out_B/use_lut6_2.latency1.Q_reg[0]/Q
+                         net (fo=2, unplaced)         0.752    -0.378    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/bf2_in_im[0]
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/comp_gen[0].first.carrymux_i_1__0/I1
+                         LUT4 (Prop_lut4_I1_O)        0.295    -0.083 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/comp_gen[0].first.carrymux_i_1__0/O
+                         net (fo=1, unplaced)         0.000    -0.083    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[0].lut_out
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/cincarrymux_CARRY4/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     0.467 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/cincarrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.009     0.476    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/cc_2
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[3].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     0.590 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[3].other.carrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     0.590    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/cc_6
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[7].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     0.704 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[7].other.carrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     0.704    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/cc_10
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[11].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     0.818 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[11].other.carrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     0.818    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/cc_14
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[15].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.348     1.166 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[15].other.carrymux_CARRY4/O[1]
+                         net (fo=1, unplaced)         0.000     1.166    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[16].xor_out
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[16].ff/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000    10.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.439    11.827    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.378     6.449 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.760     7.209    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.091     7.300 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.439     7.739    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[16].ff/C
+                         clock pessimism              0.530     8.269    
+                         clock uncertainty           -0.074     8.195    
+                         FDRE (Setup_fdre_C_D)        0.062     8.257    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.re_cmp/comp_gen[16].ff
+  -------------------------------------------------------------------
+                         required time                          8.257    
+                         arrival time                          -1.166    
+  -------------------------------------------------------------------
+                         slack                                  7.091    
+
+Slack (MET) :             7.102ns  (required time - arrival time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/no_sclr_lut.depth1_shift_ram.without_sclr.Qsr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[16].ff/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@10.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        2.741ns  (logic 1.991ns (72.638%)  route 0.750ns (27.362%))
+  Logic Levels:           6  (CARRY4=5 LUT4=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.261ns = ( 7.739 - 10.000 ) 
+    Source Clock Delay      (SCD):    -1.586ns
+    Clock Pessimism Removal (CPR):    0.530ns
+  Clock Uncertainty:      0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.131ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.584     2.042    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.108    -3.065 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.800    -2.266    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.096    -2.170 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.584    -1.586    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/no_sclr_lut.depth1_shift_ram.without_sclr.Qsr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456    -1.130 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/no_sclr_lut.depth1_shift_ram.without_sclr.Qsr_reg[0]/Q
+                         net (fo=38, unplaced)        0.741    -0.389    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/fwd_inv_i
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[0].lut_out/I0
+                         LUT4 (Prop_lut4_I0_O)        0.295    -0.094 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[0].lut_out/O
+                         net (fo=1, unplaced)         0.000    -0.094    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[0].lut_out__0
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/cincarrymux_CARRY4/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     0.456 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/cincarrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.009     0.465    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/cc_2
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[3].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     0.579 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[3].other.carrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     0.579    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/cc_6
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[7].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     0.693 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[7].other.carrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     0.693    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/cc_10
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[11].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     0.807 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[11].other.carrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     0.807    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/cc_14
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[15].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.348     1.155 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[15].other.carrymux_CARRY4/O[1]
+                         net (fo=1, unplaced)         0.000     1.155    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[16].xor_out
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[16].ff/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000    10.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.439    11.827    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.378     6.449 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.760     7.209    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.091     7.300 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.439     7.739    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[16].ff/C
+                         clock pessimism              0.530     8.269    
+                         clock uncertainty           -0.074     8.195    
+                         FDRE (Setup_fdre_C_D)        0.062     8.257    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[16].ff
+  -------------------------------------------------------------------
+                         required time                          8.257    
+                         arrival time                          -1.155    
+  -------------------------------------------------------------------
+                         slack                                  7.102    
+
+Slack (MET) :             7.102ns  (required time - arrival time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/no_sclr_lut.depth1_shift_ram.without_sclr.Qsr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[16].ff/D
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@10.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        2.741ns  (logic 1.991ns (72.638%)  route 0.750ns (27.362%))
+  Logic Levels:           6  (CARRY4=5 LUT4=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.261ns = ( 7.739 - 10.000 ) 
+    Source Clock Delay      (SCD):    -1.586ns
+    Clock Pessimism Removal (CPR):    0.530ns
+  Clock Uncertainty:      0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.131ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.584     2.042    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.108    -3.065 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.800    -2.266    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.096    -2.170 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.584    -1.586    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/no_sclr_lut.depth1_shift_ram.without_sclr.Qsr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456    -1.130 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/sign_sel_gen.fwd_inv_reg/no_sclr_lut.depth1_shift_ram.without_sclr.Qsr_reg[0]/Q
+                         net (fo=38, unplaced)        0.741    -0.389    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/fwd_inv_i
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[0].lut_out/I0
+                         LUT4 (Prop_lut4_I0_O)        0.295    -0.094 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[0].lut_out/O
+                         net (fo=1, unplaced)         0.000    -0.094    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[0].lut_out__0
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/cincarrymux_CARRY4/S[1]
+                         CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     0.456 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/cincarrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.009     0.465    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/cc_2
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[3].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     0.579 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[3].other.carrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     0.579    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/cc_6
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[7].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     0.693 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[7].other.carrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     0.693    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/cc_10
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[11].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     0.807 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[11].other.carrymux_CARRY4/CO[3]
+                         net (fo=1, unplaced)         0.000     0.807    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/cc_14
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[15].other.carrymux_CARRY4/CI
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.348     1.155 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[15].other.carrymux_CARRY4/O[1]
+                         net (fo=1, unplaced)         0.000     1.155    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[16].xor_out
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[16].ff/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000    10.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.439    11.827    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.378     6.449 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.760     7.209    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.091     7.300 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.439     7.739    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[16].ff/C
+                         clock pessimism              0.530     8.269    
+                         clock uncertainty           -0.074     8.195    
+                         FDRE (Setup_fdre_C_D)        0.062     8.257    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/hasbf2.FW_2.BF_2/logic_twoscomp.im_cmp/comp_gen[16].ff
+  -------------------------------------------------------------------
+                         required time                          8.257    
+                         arrival time                          -1.155    
+  -------------------------------------------------------------------
+                         slack                                  7.102    
+
+Slack (MET) :             7.140ns  (required time - arrival time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_natural_out_reg[0]/R
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@10.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        2.208ns  (logic 0.751ns (34.013%)  route 1.457ns (65.987%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.261ns = ( 7.739 - 10.000 ) 
+    Source Clock Delay      (SCD):    -1.586ns
+    Clock Pessimism Removal (CPR):    0.530ns
+  Clock Uncertainty:      0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.131ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.584     2.042    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.108    -3.065 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.800    -2.266    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.096    -2.170 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.584    -1.586    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456    -1.130 r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/Q
+                         net (fo=1532, unplaced)      0.610    -0.520    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/ce_w2c
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/has_bit_reverse.pe_natural_out[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.295    -0.225 r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/has_bit_reverse.pe_natural_out[31]_i_1/O
+                         net (fo=32, unplaced)        0.847     0.622    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/SR[0]
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_natural_out_reg[0]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000    10.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.439    11.827    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.378     6.449 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.760     7.209    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.091     7.300 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.439     7.739    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_natural_out_reg[0]/C
+                         clock pessimism              0.530     8.269    
+                         clock uncertainty           -0.074     8.195    
+                         FDRE (Setup_fdre_C_R)       -0.433     7.762    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_natural_out_reg[0]
+  -------------------------------------------------------------------
+                         required time                          7.762    
+                         arrival time                          -0.622    
+  -------------------------------------------------------------------
+                         slack                                  7.140    
+
+Slack (MET) :             7.140ns  (required time - arrival time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_natural_out_reg[10]/R
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@10.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        2.208ns  (logic 0.751ns (34.013%)  route 1.457ns (65.987%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.261ns = ( 7.739 - 10.000 ) 
+    Source Clock Delay      (SCD):    -1.586ns
+    Clock Pessimism Removal (CPR):    0.530ns
+  Clock Uncertainty:      0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.131ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.584     2.042    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.108    -3.065 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.800    -2.266    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.096    -2.170 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.584    -1.586    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456    -1.130 r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/Q
+                         net (fo=1532, unplaced)      0.610    -0.520    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/ce_w2c
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/has_bit_reverse.pe_natural_out[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.295    -0.225 r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/has_bit_reverse.pe_natural_out[31]_i_1/O
+                         net (fo=32, unplaced)        0.847     0.622    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/SR[0]
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_natural_out_reg[10]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000    10.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.439    11.827    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.378     6.449 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.760     7.209    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.091     7.300 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.439     7.739    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_natural_out_reg[10]/C
+                         clock pessimism              0.530     8.269    
+                         clock uncertainty           -0.074     8.195    
+                         FDRE (Setup_fdre_C_R)       -0.433     7.762    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_natural_out_reg[10]
+  -------------------------------------------------------------------
+                         required time                          7.762    
+                         arrival time                          -0.622    
+  -------------------------------------------------------------------
+                         slack                                  7.140    
+
+Slack (MET) :             7.140ns  (required time - arrival time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_natural_out_reg[11]/R
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@10.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        2.208ns  (logic 0.751ns (34.013%)  route 1.457ns (65.987%))
+  Logic Levels:           1  (LUT2=1)
+  Clock Path Skew:        -0.145ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    -2.261ns = ( 7.739 - 10.000 ) 
+    Source Clock Delay      (SCD):    -1.586ns
+    Clock Pessimism Removal (CPR):    0.530ns
+  Clock Uncertainty:      0.074ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Discrete Jitter          (DJ):    0.131ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.458     1.458 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.584     2.042    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.108    -3.065 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.800    -2.266    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.096    -2.170 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.584    -1.586    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.456    -1.130 r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/gen_ce_non_real_time.ce_predicted_reg/Q
+                         net (fo=1532, unplaced)      0.610    -0.520    Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/ce_w2c
+                                                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/has_bit_reverse.pe_natural_out[31]_i_1/I0
+                         LUT2 (Prop_lut2_I0_O)        0.295    -0.225 r  Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/has_bit_reverse.pe_natural_out[31]_i_1/O
+                         net (fo=32, unplaced)        0.847     0.622    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/SR[0]
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_natural_out_reg[11]/R
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                     10.000    10.000 r  
+    W5                                                0.000    10.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000    10.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.388    11.388 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.439    11.827    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -5.378     6.449 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.760     7.209    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.091     7.300 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.439     7.739    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_natural_out_reg[11]/C
+                         clock pessimism              0.530     8.269    
+                         clock uncertainty           -0.074     8.195    
+                         FDRE (Setup_fdre_C_R)       -0.433     7.762    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_natural_out_reg[11]
+  -------------------------------------------------------------------
+                         required time                          7.762    
+                         arrival time                          -0.622    
+  -------------------------------------------------------------------
+                         slack                                  7.140    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.062ns  (arrival time - required time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/I
+                            (rising edge-triggered cell RAMD64E clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.298ns  (logic 0.131ns (44.034%)  route 0.167ns (55.966%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -1.094ns
+    Source Clock Delay      (SCD):    -0.959ns
+    Clock Pessimism Removal (CPR):    -0.280ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.114     0.340    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.776    -1.436 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.337    -1.099    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.026    -1.073 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.114    -0.959    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.131    -0.828 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0/Q
+                         net (fo=2, unplaced)         0.167    -0.661    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/D
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.259     0.673    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.410    -1.737 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.355    -1.382    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.029    -1.353 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.259    -1.094    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/WCLK
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+                         clock pessimism              0.280    -0.814    
+                         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.091    -0.723    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP
+  -------------------------------------------------------------------
+                         required time                          0.723    
+                         arrival time                          -0.661    
+  -------------------------------------------------------------------
+                         slack                                  0.062    
+
+Slack (MET) :             0.062ns  (arrival time - required time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/I
+                            (rising edge-triggered cell RAMD64E clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.298ns  (logic 0.131ns (44.034%)  route 0.167ns (55.966%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -1.094ns
+    Source Clock Delay      (SCD):    -0.959ns
+    Clock Pessimism Removal (CPR):    -0.280ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.114     0.340    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.776    -1.436 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.337    -1.099    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.026    -1.073 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.114    -0.959    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.131    -0.828 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0/Q
+                         net (fo=2, unplaced)         0.167    -0.661    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/D
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.259     0.673    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.410    -1.737 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.355    -1.382    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.029    -1.353 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.259    -1.094    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/WCLK
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/CLK
+                         clock pessimism              0.280    -0.814    
+                         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.091    -0.723    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP
+  -------------------------------------------------------------------
+                         required time                          0.723    
+                         arrival time                          -0.661    
+  -------------------------------------------------------------------
+                         slack                                  0.062    
+
+Slack (MET) :             0.062ns  (arrival time - required time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[5].i_fdre0/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/I
+                            (rising edge-triggered cell RAMD64E clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.298ns  (logic 0.131ns (44.034%)  route 0.167ns (55.966%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -1.094ns
+    Source Clock Delay      (SCD):    -0.959ns
+    Clock Pessimism Removal (CPR):    -0.280ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.114     0.340    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.776    -1.436 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.337    -1.099    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.026    -1.073 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.114    -0.959    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[5].i_fdre0/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.131    -0.828 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[5].i_fdre0/Q
+                         net (fo=2, unplaced)         0.167    -0.661    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/D
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.259     0.673    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.410    -1.737 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.355    -1.382    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.029    -1.353 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.259    -1.094    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/WCLK
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+                         clock pessimism              0.280    -0.814    
+                         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.091    -0.723    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP
+  -------------------------------------------------------------------
+                         required time                          0.723    
+                         arrival time                          -0.661    
+  -------------------------------------------------------------------
+                         slack                                  0.062    
+
+Slack (MET) :             0.062ns  (arrival time - required time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[5].i_fdre0/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/I
+                            (rising edge-triggered cell RAMD64E clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.298ns  (logic 0.131ns (44.034%)  route 0.167ns (55.966%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -1.094ns
+    Source Clock Delay      (SCD):    -0.959ns
+    Clock Pessimism Removal (CPR):    -0.280ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.114     0.340    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.776    -1.436 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.337    -1.099    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.026    -1.073 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.114    -0.959    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[5].i_fdre0/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.131    -0.828 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[5].i_fdre0/Q
+                         net (fo=2, unplaced)         0.167    -0.661    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/D
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.259     0.673    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.410    -1.737 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.355    -1.382    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.029    -1.353 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.259    -1.094    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/WCLK
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/CLK
+                         clock pessimism              0.280    -0.814    
+                         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.091    -0.723    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP
+  -------------------------------------------------------------------
+                         required time                          0.723    
+                         arrival time                          -0.661    
+  -------------------------------------------------------------------
+                         slack                                  0.062    
+
+Slack (MET) :             0.062ns  (arrival time - required time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[6].i_fdre0/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[12].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/I
+                            (rising edge-triggered cell RAMD64E clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.298ns  (logic 0.131ns (44.034%)  route 0.167ns (55.966%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -1.094ns
+    Source Clock Delay      (SCD):    -0.959ns
+    Clock Pessimism Removal (CPR):    -0.280ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.114     0.340    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.776    -1.436 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.337    -1.099    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.026    -1.073 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.114    -0.959    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[6].i_fdre0/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.131    -0.828 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[6].i_fdre0/Q
+                         net (fo=2, unplaced)         0.167    -0.661    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[12].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/D
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[12].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.259     0.673    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.410    -1.737 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.355    -1.382    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.029    -1.353 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.259    -1.094    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[12].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/WCLK
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[12].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+                         clock pessimism              0.280    -0.814    
+                         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.091    -0.723    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[12].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP
+  -------------------------------------------------------------------
+                         required time                          0.723    
+                         arrival time                          -0.661    
+  -------------------------------------------------------------------
+                         slack                                  0.062    
+
+Slack (MET) :             0.062ns  (arrival time - required time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[6].i_fdre0/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[12].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/I
+                            (rising edge-triggered cell RAMD64E clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.298ns  (logic 0.131ns (44.034%)  route 0.167ns (55.966%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -1.094ns
+    Source Clock Delay      (SCD):    -0.959ns
+    Clock Pessimism Removal (CPR):    -0.280ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.114     0.340    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.776    -1.436 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.337    -1.099    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.026    -1.073 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.114    -0.959    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[6].i_fdre0/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.131    -0.828 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[6].i_fdre0/Q
+                         net (fo=2, unplaced)         0.167    -0.661    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[12].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/D
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[12].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.259     0.673    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.410    -1.737 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.355    -1.382    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.029    -1.353 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.259    -1.094    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[12].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/WCLK
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[12].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/CLK
+                         clock pessimism              0.280    -0.814    
+                         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.091    -0.723    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[12].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP
+  -------------------------------------------------------------------
+                         required time                          0.723    
+                         arrival time                          -0.661    
+  -------------------------------------------------------------------
+                         slack                                  0.062    
+
+Slack (MET) :             0.062ns  (arrival time - required time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[7].i_fdre0/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[14].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/I
+                            (rising edge-triggered cell RAMD64E clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.298ns  (logic 0.131ns (44.034%)  route 0.167ns (55.966%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -1.094ns
+    Source Clock Delay      (SCD):    -0.959ns
+    Clock Pessimism Removal (CPR):    -0.280ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.114     0.340    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.776    -1.436 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.337    -1.099    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.026    -1.073 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.114    -0.959    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[7].i_fdre0/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.131    -0.828 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[7].i_fdre0/Q
+                         net (fo=2, unplaced)         0.167    -0.661    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[14].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/D
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[14].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.259     0.673    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.410    -1.737 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.355    -1.382    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.029    -1.353 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.259    -1.094    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[14].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/WCLK
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[14].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+                         clock pessimism              0.280    -0.814    
+                         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.091    -0.723    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[14].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP
+  -------------------------------------------------------------------
+                         required time                          0.723    
+                         arrival time                          -0.661    
+  -------------------------------------------------------------------
+                         slack                                  0.062    
+
+Slack (MET) :             0.062ns  (arrival time - required time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[7].i_fdre0/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[14].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/I
+                            (rising edge-triggered cell RAMD64E clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.298ns  (logic 0.131ns (44.034%)  route 0.167ns (55.966%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -1.094ns
+    Source Clock Delay      (SCD):    -0.959ns
+    Clock Pessimism Removal (CPR):    -0.280ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.114     0.340    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.776    -1.436 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.337    -1.099    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.026    -1.073 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.114    -0.959    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[7].i_fdre0/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.131    -0.828 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[7].i_fdre0/Q
+                         net (fo=2, unplaced)         0.167    -0.661    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[14].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/D
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[14].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.259     0.673    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.410    -1.737 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.355    -1.382    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.029    -1.353 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.259    -1.094    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[14].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/WCLK
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[14].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/CLK
+                         clock pessimism              0.280    -0.814    
+                         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.091    -0.723    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[14].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP
+  -------------------------------------------------------------------
+                         required time                          0.723    
+                         arrival time                          -0.661    
+  -------------------------------------------------------------------
+                         slack                                  0.062    
+
+Slack (MET) :             0.062ns  (arrival time - required time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[8].i_fdre0/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[16].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/I
+                            (rising edge-triggered cell RAMD64E clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.298ns  (logic 0.131ns (44.034%)  route 0.167ns (55.966%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -1.094ns
+    Source Clock Delay      (SCD):    -0.959ns
+    Clock Pessimism Removal (CPR):    -0.280ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.114     0.340    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.776    -1.436 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.337    -1.099    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.026    -1.073 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.114    -0.959    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[8].i_fdre0/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.131    -0.828 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[8].i_fdre0/Q
+                         net (fo=2, unplaced)         0.167    -0.661    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[16].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/D
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[16].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.259     0.673    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.410    -1.737 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.355    -1.382    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.029    -1.353 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.259    -1.094    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[16].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/WCLK
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[16].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+                         clock pessimism              0.280    -0.814    
+                         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.091    -0.723    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[16].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP
+  -------------------------------------------------------------------
+                         required time                          0.723    
+                         arrival time                          -0.661    
+  -------------------------------------------------------------------
+                         slack                                  0.062    
+
+Slack (MET) :             0.062ns  (arrival time - required time)
+  Source:                 Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[8].i_fdre0/C
+                            (rising edge-triggered cell FDRE clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[16].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/I
+                            (rising edge-triggered cell RAMD64E clocked by clk_out1_Test_Xilinx_clk_wiz_0_0  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk_out1_Test_Xilinx_clk_wiz_0_0
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns - clk_out1_Test_Xilinx_clk_wiz_0_0 rise@0.000ns)
+  Data Path Delay:        0.298ns  (logic 0.131ns (44.034%)  route 0.167ns (55.966%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.145ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    -1.094ns
+    Source Clock Delay      (SCD):    -0.959ns
+    Clock Pessimism Removal (CPR):    -0.280ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.226     0.226 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.114     0.340    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -1.776    -1.436 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.337    -1.099    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.026    -1.073 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.114    -0.959    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/aclk
+                         FDRE                                         r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[8].i_fdre0/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.131    -0.828 r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.pe_out_reg/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[8].i_fdre0/Q
+                         net (fo=2, unplaced)         0.167    -0.661    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[16].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/D
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[16].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     0.414 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.259     0.673    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKOUT0)
+                                                     -2.410    -1.737 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+                         net (fo=1, unplaced)         0.355    -1.382    Test_Xilinx_i/clk_wiz_0/inst/clk_out1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+                         BUFG (Prop_bufg_I_O)         0.029    -1.353 r  Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/O
+                         net (fo=1881, unplaced)      0.259    -1.094    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[16].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/WCLK
+                         RAMD64E                                      r  Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[16].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/CLK
+                         clock pessimism              0.280    -0.814    
+                         RAMD64E (Hold_ramd64e_CLK_I)
+                                                      0.091    -0.723    Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[16].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP
+  -------------------------------------------------------------------
+                         required time                          0.723    
+                         arrival time                          -0.661    
+  -------------------------------------------------------------------
+                         slack                                  0.062    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk_out1_Test_Xilinx_clk_wiz_0_0
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0 }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period        n/a     BUFG/I              n/a            2.155         10.000      7.845                Test_Xilinx_i/clk_wiz_0/inst/clkout1_buf/I
+Min Period        n/a     DSP48E1/CLK         n/a            2.154         10.000      7.846                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.qDSP[0].appDSP[0].bppDSP[0].u_l[0].use_dsp48e1.dsp/CLK
+Min Period        n/a     DSP48E1/CLK         n/a            2.154         10.000      7.846                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.qDSP[0].appDSP[0].bppDSP[0].u_l[1].use_dsp48e1.dsp/CLK
+Min Period        n/a     DSP48E1/CLK         n/a            2.154         10.000      7.846                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.qDSP[1].appDSP[0].bppDSP[0].u_l[0].use_dsp48e1.dsp/CLK
+Min Period        n/a     DSP48E1/CLK         n/a            2.154         10.000      7.846                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/four_mult_structure.use_dsp.i_dsp/re_im/use_DSP48.qDSP[1].appDSP[0].bppDSP[0].u_l[1].use_dsp48e1.dsp/CLK
+Min Period        n/a     MMCME2_ADV/CLKOUT0  n/a            1.249         10.000      8.751                Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000                Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/CP_LEN_WE_reg/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000                Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/blk_event_frame_started.event_frame_started_reg/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000                Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/blk_event_tlast_missing.event_tlast_missing_reg/C
+Min Period        n/a     FDRE/C              n/a            1.000         10.000      9.000                Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/blk_event_tlast_unexpected.event_tlast_unexpected_reg/C
+Max Period        n/a     MMCME2_ADV/CLKOUT0  n/a            213.360       10.000      203.360              Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+Low Pulse Width   Fast    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/CLK
+Low Pulse Width   Fast    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/CLK
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+Low Pulse Width   Fast    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/CLK
+Low Pulse Width   Fast    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/CLK
+Low Pulse Width   Slow    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[11].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+Low Pulse Width   Fast    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[11].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+High Pulse Width  Fast    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/CLK
+High Pulse Width  Fast    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[0].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+High Pulse Width  Fast    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/CLK
+High Pulse Width  Fast    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[10].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/SP/CLK
+High Pulse Width  Slow    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[11].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+High Pulse Width  Fast    RAMD64E/CLK         n/a            1.250         5.000       3.750                Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/gen_width[11].gen_lutram[0].use_ram64x1d.RAM64X1D_inst/DP/CLK
+
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clkfbout_Test_Xilinx_clk_wiz_0_0
+  To Clock:  clkfbout_Test_Xilinx_clk_wiz_0_0
+
+Setup :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+Hold  :           NA  Failing Endpoints,  Worst Slack           NA  ,  Total Violation           NA
+PW    :            0  Failing Endpoints,  Worst Slack        7.845ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clkfbout_Test_Xilinx_clk_wiz_0_0
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT }
+
+Check Type  Corner  Lib Pin              Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location  Pin
+Min Period  n/a     BUFG/I               n/a            2.155         10.000      7.845                Test_Xilinx_i/clk_wiz_0/inst/clkf_buf/I
+Min Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            1.249         10.000      8.751                Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+Min Period  n/a     MMCME2_ADV/CLKFBIN   n/a            1.249         10.000      8.751                Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBIN   n/a            100.000       10.000      90.000               Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+Max Period  n/a     MMCME2_ADV/CLKFBOUT  n/a            213.360       10.000      203.360              Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+
+
+
+--------------------------------------------------------------------------------------
+Path Group:  (none)
+From Clock:  clkfbout_Test_Xilinx_clk_wiz_0_0
+  To Clock:  
+
+Max Delay             1 Endpoint
+Min Delay             1 Endpoint
+--------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+                            (clock source 'clkfbout_Test_Xilinx_clk_wiz_0_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+  Path Group:             (none)
+  Path Type:              Max at Fast Process Corner
+  Data Path Delay:        0.643ns  (logic 0.029ns (4.511%)  route 0.614ns (95.489%))
+  Logic Levels:           1  (BUFG=1)
+  Clock Uncertainty:      0.148ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.086ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkfbout_Test_Xilinx_clk_wiz_0_0 fall edge)
+                                                      5.000     5.000 f  
+    W5                                                0.000     5.000 f  sys_clock (IN)
+                         net (fo=0)                   0.000     5.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                f  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         0.414     5.414 f  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.259     5.673    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      f  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+  -------------------------------------------------------------------    -------------------
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -2.410     3.263 f  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+                         net (fo=1, unplaced)         0.355     3.618    Test_Xilinx_i/clk_wiz_0/inst/clkfbout_Test_Xilinx_clk_wiz_0_0
+                                                                      f  Test_Xilinx_i/clk_wiz_0/inst/clkf_buf/I
+                         BUFG (Prop_bufg_I_O)         0.029     3.647 f  Test_Xilinx_i/clk_wiz_0/inst/clkf_buf/O
+                         net (fo=1, unplaced)         0.259     3.906    Test_Xilinx_i/clk_wiz_0/inst/clkfbout_buf_Test_Xilinx_clk_wiz_0_0
+                         MMCME2_ADV                                   f  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack:                    inf
+  Source:                 Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+                            (clock source 'clkfbout_Test_Xilinx_clk_wiz_0_0'  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+  Path Group:             (none)
+  Path Type:              Min at Slow Process Corner
+  Data Path Delay:        1.290ns  (logic 0.091ns (7.056%)  route 1.199ns (92.944%))
+  Logic Levels:           1  (BUFG=1)
+  Clock Uncertainty:      0.148ns  ((TSJ^2 + DJ^2)^1/2) / 2 + PE
+    Total System Jitter     (TSJ):    0.050ns
+    Discrete Jitter          (DJ):    0.086ns
+    Phase Error              (PE):    0.099ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clkfbout_Test_Xilinx_clk_wiz_0_0 rise edge)
+                                                      0.000     0.000 r  
+    W5                                                0.000     0.000 r  sys_clock (IN)
+                         net (fo=0)                   0.000     0.000    Test_Xilinx_i/clk_wiz_0/inst/clk_in1
+    W5                                                                r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/I
+    W5                   IBUF (Prop_ibuf_I_O)         1.388     1.388 r  Test_Xilinx_i/clk_wiz_0/inst/clkin1_ibufg/O
+                         net (fo=1, unplaced)         0.439     1.827    Test_Xilinx_i/clk_wiz_0/inst/clk_in1_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKIN1
+  -------------------------------------------------------------------    -------------------
+                         MMCME2_ADV (Prop_mmcme2_adv_CLKIN1_CLKFBOUT)
+                                                     -5.378    -3.551 r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBOUT
+                         net (fo=1, unplaced)         0.760    -2.791    Test_Xilinx_i/clk_wiz_0/inst/clkfbout_Test_Xilinx_clk_wiz_0_0
+                                                                      r  Test_Xilinx_i/clk_wiz_0/inst/clkf_buf/I
+                         BUFG (Prop_bufg_I_O)         0.091    -2.700 r  Test_Xilinx_i/clk_wiz_0/inst/clkf_buf/O
+                         net (fo=1, unplaced)         0.439    -2.261    Test_Xilinx_i/clk_wiz_0/inst/clkfbout_buf_Test_Xilinx_clk_wiz_0_0
+                         MMCME2_ADV                                   r  Test_Xilinx_i/clk_wiz_0/inst/mmcm_adv_inst/CLKFBIN
+  -------------------------------------------------------------------    -------------------
+
+
+
+
+
+------------------------------------------------------------------------------------------------
+| Data sheet
+| ----------
+------------------------------------------------------------------------------------------------
+
+Setup between Clocks
+
+----------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+Source    | Destination |  Src:Rise     | Process |  Src:Rise     | Process |  Src:Fall     | Process |  Src:Fall     | Process |
+Clock     | Clock       | Dest:Rise(ns) | Corner  | Dest:Fall(ns) | Corner  | Dest:Rise(ns) | Corner  | Dest:Fall(ns) | Corner  |
+----------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+sys_clock | sys_clock   |         3.005 | SLOW    |               |         |               |         |               |         |
+----------+-------------+---------------+---------+---------------+---------+---------------+---------+---------------+---------+
+
+
+
