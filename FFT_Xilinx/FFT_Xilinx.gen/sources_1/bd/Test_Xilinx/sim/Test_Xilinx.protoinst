@@ -3,6 +3,48 @@
 	"modules": {
 		"Test_Xilinx": {
 			"proto_instances": {
+				"/AXI4Stream_UART_0/M00_AXIS_RX": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "m00_axis_rx_aclk"},
+						"ARESETN": { "actual": "m00_axis_rx_aresetn"},
+						"TDATA": { "actual": "m00_axis_rx_tdata"},
+						"TREADY": { "actual": "m00_axis_rx_tready"},
+						"TVALID": { "actual": "m00_axis_rx_tvalid"}
+					}
+				},
+				"/AXI4Stream_UART_0/S00_AXIS_TX": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "s00_axis_tx_aclk"},
+						"ARESETN": { "actual": "s00_axis_tx_aresetn"},
+						"TDATA": { "actual": "s00_axis_tx_tdata"},
+						"TREADY": { "actual": "s00_axis_tx_tready"},
+						"TVALID": { "actual": "s00_axis_tx_tvalid"}
+					}
+				},
+				"/xfft_0/M_AXIS_DATA": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "m_axis_data_tdata"},
+						"TLAST": { "actual": "m_axis_data_tlast"},
+						"TREADY": { "actual": "m_axis_data_tready"},
+						"TVALID": { "actual": "m_axis_data_tvalid"}
+					}
+				},
+				"/xfft_0/S_AXIS_DATA": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "s_axis_data_tdata"},
+						"TLAST": { "actual": "s_axis_data_tlast"},
+						"TREADY": { "actual": "s_axis_data_tready"},
+						"TVALID": { "actual": "s_axis_data_tvalid"}
+					}
+				}
 			}
 		}
 	}

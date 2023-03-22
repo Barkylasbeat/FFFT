@@ -1,0 +1,886 @@
+
+*** Running vivado
+    with args -log Test_Xilinx_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Test_Xilinx_wrapper.tcl
+
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source Test_Xilinx_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Github/FFFT/IP_Cores/IP_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.1/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.srcs/utils_1/imports/synth_1/Test_Xilinx_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.srcs/utils_1/imports/synth_1/Test_Xilinx_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Test_Xilinx_wrapper -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 10868
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:13 . Memory (MB): peak = 1294.051 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'Test_Xilinx_wrapper' [C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/hdl/Test_Xilinx_wrapper.vhd:23]
+INFO: [Synth 8-3491] module 'Test_Xilinx' declared at 'c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/synth/Test_Xilinx.vhd:14' bound to instance 'Test_Xilinx_i' of component 'Test_Xilinx' [C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/hdl/Test_Xilinx_wrapper.vhd:33]
+INFO: [Synth 8-638] synthesizing module 'Test_Xilinx' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/synth/Test_Xilinx.vhd:27]
+INFO: [Synth 8-3491] module 'Test_Xilinx_AXI4Stream_UART_0_0' declared at 'c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_AXI4Stream_UART_0_0_1/synth/Test_Xilinx_AXI4Stream_UART_0_0.vhd:56' bound to instance 'AXI4Stream_UART_0' of component 'Test_Xilinx_AXI4Stream_UART_0_0' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/synth/Test_Xilinx.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'Test_Xilinx_AXI4Stream_UART_0_0' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_AXI4Stream_UART_0_0_1/synth/Test_Xilinx_AXI4Stream_UART_0_0.vhd:75]
+	Parameter UART_BAUD_RATE bound to: 115200 - type: integer 
+	Parameter UART_CLOCK_FREQUENCY bound to: 100000000 - type: integer 
+	Parameter C_M00_AXIS_RX_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_S00_AXIS_TX_TDATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'AXI4Stream_UART_v1_0' declared at 'c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0.vhd:42' bound to instance 'U0' of component 'AXI4Stream_UART_v1_0' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_AXI4Stream_UART_0_0_1/synth/Test_Xilinx_AXI4Stream_UART_0_0.vhd:147]
+INFO: [Synth 8-638] synthesizing module 'AXI4Stream_UART_v1_0' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0.vhd:82]
+	Parameter C_S_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'AXI4Stream_UART_v1_0_S00_AXIS_TX' declared at 'c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0_S00_AXIS_TX.vhd:39' bound to instance 'AXI4Stream_UART_v1_0_S00_AXIS_TX_inst' of component 'AXI4Stream_UART_v1_0_S00_AXIS_TX' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0.vhd:217]
+INFO: [Synth 8-638] synthesizing module 'AXI4Stream_UART_v1_0_S00_AXIS_TX' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0_S00_AXIS_TX.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'AXI4Stream_UART_v1_0_S00_AXIS_TX' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0_S00_AXIS_TX.vhd:70]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 2048 - type: integer 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0808 - type: string 
+	Parameter READ_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 1 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 1 - type: integer 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at 'C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145' bound to instance 'FIFO_DATA_TX' of component 'xpm_fifo_async' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0.vhd:249]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1884]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1884]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1884]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1884]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1906]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1906]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1058]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (0#1) [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145]
+	Parameter UART_BAUD_RATE bound to: 115200 - type: integer 
+	Parameter UART_CLOCK_FREQUENCY bound to: 100000000 - type: integer 
+INFO: [Synth 8-3491] module 'UART_Manager' declared at 'c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/UART_Manager.vhd:42' bound to instance 'UART_Manager_inst' of component 'UART_Manager' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0.vhd:290]
+INFO: [Synth 8-638] synthesizing module 'UART_Manager' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/UART_Manager.vhd:78]
+	Parameter BAUD_RATE bound to: 115200 - type: integer 
+	Parameter CLOCK_FREQUENCY bound to: 100000000 - type: integer 
+INFO: [Synth 8-3491] module 'UART_Engine' declared at 'c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/UART_Engine.vhd:62' bound to instance 'Inst_uart' of component 'UART_engine' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/UART_Manager.vhd:125]
+INFO: [Synth 8-638] synthesizing module 'UART_Engine' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/UART_Engine.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'UART_Engine' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/UART_Engine.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'UART_Manager' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/UART_Manager.vhd:78]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 2048 - type: integer 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0808 - type: string 
+	Parameter READ_DATA_WIDTH bound to: 8 - type: integer 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 1 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 1 - type: integer 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_async' declared at 'C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2145' bound to instance 'FIFO_DATA_RX' of component 'xpm_fifo_async' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0.vhd:326]
+	Parameter C_M_AXIS_TDATA_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'AXI4Stream_UART_v1_0_M00_AXIS_RX' declared at 'c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0_M00_AXIS_RX.vhd:40' bound to instance 'AXI4Stream_UART_v1_0_M00_AXIS_RX_inst' of component 'AXI4Stream_UART_v1_0_M00_AXIS_RX' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0.vhd:367]
+INFO: [Synth 8-638] synthesizing module 'AXI4Stream_UART_v1_0_M00_AXIS_RX' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0_M00_AXIS_RX.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'AXI4Stream_UART_v1_0_M00_AXIS_RX' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0_M00_AXIS_RX.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'AXI4Stream_UART_v1_0' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/453d/hdl/AXI4Stream_UART_v1_0.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'Test_Xilinx_AXI4Stream_UART_0_0' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_AXI4Stream_UART_0_0_1/synth/Test_Xilinx_AXI4Stream_UART_0_0.vhd:75]
+INFO: [Synth 8-3491] module 'Test_Xilinx_clk_wiz_0_1' declared at 'c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1.v:68' bound to instance 'clk_wiz_0' of component 'Test_Xilinx_clk_wiz_0_1' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/synth/Test_Xilinx.vhd:146]
+INFO: [Synth 8-6157] synthesizing module 'Test_Xilinx_clk_wiz_0_1' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1.v:68]
+INFO: [Synth 8-6157] synthesizing module 'Test_Xilinx_clk_wiz_0_1_clk_wiz' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1_clk_wiz.v:68]
+INFO: [Synth 8-6157] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:55203]
+INFO: [Synth 8-6155] done synthesizing module 'IBUF' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:55203]
+INFO: [Synth 8-6157] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:63509]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: double 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: double 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: double 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: double 
+	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
+	Parameter CLKOUT4_CASCADE bound to: FALSE - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'MMCME2_ADV' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:63509]
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:1082]
+INFO: [Synth 8-6155] done synthesizing module 'Test_Xilinx_clk_wiz_0_1_clk_wiz' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1_clk_wiz.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'Test_Xilinx_clk_wiz_0_1' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1.v:68]
+INFO: [Synth 8-3491] module 'Test_Xilinx_rst_clk_wiz_0_100M_0' declared at 'c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_rst_clk_wiz_0_100M_0_1/synth/Test_Xilinx_rst_clk_wiz_0_100M_0.vhd:59' bound to instance 'rst_clk_wiz_0_100M' of component 'Test_Xilinx_rst_clk_wiz_0_100M_0' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/synth/Test_Xilinx.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'Test_Xilinx_rst_clk_wiz_0_100M_0' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_rst_clk_wiz_0_100M_0_1/synth/Test_Xilinx_rst_clk_wiz_0_100M_0.vhd:74]
+	Parameter C_FAMILY bound to: artix7 - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b1 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_rst_clk_wiz_0_100M_0_1/synth/Test_Xilinx_rst_clk_wiz_0_100M_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:105982' bound to instance 'POR_SRL_I' of component 'SRL16' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:105982]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (0#1) [C:/Xilinx/Vivado/2022.1/scripts/rt/data/unisim_comp.v:105982]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'Test_Xilinx_rst_clk_wiz_0_100M_0' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_rst_clk_wiz_0_100M_0_1/synth/Test_Xilinx_rst_clk_wiz_0_100M_0.vhd:74]
+INFO: [Synth 8-3491] module 'Test_Xilinx_xfft_0_0' declared at 'c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_xfft_0_0/synth/Test_Xilinx_xfft_0_0.vhd:59' bound to instance 'xfft_0' of component 'Test_Xilinx_xfft_0_0' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/synth/Test_Xilinx.vhd:166]
+INFO: [Synth 8-638] synthesizing module 'Test_Xilinx_xfft_0_0' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_xfft_0_0/synth/Test_Xilinx_xfft_0_0.vhd:83]
+	Parameter C_XDEVICEFAMILY bound to: artix7 - type: string 
+	Parameter C_PART bound to: xc7a35tcpg236-1 - type: string 
+	Parameter C_S_AXIS_CONFIG_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_S_AXIS_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_M_AXIS_DATA_TDATA_WIDTH bound to: 16 - type: integer 
+	Parameter C_M_AXIS_DATA_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_M_AXIS_STATUS_TDATA_WIDTH bound to: 1 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 1 - type: integer 
+	Parameter C_CHANNELS bound to: 1 - type: integer 
+	Parameter C_NFFT_MAX bound to: 5 - type: integer 
+	Parameter C_ARCH bound to: 3 - type: integer 
+	Parameter C_HAS_NFFT bound to: 0 - type: integer 
+	Parameter C_USE_FLT_PT bound to: 0 - type: integer 
+	Parameter C_INPUT_WIDTH bound to: 8 - type: integer 
+	Parameter C_TWIDDLE_WIDTH bound to: 8 - type: integer 
+	Parameter C_OUTPUT_WIDTH bound to: 8 - type: integer 
+	Parameter C_HAS_SCALING bound to: 1 - type: integer 
+	Parameter C_HAS_BFP bound to: 0 - type: integer 
+	Parameter C_HAS_ROUNDING bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 1 - type: integer 
+	Parameter C_HAS_OVFLO bound to: 0 - type: integer 
+	Parameter C_HAS_NATURAL_INPUT bound to: 1 - type: integer 
+	Parameter C_HAS_NATURAL_OUTPUT bound to: 1 - type: integer 
+	Parameter C_HAS_CYCLIC_PREFIX bound to: 0 - type: integer 
+	Parameter C_HAS_XK_INDEX bound to: 0 - type: integer 
+	Parameter C_DATA_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_TWIDDLE_MEM_TYPE bound to: 1 - type: integer 
+	Parameter C_BRAM_STAGES bound to: 0 - type: integer 
+	Parameter C_REORDER_MEM_TYPE bound to: 0 - type: integer 
+	Parameter C_USE_HYBRID_RAM bound to: 0 - type: integer 
+	Parameter C_OPTIMIZE_GOAL bound to: 0 - type: integer 
+	Parameter C_CMPY_TYPE bound to: 0 - type: integer 
+	Parameter C_BFLY_TYPE bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xfft_v9_1_8' declared at 'c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ipshared/102e/hdl/xfft_v9_1_vh_rfs.vhd:103739' bound to instance 'U0' of component 'xfft_v9_1_8' [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_xfft_0_0/synth/Test_Xilinx_xfft_0_0.vhd:206]
+INFO: [Synth 8-256] done synthesizing module 'Test_Xilinx_xfft_0_0' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_xfft_0_0/synth/Test_Xilinx_xfft_0_0.vhd:83]
+INFO: [Synth 8-256] done synthesizing module 'Test_Xilinx' (0#1) [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/synth/Test_Xilinx.vhd:27]
+INFO: [Synth 8-256] done synthesizing module 'Test_Xilinx_wrapper' (0#1) [C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/hdl/Test_Xilinx_wrapper.vhd:23]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3017]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element gen_pf_ic_rc.gae_ic_std.ram_aempty_i_reg was removed.  [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:757]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1390]
+WARNING: [Synth 8-7129] Port Q[0] in module shift_ram__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[0] in module shift_ram__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module shift_ram__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module shift_ram__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module shift_ram__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port COMBI_SCLR in module shift_ram__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized56 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[0] in module shift_ram__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized58 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[3] in module c_shift_ram_v12_0_14_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[2] in module c_shift_ram_v12_0_14_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[1] in module c_shift_ram_v12_0_14_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a[0] in module c_shift_ram_v12_0_14_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aclr in module c_shift_ram_v12_0_14_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port aset in module c_shift_ram_v12_0_14_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ainit in module c_shift_ram_v12_0_14_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sclr in module c_shift_ram_v12_0_14_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sset in module c_shift_ram_v12_0_14_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sinit in module c_shift_ram_v12_0_14_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[15] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[14] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[13] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[12] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[11] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[10] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[9] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[8] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[7] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[6] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[5] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[4] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[3] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[2] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[1] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[0] in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized57 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[0] in module shift_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D1 in module shift_ram__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized55 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Q1 in module shift_ram__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D1 in module shift_ram__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module shift_ram__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module shift_ram__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module shift_ram__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port COMBI_SCLR in module shift_ram__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized54 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ENB in module dist_mem is either unconnected or has no load
+WARNING: [Synth 8-7129] Port depthx2 in module r22_memory is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Q1 in module shift_ram__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D1 in module shift_ram__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port COMBI_SCLR in module shift_ram__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized53 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D1 in module shift_ram__parameterized50 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized50 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[0] in module shift_ram__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module shift_ram__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port COMBI_SCLR in module shift_ram__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized13 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Q1 in module shift_ram__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D1 in module shift_ram__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CLK in module shift_ram__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port CE in module shift_ram__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module shift_ram__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port COMBI_SCLR in module shift_ram__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized52 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D1 in module shift_ram__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SCLR in module shift_ram__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port COMBI_SCLR in module shift_ram__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized51 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port D[0] in module shift_ram__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port COMBI_SCLR in module shift_ram__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port DEPTHx2 in module shift_ram__parameterized17 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MUXCY_IN in module equ_rtl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AINIT in module c_reg_fd_v12_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ACLR in module c_reg_fd_v12_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ASET in module c_reg_fd_v12_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SINIT in module c_reg_fd_v12_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SSET in module c_reg_fd_v12_0_6_viv is either unconnected or has no load
+WARNING: [Synth 8-7129] Port add in module c_addsub_v12_0_14_lut6_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port bypass in module c_addsub_v12_0_14_lut6_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sset in module c_addsub_v12_0_14_lut6_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sinit in module c_addsub_v12_0_14_lut6_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b_in in module c_addsub_v12_0_14_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port a_signed in module c_addsub_v12_0_14_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port b_signed in module c_addsub_v12_0_14_legacy__parameterized9 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MAX[4] in module cnt_tc_rtl_a__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MAX[3] in module cnt_tc_rtl_a__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MAX[2] in module cnt_tc_rtl_a__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MAX[1] in module cnt_tc_rtl_a__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port MAX[0] in module cnt_tc_rtl_a__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LOAD[4] in module cnt_tc_rtl_a__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LOAD[3] in module cnt_tc_rtl_a__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LOAD[2] in module cnt_tc_rtl_a__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LOAD[1] in module cnt_tc_rtl_a__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LOAD[0] in module cnt_tc_rtl_a__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port LOAD_EN in module cnt_tc_rtl_a__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port NFFT[4] in module r22_cnt_ctrl__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port NFFT[3] in module r22_cnt_ctrl__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port NFFT[2] in module r22_cnt_ctrl__parameterized4 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:41 ; elapsed = 00:01:03 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:41 ; elapsed = 00:01:03 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:41 ; elapsed = 00:01:03 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+WARNING: [Synth 37-28] Duplicate attribute 'max_fanout' found for instance 'dist_ram.lutram.mem' of module 'dist_mem'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.162 . Memory (MB): peak = 2056.703 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1780 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1_board.xdc] for cell 'Test_Xilinx_i/clk_wiz_0/inst'
+CRITICAL WARNING: [Constraints 18-631] No BOARD_PART_PIN found named 'RESET'. [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1_board.xdc:3]
+Finished Parsing XDC File [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1_board.xdc] for cell 'Test_Xilinx_i/clk_wiz_0/inst'
+Parsing XDC File [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1.xdc] for cell 'Test_Xilinx_i/clk_wiz_0/inst'
+Finished Parsing XDC File [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1.xdc] for cell 'Test_Xilinx_i/clk_wiz_0/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_clk_wiz_0_1/Test_Xilinx_clk_wiz_0_1.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Test_Xilinx_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Test_Xilinx_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_AXI4Stream_UART_0_0_1/Test_Xilinx_AXI4Stream_UART_0_0_board.xdc] for cell 'Test_Xilinx_i/AXI4Stream_UART_0/U0'
+Finished Parsing XDC File [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_AXI4Stream_UART_0_0_1/Test_Xilinx_AXI4Stream_UART_0_0_board.xdc] for cell 'Test_Xilinx_i/AXI4Stream_UART_0/U0'
+Parsing XDC File [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_rst_clk_wiz_0_100M_0_1/Test_Xilinx_rst_clk_wiz_0_100M_0_board.xdc] for cell 'Test_Xilinx_i/rst_clk_wiz_0_100M/U0'
+Finished Parsing XDC File [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_rst_clk_wiz_0_100M_0_1/Test_Xilinx_rst_clk_wiz_0_100M_0_board.xdc] for cell 'Test_Xilinx_i/rst_clk_wiz_0_100M/U0'
+Parsing XDC File [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_rst_clk_wiz_0_100M_0_1/Test_Xilinx_rst_clk_wiz_0_100M_0.xdc] for cell 'Test_Xilinx_i/rst_clk_wiz_0_100M/U0'
+Finished Parsing XDC File [c:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.gen/sources_1/bd/Test_Xilinx/ip/Test_Xilinx_rst_clk_wiz_0_100M_0_1/Test_Xilinx_rst_clk_wiz_0_100M_0.xdc] for cell 'Test_Xilinx_i/rst_clk_wiz_0_100M/U0'
+INFO: [Timing 38-2] Deriving generated clocks
+Parsing XDC File [C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Test_Xilinx_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Test_Xilinx_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Vivado 12-3272] Current instance is the top level cell 'Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst' of design 'preSynthElab_1' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst' of design 'preSynthElab_1' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst' of design 'preSynthElab_1' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst' of design 'preSynthElab_1' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst' of design 'preSynthElab_1' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst' of design 'preSynthElab_1' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst' of design 'preSynthElab_1' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Vivado 12-3272] Current instance is the top level cell 'Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst' of design 'preSynthElab_1' [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same. 
+     Instance: Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst 
+  This will add unnecessary latency to the design. Please check the design for the following: 
+ 1) Manually instantiated XPM_CDC modules: Xilinx recommends that you remove these modules. 
+ 2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
+ [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Test_Xilinx_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Test_Xilinx_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Test_Xilinx_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/Test_Xilinx_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 14 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2056.703 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 514 instances were transformed.
+  FD => FDRE: 2 instances
+  FDE => FDRE: 57 instances
+  FDR => FDRE: 34 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 88 instances
+  MULT_AND => LUT2: 316 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 16 instances
+  SRL16 => SRL16E: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.103 . Memory (MB): peak = 2056.703 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:49 ; elapsed = 00:01:15 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:01:15 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/clk_wiz_0/inst. (constraint file  C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.runs/synth_1/dont_touch.xdc, line 20).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0. (constraint file  C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.runs/synth_1/dont_touch.xdc, line 28).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/rst_clk_wiz_0_100M/U0. (constraint file  C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.runs/synth_1/dont_touch.xdc, line 31).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/xfft_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/rst_clk_wiz_0_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.rd_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_cdc_pntr.wr_pntr_cdc_dc_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.rrst_wr_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/\gnuram_async_fifo.xpm_fifo_base_inst /xpm_fifo_rst_inst/\gen_rst_ic.wrst_rd_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX. (constraint file  auto generated constraint).
+Applied set_property KEEP = true for reset. (constraint file  auto generated constraint).
+Applied set_property KEEP = true for usb_uart_rxd. (constraint file  auto generated constraint).
+Applied set_property KEEP = true for Test_Xilinx_i/AXI4Stream_UART_0/U0/UART_Manager_inst/Inst_uart/tx. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:01:15 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__xdcDup__1'
+INFO: [Synth 8-802] inferred FSM for state register 'uart_rx_state_reg' in module 'UART_Engine'
+INFO: [Synth 8-802] inferred FSM for state register 'uart_tx_state_reg' in module 'UART_Engine'
+INFO: [Synth 8-802] inferred FSM for state register 'state_TX_reg' in module 'UART_Manager'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst__xdcDup__1'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__xdcDup__1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+       tx_send_start_bit |                              001 |                               00
+            tx_send_data |                              010 |                               01
+        tx_send_stop_bit |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'uart_tx_state_reg' using encoding 'one-hot' in module 'UART_Engine'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+        rx_get_start_bit |                              001 |                               00
+             rx_get_data |                              010 |                               01
+         rx_get_stop_bit |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'uart_rx_state_reg' using encoding 'one-hot' in module 'UART_Engine'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                         11111111
+                 iSTATE0 |                               01 |                         00000000
+                 iSTATE1 |                               10 |                         00000001
+                 iSTATE2 |                               11 |                         00000010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_TX_reg' using encoding 'sequential' in module 'UART_Manager'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:53 ; elapsed = 00:01:19 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[2].delay_reset_pe/tc_compare' (logic_gate) to 'Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[2].delay_reset_pe/tc_compare1'
+INFO: [Synth 8-223] decloning instance 'Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[1].delay_reset_pe/tc_compare' (logic_gate__parameterized0) to 'Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[1].delay_reset_pe/tc_compare1'
+INFO: [Synth 8-223] decloning instance 'Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[0].delay_reset_pe/tc_compare' (logic_gate__parameterized1) to 'Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[0].delay_reset_pe/tc_compare1'
+INFO: [Synth 8-223] decloning instance 'Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.delay_reset_3/tc_compare' (logic_gate__parameterized2) to 'Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.delay_reset_3/tc_compare1'
+INFO: [Synth 8-223] decloning instance 'Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.delay_reset_7/tc_compare' (logic_gate__parameterized3) to 'Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.delay_reset_7/tc_compare1'
+INFO: [Synth 8-223] decloning instance 'Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[2].natural_order_input.PE/SR2' (shift_ram__parameterized46) to 'Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[2].natural_order_input.PE/SR3'
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_HIGH_EXT.ACT_HI_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (EXT_LPF/ACTIVE_LOW_AUX.ACT_LO_AUX/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (FDRE_inst) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (BSR_OUT_DFF[0].FDRE_BSR) is unused and will be removed from module proc_sys_reset.
+WARNING: [Synth 8-3332] Sequential element (ACTIVE_LOW_BSR_OUT_DFF[0].FDRE_BSR_N) is unused and will be removed from module proc_sys_reset.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[2].delay_reset_pe/tc_reg1) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[1].delay_reset_pe/tc_reg1) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[0].delay_reset_pe/tc_reg1) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.delay_reset_3/tc_reg1) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.delay_reset_7/tc_reg1) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe0_bf1_addr_gen/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe0_bf1_addr_gen/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre1) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe0_bf1_addr_gen/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre0) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe0_bf1_addr_gen/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[1].i_fdre1) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[0].use_ffs.gen_fdre[0].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[0].use_ffs.gen_fdre[1].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[0].use_ffs.gen_fdre[2].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[0].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[1].use_ffs.gen_fdre[0].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[1].use_ffs.gen_fdre[1].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[1].use_ffs.gen_fdre[2].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[1].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[4].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[5].use_ffs.gen_fdre[0].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[5].use_ffs.gen_fdre[1].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[5].use_ffs.gen_fdre[2].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[5].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[0].use_ffs.gen_fdre[0].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[0].use_ffs.gen_fdre[1].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[0].use_ffs.gen_fdre[2].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[0].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[1].use_ffs.gen_fdre[0].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[1].use_ffs.gen_fdre[1].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[1].use_ffs.gen_fdre[2].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[1].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[4].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[5].use_ffs.gen_fdre[0].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[5].use_ffs.gen_fdre[1].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[5].use_ffs.gen_fdre[2].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[5].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_re/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[18].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_re/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[17].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_re/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[16].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_re/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[7].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_re/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[6].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_re/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_re/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_re/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_re/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_re/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_re/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_im/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[18].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_im/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[17].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_im/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[16].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_im/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[7].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_im/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[6].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_im/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[5].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_im/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[4].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_im/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[3].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_im/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[2].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_im/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[1].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/scaling2bits.scaler_im/scale_mux/four_inputs.use_lut6.no_lut_sclr.four_to_one_mux[0].latency1.reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_scale_pipelining.has_tw_scale_reg.tw_scale_reg_gen[5].tw_scale_reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_scale_pipelining.has_tw_scale_reg.tw_scale_reg_gen[2].tw_scale_reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_scale_pipelining.has_tw_scale_reg.tw_scale_reg_gen[0].tw_scale_reg) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/delay_addr_bf2/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/delay_addr_tw/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre0) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/delay_addr_tw/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.srl_loop[0].i_fdre1) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/delay_addr_tw/no_sclr_lut.real_shift_ram.use_baseblock.use_hlutnm_srls.runt_srl_loop.i_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[0].use_ffs.gen_fdre[0].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[0].use_ffs.gen_fdre[1].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[0].use_ffs.gen_fdre[2].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[0].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[1].use_ffs.gen_fdre[0].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[1].use_ffs.gen_fdre[1].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[1].use_ffs.gen_fdre[2].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[1].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[4].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[5].use_ffs.gen_fdre[0].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[5].use_ffs.gen_fdre[1].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[5].use_ffs.gen_fdre[2].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.re/gen_carry4s[5].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[0].use_ffs.gen_fdre[0].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[0].use_ffs.gen_fdre[1].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[0].use_ffs.gen_fdre[2].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[0].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[1].use_ffs.gen_fdre[0].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[1].use_ffs.gen_fdre[1].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[1].use_ffs.gen_fdre[2].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[1].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[4].use_ffs.gen_fdre[3].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[5].use_ffs.gen_fdre[0].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[5].use_ffs.gen_fdre[1].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Synth 8-3332] Sequential element (xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[1].natural_order_input.PE/has_TW_mult.MULT/i_cmpy/three_mult_structure.use_luts.i_mult18_lut/use_ternary_adder.im/gen_carry4s[5].use_ffs.gen_fdre[2].ff_fdre) is unused and will be removed from module xfft_v9_1_8_viv.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:32 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:06 ; elapsed = 00:01:38 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:07 ; elapsed = 00:01:39 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:08 ; elapsed = 00:01:43 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:13 ; elapsed = 00:01:49 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:13 ; elapsed = 00:01:49 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:13 ; elapsed = 00:01:49 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:13 ; elapsed = 00:01:49 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:14 ; elapsed = 00:01:49 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:14 ; elapsed = 00:01:49 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |BUFG       |     2|
+|2     |CARRY4     |   152|
+|3     |LUT1       |    52|
+|4     |LUT2       |   660|
+|5     |LUT3       |   369|
+|6     |LUT4       |   396|
+|7     |LUT5       |    83|
+|8     |LUT6       |   267|
+|10    |MMCME2_ADV |     1|
+|11    |MULT_AND   |   304|
+|12    |MUXCY      |   584|
+|13    |RAM64X1D   |     8|
+|14    |RAMB18E1   |     2|
+|15    |SRL16      |     1|
+|16    |SRL16E     |   210|
+|17    |SRLC32E    |    25|
+|18    |XORCY      |   585|
+|19    |FD         |     2|
+|20    |FDCE       |    20|
+|21    |FDE        |    52|
+|22    |FDPE       |     1|
+|23    |FDR        |    20|
+|24    |FDRE       |  2576|
+|25    |FDSE       |    44|
+|26    |IBUF       |     3|
+|27    |OBUF       |     1|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:14 ; elapsed = 00:01:50 . Memory (MB): peak = 2056.703 ; gain = 762.652
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 529 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:01:45 . Memory (MB): peak = 2056.703 ; gain = 762.652
+Synthesis Optimization Complete : Time (s): cpu = 00:01:14 ; elapsed = 00:01:50 . Memory (MB): peak = 2056.703 ; gain = 762.652
+INFO: [Project 1-571] Translating synthesized netlist
+WARNING: [Synth 37-28] Duplicate attribute 'max_fanout' found for instance 'dist_ram.lutram.mem' of module 'dist_mem'.
+Resolution: Check your design sources near the definition of the module or any related 'include files, looking for duplicate definitions with different values.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.097 . Memory (MB): peak = 2056.703 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1787 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 2056.703 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 651 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 188 instances
+  FD => FDRE: 2 instances
+  FDE => FDRE: 52 instances
+  FDR => FDRE: 20 instances
+  LUT6_2 => LUT6_2 (LUT5, LUT6): 76 instances
+  MULT_AND => LUT2: 304 instances
+  RAM64X1D => RAM64X1D (RAMD64E(x2)): 8 instances
+  SRL16 => SRL16E: 1 instance 
+
+Synth Design complete, checksum: 6eadac3b
+INFO: [Common 17-83] Releasing license: Synthesis
+273 Infos, 129 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:17 ; elapsed = 00:01:57 . Memory (MB): peak = 2056.703 ; gain = 762.652
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Github/FFFT/FFT_Xilinx/FFT_Xilinx.runs/synth_1/Test_Xilinx_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Test_Xilinx_wrapper_utilization_synth.rpt -pb Test_Xilinx_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 22 16:49:45 2023...

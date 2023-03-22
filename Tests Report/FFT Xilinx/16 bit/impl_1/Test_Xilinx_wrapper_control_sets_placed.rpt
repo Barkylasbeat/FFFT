@@ -1,0 +1,127 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1 (win64) Build 3526262 Mon Apr 18 15:48:16 MDT 2022
+| Date         : Wed Mar 22 16:59:12 2023
+| Host         : PcFraLenzi running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Test_Xilinx_wrapper_control_sets_placed.rpt
+| Design       : Test_Xilinx_wrapper
+| Device       : xc7a35t
+------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    49 |
+|    Minimum number of control sets                        |    49 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   155 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    49 |
+| >= 0 to < 4        |     9 |
+| >= 4 to < 6        |     9 |
+| >= 6 to < 8        |     7 |
+| >= 8 to < 10       |     8 |
+| >= 10 to < 12      |     3 |
+| >= 12 to < 14      |     2 |
+| >= 14 to < 16      |     2 |
+| >= 16              |     9 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             213 |           50 |
+| No           | No                    | Yes                    |               5 |            2 |
+| No           | Yes                   | No                     |             123 |           48 |
+| Yes          | No                    | No                     |            1142 |          239 |
+| Yes          | No                    | Yes                    |              16 |            3 |
+| Yes          | Yes                   | No                     |             250 |           85 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|              Clock Signal              |                                                                              Enable Signal                                                                             |                                                                     Set/Reset Signal                                                                    | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[0].delay_reset_pe/reset_sustained_raw[0]  |                1 |              1 |         1.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/AXI4Stream_UART_0/U0/UART_Manager_inst/Inst_uart/uart_tx_data                                                                                            | Test_Xilinx_i/rst_clk_wiz_0_100M/U0/peripheral_reset[0]                                                                                                 |                1 |              1 |         1.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.resets_4_pes[1].delay_reset_pe/reset_sustained_raw[0]  |                1 |              1 |         1.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.delay_reset_3/tc_reg_0                                 |                1 |              1 |         1.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/AXI4Stream_UART_0/U0/UART_Manager_inst/Inst_uart/rx_baud_tick__0                                                                                         | Test_Xilinx_i/rst_clk_wiz_0_100M/U0/peripheral_reset[0]                                                                                                 |                1 |              1 |         1.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/sclr_w2c                                                                                                    |                1 |              2 |         2.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/reset_sustain.delay_reset_7/tc_reg_0                                 |                1 |              2 |         2.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/has_scale_pipelining.has_tw_scale_reg.tw_scale_reg_ce                                                                      |                                                                                                                                                         |                1 |              2 |         2.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/count_ce_1                                                                                                                 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/sclr_w2c                                                                                                    |                2 |              3 |         1.50 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/rst_clk_wiz_0_100M/U0/EXT_LPF/lpf_int                                                                                                     |                1 |              4 |         4.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/count_ce_2                                                                                                                 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/sclr_w2c                                                                                                    |                2 |              4 |         2.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/AXI4Stream_UART_0/U0/UART_Manager_inst/Inst_uart/rx_baud_tick__0                                                                                         |                                                                                                                                                         |                1 |              4 |         4.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1_n_0 |                2 |              4 |         2.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/symbols_out_remaining[3]_i_1_n_0                                                                                           | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                                               |                2 |              4 |         2.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1_n_0 |                1 |              4 |         4.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/ce_w2c                                                                                                                     | Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/reset_delays[0].first.reset_del_reg_n_0_[0]                               |                4 |              4 |         1.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/count_ce                                                                                                                   | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/sclr_w2c                                                                                                    |                2 |              5 |         2.50 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/ce_w2c                                                                                                                     | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                                               |                1 |              5 |         5.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.no_cyclic_prefix_xk_counter.DOUT_CNT_CTRL_1/cnt/cnt_ce                   | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/sclr_w2c                                                                                                    |                3 |              6 |         2.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/count_ce_0                                                                                                                 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/sclr_w2c                                                                                                    |                3 |              6 |         2.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_addr_gen.tw_addr_gen/cnt/cnt_ce                     | Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/reset_delays[0].first.reset_del_reg_n_0_[0]                               |                3 |              6 |         2.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/pe_gen[0].natural_order_input.PE/has_addr_gen.bf2_addr_gen/cnt/cnt_ce                    | Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/reset_delays[0].first.reset_del_reg_n_0_[0]                               |                3 |              6 |         2.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/rst_clk_wiz_0_100M/U0/SEQ/seq_cnt_en                                                                                                                     | Test_Xilinx_i/rst_clk_wiz_0_100M/U0/SEQ/SEQ_COUNTER/clear                                                                                               |                1 |              6 |         6.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/DOUT_CNT_CTRL_0/cnt/cnt_ce                                                               | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/sclr_w2c                                                                                                    |                3 |              6 |         2.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/FLOW/proc0_counter/load_cnt_ce                                                           | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/sclr_w2c                                                                                                    |                3 |              6 |         2.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/ce_w2c                                                                                                                     | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/SR[0]                                                                                                       |                4 |              8 |         2.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/data_out_fifo_write                                                                                       |                                                                                                                                                         |                1 |              8 |         8.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_out_channel/gen_non_real_time.fifo/fifo0/rd_enable                                                                    |                                                                                                                                                         |                1 |              8 |         8.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/gen_non_real_time.gen_has_skid_buffer.data_out_reg_full_1_reg_0[0] | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                                               |                2 |              8 |         4.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/wr_enable                                                          |                                                                                                                                                         |                1 |              8 |         8.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/data_in_channel_fifo/gen_non_real_time.data_in_fifo_pt1/gen_non_real_time.gen_has_skid_buffer.data_out_reg_full_1_reg_1[0] | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                                               |                2 |              8 |         4.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/AXI4Stream_UART_0/U0/UART_Manager_inst/data_stream_in[7]_i_1_n_0                                                                                         | Test_Xilinx_i/rst_clk_wiz_0_100M/U0/peripheral_reset[0]                                                                                                 |                2 |              8 |         4.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/AXI4Stream_UART_0/U0/UART_Manager_inst/Inst_uart/E[0]                                                                                                    | Test_Xilinx_i/rst_clk_wiz_0_100M/U0/peripheral_reset[0]                                                                                                 |                1 |              8 |         8.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/AXI4Stream_UART_0/U0/UART_Manager_inst/Inst_uart/uart_tx_count[2]_i_1_n_0                                                                                | Test_Xilinx_i/rst_clk_wiz_0_100M/U0/peripheral_reset[0]                                                                                                 |                3 |             10 |         3.33 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/ce_w2c                                                                                                                     | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/sclr_w2c                                                                                                    |                3 |             11 |         3.67 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/AXI4Stream_UART_0/U0/UART_Manager_inst/Inst_uart/uart_rx_data_vec                                                                                        | Test_Xilinx_i/rst_clk_wiz_0_100M/U0/peripheral_reset[0]                                                                                                 |                4 |             11 |         2.75 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/wrst_busy                                        |                5 |             12 |         2.40 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/wrst_busy                                        |                4 |             12 |         3.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_rd_rst_ic_reg_0                  |                6 |             15 |         2.50 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_rd_rst_ic_reg_0                  |                6 |             15 |         2.50 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/xfft_inst/non_floating_point.arch_d.xfft_inst/has_bit_reverse.dig_rev_mem/dist_ram.lutram.mem/WE                                       |                                                                                                                                                         |                4 |             16 |         4.00 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/reset_pipe[1]                                                                                               |                7 |             19 |         2.71 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/E[0]                                                                     | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_rd_rst_ic_reg_0                  |                6 |             23 |         3.83 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/rdp_inst/E[0]                                                                     | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/gen_rst_ic.fifo_rd_rst_ic_reg_0                  |                6 |             23 |         3.83 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/E[0]                                                            | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_RX/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/wrst_busy                                        |                9 |             34 |         3.78 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        | Test_Xilinx_i/rst_clk_wiz_0_100M/U0/peripheral_reset[0]                                                                                                 |               13 |             36 |         2.77 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/E[0]                                                            | Test_Xilinx_i/AXI4Stream_UART_0/U0/FIFO_DATA_TX/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/wrst_busy                                        |               12 |             45 |         3.75 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 |                                                                                                                                                                        |                                                                                                                                                         |               51 |            214 |         4.20 |
+|  Test_Xilinx_i/clk_wiz_0/inst/clk_out1 | Test_Xilinx_i/xfft_0/U0/i_synth/axi_wrapper/ce_w2c                                                                                                                     |                                                                                                                                                         |              236 |           1272 |         5.39 |
++----------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------+------------------+----------------+--------------+
+
+

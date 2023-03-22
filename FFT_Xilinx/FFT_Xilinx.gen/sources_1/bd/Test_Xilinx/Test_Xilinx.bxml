@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="40">
   <CompositeFile CompositeFileTopName="Test_Xilinx" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1678901336"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1678901336"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1678901336"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1678901336"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1679502785"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1679502785"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1679502785"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1679502785"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth\Test_Xilinx.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>

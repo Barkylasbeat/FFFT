@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x5780AE07150595EF",
+      "boundary_crc": "0x91577990FBDDEBC3",
       "device": "xc7a35tcpg236-1",
       "gen_directory": "../../../../FFT_Xilinx.gen/sources_1/bd/Test_Xilinx",
       "name": "Test_Xilinx",
@@ -12,22 +12,18 @@
     },
     "design_tree": {
       "xfft_0": "",
-      "clk_wiz_0": ""
+      "clk_wiz_0": "",
+      "AXI4Stream_UART_0": "",
+      "rst_clk_wiz_0_100M": ""
+    },
+    "interface_ports": {
+      "usb_uart": {
+        "mode": "Master",
+        "vlnv_bus_definition": "xilinx.com:interface:uart:1.0",
+        "vlnv": "xilinx.com:interface:uart_rtl:1.0"
+      }
     },
     "ports": {
-      "Reset": {
-        "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_HIGH"
-          }
-        }
-      },
       "sys_clock": {
         "type": "clk",
         "direction": "I",
@@ -51,6 +47,19 @@
             "value": "0.0"
           }
         }
+      },
+      "reset": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
       }
     },
     "components": {
@@ -60,14 +69,17 @@
         "xci_path": "ip\\Test_Xilinx_xfft_0_0\\Test_Xilinx_xfft_0_0.xci",
         "inst_hier_path": "xfft_0",
         "parameters": {
+          "aresetn": {
+            "value": "true"
+          },
           "complex_mult_type": {
-            "value": "use_mults_performance"
+            "value": "use_luts"
           },
           "implementation_options": {
             "value": "pipelined_streaming_io"
           },
           "input_width": {
-            "value": "16"
+            "value": "8"
           },
           "memory_options_reorder": {
             "value": "distributed_ram"
@@ -88,7 +100,7 @@
             "value": "100"
           },
           "transform_length": {
-            "value": "32"
+            "value": "64"
           }
         }
       },
@@ -108,19 +120,92 @@
             "value": "true"
           }
         }
+      },
+      "AXI4Stream_UART_0": {
+        "vlnv": "DigiLAB:ip:AXI4Stream_UART:1.1",
+        "xci_name": "Test_Xilinx_AXI4Stream_UART_0_0",
+        "xci_path": "ip\\Test_Xilinx_AXI4Stream_UART_0_0_1\\Test_Xilinx_AXI4Stream_UART_0_0.xci",
+        "inst_hier_path": "AXI4Stream_UART_0",
+        "parameters": {
+          "UART_BOARD_INTERFACE": {
+            "value": "usb_uart"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      },
+      "rst_clk_wiz_0_100M": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "Test_Xilinx_rst_clk_wiz_0_100M_0",
+        "xci_path": "ip\\Test_Xilinx_rst_clk_wiz_0_100M_0_1\\Test_Xilinx_rst_clk_wiz_0_100M_0.xci",
+        "inst_hier_path": "rst_clk_wiz_0_100M",
+        "parameters": {
+          "RESET_BOARD_INTERFACE": {
+            "value": "reset"
+          },
+          "USE_BOARD_FLOW": {
+            "value": "true"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "AXI4Stream_UART_0_M00_AXIS_RX": {
+        "interface_ports": [
+          "AXI4Stream_UART_0/M00_AXIS_RX",
+          "xfft_0/S_AXIS_DATA"
+        ]
+      },
+      "AXI4Stream_UART_0_UART": {
+        "interface_ports": [
+          "usb_uart",
+          "AXI4Stream_UART_0/UART"
+        ]
+      },
+      "xfft_0_M_AXIS_DATA": {
+        "interface_ports": [
+          "xfft_0/M_AXIS_DATA",
+          "AXI4Stream_UART_0/S00_AXIS_TX"
+        ]
       }
     },
     "nets": {
-      "Reset_1": {
-        "ports": [
-          "Reset",
-          "clk_wiz_0/reset"
-        ]
-      },
       "clk_wiz_0_clk_out1": {
         "ports": [
           "clk_wiz_0/clk_out1",
-          "xfft_0/aclk"
+          "xfft_0/aclk",
+          "AXI4Stream_UART_0/clk_uart",
+          "rst_clk_wiz_0_100M/slowest_sync_clk",
+          "AXI4Stream_UART_0/s00_axis_tx_aclk",
+          "AXI4Stream_UART_0/m00_axis_rx_aclk"
+        ]
+      },
+      "clk_wiz_0_locked": {
+        "ports": [
+          "clk_wiz_0/locked",
+          "rst_clk_wiz_0_100M/dcm_locked"
+        ]
+      },
+      "reset_2": {
+        "ports": [
+          "reset",
+          "rst_clk_wiz_0_100M/ext_reset_in",
+          "clk_wiz_0/reset"
+        ]
+      },
+      "rst_clk_wiz_0_100M_peripheral_aresetn": {
+        "ports": [
+          "rst_clk_wiz_0_100M/peripheral_aresetn",
+          "AXI4Stream_UART_0/m00_axis_rx_aresetn",
+          "AXI4Stream_UART_0/s00_axis_tx_aresetn",
+          "xfft_0/aresetn"
+        ]
+      },
+      "rst_clk_wiz_0_100M_peripheral_reset": {
+        "ports": [
+          "rst_clk_wiz_0_100M/peripheral_reset",
+          "AXI4Stream_UART_0/rst"
         ]
       },
       "sys_clock_1": {
